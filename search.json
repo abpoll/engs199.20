@@ -1,0 +1,469 @@
+[
+  {
+    "objectID": "readings/readings01.html",
+    "href": "readings/readings01.html",
+    "title": "Week 1 Readings",
+    "section": "",
+    "text": "Syllabus and Schedule\n\nDon’t forget to take the short syllabus quiz on Canvas! (will upload with link when ready)\n\nKeller et al. (2021)\n\nThis review article provides an accessible overview on climate-risk management, spanning many of the topics that we will cover in the course. I will encourage you to revisit this paper throughout the term.\n\nGregory et al. (2012)\n\nThis textbook chapter provides a nice overview to structuring environmental decision making problems. In my experience interacting with decision scientists at federal agencies, this textbook forms the foundation of their decision analysis knowledge base. This course will try to crosswalk between this literature and the climate-risk-management literature."
+  },
+  {
+    "objectID": "readings/readings01.html#required-reading",
+    "href": "readings/readings01.html#required-reading",
+    "title": "Week 1 Readings",
+    "section": "",
+    "text": "Syllabus and Schedule\n\nDon’t forget to take the short syllabus quiz on Canvas! (will upload with link when ready)\n\nKeller et al. (2021)\n\nThis review article provides an accessible overview on climate-risk management, spanning many of the topics that we will cover in the course. I will encourage you to revisit this paper throughout the term.\n\nGregory et al. (2012)\n\nThis textbook chapter provides a nice overview to structuring environmental decision making problems. In my experience interacting with decision scientists at federal agencies, this textbook forms the foundation of their decision analysis knowledge base. This course will try to crosswalk between this literature and the climate-risk-management literature."
+  },
+  {
+    "objectID": "readings/readings01.html#optional-reading",
+    "href": "readings/readings01.html#optional-reading",
+    "title": "Week 1 Readings",
+    "section": "Optional Reading",
+    "text": "Optional Reading\nMost weeks will not have as many optional readings as this, but I want to provide you with opportunities to go into various focus areas of Keller et al. (2021) in more detail. I don’t expect you to read all of these in detail. However, I think it will benefit you to at least read all the abstracts and choose one to read in detail that speaks to you.\nMore on wicked problems: Rittel & Webber (1973)\nMore on analyzing complex systems: Reed et al. (2022)\nMore on robust decision-making: Lempert (2002)\nMore on framing a decision analysis: Helgeson et al. (2024)\n\nReferences\n\n\nGregory, R., Failing, L., Harstone, M., Long, G., McDaniels, T., & Ohlson, D. (2012). Structuring environmental management choices. In Structured decision making (pp. 1–20). Chichester, UK: John Wiley & Sons, Ltd. https://doi.org/10.1002/9781444398557.ch1\n\n\nHelgeson, C., Keller, K., Nicholas, R. E., Srikrishnan, V., Cooper, C., Smithwick, E. A. H., & Tuana, N. (2024). Integrating values to improve the relevance of climate‐risk research. Earths Future, 12(10), e2022EF003025. https://doi.org/10.1029/2022ef003025\n\n\nKeller, K., Helgeson, C., & Srikrishnan, V. (2021). Climate risk management. Annual Review of Earth and Planetary Sciences, 49(1), 95–116. https://doi.org/10.1146/annurev-earth-080320-055847\n\n\nLempert, R. J. (2002). A new decision sciences for complex systems. Proc. Natl. Acad. Sci. U. S. A., 99 Suppl 3(Suppl 3), 7309–7313. https://doi.org/10.1073/pnas.082081699\n\n\nReed, P. M., Hadjimichael, A., Moss, R. H., Brelsford, C., Burleyson, C. D., Cohen, S., et al. (2022). Multisector dynamics: Advancing the science of complex adaptive human‐earth systems. Earths Future, 10(3). https://doi.org/10.1029/2021ef002621\n\n\nRittel, H. W. J., & Webber, M. M. (1973). Dilemmas in a general theory of planning. Policy Sci., 4(2), 155–169. https://doi.org/10.1007/BF01405730"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#framing-refers-to-how-you-structure-a-decision-problem",
+    "href": "slides/lecture02-framing.html#framing-refers-to-how-you-structure-a-decision-problem",
+    "title": "Framing a decision analysis",
+    "section": "Framing refers to how you structure a decision problem",
+    "text": "Framing refers to how you structure a decision problem\n\n\n\n\n\n\n\nG\n\n\n\nClarify the\\ndecision context\n\nClarify the\ndecision context\n\n\n\nDefine\\nobjectives\n\nDefine\nobjectives\n\n\n\nClarify the\\ndecision context-&gt;Define\\nobjectives\n\n\n\n\n\nDevelop\\nalternatives\n\nDevelop\nalternatives\n\n\n\nDefine\\nobjectives-&gt;Develop\\nalternatives"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#framing-informs-how-you-analyze-a-decision",
+    "href": "slides/lecture02-framing.html#framing-informs-how-you-analyze-a-decision",
+    "title": "Framing a decision analysis",
+    "section": "Framing informs how you analyze a decision",
+    "text": "Framing informs how you analyze a decision\n\n\n\n\n\n\n\nG\n\n\n\nEstimate\\nmetrics\n\nEstimate\nmetrics\n\n\n\nEvaluate\\ntrade-offs\n\nEvaluate\ntrade-offs\n\n\n\nEstimate\\nmetrics-&gt;Evaluate\\ntrade-offs"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#these-are-not-independent",
+    "href": "slides/lecture02-framing.html#these-are-not-independent",
+    "title": "Framing a decision analysis",
+    "section": "These are not independent!",
+    "text": "These are not independent!\n\n\n\n\n\n\n\nG\n\n\n\nClarify the\\ndecision context\n\nClarify the\ndecision context\n\n\n\nDefine\\nobjectives\n\nDefine\nobjectives\n\n\n\nClarify the\\ndecision context-&gt;Define\\nobjectives\n\n\n\n\n\nDevelop\\nalternatives\n\nDevelop\nalternatives\n\n\n\nDefine\\nobjectives-&gt;Develop\\nalternatives\n\n\n\n\n\nEstimate\\nmetrics\n\nEstimate\nmetrics\n\n\n\nDevelop\\nalternatives-&gt;Estimate\\nmetrics\n\n\n\n\n\nEvaluate\\ntrade-offs\n\nEvaluate\ntrade-offs\n\n\n\nEstimate\\nmetrics-&gt;Evaluate\\ntrade-offs\n\n\n\n\n\nImplement,\\nmonitor,\\nreview\n\nImplement,\nmonitor,\nreview\n\n\n\nEvaluate\\ntrade-offs-&gt;Implement,\\nmonitor,\\nreview\n\n\n\n\n\nImplement,\\nmonitor,\\nreview-&gt;Clarify the\\ndecision context\n\n\n\n\n\n\n\n\n\n\n\nAdapted from Gregory et al. (2012)"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#framing-is-iterative-and-deliberative",
+    "href": "slides/lecture02-framing.html#framing-is-iterative-and-deliberative",
+    "title": "Framing a decision analysis",
+    "section": "Framing is iterative and deliberative",
+    "text": "Framing is iterative and deliberative\n\nFrom Lempert (2019)"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#how-should-i-travel-from-hanover-to-philadelphia",
+    "href": "slides/lecture02-framing.html#how-should-i-travel-from-hanover-to-philadelphia",
+    "title": "Framing a decision analysis",
+    "section": "How should I travel from Hanover to Philadelphia?",
+    "text": "How should I travel from Hanover to Philadelphia?"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#which-flight-should-i-purchase",
+    "href": "slides/lecture02-framing.html#which-flight-should-i-purchase",
+    "title": "Framing a decision analysis",
+    "section": "Which flight should I purchase?",
+    "text": "Which flight should I purchase?"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#how-to-preserve-access-to-clean-water-in-the-growing-us-southwest",
+    "href": "slides/lecture02-framing.html#how-to-preserve-access-to-clean-water-in-the-growing-us-southwest",
+    "title": "Framing a decision analysis",
+    "section": "How to preserve access to clean water in the growing US Southwest?",
+    "text": "How to preserve access to clean water in the growing US Southwest?"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#why-is-framing-water-management-more-challenging-than-travel-recommendations",
+    "href": "slides/lecture02-framing.html#why-is-framing-water-management-more-challenging-than-travel-recommendations",
+    "title": "Framing a decision analysis",
+    "section": "Why is framing water management more challenging than travel recommendations?",
+    "text": "Why is framing water management more challenging than travel recommendations?\nA few hints from our examples:\n\nAnalyzing travel options was relatively simple\nWe got to the bottom of my travel goals quickly\nI have (most of) the decision-making agency and chose my favorite option"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#conceptual-models",
+    "href": "slides/lecture02-framing.html#conceptual-models",
+    "title": "Framing a decision analysis",
+    "section": "Conceptual models",
+    "text": "Conceptual models\n\nConceptual model for addressing inland flood risk from Helgeson et al. (2024)"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#another-conceptual-model",
+    "href": "slides/lecture02-framing.html#another-conceptual-model",
+    "title": "Framing a decision analysis",
+    "section": "Another conceptual model",
+    "text": "Another conceptual model\n\nUnpublished conceptual model for federal funding rules to reduce flood risk"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#values-informed-mental-models",
+    "href": "slides/lecture02-framing.html#values-informed-mental-models",
+    "title": "Framing a decision analysis",
+    "section": "Values-informed mental models",
+    "text": "Values-informed mental models\n\nValues mapping on execerpt of the conceptual model from Helgeson et al. (2024)"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#xlrm-diagrams",
+    "href": "slides/lecture02-framing.html#xlrm-diagrams",
+    "title": "Framing a decision analysis",
+    "section": "XLRM diagrams",
+    "text": "XLRM diagrams\n\nFrom Pollack et al. (2025)"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#follow-some-explicit-structured-process",
+    "href": "slides/lecture02-framing.html#follow-some-explicit-structured-process",
+    "title": "Framing a decision analysis",
+    "section": "Follow some explicit, structured process",
+    "text": "Follow some explicit, structured process\n\nThis is an area of decision analysis that needs more attention\nStructured decision making proponents acknowledge robust decision making (but not much), and as far as I can tell not vice versa\nYou can do better than most peer-reviewed studies by doing something transparent\nIt would be great to learn about good framing practices from real-world decision-making experiments"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#works-cited",
+    "href": "slides/lecture02-framing.html#works-cited",
+    "title": "Framing a decision analysis",
+    "section": "Works cited",
+    "text": "Works cited\n\n\n\n\nGregory, R., Failing, L., Harstone, M., Long, G., McDaniels, T., & Ohlson, D. (2012). Structuring environmental management choices. In Structured decision making (pp. 1–20). Chichester, UK: John Wiley & Sons, Ltd. https://doi.org/10.1002/9781444398557.ch1\n\n\nHelgeson, C., Keller, K., Nicholas, R. E., Srikrishnan, V., Cooper, C., Smithwick, E. A. H., & Tuana, N. (2024). Integrating values to improve the relevance of climate‐risk research. Earths Future, 12(10), e2022EF003025. https://doi.org/10.1029/2022ef003025\n\n\nLempert, R. J. (2019). Robust decision making (RDM). In Decision making under deep uncertainty (pp. 23–51). Cham: Springer International Publishing. https://doi.org/10.1007/978-3-030-05252-2\\_2\n\n\nPollack, A. B., Santamaria-Aguilar, S., Maduwantha, P., Helgeson, C., Wahl, T., & Keller, K. (2025). Funding rules that promote equity in climate adaptation outcomes. Proceedings of the National Academy of Sciences, 122(2), e2418711121. https://doi.org/10.1073/pnas.2418711121"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ENGS 199.20: Decision Analysis for Wicked Climate Problems",
+    "section": "",
+    "text": "This is the course website for the Fall 2025 edition of ENGS 199.20, Decision Analysis for Wicked Climate Problems, taught at Dartmouth College by Adam Pollack.",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#course-information",
+    "href": "index.html#course-information",
+    "title": "ENGS 199.20: Decision Analysis for Wicked Climate Problems",
+    "section": "Course Information",
+    "text": "Course Information\n\nDetails on the class and course policies are provided in the syllabus.\nTopics and weekly materials can be found in the schedule.",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#software-tools",
+    "href": "index.html#software-tools",
+    "title": "ENGS 199.20: Decision Analysis for Wicked Climate Problems",
+    "section": "Software Tools",
+    "text": "Software Tools\n\nThis course will use the Python programming language. Python is free, open source, and popular (and your instructor can help you with it more than other languages). No prior knowledge of Python is required. My recommendation is to use Visual Studio Code for coding. If you use VS code, install the official Python extension and Jupyter extension. Please see this page for using Python effectively in VS Code.\nAssignments will be distributed using GitHub Clasroom. You will need a GitHub account.",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "schedule/schedule.html",
+    "href": "schedule/schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "This page contains a schedule of the topics, content, and assignments for the term, organized by module.\n\nSlides : On the schedule, this link contains the presentation for the day’s lecture.\nLab : This page contains a lab report rubric and links to each week’s lab. You can also access each week’s lab through the links in the schedule below.\nHW : This page contains the schedule and rubric for the course project. At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I highly encourage you to work on these during the module to stay on track with your project. Note that there is no lab report the first week and the first assignment is to define your project’s decision problem.\nReading : On the schedule, this link takes you to a list of required and optional readings for the module. Please read the required reading before class. There will typically be one required reading per week. I suggest you read at least the abstracts of optional readings before class. The optional readings will help you understand lecture and can serve as core references in lab reports and project updates.\n\n\n\n\n\nYou should follow this general process for each module\n\nDo the Reading before Monday’s Lecture\nComplete the lab report within one week from the assignment date\nSubmit the homework within one week from the assignment date\n\n\n\n\n\n There are seven modules in this course:\n\n“Overview”: Overview of decision analysis for wicked climate problems\n“Uncertainty”: Uncertainty and Monte Carlo analysis\n“RDM”: Robust decision-making\n“Trade-offs”: Multiple objectives and navigating trade-offs\n“DMDU”: Decision making under deep uncertainty\n“Gaps”: Gaps between decision analysis and decision support\n“Projects”: Student project presentations\n\nNote that this schedule will be updated as necessary throughout the term.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nSlides\nLab\nHW\nReading\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n1\n9/15/25\nCourse Overview\n\n\n\n\n\n\n1\n9/16/25\nComputing setup\n\n\n\n\n\n\n1\n9/17/25\nFraming a decision analysis\n\n\n\n\n\n\n1\n9/19/25\nIntro to Python and GitHub\n\n\n\n\n\n\n\n\nUncertainty\n\n\n\n\n\n\n2\n9/22/25\nShallow and deep uncertainties\n\n\n\n\n\n\n2\n9/23/25\nPython and GitHub II\n\n\n\n\n\n\n2\n9/24/25\nDeep uncertainty game\n\n\n\n\n\n\n2\n9/26/25\nPitfalls of predict-then-act\n\n\n\n\n\n\n\n\nRDM\n\n\n\n\n\n\n3\n9/29/25\nRDM workflow\n\n\n\n\n\n\n3\n10/1/25\nJournal club\n\n\n\n\n\n\n3\n10/3/25\nHome elevation problem\n\n\n\n\n\n\n\n\nTrade-offs\n\n\n\n\n\n\n4\n10/6/25\nDA in a pluralistic society\n\n\n\n\n\n\n4\n10/8/25\nGuest panel\n\n\n\n\n\n\n4\n10/10/25\nNavigating trade-offs\n\n\n\n\n\n\n5\n10/13/25\nMulti-objective evolutionary algorithms\n\n\n\n\n\n\n5\n10/15/25\nRace to the best Pareto front\n\n\n\n\n\n\n5\n10/17/25\nRace to the best Pareto front\n\n\n\n\n\n\n\n\nDMDU\n\n\n\n\n\n\n6\n10/20/25\nDirect policy search\n\n\n\n\n\n\n6\n10/22/25\nReinforcement learning lab\n\n\n\n\n\n\n6\n10/24/25\nLab continued\n\n\n\n\n\n\n7\n10/27/25\nRobustness\n\n\n\n\n\n\n7\n10/29/25\nJournal club\n\n\n\n\n\n\n7\n10/31/25\nPutting it all together\n\n\n\n\n\n\n8\n11/3/25\nRobustness II\n\n\n\n\n\n\n8\n11/5/25\nPractice presentations\n\n\n\n\n\n\n8\n11/7/25\nPutting it all together II\n\n\n\n\n\n\n\n\nGaps\n\n\n\n\n\n\n9\n11/10/25\nMore useful decision analysis\n\n\n\n\n\n\n9\n11/12/25\nGuest panel\n\n\n\n\n\n\n9\n11/14/25\nPresentations\n\n\n\n\n\n\n\n\nProjects\n\n\n\n\n\n\n10\n11/17/25\nPresentations\n\n\n\n\n\n\n10\n11/18/25\nPresentations",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "labs.html",
+    "href": "labs.html",
+    "title": "Labs",
+    "section": "",
+    "text": "This page contains the lab report rubric and a schedule of the lab assignments for the semester.",
+    "crumbs": [
+      "Labs"
+    ]
+  },
+  {
+    "objectID": "labs.html#general-information",
+    "href": "labs.html#general-information",
+    "title": "Labs",
+    "section": "General Information",
+    "text": "General Information\n\nYou can get to the lab assignment through the link on the schedule below (or at the overall term schedule).\nSubmit your lab report by the start of the next lab on Canvas.\nSubmissions must be PDFs. In the first lab, we will go over the workflow for using Quarto to do this.",
+    "crumbs": [
+      "Labs"
+    ]
+  },
+  {
+    "objectID": "labs.html#grading",
+    "href": "labs.html#grading",
+    "title": "Labs",
+    "section": "Grading",
+    "text": "Grading\nLabs will be graded on a scale of 0-5:\n\nMissing (0/5): Lab solution is missing or is not responsive to the lab prompt(s);\nNeeds Improvement (1/5): Lab is largely incomplete or is missing key concepts;\nAcceptable (2/5): Lab is mostly complete but may contain major conceptual or implementation errors and writing has substantial room for growth;\nDecent (3/5): Lab is mostly or fully complete without any major errors, but there are some minor errors and the writing/report presentation has room for growth.\nGood (4/5): Lab is fully complete without any major errors, but there are some minor errors or the writing/report presentation has room for growth.\nStrong (5/5): Lab is fully complete without any errors and the writing/report presentation is clear.\n\nNo late submissions will be graded. However, I will provide feedback on all lab reports, even if late. Your lowest lab report grade will be dropped.\n\nHow to get a 5/5 on lab\n\nGet the “right” answer for the “right” reason.\n\nBad work can accidentally lead to poor decisions (and strong analysis may not identify good decisions). It is crucial that you show your work in a traceable and understandable way so that decision-makers understand why your analysis supports certain decisions. I will grade your work for how well it demonstrates why and how you get the right answers. Because most of your code for lab report is provided with lab instructions, this mostly entails accurate references to source material (i.e., readings and code blocks/instructions from lab). However, you will be responsible for processing/presenting/interpreting results generated with lab instructions. Think about the following things when answering lab report questions:\n\nSpecific references to modeling results, figures, references, code blocks, etc., make it easier to demonstrate you got the right answer for the right reason.\nThe cleaner and clearer your code and documentation in your Jupyter notebook, the more likely I can check for correctness.\n\n\nBe as clear as possible.\n\nDecision-makers cannot read your mind. Ambiguity in decision analysis is bad decision support. Submissions that are unclear for any reason, including but not limited to unclear syntax (writing or code), lack of reasoning to support synthesis, or too much detail in writing will not be strong.\n\nThis includes being transparent about values-laden assumptions and limitations, as well as providing careful synthesis that demonstrates understanding and genuine insights.\n\n\nA good figure is worth 1,000 words\n\nVisualizations are the main way to convey results and insights to decision-mamkers. Figures should be correct and highly legible. You must:\n\nChoose the appropriate axes and label them accordingly;\nPlot the correct data series;\nInclude a descriptive legend (if it applies);\nProvide a succint descriptive caption (do not report or interpret results in a caption).\n\n\nTake your time\n\nIt is difficult to meet guidelines 1-3 in one pass. For example, on guideline 2, I tend to revise each draft of scientific manuscripts 3-4 times before sharing with co-authors, a cycle that repeats several times each paper. As another example, on guideline 3, I tend to spend at least one week working on a single figure for scientific manuscripts. This course expects you to spend roughly 3 times the in-person hours outside of course, which equates to ~10 hours. This time corresponds to one required reading, polishing your lab report (1-2 of the in-person hours each week are lab work in a class setting), and cumulatively connecting new concepts to your course project. These activities are highly synergistic, and time you spend on lab reports will pay off big for your project progress reports. Labs are also your main opportunity in the class to demonstrate to an outside audience, through your GitHub page, your decision analysis and science communication skills.",
+    "crumbs": [
+      "Labs"
+    ]
+  },
+  {
+    "objectID": "labs.html#schedule",
+    "href": "labs.html#schedule",
+    "title": "Labs",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\n\n\n\n\n\nLab\nInstructions\nDue Date\n\n\n\n\nLab 1\n\n—-\n\n\nLab 2\n\n10/3/2025\n\n\nLab 3\n\n10/10/2025\n\n\nLab 4\n\n10/17/2025\n\n\nLab 5\n\n10/24/2025\n\n\nLab 6\n\n10/31/2025\n\n\nLab 7\n\n11/14/2025",
+    "crumbs": [
+      "Labs"
+    ]
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#how-did-you-make-these-decisions",
+    "href": "slides/lecture01-intro.html#how-did-you-make-these-decisions",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "How did you make these decisions?",
+    "text": "How did you make these decisions?\n\nWhere to go to college?\nWhether/where to go to graduate school?\nWhat car to buy?\nWhat house/apartment to buy/rent?"
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#wicked-planning-problems",
+    "href": "slides/lecture01-intro.html#wicked-planning-problems",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "Wicked planning problems",
+    "text": "Wicked planning problems\n\n\n\n\nThe search for scientific bases for confronting problems of social policy is bound to fail, becuase of the nature of these problems. They are “wicked” problems…\n\n\n[there are no] “optimal solutions” to social problems unless severe qualifications are imposed first…\n\n\n— Rittel, H.W.J., Webber, M.M. Dilemmas in a general theory of planning. Policy Sci 4, 155–169 (1973)."
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#the-stakes-are-high-for-wicked-problems",
+    "href": "slides/lecture01-intro.html#the-stakes-are-high-for-wicked-problems",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "The stakes are high for wicked problems",
+    "text": "The stakes are high for wicked problems\n\n\n\n“Every solution to a wicked problem is a ‘one-shot operation’; because there is no opportunity to learn by trial-and-error, every attempt counts significantly” — ibid\n\n\n\n\n\n\n\n\nFigure 1: : Urban Renewal in Eastwick Philadelphia/Segregation by Design"
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#inaction-is-a-decision",
+    "href": "slides/lecture01-intro.html#inaction-is-a-decision",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "Inaction is a decision",
+    "text": "Inaction is a decision\nWhat examples can you think of where inaction has negative consequences?\n\n\n\n\n\n\nBurst pipe\nSmall fire in house\nDowned electrity line\nNovel viruses\nClimate change"
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#humans-are-changing-the-climate",
+    "href": "slides/lecture01-intro.html#humans-are-changing-the-climate",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "Humans are changing the climate",
+    "text": "Humans are changing the climate\n\n\nFigure 2: : Figure SPM.2 in IPCC, 2021: Summary for Policymakers."
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#this-intersects-with-many-dimensions-of-global-change",
+    "href": "slides/lecture01-intro.html#this-intersects-with-many-dimensions-of-global-change",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "This intersects with many dimensions of global change",
+    "text": "This intersects with many dimensions of global change\n\n\nFigure 3: : Figure SPM.1 in IPCC, 2022: Summary for Policymakers."
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#the-impacts-of-global-change-are-unequal",
+    "href": "slides/lecture01-intro.html#the-impacts-of-global-change-are-unequal",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "The impacts of global change are unequal",
+    "text": "The impacts of global change are unequal\n\n\nFigure 4: : Hsiang et al., Estimating economic damage from climate change in the United States. Science. (2017)"
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#actors-throughout-society-are-already-planning-and-making-decisions-to-manage-their-risks",
+    "href": "slides/lecture01-intro.html#actors-throughout-society-are-already-planning-and-making-decisions-to-manage-their-risks",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "Actors throughout society are already planning and making decisions to manage their risks",
+    "text": "Actors throughout society are already planning and making decisions to manage their risks\n\n\nInternational agreements to reduce emissions\nNational investments in decarbonization\nLarge-scale public infrastructure projects\nHousehold decisions to relocate or harden\nAnd don’t forget: inaction is a decision\n\n\n\n\nAre actors making good decisions? Can they do better?"
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#in-this-course-you-will-learn-how-to",
+    "href": "slides/lecture01-intro.html#in-this-course-you-will-learn-how-to",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "In this course, you will learn how to:",
+    "text": "In this course, you will learn how to:\n\n\nFrame climate decision problems in a helpful way.\nApply multi-objective robust decision-making frameworks to real-world problems using open source software tools.\nEvaluate trade-offs between competing objectives using appropriate quantitative techniques.\nIdentify actionable insights for addressing problems characterized by deep uncertainties.\nCommunicate complex technical analyses clearly and effectively.\nDevelop professional-quality deliverables.\n\n\n\n\n\n\n\n\n\nNote\n\n\nWe are studying an approach to how decisions could be made. We are not studying how decisions are made. Closing the gap between these two areas of focus might help make decision analysis more useful. That’s the topic of an upcoming Thayer course!"
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#a-few-recent-examples-from-our-group",
+    "href": "slides/lecture01-intro.html#a-few-recent-examples-from-our-group",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "A few recent examples from our group",
+    "text": "A few recent examples from our group\n\n\n\n\n\nSource: Biden White House\n\n\n\nPollack et al. (2025): What funding rules promote equity in climate adaptation outcomes?\n\n\n\n\n\n\nSource: Sharon Karr/FEMA\n\n\n\nZarekarizi et al. (2020): How high to elevate a home?"
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#meet-your-instructor",
+    "href": "slides/lecture01-intro.html#meet-your-instructor",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "Meet your instructor",
+    "text": "Meet your instructor\n\n\n\n\n\n\n\n\nFigure 5: Dr. Adam Pollack (right), your instructor!\n\n\n\n\n\nI research:\n\nFlood-risk management\nProblems characterized by deep uncertainty\nProblems where people don’t agree on success\nDeveloping tools to make decision analysis more useful\n\nFrom Port Washington, NY (via Boston, MA and Centerport, NY)\nI used to own a popcorn business"
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#meet-each-other",
+    "href": "slides/lecture01-intro.html#meet-each-other",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "Meet each other",
+    "text": "Meet each other\n\nWhat is your name?\nWhat is your year of study?\nWhat decision problem interests you the most?\nWhat are you looking to get out of this course?\nWhat is one fun fact about you?"
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#our-course-is-fully-online",
+    "href": "slides/lecture01-intro.html#our-course-is-fully-online",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "Our course is fully online!",
+    "text": "Our course is fully online!\n\nCheck out the website: [tbd]\nCheck out the syllabus: [tbd]\nCheck out the schedule: [tbd]\n\n\n\n\n\n\n\nNote\n\n\nYour first (ungraded) assignment is to take a short syllabus quiz on Canvas and confirm that you understand, and agree to abide, by course policies. You will have the opportunity to submit questions about the course and we will discuss these together next Monday."
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#expectations-from-students",
+    "href": "slides/lecture01-intro.html#expectations-from-students",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "Expectations from students",
+    "text": "Expectations from students\n\ncome prepared to class (e.g., by carefully reading and synthesizing the reading assignments before class and being ready to present their synthesis in class);\nactively contribute to the group discussions and activities;\nsubmit the assignments on time; and\nattend office hours as needed.\n\nStudents should expect to spend roughly three times the in-course hours outside the classroom for readings and assignments."
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#assignments-and-grading",
+    "href": "slides/lecture01-intro.html#assignments-and-grading",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "Assignments and grading",
+    "text": "Assignments and grading\n\nActive Participation (10%)\nComputational Labs (30%)\nCourse Project\n\nProgress Reports (20%)\nPresentation (20%)\nReport (20%)"
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#there-are-seven-modules-in-this-course",
+    "href": "slides/lecture01-intro.html#there-are-seven-modules-in-this-course",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "There are seven modules in this course",
+    "text": "There are seven modules in this course\n\n“Overview”: Overview of decision analysis for wicked climate problems\n“Uncertainty”: Uncertainty and Monte Carlo analysis\n“RDM”: Robust decision-making\n“Trade-offs”: Multiple objectives and navigating trade-offs\n“DMDU”: Decision making under deep uncertainty\n“Gaps”: Gaps between decision analysis and decision support\n“Projects”: Student project presentations"
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#class-structure",
+    "href": "slides/lecture01-intro.html#class-structure",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "Class structure",
+    "text": "Class structure\n10 Spot (MWF 10:10-11:15am, Tu X-hr 12:15-1:05pm)\n\nMondays\n\nLecture\nTake notes and ask questions\nSlides posted by Sunday night (often earlier)\n\n\n\nWednesdays\n\nSerious (but fun!) game or student-led journal club\nBe prepared to synthesize lessons into your lab report and project update\nSometimes we will start longer labs on Wednesday\n\n\n\nFridays\n\nLab\nMake substantial progress together\nLab report due before next lab\n\n\n\nSometimes Tuesday\n\nA few optional meetings for setting up code stuff\nOtherwise available for meetings by appointment"
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#communication",
+    "href": "slides/lecture01-intro.html#communication",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "Communication",
+    "text": "Communication\n\nQuestions during class is best\nCanvas is great - not as good as in class, but still promotes open discussion\nOffice hours are great (including when the issue is urgent and/or private)\nEmail is ok if issue is urgent and/or private and you can’t make office hours"
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#overall-guidelines",
+    "href": "slides/lecture01-intro.html#overall-guidelines",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "Overall guidelines",
+    "text": "Overall guidelines\n\nCollaboration is highly encouraged and a skill we will practice in course, but all work must reflect your own understanding.\n\nSee GenAI policy on syllabus\nAlways cite external references\n\nA rubric will be available for all graded assignments and you can easily find it from the schedule webpage.\nAssume good faith of others and engage in good faith yourself.\n\n\n\n\n\n\n\nWarning\n\n\nDecision analysis is values-laden and good decision analysis is explicit about normative assumptions. Please do not outsource the opportunity to learn this vital skill."
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#this-week",
+    "href": "slides/lecture01-intro.html#this-week",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "This week",
+    "text": "This week\nClass\n\nTuesday: computing setup\nWednesday: lecture on framing a decision analysis\nFriday: getting comfortable with our computing setup (no lab report)\n\nAssignments\n\nOne required reading before Monday\nProject progress report 1\n\nWhat decision problem will you focus on this term?\nSee [tbd] for more guidance\nDue next Friday before lab"
+  },
+  {
+    "objectID": "slides/lecture01-intro.html#next-week",
+    "href": "slides/lecture01-intro.html#next-week",
+    "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
+    "section": "Next week",
+    "text": "Next week\n\nStarting Uncertainty module\nMore practice with our computing setup\nFirst serious game of the term\nFirst lab and lab report of the term"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This website contains course materials for the Fall 2025 edition of Decision Analysis for Wicked Climate Problems, taught by Adam Pollack at Dartmouth College."
+  },
+  {
+    "objectID": "about.html#acknowledgements",
+    "href": "about.html#acknowledgements",
+    "title": "About",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nThe layout for this site draws heavily from Environmental Systems Analysis by Dr. Vivek Srikrishnan at Cornell University, Data Science for Climate Risk Assessment by Dr. James Doss-Gollin at Rice University, and course materials by Dr. Andrew Heiss at Georgia State University."
+  },
+  {
+    "objectID": "about.html#tools-and-generation-workflow",
+    "href": "about.html#tools-and-generation-workflow",
+    "title": "About",
+    "section": "Tools and Generation Workflow",
+    "text": "Tools and Generation Workflow\nThis course website was built with Quarto. All materials can be found at the GitHub Repository."
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Adam Pollack\n adam.b.pollack@dartmouth.edu\n IR 150\n Mon. & Wed., 2-3:30pm\n\n\n\n\n\n MWF\n 10:10-11:15am\n Tues., 12:15pm - 1:05pm\n TBD",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-information",
+    "href": "syllabus.html#course-information",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Adam Pollack\n adam.b.pollack@dartmouth.edu\n IR 150\n Mon. & Wed., 2-3:30pm\n\n\n\n\n\n MWF\n 10:10-11:15am\n Tues., 12:15pm - 1:05pm\n TBD",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-description",
+    "href": "syllabus.html#course-description",
+    "title": "Syllabus",
+    "section": "Course Description",
+    "text": "Course Description\nThe 21st century’s biggest challenges resist traditional problem-solving approaches. These wicked problems (Rittel & Webber, 1973), such as addressing climate risks, can’t be solved with standard engineering methods because they involve multiple stakeholders with competing goals, uncertainties that evolve over time, and complex system behaviors we’re still trying to understand. Decision-makers need new tools and frameworks that can handle this complexity while still pointing the way toward practical action. In this course, students will learn about state-of-the-art technical methods that offer promise for meeting decision-making needs to respond to climate risks. Topics range from complex systems analysis to reinforcement learning, and multi-objective robust decision-making.\n\nRittel, H. W. J., & Webber, M. M. (1973). Dilemmas in a general theory of planning. Policy Sci., 4(2), 155–169. https://doi.org/10.1007/BF01405730",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-goals",
+    "href": "syllabus.html#course-goals",
+    "title": "Syllabus",
+    "section": "Course Goals",
+    "text": "Course Goals\nThis course prepares engineers to tackle wicked climate problems. Students master in-demand quantitative techniques in multi-objective robust decision-making, which build on a number of courses in the Thayer catalog. Students also develop essential professional skills in software implementation, data visualization, and science communication. Through carefully designed projects addressing the real-world challenges that students care about, participants will build a solid portfolio that demonstrates mastery of both technical and communication skills vital to modern engineering practice. The course creates natural pathways to honors theses, graduate research, and professional opportunities.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#learning-objectives",
+    "href": "syllabus.html#learning-objectives",
+    "title": "Syllabus",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nUpon completing this course, students will be able to:\n\nFrame complex societal challenges in ways amenable to structured decision analysis while preserving essential complexities.\nApply multi-objective robust decision-making frameworks to real-world problems using open source software tools.\nEvaluate trade-offs between competing objectives using appropriate quantitative techniques.\nIdentify actionable insights for addressing problems characterized by deep uncertainties through sensitivity analysis and exploratory modeling.\nCommunicate complex technical analyses clearly and effectively through data visualization and presentation of trade-offs.\nDevelop professional-quality deliverables including software repositories, technical reports, and oral presentations.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#prerequisites",
+    "href": "syllabus.html#prerequisites",
+    "title": "Syllabus",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nENGS 93 or comparable course in probability and statistics. Students should be proficient in a programming language such as Julia, Python, R, or MATLAB. ENGS 172 recommended. The prerequisites can be replaced by permission from the instructor. If you are unsure if your background is sufficient, please contact the instructor.\n\n\n\n\n\n\nWhat If My Skills Are Rusty?\n\n\n\nIf your programming or statistics skills are a little rusty, don’t worry! We will review concepts and build skills as needed. While we will use the Python programming language in class, if you are familiar with Julia or MATLAB, the fundamentals are similar.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#teaching-approach",
+    "href": "syllabus.html#teaching-approach",
+    "title": "Syllabus",
+    "section": "Teaching Approach",
+    "text": "Teaching Approach\n\nCourse Structure\nThe course is divided into several modules and each week is generally structured as follows:\n\nMondays: Lecture\nTuesdays: Occasional X-hour for programming tutorials\nWednesdays: Student-led presentations or serious game followed by a group discussion\nFridays: Computational labs\n\n\n\nExpectations of Students\nThis course will require your sustained attention. Students are expected to:\n\ncome prepared to class (e.g., by carefully reading and synthesizing the reading assignments before class and being ready to present their synthesis in class);\nactively contribute to the group discussions and activities;\nsubmit the assignments on time; and\nattend office hours as needed.\n\nStudents should expect to spend roughly three times the in-course hours outside the classroom for readings and assignments.\n\nCommunication\n\n\n\n\n\n\nPlease, Be Excellent To Teach Other\n\n\n\nWe all make mistakes in our communications with one another, both when speaking and listening. Be mindful of how spoken or written language might be misunderstood, and be aware that, for a variety of reasons, how others perceive your words and actions may not be exactly how you intended them. At the same time, it is also essential that we be respectful and interpret each other’s comments and actions in good faith.\n\n\n\n\n\n\n\n\nTroubleshooting Tips\n\n\n\n\nDo not take screenshots of code. I will not respond. Screenshots can be difficult to read and limit accessibility. Put your code on GitHub, share the link, and point to specific line numbers if relevant, or provide a simple, self-contained example of the problem you’re running into.\nIf you wait until the day an assignment is due (or even late the previous night) to ask a question on Canvas, there is a strong chance that I will not see your post prior to the deadline.\nIf you see unanswered questions and you have some insight, please answer! This class will work best when we all work together as a community.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#assessments",
+    "href": "syllabus.html#assessments",
+    "title": "Syllabus",
+    "section": "Assessments",
+    "text": "Assessments\n\nActive Participation: 10%\nCollaboration and collegiality are important skills for interdisciplinary decision analysts. We will practice these skills in the following ways:\n\nAsking questions during course meetings and/or office hours;\nParticipating in serious games and group discussions;\nProviding constructive feedback on student-led presentations;\nCollaborating on computational labs and managing a shared GitHub repository.\n\nGraduate students will additionally practice these skills by leading a journal club session on one of the assigned readings.\nNote that passively attending class will not yield full participation points. Participation points are not free. I will record lectures, student-led presentations and group discussions, and lab tutorials and post them to Canvas. It is possible to attend these sessions remotely on Zoom, but this can affect your ability to actively participate. It is not possible to attend some of the Wednesday active learning sessions remotely and these will not be recorded.\n\n\nComputational Labs: 30%\nWe will use class time for hands-on programming exercises to give you guided practice applying the concepts and methods from class. These labs will be done in groups; if you cannot bring a laptop to class, you will be able to (and are encouraged to) work with other students, though you must turn in your own lab report for grading. All labs will cover either a set of programming tools or a case study, such as reproducing analyses in peer-reviewed studies (e.g., https://github.com/abpoll/j40_gc/tree/v1.0.0-pub and https://github.com/jdossgollin/2022-elevation-robustness).\nLab reports are due before the following lab.\n\n\nCourse Project: 60%\nThe goal of the course project is to develop and report on an actionable plan for implementing a quantitative decision analysis for the student’s topic of choice. This project can be highly synergistic with thesis projects and students are encouraged to choose a decision problem related to their thesis if they are working on one.\nStudents will work on this project throughout the entire term, with ongoing evaluations and three major evaluation milestones as follows:\n\nProject Progress Reports: At the end of each course module, students will have one week to submit a progress report that details a technically appropriate plan to integrate methods covered in the module in a quantitative decision analysis. A list of guiding questions will be available at the beginning of each module, so students will have more than a week to work on these reports. These reports test your understanding and synthesis of material in each module, and your ability to extend the underlying concepts and tools in an application area of your choice.\nProject Presentation: Students will present their projects to the class at the end of the term. Presentations should be no more than 15 minutes long and should be aimed at a general science audience. Each presentation should demonstrate comprehension of technical aspects, clearly communicate limitations and opportunities for future work, and include signposts for peer feedback. Part of your grade on this component consists of the quality of your feedback to your peers on their practice presentations (more on this in the relevant assignment).\nWritten Project Report: Students will synthesize their term-long progress reports and feedback from their project presentation into a detailed proposal for how to implement the planned decision analysis.\n\nThese components are each worth 20% of your overall grade. The course project is broken into complimentary components to help keep you on track over the term and to lower the stakes of the overall project.\nAssignments must be submitted via Canvas by the deadline to receive a full grade. Late submissions will receive a downgrading by 25% of the full credit for each day they are late. Submissions after the end of the examination period do not receive any points. Each partial day will be rounded up. You may want to submit a few hours before the deadline to avoid last minute technical problems. Extension requests must be made via email 24 hours before the submission deadline with a submission of what has been achieved, thus far.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#class-resources",
+    "href": "syllabus.html#class-resources",
+    "title": "Syllabus",
+    "section": "Class Resources",
+    "text": "Class Resources\nThis course covers material in a relatively new and fast evolving field. As such, there is no single resource that comprehensively synthesizes the state-of-the-art in decision analysis for wicked climate problems. Students may find it helpful to consult the open access textbook published several years ago with contributions from prominent scientists in the field titled Decision Making under Deep Uncertainty : From Theory to Practice. (Marchau et al., 2019)\n\nMarchau, V. A. W., Walker, W. E., Bloemen, P. J. T., & Popper, S. W. (Eds.). (2019). Decision making under deep uncertainty: From theory to practice (2019th ed.). Cham, Switzerland: Springer Nature. https://doi.org/10.1007/978-3-030-05252-2\nOther course materials consist, for example, of meeting notes, peer-reviewed publications, and reports. Students will be able to access all materials freely through Canvas or through the Dartmouth library system.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#class-policies",
+    "href": "syllabus.html#class-policies",
+    "title": "Syllabus",
+    "section": "Class Policies",
+    "text": "Class Policies\n\nCanvas\nCourse communication, assignments, submissions of written materials will be handled through the course Canvas site. Recordings will be made for most sessions (i.e., not several active learning sessions on Wednesdays) and posted on Canvas.\n\n\nAcademic Honor Principle\nStudents are expected to follow Dartmouth’s Academic Honor Principle and Thayer’s Academic Honor Policy.\n\n\nReligious Observances\nDartmouth has a deep commitment to support students’ religious observances and diverse faith practices. Some students may wish to take part in religious observances that occur during this academic term. If you have a religious observance that conflicts with your participation in the course, please meet with me as soon as possible — before the end of the second week of the term at the latest — to discuss appropriate course adjustments.\n\n\nStudent Accessibility and Accommodations\nStudents requesting disability-related accommodations and services for this course are required to register with Student Accessibility Services (SAS; Apply for Services webpage; student.accessibility.services@dartmouth.edu; 1-603-646-9900) and to request that an accommodation email be sent to me in advance of the need for an accommodation. Then, students should schedule a follow-up meeting with me to determine relevant details such as what role SAS or its Testing Center may play in accommodation implementation. This process works best for everyone when completed as early in the quarter as possible. If students have questions about whether they are eligible for accommodations or have concerns about the implementation of their accommodations, they should contact the SAS office. All inquiries and discussions will remain confidential.\n\n\nClass Climate and Inclusivity\nWe will discuss topics that for some are associated with strong emotions and opinions. We will read and discuss sources from a wide range of authors. These sources are selected to sample a wide range of diverse perspectives. However, it seems likely that important perspectives are missing.\nThis class strives to provide a respectful, inclusive, and civil space for all. Please inform all members of this class if your names and pronouns you prefer differ from your official record. Please reach out to the instructor if your performance and ability to learn is impacted by factors outside of the classroom (including financial challenges). The instructor is here to help as much as possible. Feedback can also be anonymous (including a note under the office door of the instructor). We all are continuously learning about how to ensure an inclusive environment and how to discuss contentious and emotional subjects. Please provide feedback if something makes you feel uncomfortable.\n\n\nUse of GenAI\nWork submitted for a grade in this course must reflect your own understanding. The use and consultation of AI/ML tools, such as ChatGPT or similar, for any purpose whatsoever, must be pre-approved and clearly referenced. Please see Dartmouth’s Guidelines on using GenAI.\nMy general view is that Large language models (LLMs) are powerful tools that you will encounter and use when you leave this classroom, so it’s important to learn how to use them responsibly and effectively. However, these are difficult skills to teach and are not the focus of this course. I will likely not accept requests to use GenAI to generate text for writing assignments. However, I may accept requests to use LLMs to support coding tasks. This can help accelerate your workflow, especially when you are less familiar with a new language. However, LLMs can end up being a less productive use of your time than talking to colleagues, checking out documentation and APIs, looking at StackOverflow, and experimenting with trial and failure. You are responsible for understanding and debugging your code, and for ensuring that it does what you intend it to do.\nIf approved, you must:\n\nreference the URL of the service you are using, including the specific date you accessed it;\nprovide the exact query or queries used to interact with the tool; and\nreport the exact response received.\n\n\n\nStudent’s Consent\nBy enrolling in this course:\n\nI affirm my understanding that the instructor may record meetings of this course and any associated meetings open to multiple students and the instructor, including but not limited to scheduled and ad hoc office hours and other consultations, within any digital platform, including those used to offer remote instruction for this course.\nI further affirm that the instructor owns the copyright to their instructional materials, of which these recordings constitute a part, and my distribution of any of these recordings in whole or in part to any person or entity other than other members of the class without prior written consent of the instructor may be subject to discipline by Dartmouth up to and including separation from Dartmouth.\nRequirement of consent to one-on-one recordings By enrolling in this course, I hereby affirm that I will not make a recording in any medium of any one-on-one meeting with the instructor or another member of the class or group of members of the class without obtaining the prior written consent of all those participating, and I understand that if I violate this prohibition, I will be subject to discipline by Dartmouth up to and including separation from Dartmouth, as well as any other civil or criminal penalties under applicable law. I understand that an exception to this consent applies to accommodations approved by SAS for a student’s disability, and that one or more students in a class may record class lectures, discussions, lab sessions, and review sessions and take pictures of essential information, and/or be provided class notes for personal study use only.\n\nIf you have questions, please contact the Office of the Dean of the Faculty of Arts and Sciences.\n\n\nMental Health and Wellbeing\nThe academic environment is challenging, our terms are intensive, and classes are not the only demanding part of your life. There are a number of resources available to you on campus to support your wellness, including: the Counseling Center, which allows you to book triage appointments online, the Student Wellness Center which offers wellness check-ins, and your undergraduate dean. The student-led Dartmouth Student Mental Health Union and their peer support program may be helpful if you would like to speak to a trained fellow student support listener. If you need immediate assistance, please contact the counselor on-call at (603) 646-9442 at any time. Please make me aware of anything that will hinder your success in this course.\n\n\nTitle IX\nAt Dartmouth, we value integrity, responsibility, and respect for the rights and interests of others, all central to our Principles of Community. We are dedicated to establishing and maintaining a safe and inclusive campus where all community members have equal access to Dartmouth’s educational and employment opportunities. We strive to promote an environment of sexual respect, safety, and well-being. Through the Sexual and Gender-Based Misconduct Policy (SMP), Dartmouth demonstrates that sex and gender-based discrimination, sex and gender-based harassment, sexual assault, dating violence, domestic violence, stalking, etc., are not tolerated in our community. For more information regarding Title IX and to access helpful resources, visit Title IX’s website. As a faculty member, I am required to share disclosures of sexual or gender-based misconduct with the Title IX office. If you have any questions or want to explore support and assistance, please contact the Title IX office at 603-646-0922 or TitleIX@dartmouth.edu. Speaking to Title IX does not automatically initiate a college resolution. Instead, much of their work is around providing supportive measures to ensure you can continue to engage in Dartmouth’s programs and activities.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  }
+]
