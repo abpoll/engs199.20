@@ -1,0 +1,195 @@
+---
+format:
+  html:
+    toc-depth: 3
+    title: Syllabus
+  pdf:
+    documentclass: article
+    fontsize: 11pt
+    geometry:
+      - margin=1.5in  
+    include-in-header:
+      text: |
+        \renewcommand\toprule[2]\relax
+        \renewcommand\bottomrule[2]\relax
+    title: "{{< var course.number >}} {{< var course.title >}} Syllabus"
+    subtitle: "{{< var course.semester >}}"
+
+reference-location: margin
+citation-location: margin
+---
+
+## Course Information
+
+:::: {.grid .course-details}
+
+::: {.g-col-12 .g-col-sm-7 .g-col-md-7}
+### Instructor
+
+- {{< fa sharp user title="Name" >}} [{{< var instructor.name_no_title >}}]({{< var instructor.url >}})
+- {{< fa sharp envelope title="Email" >}} [{{< var instructor.email >}}](mailto:{{< var instructor.email >}})
+- {{< fa sharp building title="Office" >}} {{< var instructor.office >}}
+- {{< fa sharp door-open title="Open Office Hours" >}} Mon. & Wed., 2-3:30pm
+:::
+
+::: {.g-col-12 .g-col-sm-5 .g-col-md-5}
+### Meetings
+
+- {{< fa sharp calendar title="Class Days" >}} {{< var course.days >}}
+- {{< fa sharp clock title="Class Time" >}} {{< var course.time >}}
+- {{< fa calendar-times >}} Tues., 12:15pm - 1:05pm
+- {{< fa sharp university title="Class Location" >}} {{< var course.location >}}
+
+:::
+::::
+
+## Course Description
+
+The 21st century's biggest challenges resist traditional problem-solving approaches. These wicked problems [@rittel-webber-1973], such as addressing climate risks, can't be solved with standard engineering methods because they involve multiple stakeholders with competing goals, uncertainties that evolve over time, and complex system behaviors we're still trying to understand. Decision-makers need new tools and frameworks that can handle this complexity while still pointing the way toward practical action. In this course, students will learn about state-of-the-art technical methods that offer promise for meeting decision-making needs to respond to climate risks. Topics range from complex systems analysis to reinforcement learning, and multi-objective robust decision-making. 
+
+## Course Goals
+This course prepares engineers to tackle wicked climate problems. Students master in-demand quantitative techniques in multi-objective robust decision-making, which build on a number of courses in the Thayer catalog. Students also develop essential professional skills in software implementation, data visualization, and science communication. Through carefully designed projects addressing the real-world challenges that students care about, participants will build a solid portfolio that demonstrates mastery of both technical and communication skills vital to modern engineering practice. The course creates natural pathways to honors theses, graduate research, and professional opportunities.
+
+## Learning Objectives
+Upon completing this course, students will be able to:
+
+1. Frame complex societal challenges in ways amenable to structured decision analysis while preserving essential complexities.
+2. Apply multi-objective robust decision-making frameworks to real-world problems using open source software tools.
+3. Evaluate trade-offs between competing objectives using appropriate quantitative techniques. 
+4. Identify actionable insights for addressing problems characterized by deep uncertainties through sensitivity analysis and exploratory modeling.
+5. Communicate complex technical analyses clearly and effectively through data visualization and presentation of trade-offs.
+6. Develop professional-quality deliverables including software repositories, technical reports, and oral presentations. 
+
+## Prerequisites
+ENGS 93 or comparable course in probability and statistics. Students should be proficient in a programming language such as Julia, Python, R, or MATLAB. ENGS 172 recommended. *The prerequisites can be replaced by permission from the instructor.* If you are unsure if your background is sufficient, please contact the instructor. 
+
+::: {.callout-tip}
+## What If My Skills Are Rusty?
+
+If your programming or statistics skills are a little rusty, don't worry! We will review concepts and build skills as needed. While we will use the Python programming language in class, if you are familiar with Julia or MATLAB, the fundamentals are similar.
+:::
+
+## Teaching Approach
+
+### Course Structure
+The course is divided into several modules and each week is generally structured as follows:
+
+- Mondays: Lecture
+- Tuesdays: Occasional X-hour for programming tutorials 
+- Wednesdays: Student-led presentations or serious game followed by a group discussion
+- Fridays: Computational labs
+
+### Expectations of Students
+This course will require your sustained attention. Students are expected to:
+
+- come prepared to class (e.g., by carefully reading and synthesizing the reading assignments before class and being ready to present their synthesis in class);
+- actively contribute to the group discussions and activities;
+- submit the assignments on time; and
+- attend office hours as needed.
+
+Students should expect to spend roughly three times the in-course hours outside the classroom for readings and assignments. 
+
+#### Communication
+
+::: {.callout-important}
+## Please, Be Excellent To Teach Other
+
+We all make mistakes in our communications with one another, both when speaking and listening. Be mindful of how spoken or written language might be misunderstood, and be aware that, for a variety of reasons, how others perceive your words and actions may not be exactly how you intended them. At the same time, it is also essential that we be respectful and interpret each other's comments and actions in good faith. 
+:::
+
+::: {.callout-important}
+## Troubleshooting Tips
+
+- **Do not take screenshots of code**. I will not respond. Screenshots can be difficult to read and limit accessibility. Put your code on GitHub, share the link, and point to specific line numbers if relevant, or provide a *simple*, self-contained example of the problem you're running into.
+- If you wait until the day an assignment is due (or even late the previous night) to ask a question on Canvas, there is a strong chance that I will not see your post prior to the deadline. 
+- If you see unanswered questions and you have some insight, please answer! This class will work best when we all work together as a community.
+:::
+
+## Assessments
+
+### Active Participation: 10%
+Collaboration and collegiality are important skills for interdisciplinary decision analysts. We will practice these skills in the following ways: 
+
+- Asking questions during course meetings and/or office hours;
+- Participating in serious games and group discussions;
+- Providing constructive feedback on student-led presentations;
+- Collaborating on computational labs and managing a shared GitHub repository.
+
+Graduate students will additionally practice these skills by leading a journal club session on one of the assigned readings. 
+
+Note that passively attending class will not yield full participation points. Participation points are not free. I will record lectures, student-led presentations and group discussions, and lab tutorials and post them to Canvas. It is possible to attend these sessions remotely on Zoom, but this can affect your ability to actively participate. It is not possible to attend some of the Wednesday active learning sessions remotely and these will not be recorded. 
+
+### Computational Labs: 30%
+We will use class time for hands-on programming exercises to give you guided practice applying the concepts and methods from class. These labs will be done in groups; if you cannot bring a laptop to class, you will be able to (and are encouraged to) work with other students, though you must turn in your own lab report for grading. All labs will cover either a set of programming tools or a case study, such as reproducing analyses in peer-reviewed studies (e.g., <https://github.com/abpoll/j40_gc/tree/v1.0.0-pub> and <https://github.com/jdossgollin/2022-elevation-robustness>). 
+
+Lab reports are due before the following lab.
+
+### Course Project: 60%
+
+The goal of the course project is to develop and report on an actionable plan for implementing a quantitative decision analysis for the student's topic of choice. This project can be highly synergistic with thesis projects and students are encouraged to choose a decision problem related to their thesis if they are working on one.
+
+Students will work on this project throughout the entire term, with ongoing evaluations and three major evaluation milestones as follows:
+
+* Project Progress Reports: At the end of each course module, students will have one week to submit a progress report that details a technically appropriate plan to integrate methods covered in the module in a quantitative decision analysis. A list of guiding questions will be available at the beginning of each module, so students will have more than a week to work on these reports. These reports test your understanding and synthesis of material in each module, and your ability to extend the underlying concepts and tools in an application area of your choice. 
+* Project Presentation: Students will present their projects to the class at the end of the term. Presentations should be no more than 15 minutes long and should be aimed at a general science audience. Each presentation should demonstrate comprehension of technical aspects, clearly communicate limitations and opportunities for future work, and include signposts for peer feedback. Part of your grade on this component consists of the quality of your feedback to your peers on their practice presentations (more on this in the relevant assignment). 
+* Written Project Report: Students will synthesize their term-long progress reports and feedback from their project presentation into a detailed proposal for how to implement the planned decision analysis. 
+
+
+**These components are each worth 20% of your overall grade. The course project is broken into complimentary components to help keep you on track over the term and to lower the stakes of the overall project.**
+
+Assignments must be submitted via Canvas by the deadline to receive a full grade. Late submissions will receive a downgrading by 25% of the full credit for each day they are late. Submissions after the end of the examination period do not receive any points. Each partial day will be rounded up. You may want to submit a few hours before the deadline to avoid last minute technical problems. Extension requests must be made via email 24 hours before the submission deadline with a submission of what has been achieved, thus far. 
+
+## Class Resources
+This course covers material in a relatively new and fast evolving field. As such, there is no single resource that comprehensively synthesizes the state-of-the-art in decision analysis for wicked climate problems. Students may find it helpful to consult the open access textbook published several years ago with contributions from prominent scientists in the field titled Decision Making under Deep Uncertainty : From Theory to Practice. [@marchau-etal-2019]
+
+Other course materials consist, for example, of meeting notes, peer-reviewed publications, and reports. Students will be able to access all materials freely through Canvas or through the Dartmouth library system. 
+
+## Class Policies
+
+### Canvas
+Course communication, assignments, submissions of written materials will be handled through the course Canvas site. Recordings will be made for most sessions (i.e., not several active learning sessions on Wednesdays) and posted on Canvas.
+
+### Academic Honor Principle
+Students are expected to follow [Dartmouth’s Academic Honor Principle](https://policies.dartmouth.edu/policy/academic-honor-principle) and [Thayer’s Academic Honor Policy](https://engineering.dartmouth.edu/about/policies/student-policies/academic-honor-policy).
+
+### Religious Observances
+Dartmouth has a deep commitment to support students' religious observances and diverse faith practices. Some students may wish to take part in religious observances that occur during this academic term. If you have a religious observance that conflicts with your participation in the course, please meet with me as soon as possible --- before the end of the second week of the term at the latest --- to discuss appropriate course adjustments.
+
+### Student Accessibility and Accommodations
+Students requesting disability-related accommodations and services for this course are required to register with Student Accessibility Services (SAS; [Apply for Services webpage](https://students.dartmouth.edu/student-accessibility/students/where-start/apply-services); <student.accessibility.services@dartmouth.edu>; 1-603-646-9900) and to request that an accommodation email be sent to me in advance of the need for an accommodation. Then, students should schedule a follow-up meeting with me to determine relevant details such as what role SAS or its [Testing Center](https://students.dartmouth.edu/student-accessibility/services/testing-center) may play in accommodation implementation. This process works best for everyone when completed as early in the quarter as possible. If students have questions about whether they are eligible for accommodations or have concerns about the implementation of their accommodations, they should contact the SAS office. All inquiries and discussions will remain confidential.
+
+### Class Climate and Inclusivity
+We will discuss topics that for some are associated with strong emotions and opinions. We will read and discuss sources from a wide range of authors. These sources are selected to sample a wide range of diverse perspectives. However, it seems likely that important perspectives are missing.
+
+This class strives to provide a respectful, inclusive, and civil space for all. Please inform all members of this class if your names and pronouns you prefer differ from your official record. Please reach out to the instructor if your performance and ability to learn is impacted by factors outside of the classroom (including financial challenges). The instructor is here to help as much as possible. Feedback can also be anonymous (including a note under the office door of the instructor). We all are continuously learning about how to ensure an inclusive environment and how to discuss contentious and emotional subjects. Please provide feedback if something makes you feel uncomfortable.
+
+### Use of GenAI
+Work submitted for a grade in this course must reflect your own understanding. The use and consultation of AI/ML tools, such as ChatGPT or similar, for any purpose whatsoever, **must be pre-approved and clearly referenced.** Please see [Dartmouth’s Guidelines on using GenAI](https://policies.dartmouth.edu/policy/guidelines-using-generative-artificial-intelligence-genai-coursework).
+
+My general view is that Large language models (LLMs) are powerful tools that you will encounter and use when you leave this classroom, so it’s important to learn how to use them responsibly and effectively. However, these are difficult skills to teach and are not the focus of this course. I will likely **not** accept requests to use GenAI to generate text for writing assignments. However, I may accept requests to use LLMs to support coding tasks. This can help accelerate your workflow, especially when you are less familiar with a new language. However, LLMs can end up being a less productive use of your time than talking to colleagues, checking out documentation and APIs, looking at StackOverflow, and experimenting with trial and failure. You are responsible for understanding and debugging your code, and for ensuring that it does what you intend it to do. 
+
+If approved, you must:
+
+- reference the URL of the service you are using, including the specific date you accessed it; 
+- provide the exact query or queries used to interact with the tool; and
+- report the exact response received.
+
+### Student's Consent
+By enrolling in this course:
+
+1. I affirm my understanding that the instructor may record meetings of this course and any associated meetings open to multiple students and the instructor, including but not limited to scheduled and ad hoc office hours and other consultations, within any digital platform, including those used to offer remote instruction for this course.
+
+2. I further affirm that the instructor owns the copyright to their instructional materials, of which these recordings constitute a part, and my distribution of any of these recordings in whole or in part to any person or entity other than other members of the class without prior written consent of the instructor may be subject to discipline by Dartmouth up to and including separation from Dartmouth.
+
+3. Requirement of consent to one-on-one recordings
+By enrolling in this course, I hereby affirm that I will not make a recording in any medium of any one-on-one meeting with the instructor or another member of the class or group of members of the class without obtaining the prior written consent of all those participating, and I understand that if I violate this prohibition, I will be subject to discipline by Dartmouth up to and including separation from Dartmouth, as well as any other civil or criminal penalties under applicable law. I understand that an exception to this consent applies to accommodations approved by SAS for a student's disability, and that one or more students in a class may record class lectures, discussions, lab sessions, and review sessions and take pictures of essential information, and/or be provided class notes for personal study use only.
+
+If you have questions, please contact the Office of the Dean of the Faculty of Arts and Sciences.
+
+### Mental Health and Wellbeing
+The academic environment is challenging, our terms are intensive, and classes are not the only demanding part of your life. There are a number of resources available to you on campus to support your wellness, including: the [Counseling Center](https://www.dartmouth.edu/~chd/), which allows you to book triage appointments online, the [Student Wellness Center](https://students.dartmouth.edu/wellness-center/wellness-mindfulness/transition-resources-and-information/virtual-student-wellness-center) which offers wellness check-ins, and your undergraduate dean. The student-led [Dartmouth Student Mental Health Union](https://journeys.dartmouth.edu/mentalhealthunion/peer-support/) and their peer support program may be helpful if you would like to speak to a trained fellow student support listener.  If you need immediate assistance, please contact the counselor on-call at (603) 646-9442 at any time. Please make me aware of anything that will hinder your success in this course.
+
+### Title IX
+At Dartmouth, we value integrity, responsibility, and respect for the rights and interests of others, all central to our Principles of Community. We are dedicated to establishing and maintaining a safe and inclusive campus where all community members have equal access to Dartmouth's educational and employment opportunities. We strive to promote an environment of sexual respect, safety, and well-being. Through the Sexual and Gender-Based Misconduct Policy (SMP), Dartmouth demonstrates that sex and gender-based discrimination, sex and gender-based harassment, sexual assault, dating violence, domestic violence, stalking, etc., are not tolerated in our community.
+For more information regarding Title IX and to access helpful resources, visit [Title IX's website](https://sexual-respect.dartmouth.edu/). As a faculty member, I am required to share disclosures of sexual or gender-based misconduct with the Title IX office. 
+If you have any questions or want to explore support and assistance, please contact the Title IX office at 603-646-0922 or <TitleIX@dartmouth.edu.> Speaking to Title IX does not automatically initiate a college resolution. Instead, much of their work is around providing supportive measures to ensure you can continue to engage in Dartmouth's programs and activities.

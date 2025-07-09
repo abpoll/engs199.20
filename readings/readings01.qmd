@@ -1,0 +1,37 @@
+---
+format:
+  html:
+    title: Week 1 Readings
+
+reference-location: document
+citation-location: document
+---
+
+## Required Reading
+
+1. [Syllabus](../syllabus.qmd) and [Schedule](../schedule/schedule.qmd)
+    - Don't forget to take the short syllabus quiz on Canvas! (will upload with link when ready)
+
+2. @Keller-etal-2021
+
+This review article provides an accessible overview on climate-risk management, spanning many of the topics that we will cover in the course. I will encourage you to revisit this paper throughout the term. 
+
+3. @Gregory-etal-2012
+
+This textbook chapter provides a nice overview to structuring environmental decision making problems. In my experience interacting with decision scientists at federal agencies, this textbook forms the foundation of their decision analysis knowledge base. This course will try to crosswalk between this literature and the climate-risk-management literature. 
+
+## Optional Reading
+
+Most weeks will not have as many optional readings as this, but I want to provide you with opportunities to go into various focus areas of @Keller-etal-2021 in more detail. I don't expect you to read all of these in detail. However, I think it will benefit you to at least read all the abstracts and choose one to read in detail that speaks to you. 
+
+More on wicked problems: @rittel-webber-1973
+
+More on analyzing complex systems: @Reed-etal-2022
+
+More on robust decision-making: @Lempert2002
+
+More on framing a decision analysis: @Helgeson-etal-2024
+
+### References
+::: {#refs}
+:::

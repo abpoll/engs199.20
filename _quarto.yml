@@ -1,0 +1,89 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "{{< var course.number >}} - {{< var course.semester >}}"
+  description: "Homepage for {{< var course.number >}}, {{< var course.title >}}, at {{ var university.name}}, {{< var course.semester >}}."
+  site-url: "{{ < var course.url >}}"
+  repo-url: "{{ < var course.github >}}"
+  repo-actions: [edit, issue]
+  open-graph: true
+
+  page-footer:
+    right: |
+      Made with [Python](https://www.python.org/) and [Quarto](https://quarto.org/)<br>
+      [View the source on {{< fa brands github >}} GitHub]({{< var course.github >}})
+
+    left: |
+      Content {{< fa copyright >}} {{< var course.copyright_year >}}  by [{{< var instructor.name_no_title >}}]({{< var instructor.url >}}).
+      All content licensed under a {{< fa brands creative-commons >}}
+      {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-nc >}}
+      [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+    center: |
+      **Page still under construction.**
+
+  sidebar:
+    style: docked
+    align: center
+    logo: _assets/logos/D-Pine_all_formats/D-Pine_RGB.png
+    title: "{{< var course.number >}}"
+    search: true
+    tools: 
+      - icon: github
+        href: "{{var course.github}}"
+        text: "Github Repository"
+#      - icon: journal-check
+#        href: https://canvas.rice.edu
+#        text: "Canvas"
+    collapse-level: 1
+    contents:
+      - href: index.qmd
+        text: Overview
+      - href: syllabus.qmd
+        text: Syllabus
+      - href: schedule/schedule.qmd
+        text: Schedule
+      - section: labs.qmd
+      - section: project/overview.qmd
+        contents:
+          - href: project/proposal.qmd
+            text: Proposal
+          - href: project/updates.qmd
+            text: Module Reports
+          - href: project/presentation.qmd
+            text: Presentation
+          - href: project/report.qmd
+            text: Final Report
+      - section: "Tutorials"
+        contents:
+          - href: tutorials/python-basics.qmd
+            text: Python Basics
+      - href: resources.qmd
+        text: Other Resources
+
+echo: true
+
+format:
+  # customization for HTML documents (i.e., the website)
+  html:
+    theme: 
+      [minty, _assets/sass/theme.scss]
+    mainfont: "Atkinson Hyperlegible"
+    copy-code: true
+    code-overflow: wrap
+    toc: true
+    anchor-sections: true
+    callout-appearance: simple
+    reference-location: margin
+    citation-location: margin
+    code-annotations: select
+
+# references
+bibliography: references.bib
+csl: _assets/references/american-geophysical-union.csl
+
+# execution options
+execute:
+  freeze: auto  

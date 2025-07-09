@@ -1,0 +1,89 @@
+/*-- scss:defaults --*/
+
+@import 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&IBM+Plex+Serif&family=Source+Serif+Pro&family=Source+Code+Pro&IBM+Plex+Mono&display=swap';
+
+@import 'https://kit.fontawesome.com/d16123e5b5.css';
+
+$font-family-sans-serif: "IBM Plex Sans", sans-serif;
+$font-family-monospace: "Source Code Pro", "IBM Plex Mono", monospace;
+$font-family-serif: "Source Serif Pro", "IBM Plex Serif", serif;
+
+$headings-font-family: $font-family-serif; // Bootstrap inputs
+
+$code-block-bg: #e7e7e7;
+$code-bg: #e7e7e7;
+
+/*-- scss:rules --*/
+
+th {
+  font-size: 1.3em;
+}
+
+.cell-output pre {
+  background: #d7d7d7;
+}
+
+.course-details {
+  margin: 0 0 1em;
+  border-bottom: 3px solid $gray-200;
+  padding-bottom: 1em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* If you need to debug layout you can
+do that by uncommenting here and setting
+the col-md-# to the right setting
+from syllabus.qmd 
+.course-details .g-col-md-4 {
+  border: 1px solid red;
+  padding: 0 15px;
+}
+*/
+
+.course-details h3 {
+  margin-top: 0;
+}
+
+.course-details ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, .5em); 
+  padding-left: 0;
+}
+
+.course-details ul > li {
+  position: relative;
+}
+
+.course-details-smaller li {
+  font-size: 1rem;
+}
+
+.course-details-smaller h3 {
+  font-size: 1.4rem;
+}
+
+
+.tools-wide {
+  padding-top: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.sidebar {
+  padding-right: 1.5em;
+}
+
+figcaption {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.module-header {
+  font-size: 1.2em;
+  color: #00693E;
+  font-weight: bold;
+  border-bottom: 2px solid #00693E;
+}

@@ -1,0 +1,13 @@
+---
+title: "About"
+---
+
+This website contains course materials for the {{< var course.semester >}} edition of [{{< var course.title >}}]({{< var course.url >}}), taught by [{{< var instructor.name_no_title >}}]({{< var instructor.url >}}) at [{{< var university.name >}}]({{< var university.url >}}).
+
+## Acknowledgements
+
+The layout for this site draws heavily from [Environmental Systems Analysis](https://viveks.me/environmental-systems-analysis/) by Dr. Vivek Srikrishnan at Cornell University, [Data Science for Climate Risk Assessment](https://ceve543.github.io/schedule.html) by Dr. James Doss-Gollin at Rice University, and [course materials](https://www.andrewheiss.com/teaching/) by Dr. Andrew Heiss at Georgia State University. 
+
+## Tools and Generation Workflow
+
+This course website was built with [Quarto](https://quarto.org/). All materials can be found at the [GitHub Repository]({{< var course.github >}}).

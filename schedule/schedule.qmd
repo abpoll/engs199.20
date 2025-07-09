@@ -1,0 +1,107 @@
+---
+title: "Schedule"
+tbl-colwidths: [5, 10, 25, 5, 5, 5, 5]
+format:
+  html:
+    code-fold: true
+jupyter: python3
+
+---
+
+This page contains a schedule of the topics, content, and assignments for the term, organized by module.
+
+- **Slides** {{< fa sharp presentation-screen >}}: On the schedule, this link contains the presentation for the day's lecture.
+
+- [**Lab**](labs.qmd) {{< fa sharp laptop-code >}}: This page contains a lab report rubric and links to each week's lab. You can also access each week's lab through the links in the schedule below. 
+
+- [**HW**](project/updates.qmd) {{< fa sharp pen-field >}}: This page contains the schedule and rubric for the course project. At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I **highly** encourage you to work on these during the module to stay on track with your project. **Note that there is no lab report the first week and the first assignment is to define your project's decision problem.**
+
+- **Reading** {{< fa sharp book-open >}}: On the schedule, this link takes you to a list of required and optional readings for the module. Please read the required reading before class. There will typically be one required reading per week. I suggest you read at least the abstracts of optional readings before class. The optional readings will help you understand lecture and can serve as core references in lab reports and project updates.
+
+:::::: {.row .d-flex .justify-content-center}
+::::: {.col-12 .col-sm-10 .col-md-6}
+:::: {.card .bg-info .text-white}
+::: {.card-body}
+
+**You should follow this general process for each module**
+
+- Do the Reading before Monday's Lecture
+- Complete the lab report within one week from the assignment date
+- Submit the homework within one week from the assignment date
+
+:::
+::::
+:::::
+::::::
+
+<br />
+There are seven modules in this course:
+
+* "Overview": Overview of decision analysis for wicked climate problems
+* "Uncertainty": Uncertainty and Monte Carlo analysis
+* "RDM": Robust decision-making
+* "Trade-offs": Multiple objectives and navigating trade-offs
+* "DMDU":  Decision making under deep uncertainty
+* "Gaps": Gaps between decision analysis and decision support
+* "Projects":  Student project presentations
+
+Note that this schedule will be updated as necessary throughout the term.
+
+```{python}
+#| echo: false
+#| output: asis
+
+import pandas as pd
+from IPython.display import Markdown, display
+
+# Read schedule data
+schedule_data = pd.read_csv("schedule_data.csv", dtype={'Week': int})
+
+
+# Function to create Quarto-compatible links
+# We want slides, lab, etc., to correspond to 
+# font awesome icons
+def format_link(path, icon_type):
+    if pd.isna(path):
+        return ""
+
+    icons = {
+        "Slides": "fa sharp presentation-screen",
+        "Lab": "fa sharp laptop-code",
+        "HW": "fa sharp pen-field",
+        "Reading": "fa sharp book-open"
+    }
+    
+    icon = icons.get(icon_type, "fa link")
+    return f"[{{{{< {icon} >}}}}]({path})"
+
+# Apply formatting to columns with links
+for col in ["Slides", "Lab", "HW", "Reading"]:
+    schedule_data[col] = schedule_data[col].apply(lambda x: format_link(x, col) if x else "")
+
+# Generate the table with module headers
+table_rows = []
+
+# Table header
+header = "| Week | Date | Topic | Slides | Lab | HW | Reading |"
+table_rows.append(header)
+table_rows.append("|:----:|:-----|:------|:------:|:---:|:--:|:-------:|")
+
+# Loop through each row of the dataframe, adding 
+# a clean centered row if we changed modules this week
+current_module = ""
+for i, row in schedule_data.iterrows():
+    # Check if we need to add a module header (when module value changes and is not empty)
+    if row["Module"] != current_module:
+        current_module = row["Module"]
+        # Add a module header row with styling to make it stand out
+        # Using HTML for styling while keeping it in the Topic column
+        styled_module = f'| | | <span class="module-header">**{current_module}**</span> | | | | |'
+        table_rows.append(styled_module)
+    
+    # Add the regular row
+    table_rows.append(f"| {row['Week']} | {row['Date']} | {row['Topic']} | {row['Slides']} | {row['Lab']} | {row['HW']} | {row['Reading']} |")
+
+# Output the table
+print("\n".join(table_rows))
+``` 

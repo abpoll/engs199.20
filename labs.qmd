@@ -1,0 +1,60 @@
+---
+title: "Labs"
+tbl-colwidths: [10, 5, 10]
+---
+
+This page contains the lab report rubric and a schedule of the lab assignments for the semester.
+
+## General Information
+
+- You can get to the lab assignment through the link on the schedule below (or at the overall term [schedule](schedule/schedule.qmd)).
+- Submit your lab report by the start of the next lab on Canvas.
+- Submissions must be PDFs. In the first lab, we will go over the workflow for using Quarto to do this.
+
+## Grading
+
+Labs will be graded on a scale of 0-5:
+
+- Missing (0/5): Lab solution is missing or is not responsive to the lab prompt(s);
+- Needs Improvement (1/5): Lab is largely incomplete or is missing key concepts;
+- Acceptable (2/5): Lab is mostly complete but may contain major conceptual or implementation errors and writing has substantial room for growth;
+- Decent (3/5): Lab is mostly or fully complete without any major errors, but there are some minor errors and the writing/report presentation has room for growth.
+- Good (4/5): Lab is fully complete without any major errors, but there are some minor errors or the writing/report presentation has room for growth.
+- Strong (5/5): Lab is fully complete without any errors *and* the writing/report presentation is clear.
+
+**No late submissions will be graded. However, I will provide feedback on all lab reports, even if late. Your lowest lab report grade will be dropped.**
+
+### How to get a 5/5 on lab
+ 
+1. **Get the "right" answer for the "right" reason.** 
+
+    * Bad work can accidentally lead to poor decisions (and strong analysis may not identify good decisions). It is crucial that you show your work in a traceable and understandable way so that decision-makers understand *why* your analysis supports certain decisions. I will grade your work for how well it demonstrates *why* and *how* you get the right answers. Because most of your code for lab report is provided with lab instructions, this mostly entails accurate references to source material (i.e., readings and code blocks/instructions from lab). However, you will be responsible for processing/presenting/interpreting results generated with lab instructions. Think about the following things when answering lab report questions:
+      - Specific references to modeling results, figures, references, code blocks, etc., make it easier to demonstrate you got the right answer for the right reason.
+      - The cleaner and clearer your code and documentation in your Jupyter notebook, the more likely I can check for correctness.  
+
+2. **Be as clear as possible.**
+
+    * Decision-makers cannot read your mind. Ambiguity in decision analysis is bad decision support. Submissions that are unclear for any reason, including but not limited to unclear syntax (writing or code), lack of reasoning to support synthesis, or too much detail in writing will not be strong. 
+      - This includes being transparent about values-laden assumptions and limitations, as well as providing careful synthesis that demonstrates understanding and genuine insights. 
+
+3. **A good figure is worth 1,000 words**
+    * Visualizations are the main way to convey results and insights to decision-mamkers. Figures should be correct and highly legible. You must:
+      - Choose the appropriate axes and label them accordingly;
+      - Plot the correct data series;
+      - Include a descriptive legend (if it applies);
+      - Provide a *succint* **descriptive** caption (do not report or interpret results in a caption).
+
+4. **Take your time**
+    * It is difficult to meet guidelines 1-3 in one pass. For example, on guideline 2, I tend to revise each draft of scientific manuscripts 3-4 times before sharing with co-authors, a cycle that repeats several times each paper. As another example, on guideline 3, I tend to spend at least one week working on a single figure for scientific manuscripts. This course expects you to spend roughly 3 times the in-person hours outside of course, which equates to ~10 hours. This time corresponds to one required reading, polishing your lab report (1-2 of the in-person hours each week are lab work in a class setting), and cumulatively connecting new concepts to your course project. These activities are highly synergistic, and time you spend on lab reports will pay off big for your project progress reports. Labs are also your main opportunity in the class to demonstrate to an outside audience, through your GitHub page, your decision analysis and science communication skills. 
+
+## Schedule
+
+| Lab | Instructions | Due Date |
+|:----------:|:------------:|:---------|
+| Lab 1 | [{{< fa sharp laptop-code >}}](labs/lab01.qmd) | ---- |
+| Lab 2 | [{{< fa sharp laptop-code >}}]{style="color:grey"} | 10/3/2025 |
+| Lab 3 | [{{< fa sharp laptop-code >}}]{style="color:grey"} | 10/10/2025 |
+| Lab 4 | [{{< fa sharp laptop-code >}}]{style="color:grey"} | 10/17/2025 |
+| Lab 5 | [{{< fa sharp laptop-code >}}]{style="color:grey"} | 10/24/2025 |
+| Lab 6 | [{{< fa sharp laptop-code >}}]{style="color:grey"} | 10/31/2025 |
+| Lab 7 | [{{< fa sharp laptop-code >}}]{style="color:grey"} | 11/14/2025 |

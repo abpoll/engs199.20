@@ -1,0 +1,16 @@
+---
+title: "{{< var course.number >}}: {{< var course.title >}}"
+---
+
+This is the course website for the {{< var course.semester >}} edition of {{< var course.number >}}, {{< var course.title >}}, taught at [{{< var university.name >}}]({{< var university.url >}}) by [{{< var instructor.name_no_title >}}]({{< var instructor.url >}}).
+
+## Course Information
+
+- Details on the class and course policies are provided in the [syllabus](syllabus.html).
+- Topics and weekly materials can be found in the [schedule](schedule/schedule.html).
+
+## Software Tools
+
+- This course will use the [Python](https://www.python.org/) programming language. Python is free, open source, and popular (and your instructor can help you with it more than other languages). No prior knowledge of Python is required. My recommendation is to use [Visual Studio Code](https://code.visualstudio.com/) for coding. If you use VS code, install the official [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter). Please see [this](https://code.visualstudio.com/docs/languages/python) page for using Python effectively in VS Code. 
+
+- Assignments will be distributed using [GitHub](https://github.com) Clasroom. You will need a [GitHub account](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github). 

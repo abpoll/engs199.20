@@ -1,0 +1,37 @@
+author: Adam Pollack
+
+instructor:
+  name: Professor Adam Pollack
+  name_no_title: Adam Pollack
+  email: adam.b.pollack@dartmouth.edu
+  url: "https://abpoll.github.io"
+  github: abpoll
+  office: "IR 150"
+#  contact_policy: >-
+#    Use the class's Ed Discussion board for any class-related queries.
+#  appointment_url: https://calendly.com/vsrikrish/
+
+
+course:
+  number: "ENGS 199.20"
+  title: "Decision Analysis for Wicked Climate Problems"
+  semester: "Fall 2025"
+  days: "MWF"
+  time: "10:10-11:15am"
+  xday: "Tu"
+  xhr: "12:15-1:05pm"
+  location: "TBD"
+  github: "https://www.github.com/abpoll/da-wicked-climate-problems"
+  url: "https://abpoll.github.io/da-wicked-climate-problems"
+  copyright_year: "2025"
+
+university:
+  name: Dartmouth College
+  url: "https://home.dartmouth.edu/"
+
+department:
+  name: Thayer School of Engineering
+  url: "https://engineering.dartmouth.edu/"
+
+github_org:
+#  repo: "https://github.com/BEE4750"

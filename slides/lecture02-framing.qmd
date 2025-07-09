@@ -1,0 +1,131 @@
+---
+title: "Framing a decision analysis"
+subtitle: "Lecture 02"
+author: "{{< var instructor.name_no_title >}}"
+course: "{{< var course.number >}}"
+institution: "{{< var university.name >}}"
+date: "September 17, 2025"
+format:
+    revealjs:
+        scrollable: true
+        slide-number: c/t
+        show-slide-number: all
+        center-title-slide: true
+        transition: none
+        toc: true
+        toc-depth: 1
+        toc-title: "Overview"
+        history: false
+        link-external-newwindow: true
+        theme: ../_assets/sass/slides.scss
+        template-partials:
+            - title-slide.html
+        menu:
+            numbers: true
+        date-format: long
+        email-obfuscation: javascript
+        controls: true
+execute:
+    freeze: auto
+    echo: false
+---
+
+# What does it mean to frame a decision analysis?
+
+## Framing refers to how you structure a decision problem
+
+```{dot}
+digraph G{
+    layout=circo
+    node [style=filled,color=lightblue]; "Clarify the\ndecision context"; "Define\nobjectives"; "Develop\nalternatives";
+    
+    "Clarify the\ndecision context" -> "Define\nobjectives";
+    "Define\nobjectives" -> "Develop\nalternatives";
+}
+```
+
+## Framing informs how you analyze a decision
+
+```{dot}
+digraph G{
+    layout=circo
+    node [style=filled,color=orange]; "Estimate\nmetrics"; "Evaluate\ntrade-offs"; 
+    "Estimate\nmetrics" -> "Evaluate\ntrade-offs";
+}
+```
+
+## These are not independent! 
+
+```{dot}
+digraph G{
+    layout=circo
+    node [style=filled,color=lightblue]; "Clarify the\ndecision context"; "Define\nobjectives"; "Develop\nalternatives";
+    node [style=filled,color=orange]; "Estimate\nmetrics"; "Evaluate\ntrade-offs"; 
+    node[style=filled,color=magenta]; "Implement,\nmonitor,\nreview";
+    
+    "Clarify the\ndecision context" -> "Define\nobjectives";
+    "Define\nobjectives" -> "Develop\nalternatives";
+    "Develop\nalternatives" -> "Estimate\nmetrics";
+    "Estimate\nmetrics" -> "Evaluate\ntrade-offs";
+    "Evaluate\ntrade-offs" -> "Implement,\nmonitor,\nreview";
+    "Implement,\nmonitor,\nreview" -> "Clarify the\ndecision context";
+}
+```
+::: footer
+Adapted from @Gregory-etal-2012
+:::
+
+## Framing is iterative and deliberative
+
+![From @Lempert2019](../_assets/img/lempert_framing.png){fig-align="center"}
+
+
+# Let's frame a few decision problems
+
+## How should I travel from Hanover to Philadelphia?
+
+![](../_assets/img/inclass_framing.png){fig-align="center"}
+
+## Which flight should I purchase?
+
+![](../_assets/img/inclass_framing_flights.png){fig-align="center"}
+
+## How to preserve access to clean water in the growing US Southwest? {.nostretch}
+
+![](../_assets/img/CO_Basin.png){fig-align="center" width="50%"}
+
+# Framing wicked climate problems is hard!
+
+## Why is framing water management more challenging than travel recommendations?
+A few hints from our examples:
+
+* Analyzing travel options was relatively simple
+* We got to the bottom of my travel goals quickly
+* I have (most of) the decision-making agency and chose my favorite option
+
+# Some good practices
+
+## Conceptual models
+
+![Conceptual model for addressing inland flood risk from @Helgeson-etal-2024](../_assets/img/concep_model.jpg){fig-align="center"}
+
+## Another conceptual model
+
+![Unpublished conceptual model for federal funding rules to reduce flood risk](../_assets/img/funding_concep.jpg){fig-align="center"}
+
+## Values-informed mental models
+
+![Values mapping on execerpt of the conceptual model from @Helgeson-etal-2024](../_assets/img/vimm_ex.jpg){fig-align="center"}
+
+## XLRM diagrams
+
+![From @Pollack-etal-2025](../_assets/img/xlrm_ex.jpeg){fig-align="center"}
+
+## Follow *some* explicit, structured process
+
+* This is an area of decision analysis that needs more attention
+* Structured decision making proponents acknowledge robust decision making (but not much), and as far as I can tell not vice versa
+* You can do better than most peer-reviewed studies by doing something transparent
+* It would be great to learn about good framing practices from real-world decision-making experiments
+
+## Works cited
