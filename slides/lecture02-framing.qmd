@@ -75,9 +75,9 @@ digraph G{
 Adapted from @Gregory-etal-2012
 :::
 
-## Framing is iterative and deliberative
+## Framing is iterative and deliberative {.nostretch}
 
-![From @Lempert2019](../_assets/img/lempert_framing.png){fig-align="center"}
+![From @Lempert2019](../_assets/img/lempert_framing.png){fig-align="center" width="80%"}
 
 
 # Let's frame a few decision problems
