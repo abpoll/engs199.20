@@ -1,12 +1,16 @@
 project:
   type: website
 
+# Having issues with variables here
+# so hand coding anything that doesn't
+# get processed correctly
+# See https://github.com/quarto-dev/quarto-cli/issues/6455
 website:
   page-navigation: true
-  title: "{{< var course.number >}} - {{< var course.semester >}}"
-  description: "Homepage for {{< var course.number >}}, {{< var course.title >}}, at {{ var university.name}}, {{< var course.semester >}}."
-  site-url: "{{ < var course.url >}}"
-  repo-url: "{{ < var course.github >}}"
+  title: "ENGS 199.20 - Fall 2025"
+  description: "Homepage for ENGS 199.20, Decision Analysis for Wicked Climate Problems, at Dartmouth College, Fall 2025."
+  site-url: "https://abpoll.github.io/engs199.20"
+  repo-url: "https://www.github.com/abpoll/engs199.20"
   repo-actions: [edit, issue]
   open-graph: true
 
@@ -32,7 +36,7 @@ website:
     search: true
     tools: 
       - icon: github
-        href: "{{var course.github}}"
+        href: "{{< var course.github >}}"
         text: "Github Repository"
 #      - icon: journal-check
 #        href: https://canvas.rice.edu
