@@ -1,0 +1,35 @@
+---
+title: "Project Presentation Instructions"
+---
+
+## Overview
+Your project presentation will provide a narrative overview of your project. You are allowed 12-15 minutes for your presentation, which should cover the following:
+
+* What is your decision problem?
+* What is the state of the art in addressing this problem?
+* What is wrong with the status quo?
+* What knowledge gaps are there and which do you address?
+* How will you address these knowledge gaps (not too technical)?
+* What are your hypotheses about your planned decision analysis?
+* What are the implications?
+
+You can find some links to good practices on presentations in the [Other Resources](../resources.qmd) section of the course webpage. 
+
+As an audience member, you will be responsible for one short summary and round of moderation of group discussion for a colleague's project. Your summary should focus on the story of the project and should clarify any parts of the story that were not clear to you. Your round of moderation should facilitate specific attention from the other audience members. For example, you can prompt other students to comment on potential limitations in proposed methods or you can prompt the presenter to clarify a specific narrative point. 
+
+## Rubric
+
+You can receive a maximum of 20 points, with credit opportunities as follows:
+
+* Up to 10 points based on instructor's rating
+* Up to 8 points based on average of peer rating (low quality dropped)
+* Up to 2 points for summary and moderation
+* 1 point for strong and constructive peer evaluation
+* Up to 2 points for submitting a revised and improved recorded presentation on Canvas within the following week 
+
+You can lose points as follows:
+
+* -5 points for going over 15 minutes on either presentation opportunity
+* -2 points for low quality peer evaluation
+
+**Note:** Low quality peer evaluations are ones that suggest you were not paying attention to your colleague's presentation. Even if you struggle to understand some material, your colleague deserves your respect. In fact, conveying clearly that you struggled to understand some material can be very helpful to your colleague in synthesizing feedback and working on their final report. 

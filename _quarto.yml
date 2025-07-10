@@ -49,11 +49,9 @@ website:
         text: Syllabus
       - href: schedule/schedule.qmd
         text: Schedule
-      - section: labs.qmd
+      - href: labs.qmd
       - section: project/overview.qmd
         contents:
-          - href: project/proposal.qmd
-            text: Proposal
           - href: project/updates.qmd
             text: Module Reports
           - href: project/presentation.qmd

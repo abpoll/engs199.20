@@ -229,9 +229,9 @@ Zarekarizi et al. (2020): [How high to elevate a home?](https://doi.org/10.1038/
 # Course overview and logistics
 
 ## Our course is fully online!
-* Check out the website: [tbd]
-* Check out the syllabus: [tbd]
-* Check out the schedule: [tbd]
+* Check out the [website](https://abpoll.github.io/engs199.20)
+* Check out the [syllabus](https://abpoll.github.io/engs199.20/syllabus.html)
+* Check out the [schedule](https://abpoll.github.io/engs199.20/schedule/schedule.html) 
 
 ::: {.callout-note}
 Your first (ungraded) assignment is to take a short syllabus quiz on Canvas and confirm that you understand, and agree to abide, by course policies. You will have the opportunity to submit questions about the course and we will discuss these together next Monday. 
@@ -320,7 +320,7 @@ Decision analysis is values-laden and good decision analysis is explicit about n
 * One required reading before Monday
 * Project progress report 1
   - What decision problem will you focus on this term?
-  - See [tbd] for more guidance
+  - See [here](../updates/overview.qmd) for more guidance
   - Due next Friday before lab
 
 ## Next week

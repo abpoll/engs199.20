@@ -1,0 +1,14 @@
+---
+title: Course Project
+tbl-colwidths: [20, 5, 10]
+---
+
+## Overview
+The goal of the course project is to develop and report on an actionable plan for implementing a quantitative decision analysis. This project can be highly synergistic with thesis projects.
+
+## Schedule
+| Milestone |Instructions |  Due Date |
+|:---------:|:-----------|:---------:|
+| Progress Reports | [{{< fa sharp pen-field >}}](./updates.qmd)  |  Weekly |
+| Presentation | {{< fa sharp pen-field >}} | Nov. 16, 2025 |
+| Report | {{< fa sharp pen-field >}}|  Nov. 26, 2025 |

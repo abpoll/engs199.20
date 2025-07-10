@@ -1,0 +1,12 @@
+{
+  "hash": "52fcd49e37bb345eef7c2d4c4c58bc90",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Project Progress Reports\"\ntbl-colwidths: [20, 5, 10]\nformat:\n  html:\n    code-fold: true\njupyter: python3\n\n---\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n## Overview\nAt the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I **highly** encourage you to work on these during the module to stay on track with your project.\n\n## Schedule\n| Module | Instructions | Due Date |\n|:------:|:------------:|:--------:|\n| Overview | [{{< fa sharp pen-field >}}](../updates/overview.qmd) | 9/26/25 |\n| Uncertainty | [{{< fa sharp pen-field >}}](../updates/uncertainty.qmd) | 10/3/25 |\n| RDM | [{{< fa sharp pen-field >}}](../updates/rdm.qmd) | 10/10/25 |\n| Trade-offs | [{{< fa sharp pen-field >}}](../updates/tradeoffs.qmd) | 10/24/25 |\n| DMDU | [{{< fa sharp pen-field >}}](../updates/dmdu.qmd) | 11/14/25 |\n| Gaps | [{{< fa sharp pen-field >}}](../updates/gaps.qmd) | 11/21/25 |\n\n## Rubric\nYour grade is based on your perceived effort. Even if you do not fully understand how to apply lessons from a module to your project, you can receive full credit for a report if you understand your knowledge gaps and form strong questions for me to provide clarification and direction for you. You can receive 0-3 points on each assignment.\n* 0: No perceived effort\n  - E.g.,: \n* 1: Low perceived effort\n* 2: Moderate perceived effort   \n* 3: High perceived effort\n\nI will provide as much detailed feedback on each report as I can. This means that the more thought and effort you put into your report, the more guidance you will receive. This will help you on your project presentation and report. However, you must apply discretion when writing your report and should not include too much or irrelevant details. Concision is a very important feature of strong synthesis. \n\nLate submissions receive a 25% downgrading of the full credit score for each l ate day. Extension requests must be made 24 hours before the submission deadline with a submission of what you have achieved so far.\n\n",
+    "supporting": [
+      "updates_files/figure-html"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

@@ -1,0 +1,32 @@
+---
+title: "Project Proposal"
+date: last-modified
+format:
+    html:        
+        warning: true
+        error: true
+---
+
+## Instructions
+
+Your guiding question for this report is: 
+
+**"What decision problem will you focus on for your project?"**
+
+Here are a few examples of decision problem statements:
+
+* What height, if at all, should a homeowner elevate their home to defend against flooding?
+* What federal funding rules promote economic efficiency and social equity in disaster-risk reduction outcomes?
+
+In addition to answering this guiding question, your report should be responsive to the content in lectures 1 and 2. Because of the focus of this class, you must explain why your problem is a wicked climate problem. You should also develop an initial framing for a decision analysis on your problem. The further you get into sketching out the structure and analysis, the better! That said, I don't expect you to submit a full conceptual model, plan for a ViMM, XLRM, etc., You might benefit from experimenting with these boundary objects, and proposing partial versions, but at this stage it may be better to answer and/or describe your guiding questions for framing (and to ask me questions, such as whether I know of references that can help you learn more about something you think is relevant). 
+
+Your report does not have to be in an essay form. I want you to make cumulative progress on your project throughout the term. So, while you might find it helpful to write in the same form as your final report, you can also complete your report in a structure that works better for you in the planning stages of a project. For example, some students may find it helpful to structure their report in a questions and answers format, or in a detailed outline, or in a hybrid form. While you do not have to write your report as an essay, you should write all ideas as complete sentences (even if you incorporate bullet and sub-bullets into your report structure). My goal is to give you flexibility in planning, but to hold you to a high standard for synthesizing ideas and demonstrating your project's potential. Figure sketches, and descriptions of the ideas they convey, are your friend (but not expected). 
+
+::: {.callout-tip}
+## Hints
+You may find it useful to take a close look at @Gregory-etal-2012
+:::
+
+## Submitting the Report
+
+Export your writeup as a PDF and submit it to the "Update 1" assignment on Canvas. 
