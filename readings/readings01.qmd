@@ -14,11 +14,11 @@ citation-location: document
 
 2. @Keller-etal-2021
 
-This review article provides an accessible overview on climate-risk management, spanning many of the topics that we will cover in the course. I will encourage you to revisit this paper throughout the term. 
+    - This review article provides an accessible overview on climate-risk management, spanning many of the topics that we will cover in the course. I will encourage you to revisit this paper throughout the term. 
 
 3. @Gregory-etal-2012
 
-This textbook chapter provides a nice overview to structuring environmental decision making problems. In my experience interacting with decision scientists at federal agencies, this textbook forms the foundation of their decision analysis knowledge base. This course will try to crosswalk between this literature and the climate-risk-management literature. 
+    - This textbook chapter provides a nice overview to structuring environmental decision making problems. In my experience interacting with decision scientists at federal agencies, this textbook forms the foundation of their decision analysis knowledge base. This course will try to crosswalk between this literature and the climate-risk-management literature. 
 
 ## Optional Reading
 
