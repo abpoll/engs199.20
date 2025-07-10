@@ -5,6 +5,7 @@ format:
 
 reference-location: document
 citation-location: document
+sidebar: main
 ---
 
 ## Required Reading

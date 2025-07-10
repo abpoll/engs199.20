@@ -1,6 +1,5 @@
 ---
 title: "Project Proposal"
-date: last-modified
 format:
     html:        
         warning: true
