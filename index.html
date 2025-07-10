@@ -72,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta property="og:title" content="ENGS 199.20: Decision Analysis for Wicked Climate Problems – ENGS 199.20 - Fall 2025">
-<meta property="og:description" content="Homepage for ENGS 199.20, Decision Analysis for Wicked Climate Problems, at {{ var university.name}}, Fall 2025.">
+<meta property="og:description" content="Homepage for ENGS 199.20, Decision Analysis for Wicked Climate Problems, at Dartmouth College, Fall 2025.">
 <meta property="og:site_name" content="{{< var course.number >}} - {{< var course.semester >}}">
 </head>
 
@@ -105,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">ENGS 199.20</a> 
         <div class="sidebar-tools-main">
-    <a href="./{{var course.github}}" title="Github Repository" class="quarto-navigation-tool px-1" aria-label="Github Repository"><i class="bi bi-github"></i></a>
+    <a href="{{< var course.github >}}" title="Github Repository" class="quarto-navigation-tool px-1" aria-label="Github Repository"><i class="bi bi-github"></i></a>
 </div>
     </div>
       </div>
@@ -209,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#course-information" id="toc-course-information" class="nav-link active" data-scroll-target="#course-information">Course Information</a></li>
   <li><a href="#software-tools" id="toc-software-tools" class="nav-link" data-scroll-target="#software-tools">Software Tools</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="{{ < var course.github >}}/edit/main/index.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="{{ < var course.github >}}/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="{{< var course.github >}}/edit/main/index.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="{{< var course.github >}}/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -342,7 +342,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("{{ < var course\.url >}}");
+      var filterRegex = new RegExp("?var:course\.url");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -727,7 +727,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p><strong>Page still under construction.</strong></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="{{ < var course.github >}}/edit/main/index.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="{{ < var course.github >}}/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="{{< var course.github >}}/edit/main/index.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="{{< var course.github >}}/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Made with <a href="https://www.python.org/">Python</a> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://www.github.com/abpoll/engs199.20">View the source on <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></p>
 </div>

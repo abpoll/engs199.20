@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>{{ &lt; var course.url &gt;}}/resources.html</loc>
+    <loc>{{&lt; var course.url &gt;}}/resources.html</loc>
     <lastmod>2025-07-09T20:52:55.319Z</lastmod>
   </url>
   <url>
-    <loc>{{ &lt; var course.url &gt;}}/readings/readings01.html</loc>
+    <loc>{{&lt; var course.url &gt;}}/readings/readings01.html</loc>
     <lastmod>2025-07-09T20:52:55.319Z</lastmod>
   </url>
   <url>
-    <loc>{{ &lt; var course.url &gt;}}/project/updates.html</loc>
+    <loc>{{&lt; var course.url &gt;}}/project/updates.html</loc>
     <lastmod>2025-07-09T20:52:55.318Z</lastmod>
   </url>
   <url>
-    <loc>{{ &lt; var course.url &gt;}}/project/overview.html</loc>
+    <loc>{{&lt; var course.url &gt;}}/project/overview.html</loc>
     <lastmod>2025-07-09T20:52:55.318Z</lastmod>
   </url>
   <url>
-    <loc>{{ &lt; var course.url &gt;}}/slides/lecture02-framing.html</loc>
+    <loc>{{&lt; var course.url &gt;}}/slides/lecture02-framing.html</loc>
     <lastmod>2025-07-09T20:52:55.320Z</lastmod>
   </url>
   <url>
-    <loc>{{ &lt; var course.url &gt;}}/index.html</loc>
+    <loc>{{&lt; var course.url &gt;}}/index.html</loc>
     <lastmod>2025-07-09T20:52:55.318Z</lastmod>
   </url>
   <url>
-    <loc>{{ &lt; var course.url &gt;}}/schedule/schedule.html</loc>
+    <loc>{{&lt; var course.url &gt;}}/schedule/schedule.html</loc>
     <lastmod>2025-07-09T20:58:36.421Z</lastmod>
   </url>
   <url>
-    <loc>{{ &lt; var course.url &gt;}}/labs.html</loc>
+    <loc>{{&lt; var course.url &gt;}}/labs.html</loc>
     <lastmod>2025-07-09T20:52:55.318Z</lastmod>
   </url>
   <url>
-    <loc>{{ &lt; var course.url &gt;}}/slides/lecture01-intro.html</loc>
+    <loc>{{&lt; var course.url &gt;}}/slides/lecture01-intro.html</loc>
     <lastmod>2025-07-09T20:52:55.320Z</lastmod>
   </url>
   <url>
-    <loc>{{ &lt; var course.url &gt;}}/about.html</loc>
+    <loc>{{&lt; var course.url &gt;}}/about.html</loc>
     <lastmod>2025-07-09T20:52:55.318Z</lastmod>
   </url>
   <url>
-    <loc>{{ &lt; var course.url &gt;}}/project/presentation.html</loc>
+    <loc>{{&lt; var course.url &gt;}}/project/presentation.html</loc>
     <lastmod>2025-07-09T20:52:55.318Z</lastmod>
   </url>
   <url>
-    <loc>{{ &lt; var course.url &gt;}}/project/report.html</loc>
+    <loc>{{&lt; var course.url &gt;}}/project/report.html</loc>
     <lastmod>2025-07-09T20:52:55.318Z</lastmod>
   </url>
   <url>
-    <loc>{{ &lt; var course.url &gt;}}/syllabus.html</loc>
+    <loc>{{&lt; var course.url &gt;}}/syllabus.html</loc>
     <lastmod>2025-07-09T20:52:55.320Z</lastmod>
   </url>
 </urlset>
