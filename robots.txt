@@ -1,1 +1,1 @@
-Sitemap: {{< var course.url >}}/sitemap.xml
+Sitemap: https://abpoll.github.io/engs199.20/sitemap.xml
