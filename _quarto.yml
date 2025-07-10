@@ -13,7 +13,7 @@ website:
   repo-url: "https://www.github.com/abpoll/engs199.20"
   repo-actions: [edit, issue]
   open-graph: true
-
+  bread-crumbs: false
   page-footer:
     right: |
       Made with [Python](https://www.python.org/) and [Quarto](https://quarto.org/)<br>
@@ -29,6 +29,7 @@ website:
       **Page still under construction.**
 
   sidebar:
+    id: main
     style: docked
     align: center
     logo: _assets/logos/D-Pine_all_formats/D-Pine_RGB.png
@@ -58,10 +59,6 @@ website:
             text: Presentation
           - href: project/report.qmd
             text: Final Report
-      - section: "Tutorials"
-        contents:
-          - href: tutorials/python-basics.qmd
-            text: Python Basics
       - href: resources.qmd
         text: Other Resources
 

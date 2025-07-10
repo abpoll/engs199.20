@@ -5,6 +5,7 @@ format:
     html:        
         warning: true
         error: true
+sidebar: main
 ---
 
 ## Instructions
