@@ -32,43 +32,52 @@ execute:
 
 # What does it mean to frame a decision analysis?
 
-## Framing refers to how you structure a decision problem
+## How did you make these decisions?
 
-```{dot}
-digraph G{
-    layout=circo
-    node [style=filled,color=lightblue]; "Clarify the\ndecision context"; "Define\nobjectives"; "Develop\nalternatives";
-    
-    "Clarify the\ndecision context" -> "Define\nobjectives";
-    "Define\nobjectives" -> "Develop\nalternatives";
-}
-```
+::: {.incremental}
+1. What did you eat for your last meal?
+2. What colleges did you apply to?
+3. Why Dartmouth?
+:::
+
+::: {.fragment}
+![https://xkcd.com/1445/](../_assets/img/efficiency_2x.png){width="50%"}
+:::
+
+## Framing refers to how you structure a decision problem
+Framing breakfast decisions
+
+::: {.incremental}
+* I want to eat a healthy breakfast every morning that gives me energy
+* It needs to be affordable, tasty, low in sugar, etc.,
+* Oatmeal with peanut butter and frozen berries, toast with peanut butter and bananas, etc., 
+:::
+
 
 ## Framing informs how you analyze a decision
+Framing breakfast decisions, continued
+
+::: {.incremental}
+* I can calculate the costs, macronutrients, etc.,
+* I can map out which breakfasts do better/worse on my objectives
+:::
+
+## Getting theoretical about it
 
 ```{dot}
+//| fig-height: 6
 digraph G{
     layout=circo
-    node [style=filled,color=orange]; "Estimate\nmetrics"; "Evaluate\ntrade-offs"; 
-    "Estimate\nmetrics" -> "Evaluate\ntrade-offs";
-}
-```
-
-## These are not independent! 
-
-```{dot}
-digraph G{
-    layout=circo
-    node [style=filled,color=lightblue]; "Clarify the\ndecision context"; "Define\nobjectives"; "Develop\nalternatives";
-    node [style=filled,color=orange]; "Estimate\nmetrics"; "Evaluate\ntrade-offs"; 
-    node[style=filled,color=magenta]; "Implement,\nmonitor,\nreview";
+    node [style=filled,color=lightblue,fontsize=100]; "Clarify the\ndecision\ncontext"; "Define\nobjectives"; "Develop\nalternatives";
+    node [style=filled,color=orange,fontsize=100]; "Estimate\nmetrics"; "Evaluate\ntrade-offs"; 
+    node[style=filled,color=magenta,fontsize=100]; "Implement,\nmonitor,\nreview";
     
-    "Clarify the\ndecision context" -> "Define\nobjectives";
-    "Define\nobjectives" -> "Develop\nalternatives";
-    "Develop\nalternatives" -> "Estimate\nmetrics";
-    "Estimate\nmetrics" -> "Evaluate\ntrade-offs";
-    "Evaluate\ntrade-offs" -> "Implement,\nmonitor,\nreview";
-    "Implement,\nmonitor,\nreview" -> "Clarify the\ndecision context";
+    "Clarify the\ndecision\ncontext" -> "Define\nobjectives" [penwidth=10];
+    "Define\nobjectives" -> "Develop\nalternatives" [penwidth=10];
+    "Develop\nalternatives" -> "Estimate\nmetrics" [penwidth=10];
+    "Estimate\nmetrics" -> "Evaluate\ntrade-offs" [penwidth=10];
+    "Evaluate\ntrade-offs" -> "Implement,\nmonitor,\nreview" [penwidth=10];
+    "Implement,\nmonitor,\nreview" -> "Clarify the\ndecision\ncontext" [penwidth=10];
 }
 ```
 ::: footer
@@ -86,9 +95,24 @@ Adapted from @Gregory-etal-2012
 
 ![](../_assets/img/inclass_framing.png){fig-align="center"}
 
-## Which flight should I purchase?
+## Which job should I take?
 
-![](../_assets/img/inclass_framing_flights.png){fig-align="center"}
+::: {.columns}
+
+::: {.column #vcenter width="40%"}
+- Academia
+- Public sector
+- Private company
+- Nonprofit/NGO
+:::
+
+::: {.column #vcenter width="60%"}
+::: {.fragment}
+![https://www.modernhealthcare.com/article/20160927/NEWS/160929902/the-fda-s-revolving-door-raises-ethical-questions/](../_assets/img/revolving_door.png)
+:::
+:::
+
+:::
 
 ## How to preserve access to clean water in the growing US Southwest? {.nostretch}
 
@@ -120,12 +144,5 @@ A few hints from our examples:
 ## XLRM diagrams
 
 ![From @Pollack-etal-2025](../_assets/img/xlrm_ex.jpeg){fig-align="center"}
-
-## Follow *some* explicit, structured process
-
-* This is an area of decision analysis that needs more attention
-* Structured decision making proponents acknowledge robust decision making (but not much), and as far as I can tell not vice versa
-* You can do better than most peer-reviewed studies by doing something transparent
-* It would be great to learn about good framing practices from real-world decision-making experiments
 
 ## Works cited

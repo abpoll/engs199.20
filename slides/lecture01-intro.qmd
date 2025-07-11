@@ -11,6 +11,7 @@ format:
         slide-number: c/t
         show-slide-number: all
         center-title-slide: true
+        margin: .01
         transition: none
         toc: true
         toc-depth: 1
