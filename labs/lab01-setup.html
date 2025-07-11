@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="ENGS 199.20">
+<meta name="dcterms.date" content="2025-07-11">
 
-<title>lab01-setup – ENGS 199.20 - Fall 2025</title>
+<title>Lab 1: Computing Setup – ENGS 199.20 - Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -38,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-51708a3f6fe96a8431666b02a5f1c25b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-069f9cd79a59b8ec129fcab6bd521de4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-857b89ac35367dc1dc1487267b3a483d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -70,28 +106,303 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="ENGS 199.20 - Fall 2025">
+<meta property="og:title" content="Lab 1: Computing Setup – ENGS 199.20 - Fall 2025">
+<meta property="og:description" content="Homepage for ENGS 199.20, Decision Analysis for Wicked Climate Problems, at Dartmouth College, Fall 2025.">
+<meta property="og:image" content="https://abpoll.github.io/engs199.20/labs/lab01-setup_files/figure-html/cell-2-output-1.png">
 <meta property="og:site_name" content="ENGS 199.20 - Fall 2025">
+<meta property="og:image:height" content="449">
+<meta property="og:image:width" content="602">
 </head>
 
-<body>
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Lab 1: Computing Setup</h1>
+        </a>     
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../_assets/logos/D-Pine_all_formats/D-Pine_RGB.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">ENGS 199.20</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://www.github.com/abpoll/engs199.20" title="Github Repository" class="quarto-navigation-tool px-1" aria-label="Github Repository"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../schedule/schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Labs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../project/overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Project</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/updates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module Reports</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Final Report</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Other Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#lab-workflow" id="toc-lab-workflow" class="nav-link" data-scroll-target="#lab-workflow">Lab Workflow</a>
+  <ul class="collapse">
+  <li><a href="#installation-and-setup" id="toc-installation-and-setup" class="nav-link" data-scroll-target="#installation-and-setup">Installation and Setup</a></li>
+  <li><a href="#run-code" id="toc-run-code" class="nav-link" data-scroll-target="#run-code">Run Code</a></li>
+  <li><a href="#submit-report" id="toc-submit-report" class="nav-link" data-scroll-target="#submit-report">Submit Report</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://www.github.com/abpoll/engs199.20/edit/main/labs/lab01-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://www.github.com/abpoll/engs199.20/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lab01-setup.ipynb" download="lab01-setup.ipynb"><i class="bi bi-journal-code"></i>Jupyter</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Lab 1: Computing Setup</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>ENGS 199.20 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 11, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Today we’re going to install (or double check installations for) the computing tools we will use in this course and practice the lab report submission workflow. If you are an experienced programmer, you are free to follow your own workflow and/or use your own toolkit for implementing labs - but there is a lower probability that I can help you troubleshoot any issues you run into.</p>
+<p>Today we will:</p>
+<ol type="1">
+<li>Install <a href="https://code.visualstudio.com/">VS Code</a>, <a href="https://mamba.readthedocs.io/en/latest/index.html">Mamba</a>, <a href="https://www.python.org/">Python</a>, and <a href="https://git-scm.com/">git</a>.</li>
+<li>Setup our <a href="https://github.com/">GitHub</a> account and create a repository for today’s lab.</li>
+<li>Run through the setup steps typical of future labs, run some code, export our notebook, and submit a pdf on Canvas.</li>
+</ol>
+</section>
+<section id="lab-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="lab-workflow">Lab Workflow</h2>
+<section id="installation-and-setup" class="level3">
+<h3 class="anchored" data-anchor-id="installation-and-setup">Installation and Setup</h3>
+<ol type="1">
+<li>Download <a href="https://code.visualstudio.com/">VS Code</a> for your machine if you don’t already have it.</li>
+<li>Install <a href="https://github.com/conda-forge/miniforge?tab=readme-ov-file#install">Mamba</a> for your system if you don’t already have it. We will use Python in individual <code>Mamba</code> environments as opposed to a system-wide distribution.
+<ul>
+<li>Please review <a href="https://mamba.readthedocs.io/en/latest/user_guide/concepts.html#concepts">key concepts</a> for environment management with <code>Mamba</code>.</li>
+</ul></li>
+<li>Install the Jupyter &amp; Python VS Code extensions, along with their extension packs.</li>
+<li>Download <a href="https://git-scm.com/downloads">git</a> for your machine if you don’t already have it.</li>
+<li>Setup a <a href="https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account">GitHub</a> account if you don’t already have one. I <em>highly</em> recommend following the instructions for <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH</a>.</li>
+<li><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository">Create a new Public repository</a> called ‘ENGS 199.20 Lab 1’. Add a <code>README</code>, <code>.gitignore</code>, and License. Learn about these files if you are unfamiliar with them.</li>
+<li><a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">Clone your repository</a> to your local machine. I recommend having a directory for this class and to clone the repository inside that directory.</li>
+<li>Download this file as a Jupyter notebook (see the upper righthand corner of the page) and add it to your project directory. You can use whatever git workflow you’d like to do version control, but I will provide instructions for using the command line.
+<ul>
+<li>Run <code>git remote -v</code> to check that your local repository is tracking the repository on GitHub.</li>
+<li>Run <code>git status</code> from this lab directory’s root to see that the notebook is untracked.</li>
+<li>Run <code>git add .</code> to track the notebook.</li>
+<li>Run <code>git commit -m [message]</code> with your own helpful message.</li>
+<li>Use this simple workflow when you make changes to files. If you don’t want to track a file, you can add the specific file’s location (or use wildcards and file prefixes or suffixes) to avoid tracking.</li>
+</ul></li>
+<li>For this lab, we are going to create a small environment that allows us to plot using the <code>seaborn</code> package. <code>conda-lock</code> allows us to create multi-platform instances of the exact package versions others need to reproduce our computational environment. After following these next instructions, we will be ready to run our notebook.</li>
+</ol>
+<p>Create a file called <code>env-lock.yml</code> in your lab1 directory. Add the following contents and save:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> lab1</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">channels</span><span class="kw">:</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> conda-forge</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dependences</span><span class="kw">:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> python</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> ipykernel</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> seaborn</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> jupyter</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> conda-lock</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Run <code>mamba create -f env-lock.yml</code>. Run <code>mamba activate lab1</code>. Set up the kernel for the environment with <code>python -m ipykernel install --user --name lab1 --display-name lab1</code>.</p>
+</section>
+<section id="run-code" class="level3">
+<h3 class="anchored" data-anchor-id="run-code">Run Code</h3>
+<p>Below, I reproduce a plot from the <a href="seaborn.pydata.org/examples/grouped_boxplot.html">seaborn Gallery</a>. Make sure the <code>lab1</code> kernel is set up in the notebook and then run the code block.</p>
+<div id="c9c13580" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>sns.set_theme(style<span class="op">=</span><span class="st">"ticks"</span>, palette<span class="op">=</span><span class="st">"pastel"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the example tips dataset</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>tips <span class="op">=</span> sns.load_dataset(<span class="st">"tips"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw a nested boxplot to show bills by day and time</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>sns.boxplot(x<span class="op">=</span><span class="st">"day"</span>, y<span class="op">=</span><span class="st">"total_bill"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>            hue<span class="op">=</span><span class="st">"smoker"</span>, palette<span class="op">=</span>[<span class="st">"m"</span>, <span class="st">"g"</span>],</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>            data<span class="op">=</span>tips)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>sns.despine(offset<span class="op">=</span><span class="dv">10</span>, trim<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab01-setup_files/figure-html/cell-2-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Attractive and clear figures are very important in decision analysis. Run the cell below, which make the figure higher resolution and makes the font more legible. Some changes reflect my personal style preferences.</p>
+<div id="cell-revised-plot" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up a figure with higher resolution</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw a nested boxplot to show bills by day and time</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>sns.boxplot(x<span class="op">=</span><span class="st">"day"</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>            y<span class="op">=</span><span class="st">"total_bill"</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>            hue<span class="op">=</span><span class="st">"smoker"</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>            showfliers<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>            palette<span class="op">=</span>[<span class="st">"m"</span>, <span class="st">"g"</span>],</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>            showmeans<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>            meanprops<span class="op">=</span>{<span class="st">'marker'</span>: <span class="st">'D'</span>,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>                       <span class="st">'markerfacecolor'</span>: <span class="st">'firebrick'</span>,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>                       <span class="st">'markeredgecolor'</span>: <span class="st">'firebrick'</span>},</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>            data<span class="op">=</span>tips,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>            ax<span class="op">=</span>ax)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename legend title and increase font size</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>sns.move_legend(ax,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>                loc<span class="op">=</span><span class="st">'best'</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>                title<span class="op">=</span><span class="st">'Smoker at Table?'</span>,</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>                alignment<span class="op">=</span><span class="st">'left'</span>,</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>                fontsize<span class="op">=</span><span class="dv">12</span>,</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>                title_fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Make tick labels more legible</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>ax.tick_params(labelsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename axis labels</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Total Bill ($)"</span>, size<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Day"</span>, size<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="revised-plot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="lab01-setup_files/figure-html/revised-plot-output-1.png" class="img-fluid figure-img"></p>
+<figcaption>The distribution of restaurant bills in dollars reported by a waiter over a period of several months, shown in boxplots. The grouping examines how total bill size is distributed across day of the week (x-axis) and whether the party included a smoker (hue). Red diamonds denote the mean restaurant bill in each group. Data obtained from <a href="https://rdrr.io/cran/reshape2/man/tips.html" class="uri">https://rdrr.io/cran/reshape2/man/tips.html</a> and originally provided in Bryant, P. G. and Smith, M (1995) Practical Data Analysis: Case Studies in Business Statistics. Homewood, IL: Richard D. Irwin Publishing.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Following the link in the seaborn example, we can learn more about the tips data <a href="https://rdrr.io/cran/reshape2/man/tips.html">here</a>.</p>
+<p>To complete this lab report, add a code cell where you create a new figure that explores the relationship between variables in this dataset. It does not have to use the variables we used so far, nor do you have to use a boxplot. Make sure your tick and axis labels are at least size 12 and that the figure resolution is at least 300 dots per inch. Make sure your figure includes a caption, which must state the association considered in the exploratory visualization. In the cell after your plot, add a markdown cell where you:</p>
+<ol type="1">
+<li>Describe the plotted result; and</li>
+<li>Suggest further analysis that could help uncover the relationship between these and/or other variables.</li>
+</ol>
+<p>See an example below for the revised figure from the seaborn example (note the caption below the revised figure).</p>
+<p>Analysis: On average, the waiter’s bills were similar regardless of day of the week or whether a smoker was present in the party. On Saturdays and Sundays, bills tend to be larger and more variable when smokers are in a party.</p>
+<p>Future work: Lacking information on the relative frequency of bills across days of the week and smokers present in a party, it is difficult to draw strong conclusions about the associations of bill size and the considered variables. To better understand these associations, it would be helpful to show histograms in a second panel under the present plot. In addition, it’s not clear why presence of smokers in a dining party would have any association with the bill size. Other variables in the dataset, such as time of day and size of the party are likely more relevant to consider.</p>
+</section>
+<section id="submit-report" class="level3">
+<h3 class="anchored" data-anchor-id="submit-report">Submit Report</h3>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -560,7 +871,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p><strong>Page still under construction.</strong></p>
-<div class="toc-actions"><ul><li><a href="https://www.github.com/abpoll/engs199.20/edit/main/labs/lab01-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://www.github.com/abpoll/engs199.20/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://www.github.com/abpoll/engs199.20/edit/main/labs/lab01-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://www.github.com/abpoll/engs199.20/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Made with <a href="https://www.python.org/">Python</a> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://www.github.com/abpoll/engs199.20">View the source on <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></p>
 </div>
