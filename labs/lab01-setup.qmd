@@ -10,11 +10,11 @@ format:
     ipynb:
         warning: true
         error: true
-        code-annotation: below
 execute: 
     echo: true
     enabled: true
 jupyter: python3
+engine: jupyter
 sidebar: main
 ---
 
@@ -81,11 +81,11 @@ sns.boxplot(x="day", y="total_bill",
 sns.despine(offset=10, trim=True)
 ```
 
-Attractive and clear figures are very important in decision analysis. Run the cell below, which make the figure higher resolution and makes the font more legible. Some changes reflect my personal style preferences. 
+Attractive and clear figures are very important in decision analysis. Run the cell below, which makes the figure higher resolution and makes the font more legible. Some changes reflect my personal style preferences. 
 
 ```{python}
 #| label: revised-plot
-#| fig-cap: "The distribution of restaurant bills in dollars reported by a waiter over a period of several months, shown in boxplots. The grouping examines how total bill size is distributed across day of the week (x-axis) and whether the party included a smoker (hue). Red diamonds denote the mean restaurant bill in each group. Data obtained from <https://rdrr.io/cran/reshape2/man/tips.html> and originally provided in Bryant, P. G. and Smith, M (1995) Practical Data Analysis: Case Studies in Business Statistics. Homewood, IL: Richard D. Irwin Publishing."
+#| fig-cap: "The distribution of restaurant bills in dollars reported by a waiter over a period of several months, shown in boxplots. The grouping examines how total bill size is distributed across day of the week (x-axis) and whether the party included a smoker (hue). Red diamonds denote the mean restaurant bill in each group." 
 
 import matplotlib.pyplot as plt
 
@@ -126,13 +126,16 @@ Following the link in the seaborn example, we can learn more about the tips data
 
 To complete this lab report, add a code cell where you create a new figure that explores the relationship between variables in this dataset. It does not have to use the variables we used so far, nor do you have to use a boxplot. Make sure your tick and axis labels are at least size 12 and that the figure resolution is at least 300 dots per inch. Make sure your figure includes a caption, which must state the association considered in the exploratory visualization. In the cell after your plot, add a markdown cell where you:
 
-1. Describe the plotted result; and
-2. Suggest further analysis that could help uncover the relationship between these and/or other variables. 
+1. Write out a caption; 
+2. Describe the plotted result; 
+3. Suggest further analysis that could help uncover the relationship between these and/or other variables. 
 
-See an example below for the revised figure from the seaborn example (note the caption below the revised figure). 
+See a text example below for the revised figure from the seaborn example (note the caption underneath the revised figure on the website). 
 
 Analysis: On average, the waiter's bills were similar regardless of day of the week or whether a smoker was present in the party. On Saturdays and Sundays, bills tend to be larger and more variable when smokers are in a party. 
 
 Future work: Lacking information on the relative frequency of bills across days of the week and smokers present in a party, it is difficult to draw strong conclusions about the associations of bill size and the considered variables. To better understand these associations, it would be helpful to show histograms in a second panel under the present plot. In addition, it's not clear why presence of smokers in a dining party would have any association with the bill size. Other variables in the dataset, such as time of day and size of the party are likely more relevant to consider. 
+
+**Note**: You can add captions to figures in Jupyter 
 
 ### Submit Report
