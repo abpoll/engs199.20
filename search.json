@@ -95,25 +95,32 @@
     ]
   },
   {
+    "objectID": "slides/lecture02-framing.html#how-did-you-make-these-decisions",
+    "href": "slides/lecture02-framing.html#how-did-you-make-these-decisions",
+    "title": "Framing a decision analysis",
+    "section": "How did you make these decisions?",
+    "text": "How did you make these decisions?\n\n\nWhat did you eat for your last meal?\nWhat colleges did you apply to?\nWhy Dartmouth?\n\n\n\n\n\n\nhttps://xkcd.com/1445/"
+  },
+  {
     "objectID": "slides/lecture02-framing.html#framing-refers-to-how-you-structure-a-decision-problem",
     "href": "slides/lecture02-framing.html#framing-refers-to-how-you-structure-a-decision-problem",
     "title": "Framing a decision analysis",
     "section": "Framing refers to how you structure a decision problem",
-    "text": "Framing refers to how you structure a decision problem\n\n\n\n\n\n\n\nG\n\n\n\nClarify the\\ndecision context\n\nClarify the\ndecision context\n\n\n\nDefine\\nobjectives\n\nDefine\nobjectives\n\n\n\nClarify the\\ndecision context-&gt;Define\\nobjectives\n\n\n\n\n\nDevelop\\nalternatives\n\nDevelop\nalternatives\n\n\n\nDefine\\nobjectives-&gt;Develop\\nalternatives"
+    "text": "Framing refers to how you structure a decision problem\nFraming breakfast decisions\n\n\nI want to eat a healthy breakfast every morning that gives me energy\nIt needs to be affordable, tasty, low in sugar, etc.,\nOatmeal with peanut butter and frozen berries, toast with peanut butter and bananas, etc.,"
   },
   {
     "objectID": "slides/lecture02-framing.html#framing-informs-how-you-analyze-a-decision",
     "href": "slides/lecture02-framing.html#framing-informs-how-you-analyze-a-decision",
     "title": "Framing a decision analysis",
     "section": "Framing informs how you analyze a decision",
-    "text": "Framing informs how you analyze a decision\n\n\n\n\n\n\n\nG\n\n\n\nEstimate\\nmetrics\n\nEstimate\nmetrics\n\n\n\nEvaluate\\ntrade-offs\n\nEvaluate\ntrade-offs\n\n\n\nEstimate\\nmetrics-&gt;Evaluate\\ntrade-offs"
+    "text": "Framing informs how you analyze a decision\nFraming breakfast decisions, continued\n\n\nI can calculate the costs, macronutrients, etc.,\nI can map out which breakfasts do better/worse on my objectives"
   },
   {
-    "objectID": "slides/lecture02-framing.html#these-are-not-independent",
-    "href": "slides/lecture02-framing.html#these-are-not-independent",
+    "objectID": "slides/lecture02-framing.html#getting-theoretical-about-it",
+    "href": "slides/lecture02-framing.html#getting-theoretical-about-it",
     "title": "Framing a decision analysis",
-    "section": "These are not independent!",
-    "text": "These are not independent!\n\n\n\n\n\n\n\nG\n\n\n\nClarify the\\ndecision context\n\nClarify the\ndecision context\n\n\n\nDefine\\nobjectives\n\nDefine\nobjectives\n\n\n\nClarify the\\ndecision context-&gt;Define\\nobjectives\n\n\n\n\n\nDevelop\\nalternatives\n\nDevelop\nalternatives\n\n\n\nDefine\\nobjectives-&gt;Develop\\nalternatives\n\n\n\n\n\nEstimate\\nmetrics\n\nEstimate\nmetrics\n\n\n\nDevelop\\nalternatives-&gt;Estimate\\nmetrics\n\n\n\n\n\nEvaluate\\ntrade-offs\n\nEvaluate\ntrade-offs\n\n\n\nEstimate\\nmetrics-&gt;Evaluate\\ntrade-offs\n\n\n\n\n\nImplement,\\nmonitor,\\nreview\n\nImplement,\nmonitor,\nreview\n\n\n\nEvaluate\\ntrade-offs-&gt;Implement,\\nmonitor,\\nreview\n\n\n\n\n\nImplement,\\nmonitor,\\nreview-&gt;Clarify the\\ndecision context\n\n\n\n\n\n\n\n\n\n\n\nAdapted from Gregory et al. (2012)"
+    "section": "Getting theoretical about it",
+    "text": "Getting theoretical about it\n\n\n\n\n\n\n\nG\n\n\n\nClarify the\\ndecision\\ncontext\n\nClarify the\ndecision\ncontext\n\n\n\nDefine\\nobjectives\n\nDefine\nobjectives\n\n\n\nClarify the\\ndecision\\ncontext-&gt;Define\\nobjectives\n\n\n\n\n\nDevelop\\nalternatives\n\nDevelop\nalternatives\n\n\n\nDefine\\nobjectives-&gt;Develop\\nalternatives\n\n\n\n\n\nEstimate\\nmetrics\n\nEstimate\nmetrics\n\n\n\nDevelop\\nalternatives-&gt;Estimate\\nmetrics\n\n\n\n\n\nEvaluate\\ntrade-offs\n\nEvaluate\ntrade-offs\n\n\n\nEstimate\\nmetrics-&gt;Evaluate\\ntrade-offs\n\n\n\n\n\nImplement,\\nmonitor,\\nreview\n\nImplement,\nmonitor,\nreview\n\n\n\nEvaluate\\ntrade-offs-&gt;Implement,\\nmonitor,\\nreview\n\n\n\n\n\nImplement,\\nmonitor,\\nreview-&gt;Clarify the\\ndecision\\ncontext\n\n\n\n\n\n\n\n\n\n\n\nAdapted from Gregory et al. (2012)"
   },
   {
     "objectID": "slides/lecture02-framing.html#framing-is-iterative-and-deliberative",
@@ -130,11 +137,11 @@
     "text": "How should I travel from Hanover to Philadelphia?"
   },
   {
-    "objectID": "slides/lecture02-framing.html#which-flight-should-i-purchase",
-    "href": "slides/lecture02-framing.html#which-flight-should-i-purchase",
+    "objectID": "slides/lecture02-framing.html#which-job-should-i-take",
+    "href": "slides/lecture02-framing.html#which-job-should-i-take",
     "title": "Framing a decision analysis",
-    "section": "Which flight should I purchase?",
-    "text": "Which flight should I purchase?"
+    "section": "Which job should I take?",
+    "text": "Which job should I take?\n\n\n\nAcademia\nPublic sector\nPrivate company\nNonprofit/NGO\n\n\n\n\n\n\nhttps://www.modernhealthcare.com/article/20160927/NEWS/160929902/the-fda-s-revolving-door-raises-ethical-questions/"
   },
   {
     "objectID": "slides/lecture02-framing.html#how-to-preserve-access-to-clean-water-in-the-growing-us-southwest",
@@ -177,13 +184,6 @@
     "title": "Framing a decision analysis",
     "section": "XLRM diagrams",
     "text": "XLRM diagrams\n\nFrom Pollack et al. (2025)"
-  },
-  {
-    "objectID": "slides/lecture02-framing.html#follow-some-explicit-structured-process",
-    "href": "slides/lecture02-framing.html#follow-some-explicit-structured-process",
-    "title": "Framing a decision analysis",
-    "section": "Follow some explicit, structured process",
-    "text": "Follow some explicit, structured process\n\nThis is an area of decision analysis that needs more attention\nStructured decision making proponents acknowledge robust decision making (but not much), and as far as I can tell not vice versa\nYou can do better than most peer-reviewed studies by doing something transparent\nIt would be great to learn about good framing practices from real-world decision-making experiments"
   },
   {
     "objectID": "slides/lecture02-framing.html#works-cited",
