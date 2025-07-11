@@ -52,8 +52,9 @@ Create a file called `env-lock.yml` in your lab1 directory. Add the following co
 name: lab1
 channels:
   - conda-forge
-dependences:
+dependencies:
   - python
+  - nbconvert
   - ipykernel
   - seaborn
   - jupyter
@@ -138,4 +139,12 @@ Future work: Lacking information on the relative frequency of bills across days 
 
 **Note**: You can add captions to figures in Jupyter 
 
-### Submit Report
+### Submit Code and Report
+Make sure your GitHub repository is up to date. 
+
+Export your .ipynb as a .pdf and submit on Canvas. In your submission, share a link to your repository. Please replace "ENGS 199.20" in the top cell with your name and change the filename to include your name. 
+
+::: {.callout-tip}
+## Printing Code to PDF
+Because we included `nbconvert` in our computational environment, we should be able to export the .ipynb to .pdf using VS Code and get a nicely formatted file. 
+:::
