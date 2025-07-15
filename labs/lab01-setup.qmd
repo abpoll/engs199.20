@@ -133,11 +133,9 @@ To complete this lab report, add a code cell where you create a new figure that 
 
 See a text example below for the revised figure from the seaborn example (note the caption underneath the revised figure on the website). 
 
-Analysis: On average, the waiter's bills were similar regardless of day of the week or whether a smoker was present in the party. On Saturdays and Sundays, bills tend to be larger and more variable when smokers are in a party. 
+Analysis: On average, the waiter's bills were similar regardless of day of the week or whether a smoker was present in the party. On Saturdays and Sundays, bills tended to be larger and more variable when smokers are in a party. 
 
 Future work: Lacking information on the relative frequency of bills across days of the week and smokers present in a party, it is difficult to draw strong conclusions about the associations of bill size and the considered variables. To better understand these associations, it would be helpful to show histograms in a second panel under the present plot. In addition, it's not clear why presence of smokers in a dining party would have any association with the bill size. Other variables in the dataset, such as time of day and size of the party are likely more relevant to consider. 
-
-**Note**: You can add captions to figures in Jupyter 
 
 ### Submit Code and Report
 Make sure your GitHub repository is up to date. 
