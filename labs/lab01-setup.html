@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="ENGS 199.20">
-<meta name="dcterms.date" content="2025-07-11">
+<meta name="dcterms.date" content="2025-07-15">
 
 <title>Lab 1: Computing Setup – ENGS 199.20 - Fall 2025</title>
 <style>
@@ -228,7 +228,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#installation-and-setup" id="toc-installation-and-setup" class="nav-link" data-scroll-target="#installation-and-setup">Installation and Setup</a></li>
   <li><a href="#run-code" id="toc-run-code" class="nav-link" data-scroll-target="#run-code">Run Code</a></li>
-  <li><a href="#submit-report" id="toc-submit-report" class="nav-link" data-scroll-target="#submit-report">Submit Report</a></li>
+  <li><a href="#submit-code-and-report" id="toc-submit-code-and-report" class="nav-link" data-scroll-target="#submit-code-and-report">Submit Code and Report</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://www.github.com/abpoll/engs199.20/edit/main/labs/lab01-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://www.github.com/abpoll/engs199.20/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lab01-setup.ipynb" download="lab01-setup.ipynb"><i class="bi bi-journal-code"></i>Jupyter</a></li></ul></div></nav>
@@ -255,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 11, 2025</p>
+      <p class="date">July 15, 2025</p>
     </div>
   </div>
   
@@ -306,18 +306,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> lab1</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">channels</span><span class="kw">:</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> conda-forge</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dependences</span><span class="kw">:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dependencies</span><span class="kw">:</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> python</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> ipykernel</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> seaborn</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> jupyter</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> conda-lock</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> nbconvert</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> ipykernel</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> seaborn</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> jupyter</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> conda-lock</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Run <code>mamba create -f env-lock.yml</code>. Run <code>mamba activate lab1</code>. Set up the kernel for the environment with <code>python -m ipykernel install --user --name lab1 --display-name lab1</code>.</p>
 </section>
 <section id="run-code" class="level3">
 <h3 class="anchored" data-anchor-id="run-code">Run Code</h3>
 <p>Below, I reproduce a plot from the <a href="seaborn.pydata.org/examples/grouped_boxplot.html">seaborn Gallery</a>. Make sure the <code>lab1</code> kernel is set up in the notebook and then run the code block.</p>
-<div id="13b04379" class="cell" data-execution_count="1">
+<div id="87366ecb" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -395,12 +396,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Suggest further analysis that could help uncover the relationship between these and/or other variables.</li>
 </ol>
 <p>See a text example below for the revised figure from the seaborn example (note the caption underneath the revised figure on the website).</p>
-<p>Analysis: On average, the waiter’s bills were similar regardless of day of the week or whether a smoker was present in the party. On Saturdays and Sundays, bills tend to be larger and more variable when smokers are in a party.</p>
+<p>Analysis: On average, the waiter’s bills were similar regardless of day of the week or whether a smoker was present in the party. On Saturdays and Sundays, bills tended to be larger and more variable when smokers are in a party.</p>
 <p>Future work: Lacking information on the relative frequency of bills across days of the week and smokers present in a party, it is difficult to draw strong conclusions about the associations of bill size and the considered variables. To better understand these associations, it would be helpful to show histograms in a second panel under the present plot. In addition, it’s not clear why presence of smokers in a dining party would have any association with the bill size. Other variables in the dataset, such as time of day and size of the party are likely more relevant to consider.</p>
-<p><strong>Note</strong>: You can add captions to figures in Jupyter</p>
 </section>
-<section id="submit-report" class="level3">
-<h3 class="anchored" data-anchor-id="submit-report">Submit Report</h3>
+<section id="submit-code-and-report" class="level3">
+<h3 class="anchored" data-anchor-id="submit-code-and-report">Submit Code and Report</h3>
+<p>Make sure your GitHub repository is up to date.</p>
+<p>Export your .ipynb as a .pdf and submit on Canvas. In your submission, share a link to your repository. Please replace “ENGS 199.20” in the top cell with your name and change the filename to include your name.</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Printing Code to PDF
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Because we included <code>nbconvert</code> in our computational environment, we should be able to export the .ipynb to .pdf using VS Code and get a nicely formatted file.</p>
+</div>
+</div>
 
 
 </section>
