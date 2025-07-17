@@ -1,0 +1,11 @@
+{
+  "hash": "57032069dd7e86b6be3b188c559ed22f",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Lab 2: Python and GitHub Bootcamp\"\nauthor: \"ENGS 199.20\"\ndate: last-modified\nformat:\n    html:        \n        warning: true\n        error: true\n        code-fold: true\n    ipynb:\n        warning: true\n        error: true\nexecute: \n    echo: true\n    enabled: true\njupyter: python3\nengine: jupyter\nsidebar: main\n---\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n## Overview\nToday we're going to practice our lab GitHub workflow and learn/refresh Python code for the types of analyses we'll see in future labs. There's a lot of content in this lab, so I will host an extra hour session on Tuesday so that I'm available for questions. Today's lab is not graded. \n\nToday's objectives:\n1. Become more comfortable using [numpy] for efficient array-based operations\n2. Become more comfortable using [pandas] for structured data analysis\n3. Create a reproducible analysis with GitHub\n4. Get some practice using Python to address a *toy* decision analysis problem\n\n## Lab Workflow\n\n### Part 1: GitHub Repository Setup\n\n1. Go to GitHub and create a new repository called \"toy-flood-analysis\"\n2. Clone the repo locally (I recommend using ssh as discussed last lab)\n3. Create the folder structure below\ntoy-flood-analysis/\n|----data/\n|----notebooks/\n|----figures/\n|----docs/\n|_README.md\n|_.gitignore\n\n---\njupyter:\n  kernelspec:\n    display_name: Python 3 (ipykernel)\n    language: python\n    name: python3\n    path: /Users/f006dwr/Library/Jupyter/kernels/python3\n---\n",
+    "supporting": [
+      "lab02-intro_files/figure-ipynb"
+    ],
+    "filters": []
+  }
+}

@@ -19,7 +19,7 @@ sidebar: main
 ---
 
 ## Overview
-Today we're going to install (or double check installations for) the computing tools we will use in this course and practice the lab report submission workflow. If you are an experienced programmer, you are free to follow your own workflow and/or use your own toolkit for implementing labs - but there is a lower probability that I can help you troubleshoot any issues you run into. 
+Today we're going to install (or double check installations for) the computing tools we will use in this course and practice the lab report submission workflow. If you are an experienced programmer, you are free to follow your own workflow and/or use your own toolkit for implementing labs - but there is a lower probability that I can help you troubleshoot any issues you run into. Today's lab is not graded. 
 
 Today we will:
 
@@ -136,6 +136,8 @@ See a text example below for the revised figure from the seaborn example (note t
 Analysis: On average, the waiter's bills were similar regardless of day of the week or whether a smoker was present in the party. On Saturdays and Sundays, bills tended to be larger and more variable when smokers are in a party. 
 
 Future work: Lacking information on the relative frequency of bills across days of the week and smokers present in a party, it is difficult to draw strong conclusions about the associations of bill size and the considered variables. To better understand these associations, it would be helpful to show histograms in a second panel under the present plot. In addition, it's not clear why presence of smokers in a dining party would have any association with the bill size. Other variables in the dataset, such as time of day and size of the party are likely more relevant to consider. 
+
+**Note**: If you do not have experience with Python, I recommend trying to generate a new plot -- the `seaborn` package does not really require Python knowledge to generate a new plot. However, today's lab is not graded so you don't *have* to generate a new plot, write a caption, etc., I think it's a good opportunity to practice the lab submission workflow and ask questions now before I start grading labs. 
 
 ### Submit Code and Report
 Make sure your GitHub repository is up to date. 

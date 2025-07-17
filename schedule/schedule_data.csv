@@ -2,9 +2,9 @@ Week,Module,Date,Topic,Slides,Lab,HW,Reading
 1,Overview,9/15/25,Course Overview,../slides/lecture01-intro.qmd,,../updates/overview.qmd,../readings/readings01.qmd
 1,Overview,9/16/25,Computing setup,,../labs/lab01-setup.qmd,,
 1,Overview,9/17/25,Framing a decision analysis,../slides/lecture02-framing.qmd,,,
-1,Overview,9/19/25,Intro to Python and GitHub,,../labs/lab02-intro.qmd,,
+1,Overview,9/19/25,Python and GitHub Bootcamp,,../labs/lab02-intro.qmd,,
 2,Uncertainty,9/22/25,Shallow and deep uncertainties,,,,
-2,Uncertainty,9/23/25,Python and GitHub II,,,,
+2,Uncertainty,9/23/25,Python and GitHub Bootcamp II,,,,
 2,Uncertainty,9/24/25,Deep uncertainty game,,,,
 2,Uncertainty,9/26/25,Pitfalls of predict-then-act,,,,
 3,RDM,9/29/25,RDM workflow,,,,
