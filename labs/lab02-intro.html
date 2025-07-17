@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="ENGS 199.20">
+<meta name="dcterms.date" content="2025-07-17">
 
-<title>lab02-intro – ENGS 199.20 - Fall 2025</title>
+<title>Lab 2: Python and GitHub Bootcamp – ENGS 199.20 - Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -70,28 +106,992 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="ENGS 199.20 - Fall 2025">
+<meta property="og:title" content="Lab 2: Python and GitHub Bootcamp – ENGS 199.20 - Fall 2025">
+<meta property="og:description" content="Homepage for ENGS 199.20, Decision Analysis for Wicked Climate Problems, at Dartmouth College, Fall 2025.">
+<meta property="og:image" content="https://abpoll.github.io/engs199.20/labs/lab02-intro_files/figure-html/cell-3-output-1.png">
 <meta property="og:site_name" content="ENGS 199.20 - Fall 2025">
+<meta property="og:image:height" content="471">
+<meta property="og:image:width" content="678">
 </head>
 
-<body>
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Lab 2: Python and GitHub Bootcamp</h1>
+        </a>     
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../_assets/logos/D-Pine_all_formats/D-Pine_RGB.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">ENGS 199.20</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://www.github.com/abpoll/engs199.20" title="Github Repository" class="quarto-navigation-tool px-1" aria-label="Github Repository"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../schedule/schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Labs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../project/overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Project</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/updates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module Reports</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Final Report</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Other Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#lab-workflow" id="toc-lab-workflow" class="nav-link" data-scroll-target="#lab-workflow">Lab Workflow</a>
+  <ul class="collapse">
+  <li><a href="#github-repository-setup" id="toc-github-repository-setup" class="nav-link" data-scroll-target="#github-repository-setup">GitHub Repository Setup</a></li>
+  <li><a href="#setting-up-our-computing-environment" id="toc-setting-up-our-computing-environment" class="nav-link" data-scroll-target="#setting-up-our-computing-environment">Setting up our computing environment</a></li>
+  <li><a href="#setting-up-our-analysis" id="toc-setting-up-our-analysis" class="nav-link" data-scroll-target="#setting-up-our-analysis">Setting up our analysis</a></li>
+  <li><a href="#building-our-toy-problem" id="toc-building-our-toy-problem" class="nav-link" data-scroll-target="#building-our-toy-problem">Building our toy problem</a></li>
+  <li><a href="#analyzing-risk" id="toc-analyzing-risk" class="nav-link" data-scroll-target="#analyzing-risk">Analyzing risk</a></li>
+  <li><a href="#wrapping-up-the-analysis" id="toc-wrapping-up-the-analysis" class="nav-link" data-scroll-target="#wrapping-up-the-analysis">Wrapping up the analysis</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://www.github.com/abpoll/engs199.20/edit/main/labs/lab02-intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://www.github.com/abpoll/engs199.20/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lab02-intro.ipynb" download="lab02-intro.ipynb"><i class="bi bi-journal-code"></i>Jupyter</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Lab 2: Python and GitHub Bootcamp</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>ENGS 199.20 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 17, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Today we’re going to practice our lab GitHub workflow and learn/refresh Python code for the types of analyses we’ll see in future labs. There’s a lot of content in this lab, so I will host an extra hour session on Tuesday so that I’m available for questions. Today’s lab is not graded but I will provide feedback on your submission to provide guidance on expectations for future submissions.</p>
+<p>Today’s objectives:</p>
+<ol type="1">
+<li>Become more comfortable using <a href="https://numpy.org/">numpy</a> for efficient array-based operations</li>
+<li>Become more comfortable using <a href="https://pandas.pydata.org/">pandas</a> for structured data analysis</li>
+<li>Create a reproducible analysis with GitHub</li>
+<li>Get some practice using Python to address a <em>toy</em> decision analysis problem</li>
+</ol>
+<p>It’s pretty easy to find tutorials online for #1-#3 above. I thought it would be fun to have a more applied example. I will link to reference material and point out tips for where certain coding decisions come from to help you engage with that type of material.</p>
+<p>Let’s pretend you just got hired as a flood risk analyst for an emergency management department. The city council has a budget to spend on flood mitigation strategies before the next storm season. Your job is to analyze two potential flood scenarios and provide actionable recommendations.</p>
+<div class="callout callout-style-simple callout-important">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This tutorial is for learning coding skills. We will violate a lot of decision analysis principles I will teach later in the term in service of meeting our primary objectives for today’s lab.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="lab-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="lab-workflow">Lab Workflow</h2>
+<section id="github-repository-setup" class="level3">
+<h3 class="anchored" data-anchor-id="github-repository-setup">GitHub Repository Setup</h3>
+<ol type="1">
+<li>Go to GitHub and create a new repository called “toy-flood-analysis”</li>
+<li>Clone the repo locally (I recommend using ssh as discussed last lab)</li>
+<li>Create the folder structure below</li>
+</ol>
+<pre><code>toy-flood-analysis/
+   ├── data/
+   ├── notebooks/
+   ├── figures/
+   └── README.md
+   └── .gitignore</code></pre>
+<p>Your README.md should include the following structure:</p>
+<pre><code># Toy Flood Analysis
+
+## Project Description
+[explain project]
+
+## How to Run
+[reproducibility instructions]</code></pre>
+<p>Here’s an example of a GitHub repository with reproducibility instructions: <a href="https://github.com/IMMM-SFA/burleyson-etal_2024_applied_energy" class="uri">https://github.com/IMMM-SFA/burleyson-etal_2024_applied_energy</a>. You can check out the raw markdown <a href="https://github.com/IMMM-SFA/burleyson-etal_2024_applied_energy/blob/main/Readme.md?plain=1">here</a>.</p>
+<p>Remember to regularly add, commit, and push changes to your remote branch.</p>
+</section>
+<section id="setting-up-our-computing-environment" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-our-computing-environment">Setting up our computing environment</h3>
+<p>Create a file called <code>env-lock.yml</code> in your project directory. Add the following contents and save:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> lab2</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">channels</span><span class="kw">:</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> conda-forge</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">dependencies</span><span class="kw">:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> python</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> pandas</span><span class="co"> # great for tabular data</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> numpy</span><span class="co"> # great for efficient operations on large arrays</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> matplotlib</span><span class="co"> # standard plotting library for python</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> nbconvert</span><span class="co"> # for converting our notebook to pdf for submission</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> ipykernel</span><span class="co"> # for setting up the kernel for using this env in jupyter</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> seaborn</span><span class="co"> # good for exploratory data analysis and some final figures</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> jupyter </span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> conda-lock</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Run <code>mamba create -f env-lock.yml</code>. Run <code>mamba activate lab2</code>. Set up the kernel for the environment with <code>python -m ipykernel install --user --name lab2 --display-name lab2</code>.</p>
+</section>
+<section id="setting-up-our-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="setting-up-our-analysis">Setting up our analysis</h3>
+<p>Create a new .ipynb file in the <code>notebooks/</code> subdirectory. In the first cell, let’s import our tools for the analysis.</p>
+<div id="46b290af" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Core numerical computing</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Data manipulation and analysis</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualization</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="building-our-toy-problem" class="level3">
+<h3 class="anchored" data-anchor-id="building-our-toy-problem">Building our toy problem</h3>
+<p>Our city is fake, so we have to build it. We will create a fake digital elevation grid, a fake built environment, and fake flood scenarios.</p>
+<p>Below, we define a <a href="https://docs.python.org/3/tutorial/controlflow.html#defining-functions">function</a> to create an elevation grid for the city. We use <code>numpy</code> because it’s a great tool for setting up our 2d array. We will use a <a href="https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html">meshgrid</a> to set up our grid.</p>
+<p>Please read the comments and test out any lines of code you want to understand better. I encourage you to reference the <code>numpy</code> documentation to read about any functions you’re seeing for the first time.</p>
+<div id="0596c841" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_terrain(width<span class="op">=</span><span class="dv">100</span>, height<span class="op">=</span><span class="dv">80</span>):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Create an elevation grid using numpy meshgrid</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Key features:</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">        - Rivers are the lowest elevations (like real topography)</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">        - Land slopes toward rivers creating natural drainage</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">        - Floodplains are flat areas adjacent to rivers</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">        - Higher elevations are away from water</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">    Keyword arguments:</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co">    width -- the number of columns in our elevation grid</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co">    height -- the number of rows in our elevation grid</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set seed for reproducible terrain</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    rng <span class="op">=</span> np.random.default_rng(<span class="dv">42</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create coordinate grids</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.linspace(<span class="dv">0</span>, width<span class="op">/</span><span class="dv">10</span>, width)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> np.linspace(<span class="dv">0</span>, height<span class="op">/</span><span class="dv">10</span>, height)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    X, Y <span class="op">=</span> np.meshgrid(x, y)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define river path (straight east-west through middle)</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    river_center_y <span class="op">=</span> height <span class="op">//</span> <span class="dv">2</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a slightly meandering river path</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    river_path <span class="op">=</span> river_center_y <span class="op">+</span> <span class="dv">6</span> <span class="op">*</span> np.sin(np.linspace(<span class="dv">0</span>, <span class="dv">3</span><span class="op">*</span>np.pi, width))</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate distance from each point to the river</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Elevation increases with distance from water</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    distance_to_river <span class="op">=</span> np.zeros((height, width))</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(height):</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(width):</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>            river_y_at_x <span class="op">=</span> river_path[j]</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>            distance_to_river[i, j] <span class="op">=</span> <span class="bu">abs</span>(i <span class="op">-</span> river_y_at_x)</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create elevation based on distance to water</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Start with river at elevation 0, then build up from there</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Base elevation: increases as you move away from river</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>    elevation <span class="op">=</span> distance_to_river <span class="op">*</span> <span class="fl">1.2</span>  <span class="co"># 1.2m rise per grid cell from river</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add gentle regional slope (slightly higher in the east)</span></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>    elevation <span class="op">+=</span> X <span class="op">*</span> <span class="fl">1.5</span></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add some rolling hills in areas far from the river</span></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>    upland_mask <span class="op">=</span> distance_to_river <span class="op">&gt;</span> <span class="dv">10</span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    hill_effect <span class="op">=</span> np.where(upland_mask, </span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>                          <span class="dv">8</span> <span class="op">*</span> np.sin(X <span class="op">*</span> <span class="fl">0.6</span>) <span class="op">*</span> np.cos(Y <span class="op">*</span> <span class="fl">0.5</span>), </span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>                          <span class="dv">0</span>)</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    elevation <span class="op">+=</span> hill_effect</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create realistic floodplain (very flat near river)</span></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>    floodplain_mask <span class="op">=</span> distance_to_river <span class="op">&lt;</span> <span class="dv">3</span></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>    elevation[floodplain_mask] <span class="op">=</span> distance_to_river[floodplain_mask] <span class="op">*</span> <span class="fl">0.3</span> <span class="op">+</span> X[floodplain_mask] <span class="op">*</span> <span class="fl">0.5</span></span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ensure river channel is the absolute lowest point</span></span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>    river_mask <span class="op">=</span> distance_to_river <span class="op">&lt;</span> <span class="dv">1</span></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>    elevation[river_mask] <span class="op">=</span> X[river_mask] <span class="op">*</span> <span class="fl">0.2</span>  <span class="co"># Gentle downstream slope</span></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add small-scale variation</span></span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>    elevation <span class="op">+=</span> np.random.normal(<span class="dv">0</span>, <span class="fl">0.5</span>, elevation.shape)</span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ensure no negative elevations</span></span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>    elevation <span class="op">=</span> np.maximum(elevation, <span class="dv">0</span>)</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> elevation, distance_to_river</span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate terrain</span></span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>terrain, river_distance <span class="op">=</span> create_terrain()</span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a much better visualization</span></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a><span class="co"># Elevation map with proper terrain colormap</span></span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>im1 <span class="op">=</span> ax.imshow(terrain, cmap<span class="op">=</span><span class="st">'terrain'</span>, origin<span class="op">=</span><span class="st">'lower'</span>)</span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>ax.axis(<span class="st">'off'</span>)</span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>plt.colorbar(im1, ax<span class="op">=</span>ax, label<span class="op">=</span><span class="st">'Elevation (m)'</span>)</span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab02-intro_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Now we’ll use both <code>numpy</code> and <code>pandas</code> to set up our building inventory. There are a lot of things that go into where people build &amp; occupy buildings with respect to flood hazard, but we’re going to ignore that in setting up this problem. (You have no idea how uncommon it is for your instructor to let explanations on those things slide!)</p>
+<div id="1dc4805e" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generate_building_inventory(terrain, n_buildings<span class="op">=</span><span class="dv">500</span>, min_elevation<span class="op">=</span><span class="dv">10</span>):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Creates building inventory, excluding buildings in flood-prone areas.</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Generate buildings randomly, then filter out those </span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">    below minimum elevation.</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">    Keyword arguments:</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">    terrain -- digital elevation grid</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">    n_buildings -- the max number of buildings in the city</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co">    min_elevation -- the lowest elevation a building can have</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set seed for reproducible inventory</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    rng <span class="op">=</span> np.random.default_rng(<span class="dv">42</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Keep track of grid dimensions</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    height, width <span class="op">=</span> terrain.shape</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Vectorized location sampling</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    x_coords <span class="op">=</span> rng.integers(<span class="dv">0</span>, width, n_buildings)</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    y_coords <span class="op">=</span> rng.integers(<span class="dv">0</span>, height, n_buildings)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get elevations using numpy indexing</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    elevations <span class="op">=</span> terrain[y_coords, x_coords]</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Keep only buildings above minimum elevation</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># This automatically excludes buildings in the river, and some near</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    valid_mask <span class="op">=</span> elevations <span class="op">&gt;</span> min_elevation</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Apply filter to all arrays</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    x_coords <span class="op">=</span> x_coords[valid_mask]</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    y_coords <span class="op">=</span> y_coords[valid_mask]</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    elevations <span class="op">=</span> elevations[valid_mask]</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check how many buildingds we're left with</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>    n_actual <span class="op">=</span> <span class="bu">len</span>(x_coords)</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate building characteristics (vectorized)</span></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>    building_types <span class="op">=</span> rng.choice(</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>        [<span class="st">'residential'</span>, <span class="st">'commercial'</span>, <span class="st">'industrial'</span>],</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>        size<span class="op">=</span>n_actual,</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>        p<span class="op">=</span>[<span class="fl">0.75</span>, <span class="fl">0.2</span>, <span class="fl">0.05</span>]</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Structure values by type (vectorized with masks)</span></span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>    values <span class="op">=</span> np.zeros(n_actual)</span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>    residential_mask <span class="op">=</span> (building_types <span class="op">==</span> <span class="st">'residential'</span>)</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>    commercial_mask <span class="op">=</span> (building_types <span class="op">==</span> <span class="st">'commercial'</span>)</span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>    industrial_mask <span class="op">=</span> (building_types <span class="op">==</span> <span class="st">'industrial'</span>)</span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>    values[residential_mask] <span class="op">=</span> rng.lognormal(<span class="dv">12</span>, <span class="fl">0.5</span>, residential_mask.<span class="bu">sum</span>())</span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>    values[commercial_mask] <span class="op">=</span> rng.lognormal(<span class="dv">13</span>, <span class="fl">0.7</span>, commercial_mask.<span class="bu">sum</span>())</span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>    values[industrial_mask] <span class="op">=</span> rng.lognormal(<span class="dv">14</span>, <span class="fl">0.8</span>, industrial_mask.<span class="bu">sum</span>())</span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create DataFrame</span></span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>    buildings <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>        <span class="st">'bld_id'</span>: [<span class="ss">f'</span><span class="sc">{</span>i<span class="sc">:04d}</span><span class="ss">'</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_actual)],</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>        <span class="st">'x'</span>: x_coords,</span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>        <span class="st">'y'</span>: y_coords,</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>        <span class="st">'elevation'</span>: elevations,</span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>        <span class="st">'type'</span>: building_types,</span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>        <span class="st">'value'</span>: values</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> buildings</span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate building inventory</span></span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>buildings <span class="op">=</span> generate_building_inventory(terrain, n_buildings<span class="op">=</span><span class="dv">500</span>, min_elevation<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize building locations on terrain</span></span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a><span class="co"># Show terrain</span></span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>img <span class="op">=</span> ax.imshow(terrain, cmap<span class="op">=</span><span class="st">'terrain'</span>, origin<span class="op">=</span><span class="st">'lower'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> plt.colorbar(img)</span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>cbar.set_label(<span class="st">'Elevation (m)'</span>, size<span class="op">=</span><span class="dv">14</span>, rotation<span class="op">=</span><span class="dv">90</span>)</span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>cbar.ax.tick_params(labelsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a><span class="co"># Add building locations colored by type</span></span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> {<span class="st">'residential'</span>: <span class="st">'red'</span>, <span class="st">'commercial'</span>: <span class="st">'blue'</span>, <span class="st">'industrial'</span>: <span class="st">'purple'</span>}</span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> building_type, color <span class="kw">in</span> colors.items():</span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>    type_buildings <span class="op">=</span> buildings[buildings[<span class="st">'type'</span>] <span class="op">==</span> building_type]</span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a>    ax.scatter(type_buildings[<span class="st">'x'</span>], type_buildings[<span class="st">'y'</span>], </span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>               c<span class="op">=</span>color, s<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, label<span class="op">=</span>building_type)</span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>ax.legend(bbox_to_anchor<span class="op">=</span>(<span class="fl">.5</span>, <span class="op">-</span><span class="fl">.1</span>),</span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a>          loc<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a>          ncols<span class="op">=</span><span class="dv">3</span>,</span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a>          fontsize<span class="op">=</span><span class="dv">14</span>,</span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a>          title_fontsize<span class="op">=</span><span class="dv">14</span>,</span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a>          title<span class="op">=</span><span class="st">'Occupancy'</span>)</span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a>ax.axis(<span class="st">'off'</span>)</span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab02-intro_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Now we’ll generate two flood scenarios. We’ll organize our parameterizations for each scenario using dictionaries. Then we’ll simulate the floods in a highly stylized fashion to get depth grids.</p>
+<div id="c81a971c" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>scenarios <span class="op">=</span> {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>        <span class="st">'moderate'</span>: {</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>            <span class="st">'name'</span>: <span class="st">'Moderate Flood'</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>            <span class="st">'rainfall_mm'</span>: <span class="dv">100</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>            <span class="st">'river_discharge_multiplier'</span>: <span class="fl">3.0</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">'storm_duration_hours'</span>: <span class="dv">12</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        },</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="st">'extreme'</span>: {</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>            <span class="st">'name'</span>: <span class="st">'Extreme Flood'</span>, </span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">'rainfall_mm'</span>: <span class="dv">200</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">'river_discharge_multiplier'</span>: <span class="fl">6.0</span>,</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>            <span class="st">'storm_duration_hours'</span>: <span class="dv">24</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simulate_flood(terrain, river_distance, scenario_params):</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="co">    Simple linear flood model based on terrain characteristics.</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co">    Flood depth depends on:</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co">    - Base scenario intensity</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co">    - Distance to river (closer = more flooding)</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="co">    - Elevation (lower = more flooding)</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co">    - Random noise (varies by distance to river)</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a><span class="co">    Keyword arguments:</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="co">    terrain -- digital elevation grid</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="co">    river_distance -- grid of distances from river</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="co">    scenario_params -- dict of flood scenario details</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Random seed for reproducibility</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>    rng <span class="op">=</span> np.random.default_rng(<span class="dv">42</span>)</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Base flood intensity from scenario</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    base_intensity <span class="op">=</span> scenario_params[<span class="st">'rainfall_mm'</span>] <span class="op">/</span> <span class="dv">1000</span>  <span class="co"># Convert to meters</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>    river_intensity <span class="op">=</span> base_intensity <span class="op">*</span> scenario_params[<span class="st">'river_discharge_multiplier'</span>]</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Linear model for flood depth</span></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Flood depth = base + river_effect + elevation_effect + noise</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># River effect: flooding decreases with distance from river</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>    river_effect <span class="op">=</span> np.maximum(<span class="dv">0</span>, river_intensity <span class="op">*</span> (<span class="dv">10</span> <span class="op">-</span> river_distance) <span class="op">/</span> <span class="dv">10</span>)</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Elevation effect: flooding decreases with elevation above minimum</span></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>    min_elevation <span class="op">=</span> np.<span class="bu">min</span>(terrain)</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>    elevation_effect <span class="op">=</span> np.maximum(<span class="dv">0</span>, base_intensity <span class="op">*</span> (<span class="dv">35</span> <span class="op">-</span> (terrain <span class="op">-</span> min_elevation)) <span class="op">/</span> <span class="dv">35</span>)</span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Spatially varying noise</span></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># More variability near river (complex hydrology)</span></span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Less variability on uplands (simple runoff)</span></span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>    noise_scale <span class="op">=</span> <span class="fl">0.1</span> <span class="op">*</span> base_intensity <span class="op">*</span> (<span class="dv">1</span> <span class="op">+</span> <span class="fl">0.5</span> <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> river_distance))</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>    noise <span class="op">=</span> rng.normal(<span class="dv">0</span>, noise_scale, terrain.shape)</span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Combine effects</span></span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>    flood_depth <span class="op">=</span> river_effect <span class="op">+</span> elevation_effect <span class="op">+</span> noise</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ensure realistic constraints</span></span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>    <span class="co"># No negative depths</span></span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>    flood_depth <span class="op">=</span> np.maximum(flood_depth, <span class="dv">0</span>)</span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Cap maximum depth (physical limit)</span></span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>    flood_depth <span class="op">=</span> np.minimum(flood_depth, <span class="fl">5.0</span>)</span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Areas above certain elevation rarely flood</span></span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>    high_elevation_mask <span class="op">=</span> terrain <span class="op">&gt;</span> (min_elevation <span class="op">+</span> <span class="dv">40</span>)</span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>    flood_depth[high_elevation_mask] <span class="op">*=</span> <span class="fl">0.1</span>  <span class="co"># Reduce flooding on high ground</span></span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Very small depths set to zero (not meaningful flooding)</span></span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>    flood_depth[flood_depth <span class="op">&lt;</span> <span class="fl">0.02</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> flood_depth</span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the simplified simulations</span></span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>flood_results <span class="op">=</span> {}</span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> scenario_id, params <span class="kw">in</span> scenarios.items():</span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a>    flood_depth <span class="op">=</span> simulate_flood(terrain, river_distance, params)</span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a>    flood_results[scenario_id] <span class="op">=</span> {</span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a>        <span class="st">'depth'</span>: flood_depth,</span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a>        <span class="st">'params'</span>: params,</span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a>        <span class="st">'flooded_cells'</span>: np.<span class="bu">sum</span>(flood_depth <span class="op">&gt;</span> <span class="fl">0.01</span>),  <span class="co"># 1cm threshold</span></span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a>        <span class="st">'max_depth'</span>: np.<span class="bu">max</span>(flood_depth),</span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>        <span class="st">'mean_depth'</span>: np.mean(flood_depth[flood_depth <span class="op">&gt;</span> <span class="fl">0.01</span>]) <span class="cf">if</span> np.<span class="bu">any</span>(flood_depth <span class="op">&gt;</span> <span class="fl">0.01</span>) <span class="cf">else</span> <span class="dv">0</span></span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a><span class="co"># Enhanced visualization with proper handling of zero flood depths</span></span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">12</span>), sharey<span class="op">=</span><span class="st">'col'</span>)</span>
+<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, (scenario_id, results) <span class="kw">in</span> <span class="bu">enumerate</span>(flood_results.items()):</span>
+<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a>    row <span class="op">=</span> i</span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Only show flood depths, gray for no flooding</span></span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a>    flood_depth_viz <span class="op">=</span> results[<span class="st">'depth'</span>].copy()</span>
+<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create a masked array where zeros are masked</span></span>
+<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a>    flood_depth_masked <span class="op">=</span> np.ma.masked_where(flood_depth_viz <span class="op">&lt;=</span> <span class="fl">0.01</span>, flood_depth_viz)</span>
+<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Show only flood depths (zeros will be transparent, showing gray background)</span></span>
+<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a>    im <span class="op">=</span> axes[row, <span class="dv">0</span>].imshow(flood_depth_masked, cmap<span class="op">=</span><span class="st">'Blues'</span>, vmin<span class="op">=</span><span class="dv">0</span>, vmax<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a>    axes[row, <span class="dv">0</span>].set_title(<span class="ss">f"</span><span class="sc">{</span>results[<span class="st">'params'</span>][<span class="st">'name'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add colorbar with proper label</span></span>
+<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a>    cbar <span class="op">=</span> plt.colorbar(im, ax<span class="op">=</span>axes[row, <span class="dv">0</span>], extend<span class="op">=</span><span class="st">'max'</span>, label<span class="op">=</span><span class="st">'Flood Depth (m)'</span>)</span>
+<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Show flooded and non-flooded areas</span></span>
+<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Get all terrain elevations</span></span>
+<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a>    all_elevations <span class="op">=</span> terrain.flatten()</span>
+<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a>    all_flood_depths <span class="op">=</span> results[<span class="st">'depth'</span>].flatten()</span>
+<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-111"><a href="#cb7-111" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Separate flooded and non-flooded areas</span></span>
+<span id="cb7-112"><a href="#cb7-112" aria-hidden="true" tabindex="-1"></a>    flooded_mask <span class="op">=</span> all_flood_depths <span class="op">&gt;</span> <span class="fl">0.01</span></span>
+<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a>    non_flooded_mask <span class="op">=</span> all_flood_depths <span class="op">&lt;=</span> <span class="fl">0.01</span></span>
+<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot non-flooded areas (gray triangles)</span></span>
+<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> np.<span class="bu">any</span>(non_flooded_mask):</span>
+<span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a>        axes[row, <span class="dv">1</span>].scatter(all_elevations[non_flooded_mask], </span>
+<span id="cb7-118"><a href="#cb7-118" aria-hidden="true" tabindex="-1"></a>                           all_flood_depths[non_flooded_mask],</span>
+<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a>                           c<span class="op">=</span><span class="st">'lightgray'</span>, marker<span class="op">=</span><span class="st">'^'</span>, s<span class="op">=</span><span class="dv">8</span>, alpha<span class="op">=</span><span class="dv">1</span>, </span>
+<span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a>                           label<span class="op">=</span><span class="st">'No flooding'</span>)</span>
+<span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot flooded areas (blue circles)</span></span>
+<span id="cb7-123"><a href="#cb7-123" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> np.<span class="bu">any</span>(flooded_mask):</span>
+<span id="cb7-124"><a href="#cb7-124" aria-hidden="true" tabindex="-1"></a>        scatter <span class="op">=</span> axes[row, <span class="dv">1</span>].scatter(all_elevations[flooded_mask], </span>
+<span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a>                                     all_flood_depths[flooded_mask],</span>
+<span id="cb7-126"><a href="#cb7-126" aria-hidden="true" tabindex="-1"></a>                                     c<span class="op">=</span>all_flood_depths[flooded_mask], </span>
+<span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a>                                     cmap<span class="op">=</span><span class="st">'Blues'</span>, s<span class="op">=</span><span class="dv">12</span>, alpha<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb7-128"><a href="#cb7-128" aria-hidden="true" tabindex="-1"></a>                                     vmin<span class="op">=</span><span class="dv">0</span>, vmax<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb7-129"><a href="#cb7-129" aria-hidden="true" tabindex="-1"></a>                                     label<span class="op">=</span><span class="st">'Flooded'</span>)</span>
+<span id="cb7-130"><a href="#cb7-130" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-131"><a href="#cb7-131" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add colorbar for scatter plot</span></span>
+<span id="cb7-132"><a href="#cb7-132" aria-hidden="true" tabindex="-1"></a>        plt.colorbar(scatter, ax<span class="op">=</span>axes[row, <span class="dv">1</span>], extend<span class="op">=</span><span class="st">'max'</span>, label<span class="op">=</span><span class="st">'Flood Depth (m)'</span>)</span>
+<span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-134"><a href="#cb7-134" aria-hidden="true" tabindex="-1"></a>    axes[row, <span class="dv">1</span>].set_xlabel(<span class="st">'Terrain Elevation (m)'</span>)</span>
+<span id="cb7-135"><a href="#cb7-135" aria-hidden="true" tabindex="-1"></a>    axes[row, <span class="dv">1</span>].set_ylabel(<span class="st">'Flood Depth (m)'</span>)</span>
+<span id="cb7-136"><a href="#cb7-136" aria-hidden="true" tabindex="-1"></a>    axes[row, <span class="dv">1</span>].set_title(<span class="ss">f"</span><span class="sc">{</span>results[<span class="st">'params'</span>][<span class="st">'name'</span>]<span class="sc">}</span><span class="ch">\n</span><span class="ss">Elevation vs Flood Depth"</span>)</span>
+<span id="cb7-137"><a href="#cb7-137" aria-hidden="true" tabindex="-1"></a>    axes[row, <span class="dv">1</span>].grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb7-138"><a href="#cb7-138" aria-hidden="true" tabindex="-1"></a>    axes[row, <span class="dv">1</span>].legend()</span>
+<span id="cb7-139"><a href="#cb7-139" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-140"><a href="#cb7-140" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add some summary statistics as text</span></span>
+<span id="cb7-141"><a href="#cb7-141" aria-hidden="true" tabindex="-1"></a>    flooded_cells <span class="op">=</span> np.<span class="bu">sum</span>(flooded_mask)</span>
+<span id="cb7-142"><a href="#cb7-142" aria-hidden="true" tabindex="-1"></a>    total_cells <span class="op">=</span> <span class="bu">len</span>(all_elevations)</span>
+<span id="cb7-143"><a href="#cb7-143" aria-hidden="true" tabindex="-1"></a>    flood_percentage <span class="op">=</span> (flooded_cells <span class="op">/</span> total_cells) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb7-144"><a href="#cb7-144" aria-hidden="true" tabindex="-1"></a>       </span>
+<span id="cb7-145"><a href="#cb7-145" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add text box with statistics</span></span>
+<span id="cb7-146"><a href="#cb7-146" aria-hidden="true" tabindex="-1"></a>    stats_text <span class="op">=</span> <span class="ss">f'Flooded: </span><span class="sc">{</span>flooded_cells<span class="sc">:,}</span><span class="ss"> cells (</span><span class="sc">{</span>flood_percentage<span class="sc">:.1f}</span><span class="ss">%)</span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb7-147"><a href="#cb7-147" aria-hidden="true" tabindex="-1"></a>    stats_text <span class="op">+=</span> <span class="ss">f'Max depth: </span><span class="sc">{</span>results[<span class="st">"max_depth"</span>]<span class="sc">:.2f}</span><span class="ss">m'</span></span>
+<span id="cb7-148"><a href="#cb7-148" aria-hidden="true" tabindex="-1"></a>    axes[row, <span class="dv">1</span>].text(<span class="fl">0.42</span>, <span class="fl">0.98</span>, stats_text, transform<span class="op">=</span>axes[row, <span class="dv">1</span>].transAxes, </span>
+<span id="cb7-149"><a href="#cb7-149" aria-hidden="true" tabindex="-1"></a>                     verticalalignment<span class="op">=</span><span class="st">'top'</span>, bbox<span class="op">=</span><span class="bu">dict</span>(boxstyle<span class="op">=</span><span class="st">'round'</span>, facecolor<span class="op">=</span><span class="st">'white'</span>, alpha<span class="op">=</span><span class="fl">0.8</span>))</span>
+<span id="cb7-150"><a href="#cb7-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-151"><a href="#cb7-151" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb7-152"><a href="#cb7-152" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab02-intro_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="analyzing-risk" class="level3">
+<h3 class="anchored" data-anchor-id="analyzing-risk">Analyzing risk</h3>
+<p>Now it’s time to calculate flood damages. We will identify which buildings face flooding in each scenario, then will apply (made up) depth-damage functions to translate exposure into damages. These functions return damage as a fraction of building value, so we will scale these outputs by each building’s value.</p>
+<div id="2396796c" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get building depths for each scenario</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> scenario_id, results <span class="kw">in</span> flood_results.items():</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    depths <span class="op">=</span> results[<span class="st">'depth'</span>][buildings[<span class="st">'y'</span>], buildings[<span class="st">'x'</span>]]</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    buildings[<span class="st">'depth_</span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(scenario_id)] <span class="op">=</span> pd.Series(depths)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Function for estimating damages</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calc_flood_damages(buildings, depth_col):</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">    Estimate flood damages for the merged flood scenarios</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">    Keyword arguments:</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">    buildings -- our building inventory</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">    depth_cols -- name of the flood scenario to calculate damages</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">    Note: we must have preprocessed depth columns in the buildings dataframe</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co">    to avoid throwing an Error (it's much better to explicitly handle this if you can!)</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set seed for reproducibility</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    rng <span class="op">=</span> np.random.default_rng(<span class="dv">42</span>)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Helpful to have a function for the depth-damage curves</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> damage_curve_deterministic(depth, building_type):</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co">        Base damage curves without noise - cleaner for teaching the core concept.</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> depth <span class="op">&lt;=</span> <span class="fl">0.01</span>: </span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> depth <span class="op">&lt;=</span> <span class="fl">0.25</span>:  </span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> building_type <span class="op">==</span> <span class="st">'residential'</span>:</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="fl">0.1</span> <span class="op">+</span> <span class="fl">0.3</span> <span class="op">*</span> (depth <span class="op">-</span> <span class="fl">0.1</span>) <span class="op">/</span> <span class="fl">0.4</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="fl">0.05</span> <span class="op">+</span> <span class="fl">0.2</span> <span class="op">*</span> (depth <span class="op">-</span> <span class="fl">0.1</span>) <span class="op">/</span> <span class="fl">0.4</span></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> depth <span class="op">&lt;=</span> <span class="fl">.75</span>:  </span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> building_type <span class="op">==</span> <span class="st">'residential'</span>:</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="fl">0.4</span> <span class="op">+</span> <span class="fl">0.3</span> <span class="op">*</span> (depth <span class="op">-</span> <span class="fl">0.5</span>) <span class="op">/</span> <span class="fl">0.5</span></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="fl">0.25</span> <span class="op">+</span> <span class="fl">0.4</span> <span class="op">*</span> (depth <span class="op">-</span> <span class="fl">0.5</span>) <span class="op">/</span> <span class="fl">0.5</span></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:  </span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> building_type <span class="op">==</span> <span class="st">'residential'</span>:</span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="bu">min</span>(<span class="fl">0.7</span> <span class="op">+</span> <span class="fl">0.2</span> <span class="op">*</span> (depth <span class="op">-</span> <span class="fl">1.0</span>), <span class="fl">0.95</span>)</span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="bu">min</span>(<span class="fl">0.65</span> <span class="op">+</span> <span class="fl">0.25</span> <span class="op">*</span> (depth <span class="op">-</span> <span class="fl">1.0</span>), <span class="fl">0.90</span>)</span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate deterministic damage ratios using vectorized pandas apply</span></span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>    damage_ratios_base <span class="op">=</span> buildings.<span class="bu">apply</span>(</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>        <span class="kw">lambda</span> row: damage_curve_deterministic(row[depth_col], row[<span class="st">'type'</span>]), </span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>        axis<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add noise</span></span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Uncertainty increases with predicted damage level</span></span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Low damage = low uncertainty, High damage = high uncertainty</span></span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create noise scale that increases with predicted damage</span></span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>    <span class="co"># No noise for zero damage, maximum noise for high damage</span></span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>    noise_scale <span class="op">=</span> <span class="fl">0.15</span> <span class="op">*</span> damage_ratios_base  <span class="co"># 15% relative noise</span></span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate heteroskedastic noise</span></span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>    damage_noise <span class="op">=</span> rng.normal(<span class="dv">0</span>, noise_scale)</span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Apply noise to damage ratios</span></span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>    damage_ratios_noisy <span class="op">=</span> damage_ratios_base <span class="op">+</span> damage_noise</span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ensure realistic bounds (damage ratios must be between 0 and 1)</span></span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>    damage_ratios_final <span class="op">=</span> np.clip(damage_ratios_noisy, <span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Return damage amounts</span></span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> buildings[<span class="st">'value'</span>] <span class="op">*</span> damage_ratios_final</span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate damages</span></span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify depth columns and loop through them</span></span>
+<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a><span class="co"># Store the scenario name to create the damage column</span></span>
+<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a><span class="co"># This is called list comprehension - very handy!</span></span>
+<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>depth_cols <span class="op">=</span> [x <span class="cf">for</span> x <span class="kw">in</span> buildings.columns <span class="cf">if</span> <span class="st">'depth'</span> <span class="kw">in</span> x]</span>
+<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a><span class="co"># Our names of interest come after a '_' so we can split our strings</span></span>
+<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> d_col <span class="kw">in</span> depth_cols:</span>
+<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>    <span class="co"># This returns a list of strings after splitting on '_'</span></span>
+<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a>    <span class="co"># and we want the last indexed string in that list</span></span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>    scenario <span class="op">=</span> d_col.split(<span class="st">'_'</span>)[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a>    dam_col <span class="op">=</span> <span class="st">'damage_</span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(scenario)</span>
+<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>    damage <span class="op">=</span> calc_flood_damages(buildings, d_col)</span>
+<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a>    buildings[dam_col] <span class="op">=</span> damage</span>
+<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a><span class="co">## Diagnostic plot</span></span>
+<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">1</span>,</span>
+<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a>                               sharex<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a>                               figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">10</span>))</span>
+<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a><span class="co"># Define colors and scenario info</span></span>
+<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a>scenarios_plot <span class="op">=</span> {</span>
+<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a>    <span class="st">'moderate_flood'</span>: {</span>
+<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a>        <span class="st">'color'</span>: <span class="st">'blue'</span>,</span>
+<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a>        <span class="st">'label'</span>: <span class="st">'Moderate Flood'</span>,</span>
+<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a>        <span class="st">'depth_col'</span>: <span class="st">'depth_moderate'</span>,</span>
+<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a>        <span class="st">'damage_col'</span>: <span class="st">'damage_moderate'</span></span>
+<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a>    <span class="st">'extreme_flood'</span>: {</span>
+<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a>        <span class="st">'color'</span>: <span class="st">'red'</span>, </span>
+<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a>        <span class="st">'label'</span>: <span class="st">'Extreme Flood'</span>,</span>
+<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a>        <span class="st">'depth_col'</span>: <span class="st">'depth_extreme'</span>,</span>
+<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a>        <span class="st">'damage_col'</span>: <span class="st">'damage_extreme'</span></span>
+<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a>min_dam_depth <span class="op">=</span> <span class="fl">.01</span></span>
+<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a><span class="co"># Cumulative damage curves</span></span>
+<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> scenario_id, info <span class="kw">in</span> scenarios_plot.items():</span>
+<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Filter to buildings with flooding in this scenario</span></span>
+<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a>    flooded_buildings <span class="op">=</span> buildings[</span>
+<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a>        buildings[info[<span class="st">'depth_col'</span>]] <span class="op">&gt;</span> min_dam_depth</span>
+<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a>    ].copy()</span>
+<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(flooded_buildings) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Sort by flood depth</span></span>
+<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a>        flooded_buildings <span class="op">=</span> flooded_buildings.sort_values(info[<span class="st">'depth_col'</span>])</span>
+<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculate cumulative damage</span></span>
+<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a>        cumulative_damage <span class="op">=</span> flooded_buildings[info[<span class="st">'damage_col'</span>]].cumsum()</span>
+<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a>        flood_depths <span class="op">=</span> flooded_buildings[info[<span class="st">'depth_col'</span>]]</span>
+<span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Create step plot</span></span>
+<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a>        ax1.step(flood_depths, cumulative_damage <span class="op">/</span> <span class="fl">1e6</span>, </span>
+<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a>                where<span class="op">=</span><span class="st">'post'</span>, linewidth<span class="op">=</span><span class="fl">2.5</span>, </span>
+<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a>                color<span class="op">=</span>info[<span class="st">'color'</span>], label<span class="op">=</span>info[<span class="st">'label'</span>])</span>
+<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'Cumulative Damage ($ millions)'</span>, size<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'Cumulative Damage by Flood Depth</span><span class="ch">\n</span><span class="st">(Step plot shows damage accumulation)'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a>ax1.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a>ax1.legend(fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a><span class="co"># Overlapping histograms of flood depths</span></span>
+<span id="cb8-135"><a href="#cb8-135" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> scenario_id, info <span class="kw">in</span> scenarios_plot.items():</span>
+<span id="cb8-136"><a href="#cb8-136" aria-hidden="true" tabindex="-1"></a>    flood_depths <span class="op">=</span> buildings[info[<span class="st">'depth_col'</span>]]</span>
+<span id="cb8-137"><a href="#cb8-137" aria-hidden="true" tabindex="-1"></a>    flooded_depths <span class="op">=</span> flood_depths[flood_depths <span class="op">&gt;</span> min_dam_depth]</span>
+<span id="cb8-138"><a href="#cb8-138" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-139"><a href="#cb8-139" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(flooded_depths) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb8-140"><a href="#cb8-140" aria-hidden="true" tabindex="-1"></a>        ax2.hist(flooded_depths, bins<span class="op">=</span><span class="dv">30</span>, alpha<span class="op">=</span><span class="fl">0.6</span>, </span>
+<span id="cb8-141"><a href="#cb8-141" aria-hidden="true" tabindex="-1"></a>                color<span class="op">=</span>info[<span class="st">'color'</span>], label<span class="op">=</span>info[<span class="st">'label'</span>],</span>
+<span id="cb8-142"><a href="#cb8-142" aria-hidden="true" tabindex="-1"></a>                edgecolor<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>, density<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-143"><a href="#cb8-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-144"><a href="#cb8-144" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">'Flood Depth (m)'</span>, size<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb8-145"><a href="#cb8-145" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'Density'</span>, size<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb8-146"><a href="#cb8-146" aria-hidden="true" tabindex="-1"></a>ax2.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb8-147"><a href="#cb8-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-148"><a href="#cb8-148" aria-hidden="true" tabindex="-1"></a><span class="co"># Add summary statistics as text annotations</span></span>
+<span id="cb8-149"><a href="#cb8-149" aria-hidden="true" tabindex="-1"></a>summary_text <span class="op">=</span> <span class="st">"SCENARIO SUMMARY:</span><span class="ch">\n\n</span><span class="st">"</span></span>
+<span id="cb8-150"><a href="#cb8-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-151"><a href="#cb8-151" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> scenario_id, info <span class="kw">in</span> scenarios_plot.items():</span>
+<span id="cb8-152"><a href="#cb8-152" aria-hidden="true" tabindex="-1"></a>    flood_depths <span class="op">=</span> buildings[info[<span class="st">'depth_col'</span>]]</span>
+<span id="cb8-153"><a href="#cb8-153" aria-hidden="true" tabindex="-1"></a>    damages <span class="op">=</span> buildings[info[<span class="st">'damage_col'</span>]]</span>
+<span id="cb8-154"><a href="#cb8-154" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-155"><a href="#cb8-155" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate statistics</span></span>
+<span id="cb8-156"><a href="#cb8-156" aria-hidden="true" tabindex="-1"></a>    n_flooded <span class="op">=</span> np.<span class="bu">sum</span>(flood_depths <span class="op">&gt;</span> min_dam_depth)</span>
+<span id="cb8-157"><a href="#cb8-157" aria-hidden="true" tabindex="-1"></a>    total_damage <span class="op">=</span> damages.<span class="bu">sum</span>()</span>
+<span id="cb8-158"><a href="#cb8-158" aria-hidden="true" tabindex="-1"></a>    mean_damage <span class="op">=</span> damages[damages <span class="op">&gt;</span> <span class="dv">0</span>].mean() <span class="cf">if</span> np.<span class="bu">any</span>(damages <span class="op">&gt;</span> <span class="dv">0</span>) <span class="cf">else</span> <span class="dv">0</span></span>
+<span id="cb8-159"><a href="#cb8-159" aria-hidden="true" tabindex="-1"></a>    max_depth <span class="op">=</span> flood_depths.<span class="bu">max</span>()</span>
+<span id="cb8-160"><a href="#cb8-160" aria-hidden="true" tabindex="-1"></a>    mean_depth <span class="op">=</span> flood_depths[flood_depths <span class="op">&gt;</span> min_dam_depth].mean() <span class="cf">if</span> np.<span class="bu">any</span>(flood_depths <span class="op">&gt;</span> min_dam_depth) <span class="cf">else</span> <span class="dv">0</span></span>
+<span id="cb8-161"><a href="#cb8-161" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-162"><a href="#cb8-162" aria-hidden="true" tabindex="-1"></a>    summary_text <span class="op">+=</span> <span class="ss">f"</span><span class="sc">{</span>info[<span class="st">'label'</span>]<span class="sc">}</span><span class="ss">:</span><span class="ch">\n</span><span class="ss">"</span></span>
+<span id="cb8-163"><a href="#cb8-163" aria-hidden="true" tabindex="-1"></a>    summary_text <span class="op">+=</span> <span class="ss">f"  • Buildings flooded: </span><span class="sc">{</span>n_flooded<span class="sc">:,}</span><span class="ch">\n</span><span class="ss">"</span></span>
+<span id="cb8-164"><a href="#cb8-164" aria-hidden="true" tabindex="-1"></a>    summary_text <span class="op">+=</span> <span class="ss">f"  • Total damage: $</span><span class="sc">{</span>total_damage<span class="op">/</span><span class="fl">1e6</span><span class="sc">:.1f}</span><span class="ss">M</span><span class="ch">\n</span><span class="ss">"</span></span>
+<span id="cb8-165"><a href="#cb8-165" aria-hidden="true" tabindex="-1"></a>    summary_text <span class="op">+=</span> <span class="ss">f"  • Mean damage: $</span><span class="sc">{</span>mean_damage<span class="op">/</span><span class="fl">1e3</span><span class="sc">:.0f}</span><span class="ss">K</span><span class="ch">\n</span><span class="ss">"</span></span>
+<span id="cb8-166"><a href="#cb8-166" aria-hidden="true" tabindex="-1"></a>    summary_text <span class="op">+=</span> <span class="ss">f"  • Max depth: </span><span class="sc">{</span>max_depth<span class="sc">:.2f}</span><span class="ss">m</span><span class="ch">\n</span><span class="ss">"</span></span>
+<span id="cb8-167"><a href="#cb8-167" aria-hidden="true" tabindex="-1"></a>    summary_text <span class="op">+=</span> <span class="ss">f"  • Mean depth: </span><span class="sc">{</span>mean_depth<span class="sc">:.2f}</span><span class="ss">m</span><span class="ch">\n\n</span><span class="ss">"</span></span>
+<span id="cb8-168"><a href="#cb8-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-169"><a href="#cb8-169" aria-hidden="true" tabindex="-1"></a><span class="co"># Add text box with statistics</span></span>
+<span id="cb8-170"><a href="#cb8-170" aria-hidden="true" tabindex="-1"></a>summary_text <span class="op">+=</span> <span class="ss">f"Total buildings: </span><span class="sc">{</span><span class="bu">len</span>(buildings)<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb8-171"><a href="#cb8-171" aria-hidden="true" tabindex="-1"></a>ax2.text(<span class="fl">0.8</span>, <span class="fl">0.2</span>, summary_text, transform<span class="op">=</span>ax2.transAxes,</span>
+<span id="cb8-172"><a href="#cb8-172" aria-hidden="true" tabindex="-1"></a>            fontsize<span class="op">=</span><span class="dv">12</span>,</span>
+<span id="cb8-173"><a href="#cb8-173" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(boxstyle<span class="op">=</span><span class="st">'round,pad=0.5'</span>, facecolor<span class="op">=</span><span class="st">'white'</span>, alpha<span class="op">=</span><span class="fl">0.9</span>))</span>
+<span id="cb8-174"><a href="#cb8-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-175"><a href="#cb8-175" aria-hidden="true" tabindex="-1"></a>ax1.tick_params(labelsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb8-176"><a href="#cb8-176" aria-hidden="true" tabindex="-1"></a>ax2.tick_params(labelsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb8-177"><a href="#cb8-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-178"><a href="#cb8-178" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb8-179"><a href="#cb8-179" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab02-intro_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Now we compare different flood mitigation options. We will make very rudimentary assumptions about costs and benefits for different actions. While the text table does not render colors on the website, checkout what happens in your Jupyter notebook!</p>
+<div id="f8421c33" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> analyze_mitigation_strategies_multi_scenario(buildings):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Evaluates mitigation strategies across both flood scenarios.</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate baseline damages for both scenarios</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    baseline_moderate <span class="op">=</span> buildings[<span class="st">'damage_moderate'</span>].<span class="bu">sum</span>()</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    baseline_extreme <span class="op">=</span> buildings[<span class="st">'damage_extreme'</span>].<span class="bu">sum</span>()</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Baseline damages:"</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  Moderate flood: $</span><span class="sc">{</span>baseline_moderate<span class="sc">:,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  Extreme flood: $</span><span class="sc">{</span>baseline_extreme<span class="sc">:,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Define mitigation strategies</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    strategies <span class="op">=</span> {</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">'do_nothing'</span>: {</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>            <span class="st">'cost'</span>: <span class="dv">0</span>,</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>            <span class="st">'damage_reduction_moderate'</span>: <span class="dv">0</span>,</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>            <span class="st">'damage_reduction_extreme'</span>: <span class="dv">0</span>,</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>            <span class="st">'description'</span>: <span class="st">'Accept current flood risk'</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>        },</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">'early_warning'</span>: {</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>            <span class="st">'cost'</span>: <span class="dv">500_000</span>,</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>            <span class="st">'damage_reduction_moderate'</span>: <span class="fl">0.15</span>,  <span class="co"># 15% reduction through evacuation</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>            <span class="st">'damage_reduction_extreme'</span>: <span class="fl">0.12</span>,   <span class="co"># Less effective in extreme events</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>            <span class="st">'description'</span>: <span class="st">'Flood warning system + evacuation plans'</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>        },</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>        <span class="st">'levees'</span>: {</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>            <span class="st">'cost'</span>: <span class="dv">25_000_000</span>,</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>            <span class="st">'damage_reduction_moderate'</span>: <span class="fl">0.70</span>,  <span class="co"># Very effective for moderate floods</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>            <span class="st">'damage_reduction_extreme'</span>: <span class="fl">0.45</span>,   <span class="co"># Less effective for extreme floods</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>            <span class="st">'description'</span>: <span class="st">'Construct flood levees along river'</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>        },</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>        <span class="st">'buyouts'</span>: {</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>            <span class="st">'cost'</span>: <span class="dv">15_000_000</span>,  <span class="co"># Simplified cost</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>            <span class="st">'damage_reduction_moderate'</span>: <span class="fl">0.35</span>,  <span class="co"># Remove highest-risk buildings</span></span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>            <span class="st">'damage_reduction_extreme'</span>: <span class="fl">0.40</span>,   <span class="co"># More effective in extreme events</span></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>            <span class="st">'description'</span>: <span class="st">'Buy out highest-risk properties'</span></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>        },</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>        <span class="st">'green_infrastructure'</span>: {</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>            <span class="st">'cost'</span>: <span class="dv">12_000_000</span>,</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>            <span class="st">'damage_reduction_moderate'</span>: <span class="fl">0.30</span>,  <span class="co"># Natural storage</span></span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>            <span class="st">'damage_reduction_extreme'</span>: <span class="fl">0.35</span>,   <span class="co"># Better performance in extreme events</span></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>            <span class="st">'description'</span>: <span class="st">'Wetland restoration + permeable surfaces'</span></span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>        },</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>        <span class="st">'combined_approach'</span>: {</span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>            <span class="st">'cost'</span>: <span class="dv">18_000_000</span>,</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>            <span class="st">'damage_reduction_moderate'</span>: <span class="fl">0.50</span>,  <span class="co"># Combines multiple strategies</span></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>            <span class="st">'damage_reduction_extreme'</span>: <span class="fl">0.6</span>,   <span class="co"># Better performance in extremes</span></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>            <span class="st">'description'</span>: <span class="st">'Early warning + green infrastructure + targeted buyouts'</span></span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate metrics for each strategy</span></span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>    strategy_analysis <span class="op">=</span> []</span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, strategy <span class="kw">in</span> strategies.items():</span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculate avoided damages for both scenarios</span></span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>        avoided_moderate <span class="op">=</span> baseline_moderate <span class="op">*</span> strategy[<span class="st">'damage_reduction_moderate'</span>]</span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a>        avoided_extreme <span class="op">=</span> baseline_extreme <span class="op">*</span> strategy[<span class="st">'damage_reduction_extreme'</span>]</span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calculate net benefits</span></span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a>        net_benefit_moderate <span class="op">=</span> avoided_moderate <span class="op">-</span> strategy[<span class="st">'cost'</span>]</span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a>        net_benefit_extreme <span class="op">=</span> avoided_extreme <span class="op">-</span> strategy[<span class="st">'cost'</span>]</span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a>        strategy_analysis.append({</span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a>            <span class="st">'strategy'</span>: name,</span>
+<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a>            <span class="st">'description'</span>: strategy[<span class="st">'description'</span>],</span>
+<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a>            <span class="st">'cost'</span>: strategy[<span class="st">'cost'</span>],</span>
+<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a>            <span class="st">'avoided_damage_moderate'</span>: avoided_moderate,</span>
+<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a>            <span class="st">'avoided_damage_extreme'</span>: avoided_extreme,</span>
+<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a>            <span class="st">'net_benefit_moderate'</span>: net_benefit_moderate,</span>
+<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a>            <span class="st">'net_benefit_extreme'</span>: net_benefit_extreme</span>
+<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.DataFrame(strategy_analysis)</span>
+<span id="cb9-77"><a href="#cb9-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-78"><a href="#cb9-78" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the multi-scenario analysis</span></span>
+<span id="cb9-79"><a href="#cb9-79" aria-hidden="true" tabindex="-1"></a>strategy_results <span class="op">=</span> analyze_mitigation_strategies_multi_scenario(buildings)</span>
+<span id="cb9-80"><a href="#cb9-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-81"><a href="#cb9-81" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a nicely formatted table with colors</span></span>
+<span id="cb9-82"><a href="#cb9-82" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_strategy_table(strategy_df):</span>
+<span id="cb9-83"><a href="#cb9-83" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb9-84"><a href="#cb9-84" aria-hidden="true" tabindex="-1"></a><span class="co">    Pretty print the strategy analysis table with colored output.</span></span>
+<span id="cb9-85"><a href="#cb9-85" aria-hidden="true" tabindex="-1"></a><span class="co">    Red for costs, black for benefits.</span></span>
+<span id="cb9-86"><a href="#cb9-86" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb9-87"><a href="#cb9-87" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-88"><a href="#cb9-88" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ANSI color codes</span></span>
+<span id="cb9-89"><a href="#cb9-89" aria-hidden="true" tabindex="-1"></a>    RED <span class="op">=</span> <span class="st">'</span><span class="ch">\033</span><span class="st">[91m'</span></span>
+<span id="cb9-90"><a href="#cb9-90" aria-hidden="true" tabindex="-1"></a>    GREEN <span class="op">=</span> <span class="st">'</span><span class="ch">\033</span><span class="st">[92m'</span></span>
+<span id="cb9-91"><a href="#cb9-91" aria-hidden="true" tabindex="-1"></a>    BLUE <span class="op">=</span> <span class="st">'</span><span class="ch">\033</span><span class="st">[94m'</span></span>
+<span id="cb9-92"><a href="#cb9-92" aria-hidden="true" tabindex="-1"></a>    BOLD <span class="op">=</span> <span class="st">'</span><span class="ch">\033</span><span class="st">[1m'</span></span>
+<span id="cb9-93"><a href="#cb9-93" aria-hidden="true" tabindex="-1"></a>    END <span class="op">=</span> <span class="st">'</span><span class="ch">\033</span><span class="st">[0m'</span></span>
+<span id="cb9-94"><a href="#cb9-94" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-95"><a href="#cb9-95" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="sc">{</span>BOLD<span class="sc">}</span><span class="ss"> MITIGATION STRATEGY ANALYSIS - MULTI-SCENARIO</span><span class="sc">{</span>END<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-96"><a href="#cb9-96" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"="</span><span class="op">*</span><span class="dv">100</span>)</span>
+<span id="cb9-97"><a href="#cb9-97" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-98"><a href="#cb9-98" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Table header</span></span>
+<span id="cb9-99"><a href="#cb9-99" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>BOLD<span class="sc">}{</span><span class="st">'Strategy'</span><span class="sc">:&lt;20}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'Cost'</span><span class="sc">:&lt;12}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'Avoided Damage'</span><span class="sc">:&lt;25}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'Net Benefit'</span><span class="sc">:&lt;25}{</span>END<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-100"><a href="#cb9-100" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>BOLD<span class="sc">}{</span><span class="st">''</span><span class="sc">:20}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'($M)'</span><span class="sc">:&lt;12}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'Mod/Ext ($M)'</span><span class="sc">:&lt;25}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'Mod/Ext ($M)'</span><span class="sc">:&lt;25}{</span>END<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-101"><a href="#cb9-101" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">100</span>)</span>
+<span id="cb9-102"><a href="#cb9-102" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-103"><a href="#cb9-103" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> idx, row <span class="kw">in</span> strategy_df.iterrows():</span>
+<span id="cb9-104"><a href="#cb9-104" aria-hidden="true" tabindex="-1"></a>        strategy_name <span class="op">=</span> row[<span class="st">'strategy'</span>].replace(<span class="st">'_'</span>, <span class="st">' '</span>).title()</span>
+<span id="cb9-105"><a href="#cb9-105" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-106"><a href="#cb9-106" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Format costs (red)</span></span>
+<span id="cb9-107"><a href="#cb9-107" aria-hidden="true" tabindex="-1"></a>        cost_str <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>RED<span class="sc">}</span><span class="ss">$</span><span class="sc">{</span>row[<span class="st">'cost'</span>]<span class="op">/</span><span class="fl">1e6</span><span class="sc">:.1f}{</span>END<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb9-108"><a href="#cb9-108" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-109"><a href="#cb9-109" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Format avoided damages (green if positive)</span></span>
+<span id="cb9-110"><a href="#cb9-110" aria-hidden="true" tabindex="-1"></a>        avoided_mod <span class="op">=</span> row[<span class="st">'avoided_damage_moderate'</span>] <span class="op">/</span> <span class="fl">1e6</span></span>
+<span id="cb9-111"><a href="#cb9-111" aria-hidden="true" tabindex="-1"></a>        avoided_ext <span class="op">=</span> row[<span class="st">'avoided_damage_extreme'</span>] <span class="op">/</span> <span class="fl">1e6</span></span>
+<span id="cb9-112"><a href="#cb9-112" aria-hidden="true" tabindex="-1"></a>        avoided_str <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>GREEN<span class="sc">}</span><span class="ss">$</span><span class="sc">{</span>avoided_mod<span class="sc">:.1f}</span><span class="ss">/$</span><span class="sc">{</span>avoided_ext<span class="sc">:.1f}{</span>END<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb9-113"><a href="#cb9-113" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-114"><a href="#cb9-114" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Format net benefits (green if positive, red if negative)</span></span>
+<span id="cb9-115"><a href="#cb9-115" aria-hidden="true" tabindex="-1"></a>        net_mod <span class="op">=</span> row[<span class="st">'net_benefit_moderate'</span>] <span class="op">/</span> <span class="fl">1e6</span></span>
+<span id="cb9-116"><a href="#cb9-116" aria-hidden="true" tabindex="-1"></a>        net_ext <span class="op">=</span> row[<span class="st">'net_benefit_extreme'</span>] <span class="op">/</span> <span class="fl">1e6</span></span>
+<span id="cb9-117"><a href="#cb9-117" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-118"><a href="#cb9-118" aria-hidden="true" tabindex="-1"></a>        net_mod_color <span class="op">=</span> GREEN <span class="cf">if</span> net_mod <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> RED</span>
+<span id="cb9-119"><a href="#cb9-119" aria-hidden="true" tabindex="-1"></a>        net_ext_color <span class="op">=</span> GREEN <span class="cf">if</span> net_ext <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> RED</span>
+<span id="cb9-120"><a href="#cb9-120" aria-hidden="true" tabindex="-1"></a>        net_str <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>net_mod_color<span class="sc">}</span><span class="ss">$</span><span class="sc">{</span>net_mod<span class="sc">:.1f}{</span>END<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>net_ext_color<span class="sc">}</span><span class="ss">$</span><span class="sc">{</span>net_ext<span class="sc">:.1f}{</span>END<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb9-121"><a href="#cb9-121" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb9-122"><a href="#cb9-122" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>strategy_name<span class="sc">:&lt;20}</span><span class="ss"> </span><span class="sc">{</span>cost_str<span class="sc">:&lt;20}</span><span class="ss"> </span><span class="sc">{</span>avoided_str<span class="sc">:&lt;35}</span><span class="ss"> </span><span class="sc">{</span>net_str<span class="sc">:&lt;35}</span><span class="ss">"</span>)</span>
+<span id="cb9-123"><a href="#cb9-123" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-124"><a href="#cb9-124" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span> <span class="op">+</span> <span class="st">"="</span><span class="op">*</span><span class="dv">100</span>)</span>
+<span id="cb9-125"><a href="#cb9-125" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>BOLD<span class="sc">}</span><span class="ss">Legend:</span><span class="sc">{</span>END<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-126"><a href="#cb9-126" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  • </span><span class="sc">{</span>GREEN<span class="sc">}</span><span class="ss">Green</span><span class="sc">{</span>END<span class="sc">}</span><span class="ss"> = Positive value (benefit)"</span>)</span>
+<span id="cb9-127"><a href="#cb9-127" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  • </span><span class="sc">{</span>RED<span class="sc">}</span><span class="ss">Red</span><span class="sc">{</span>END<span class="sc">}</span><span class="ss"> = Negative value (cost)"</span>)</span>
+<span id="cb9-128"><a href="#cb9-128" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  • Mod/Ext = Moderate/Extreme flood scenarios"</span>)</span>
+<span id="cb9-129"><a href="#cb9-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-130"><a href="#cb9-130" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the formatted table</span></span>
+<span id="cb9-131"><a href="#cb9-131" aria-hidden="true" tabindex="-1"></a>print_strategy_table(strategy_results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Baseline damages:
+  Moderate flood: $2,739,624
+  Extreme flood: $7,879,938
+
+ MITIGATION STRATEGY ANALYSIS - MULTI-SCENARIO
+====================================================================================================
+Strategy             Cost         Avoided Damage            Net Benefit              
+                     ($M)         Mod/Ext ($M)              Mod/Ext ($M)             
+----------------------------------------------------------------------------------------------------
+Do Nothing           $0.0        $0.0/$0.0                  $0.0/$0.0        
+Early Warning        $0.5        $0.4/$0.9                  $-0.1/$0.4       
+Levees               $25.0       $1.9/$3.5                  $-23.1/$-21.5    
+Buyouts              $15.0       $1.0/$3.2                  $-14.0/$-11.8    
+Green Infrastructure $12.0       $0.8/$2.8                  $-11.2/$-9.2     
+Combined Approach    $18.0       $1.4/$4.7                  $-16.6/$-13.3    
+
+====================================================================================================
+Legend:
+  • Green = Positive value (benefit)
+  • Red = Negative value (cost)
+  • Mod/Ext = Moderate/Extreme flood scenarios</code></pre>
+</div>
+</div>
+</section>
+<section id="wrapping-up-the-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="wrapping-up-the-analysis">Wrapping up the analysis</h3>
+<ol type="1">
+<li>Save your figures in the <code>figures/</code> subdirectory</li>
+<li>Create a comprehensive <code>.README</code></li>
+<li>Push final changes to GitHub</li>
+<li>Convert your notebook to pdf and submit on Canvas</li>
+</ol>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -560,7 +1560,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p><strong>Page still under construction.</strong></p>
-<div class="toc-actions"><ul><li><a href="https://www.github.com/abpoll/engs199.20/edit/main/labs/lab02-intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://www.github.com/abpoll/engs199.20/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://www.github.com/abpoll/engs199.20/edit/main/labs/lab02-intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://www.github.com/abpoll/engs199.20/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Made with <a href="https://www.python.org/">Python</a> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://www.github.com/abpoll/engs199.20">View the source on <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></p>
 </div>
