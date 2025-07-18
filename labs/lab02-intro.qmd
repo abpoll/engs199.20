@@ -779,7 +779,9 @@ print_strategy_table(strategy_results)
 ```
 
 ### Wrapping up the analysis
-1. Save your figures in the `figures/` subdirectory
-2. Create a comprehensive `.README`
-3. Push final changes to GitHub
+1. Save your figures in the `figures/` subdirectory (check the resolution)
+2. Finalize a comprehensive `.README`
+3. Push final changes to GitHub (hopefully you made commits throughout)
 4. Convert your notebook to pdf and submit on Canvas
+
+**Note:** If you would like to experiment with code, I am happy to review and provide feedback! For example, you might want to create a new notebook where you initialize a different terrain and/or flood model, building representation, etc., You might want to try adding figures to your main notebook, or flood scenarios. If you want practice and have some extra time, go for it! 
