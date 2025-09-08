@@ -23,7 +23,7 @@ sidebar: main
 
 ## Optional Reading
 
-Most weeks will not have as many optional readings as this, but I want to provide you with opportunities to go into various focus areas of @Keller-etal-2021 in more detail. I don't expect you to read all of these in detail. However, I think it will benefit you to at least read all the abstracts and choose one to read in detail that speaks to you. 
+I want to provide you with opportunities to go into various focus areas of @Keller-etal-2021 in more detail. I don't expect you to read all of these in detail. However, I think it will benefit you to at least read all the abstracts and choose one to read in detail that speaks to you. 
 
 More on wicked problems: @rittel-webber-1973
 

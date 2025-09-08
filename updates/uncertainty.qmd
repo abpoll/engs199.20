@@ -1,0 +1,31 @@
+---
+title: "Accounting for Key Uncertainties"
+format:
+    html:        
+        warning: true
+        error: true
+sidebar: main
+---
+
+## Instructions
+
+Your guiding question for this report is: 
+
+**"What are the key uncertainties in my decision analysis and how will I address them?"**
+
+It may be helpful to think of this as a rough draft of (a sizable component of) the Methods section of your paper. The more you include in your write-up, the more progress you make on your paper and the more feedback you get on your current analysis plan. Please consult this week's [readings](../readings/readings02.qmd) to see papers with strong Methods text describing the key uncertainties in a decision analysis and how the authors address them. 
+
+While you have flexibility for structuring your response to this guiding question, I would like you to produce a XLRM diagram for this assignment. Each key uncertainty you identify will end up as an "X" in your XLRM. You may take any classification approach you'd like for identifying the components in "X" and expanding on how you identified them and plan to address them, but I recommend a few representations from @Srikrishnan-etal-2022. I think the whole article includes useful information for documenting your uncertainty considerations and analysis, but in particular you may benefit from considering the taxonomy of uncertainty types in Table 1, the model coupling diagrams in Figure 4, and the final section on best practices. 
+
+You may feel trepidation about over-committing to a particular uncertain factor in your "X" and/or an analysis plan for addressing some uncertainties. I encourage you to embrace that feeling and take an inquiring approach to addressing it. For example, perhaps you feel that you lack the data to calibrate a parameter and you're unsure about how to respresent it: you could use wide uniform priors or you could use different discrete values seen in the literature as scenarios. For this assignment, you do not have to choose an option - identifying your options and thinking through various pros/cons of different approaches is valuable. When you write your Methods text for your paper, regardless of what you choose, you should be able to defend your choice and justify it against defensible alternatives (or test that results are not sensitive to using a defensible alternative). 
+
+As with the last assignment, your report does not have to be in an essay form. You should write all ideas as complete sentences, even if you incorporate bullet and sub-bullets into your report structure. In addition to a XLRM, I think that a table with priors on parameters, a table documenting data sources, figure sketches, etc., could be helpful for drafting a comprehensive response. 
+
+::: {.callout-tip}
+## Hints
+The clearer your decision analyslis framing, the easier it is to identify key uncertainties and how to address them for your decision analysis. I recommend you think of the modules as cumulatively building on each other, not independent. That means that as you think about uncertainties in more detail, you may want to refine your analysis's framing. 
+:::
+
+## Submitting the Report
+
+Export your writeup as a PDF and submit it to me over Slack. You can upload it to our course channel or direct message me, whichever you prefer. 
