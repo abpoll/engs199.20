@@ -1,5 +1,5 @@
 ---
-title: "Accounting for uncertainties in climate-risk decision analyses"
+title: "Dealing with uncertainty in analyzing decisions"
 subtitle: "Lecture 03"
 author: "{{< var instructor.name_no_title >}}"
 course: "{{< var course.number >}}"
@@ -29,3 +29,11 @@ execute:
     freeze: auto
     echo: false
 ---
+
+# Uncertainty in Earth sytems modeling
+
+# Neglecting uncertainty can bias decisions
+
+# Uncertainty characterization
+
+# Uncertainty quantification
