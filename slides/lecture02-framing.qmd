@@ -95,25 +95,6 @@ Adapted from @Gregory-etal-2012
 
 ![](../_assets/img/inclass_framing.png){fig-align="center"}
 
-## Which job should I take?
-
-::: {.columns}
-
-::: {.column #vcenter width="40%"}
-- Academia
-- Public sector
-- Private company
-- Nonprofit/NGO
-:::
-
-::: {.column #vcenter width="60%"}
-::: {.fragment}
-![https://www.modernhealthcare.com/article/20160927/NEWS/160929902/the-fda-s-revolving-door-raises-ethical-questions/](../_assets/img/revolving_door.png)
-:::
-:::
-
-:::
-
 ## How to preserve access to clean water in the growing US Southwest? {.nostretch}
 
 ![](../_assets/img/CO_Basin.png){fig-align="center" width="50%"}
