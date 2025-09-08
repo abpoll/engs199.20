@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>uncertainty – ENGS 199.20 - Fall 2025</title>
+<title>Accounting for Key Uncertainties – ENGS 199.20 - Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -35,7 +55,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-81d3553f06a46ab73724c306d0200002.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-51708a3f6fe96a8431666b02a5f1c25b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-857b89ac35367dc1dc1487267b3a483d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -70,28 +90,178 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="ENGS 199.20 - Fall 2025">
+<meta property="og:title" content="Accounting for Key Uncertainties – ENGS 199.20 - Fall 2025">
+<meta property="og:description" content="Homepage for ENGS 199.20, Decision Analysis for Wicked Climate Problems, at Dartmouth College, Fall 2025.">
 <meta property="og:site_name" content="ENGS 199.20 - Fall 2025">
 </head>
 
-<body>
+<body class="nav-sidebar docked slimcontent">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Accounting for Key Uncertainties</h1>
+        </a>     
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../_assets/logos/D-Pine_all_formats/D-Pine_RGB.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">ENGS 199.20</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://www.github.com/abpoll/engs199.20" title="Github Repository" class="quarto-navigation-tool px-1" aria-label="Github Repository"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../schedule/schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Labs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../project/overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Project</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/updates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module Reports</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Final Report</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Other Resources</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a></li>
+  <li><a href="#submitting-the-report" id="toc-submitting-the-report" class="nav-link" data-scroll-target="#submitting-the-report">Submitting the Report</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://www.github.com/abpoll/engs199.20/edit/main/updates/uncertainty.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://www.github.com/abpoll/engs199.20/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Accounting for Key Uncertainties</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="instructions" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<p>Your guiding question for this report is:</p>
+<p><strong>“What are the key uncertainties in my decision analysis and how will I address them?”</strong></p>
+<p>It may be helpful to think of this as a rough draft of (a sizable component of) the Methods section of your paper. The more you include in your write-up, the more progress you make on your paper and the more feedback you get on your current analysis plan. Please consult this week’s <a href="../readings/readings02.html">readings</a> to see papers with strong Methods text describing the key uncertainties in a decision analysis and how the authors address them.</p>
+<p>While you have flexibility for structuring your response to this guiding question, I would like you to produce a XLRM diagram for this assignment. Each key uncertainty you identify will end up as an “X” in your XLRM. You may take any classification approach you’d like for identifying the components in “X” and expanding on how you identified them and plan to address them, but I recommend a few representations from <span class="citation" data-cites="Srikrishnan-etal-2022">Srikrishnan et al. (<a href="#ref-Srikrishnan-etal-2022" role="doc-biblioref">2022</a>)</span>. I think the whole article includes useful information for documenting your uncertainty considerations and analysis, but in particular you may benefit from considering the taxonomy of uncertainty types in Table 1, the model coupling diagrams in Figure 4, and the final section on best practices.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-Srikrishnan-etal-2022" class="csl-entry" role="listitem">
+Srikrishnan, V., Lafferty, D. C., Wong, T. E., Lamontagne, J. R., Quinn, J. D., Sharma, S., et al. (2022). Uncertainty analysis in multi‐sector systems: Considerations for risk analysis, projection, and planning for complex systems. <em>Earths Future</em>, <em>10</em>(8). <a href="https://doi.org/10.1029/2021ef002644">https://doi.org/10.1029/2021ef002644</a>
+</div></div><p>You may feel trepidation about over-committing to a particular uncertain factor in your “X” and/or an analysis plan for addressing some uncertainties. I encourage you to embrace that feeling and take an inquiring approach to addressing it. For example, perhaps you feel that you lack the data to calibrate a parameter and you’re unsure about how to respresent it: you could use wide uniform priors or you could use different discrete values seen in the literature as scenarios. For this assignment, you do not have to choose an option - identifying your options and thinking through various pros/cons of different approaches is valuable. When you write your Methods text for your paper, regardless of what you choose, you should be able to defend your choice and justify it against defensible alternatives (or test that results are not sensitive to using a defensible alternative).</p>
+<p>As with the last assignment, your report does not have to be in an essay form. You should write all ideas as complete sentences, even if you incorporate bullet and sub-bullets into your report structure. In addition to a XLRM, I think that a table with priors on parameters, a table documenting data sources, figure sketches, etc., could be helpful for drafting a comprehensive response.</p>
+<div class="callout callout-style-simple callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hints
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The clearer your decision analyslis framing, the easier it is to identify key uncertainties and how to address them for your decision analysis. I recommend you think of the modules as cumulatively building on each other, not independent. That means that as you think about uncertainties in more detail, you may want to refine your analysis’s framing.</p>
+</div>
+</div>
+</section>
+<section id="submitting-the-report" class="level2">
+<h2 class="anchored" data-anchor-id="submitting-the-report">Submitting the Report</h2>
+<p>Export your writeup as a PDF and submit it to me over Slack. You can upload it to our course channel or direct message me, whichever you prefer.</p>
 
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -560,7 +730,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p><strong>Page still under construction.</strong></p>
-<div class="toc-actions"><ul><li><a href="https://www.github.com/abpoll/engs199.20/edit/main/updates/uncertainty.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://www.github.com/abpoll/engs199.20/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://www.github.com/abpoll/engs199.20/edit/main/updates/uncertainty.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://www.github.com/abpoll/engs199.20/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Made with <a href="https://www.python.org/">Python</a> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://www.github.com/abpoll/engs199.20">View the source on <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></p>
 </div>
