@@ -9,7 +9,7 @@ At the end of each module, you will have one week to submit your responses to gu
 | Module | Instructions | Due Date |
 |:------:|:------------:|:--------:|
 | Overview | [{{< fa sharp pen-field >}}](../updates/overview.qmd) | 9/26/25 |
-| Uncertainty | {{< fa sharp pen-field >}} | 10/3/25 |
+| Uncertainty | [{{< fa sharp pen-field >}}](../updates/uncertainty.qmd) | 10/3/25 |
 | RDM | {{< fa sharp pen-field >}} | 10/10/25 |
 | Trade-offs | {{< fa sharp pen-field >}} | 10/24/25 |
 | DMDU | {{< fa sharp pen-field >}} | 11/14/25 |
