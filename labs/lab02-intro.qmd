@@ -33,7 +33,7 @@ It's pretty easy to find tutorials online for #1-#3 above. I thought it would be
 Let's pretend you just got hired as a flood risk analyst for an emergency management department. The city council has a budget to spend on flood mitigation strategies before the next storm season. Your job is to analyze two potential flood scenarios and provide actionable recommendations.
 
 :::{.callout-important}
-This tutorial is for learning coding skills. We will violate a lot of decision analysis principles I will teach later in the term in service of meeting our primary objectives for today's lab. 
+This tutorial is for learning coding skills. We will violate a lot of decision analysis principles, which I will teach later in the term, in service of meeting our primary objectives for today's lab. 
 :::
 
 ## Lab Workflow
@@ -202,7 +202,7 @@ Now we'll use both `numpy` and `pandas` to set up our building inventory. There 
 ```{python}
 def generate_building_inventory(terrain, n_buildings=500, min_elevation=10):
     """
-    Creates building inventory, excluding buildings in flood-prone areas.
+    Creates building inventory, excluding buildings in the river.
     
     Generate buildings randomly, then filter out those 
     below minimum elevation.

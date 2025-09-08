@@ -29,7 +29,7 @@ citation-location: margin
 - {{< fa sharp user title="Name" >}} [{{< var instructor.name_no_title >}}]({{< var instructor.url >}})
 - {{< fa sharp envelope title="Email" >}} [{{< var instructor.email >}}](mailto:{{< var instructor.email >}})
 - {{< fa sharp building title="Office" >}} {{< var instructor.office >}}
-- {{< fa sharp door-open title="Open Office Hours" >}} Mon. & Wed., 2-3:30pm
+- {{< fa sharp door-open title="Open Office Hours" >}} By appointment
 :::
 
 ::: {.g-col-12 .g-col-sm-5 .g-col-md-5}
@@ -37,8 +37,8 @@ citation-location: margin
 
 - {{< fa sharp calendar title="Class Days" >}} {{< var course.days >}}
 - {{< fa sharp clock title="Class Time" >}} {{< var course.time >}}
-- {{< fa calendar-times >}} Tues., 12:15pm - 1:05pm
-- {{< fa sharp university title="Class Location" >}} {{< var course.location >}}
+- {{< fa calendar-times >}} No Extra Hour
+- {{< fa sharp university title="Class Location" >}} [Zoom Room](https://dartmouth.zoom.us/j/5548981286)
 
 :::
 ::::

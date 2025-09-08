@@ -209,7 +209,6 @@ Zarekarizi et al. (2020): [How high to elevate a home?](https://doi.org/10.1038/
 
 * I research:
   - Flood-risk management
-  - Problems characterized by deep uncertainty
   - Problems where people don't agree on success
   - Developing tools to make decision analysis more useful
 * From Port Washington, NY (via Boston, MA and Centerport, NY)
@@ -264,7 +263,8 @@ Students should expect to spend roughly three times the in-course hours outside 
 * "Projects":  Student project presentations
 
 ## Class structure
-10 Spot (MWF 10:10-11:15am, Tu X-hr 12:15-1:05pm)
+Emulating the 2 Spot (MWF 2:00-2:55pm, No Tu X-hr)
+Let's discuss how we do the labs for this training
 
 ::: {.fragment}
 ### Mondays
@@ -288,14 +288,14 @@ Students should expect to spend roughly three times the in-course hours outside 
 :::
 
 ::: {.fragment}
-### Sometimes Tuesday
-* A few optional meetings for setting up code stuff
-* Otherwise available for meetings by appointment
+### Other Notes
+* Available for meetings by appointment
+* We can take labs offline and make them optional - let's discuss
 :::
 
 ## Communication
 * Questions during class is best
-* Canvas is great - not as good as in class, but still promotes open discussion
+* Canvas is great - not as good as in class, but still promotes open discussion (this is not relevant for the training)
 * Office hours are great (including when the issue is urgent and/or private)
 * Email is ok if issue is urgent and/or private and you can't make office hours
 
@@ -313,12 +313,12 @@ Decision analysis is values-laden and good decision analysis is explicit about n
 # Upcoming Schedule
 ## This week
 ### Class 
-* Tuesday: computing setup
+* Tuesday: computing setup (do on your own if you want to work through labs)
 * Wednesday: lecture on framing a decision analysis
-* Friday: getting comfortable with our computing setup (no lab report)
+* Friday: getting comfortable with our computing setup (no lab report) - let's discuss
 
 ### Assignments
-* One required reading before Monday
+* Catch up on Readings
 * Project progress report 1
   - What decision problem will you focus on this term?
   - See [here](../updates/overview.qmd) for more guidance
