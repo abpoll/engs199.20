@@ -100,35 +100,35 @@
     "href": "slides/lecture03-uncertainty.html#example-climate-scenario-uncertainty-is-often-called-deep",
     "title": "Dealing with uncertainty in analyzing decisions",
     "section": "Example: Climate scenario uncertainty is often called “deep”",
-    "text": "Example: Climate scenario uncertainty is often called “deep”\n\n\n\nHausfather & Peters (2020)"
+    "text": "Example: Climate scenario uncertainty is often called “deep”\n\n\n\nHausfather and Peters (2020). RCP8.5 is a problematic scenario for near-term emissions"
   },
   {
     "objectID": "slides/lecture03-uncertainty.html#example-scenario-and-model-choices-reflect-deep-uncertainty-in-sea-level-rise-projections",
     "href": "slides/lecture03-uncertainty.html#example-scenario-and-model-choices-reflect-deep-uncertainty-in-sea-level-rise-projections",
     "title": "Dealing with uncertainty in analyzing decisions",
     "section": "Example: Scenario and model choices reflect “deep” uncertainty in sea-level rise projections",
-    "text": "Example: Scenario and model choices reflect “deep” uncertainty in sea-level rise projections\n\nDoss-Gollin & Keller (2023)"
+    "text": "Example: Scenario and model choices reflect “deep” uncertainty in sea-level rise projections\n\nDoss-Gollin and Keller (2023). A subjective Bayesian framework for synthesizing deep uncertainties in climate risk management"
   },
   {
     "objectID": "slides/lecture03-uncertainty.html#example-triggering-managed-retreat",
     "href": "slides/lecture03-uncertainty.html#example-triggering-managed-retreat",
     "title": "Dealing with uncertainty in analyzing decisions",
     "section": "Example: Triggering managed retreat",
-    "text": "Example: Triggering managed retreat\n\n(Hegde-etal-2025?)"
+    "text": "Example: Triggering managed retreat\n\nHegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies. In Preparation."
   },
   {
     "objectID": "slides/lecture03-uncertainty.html#myopic-strategies",
     "href": "slides/lecture03-uncertainty.html#myopic-strategies",
     "title": "Dealing with uncertainty in analyzing decisions",
     "section": "Myopic strategies",
-    "text": "Myopic strategies\n\n(Hegde-etal-2025?)"
+    "text": "Myopic strategies\n\nHegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies. In Preparation."
   },
   {
     "objectID": "slides/lecture03-uncertainty.html#schematic-representation",
     "href": "slides/lecture03-uncertainty.html#schematic-representation",
     "title": "Dealing with uncertainty in analyzing decisions",
     "section": "Schematic Representation",
-    "text": "Schematic Representation\n\nReed et al. (2025)"
+    "text": "Schematic Representation\n\nReed et al., (2025). Addressing Uncertainty in multisector dynamics research"
   },
   {
     "objectID": "slides/lecture03-uncertainty.html#many-purposes---a-few-highlights-for-decision-analyses",
@@ -142,28 +142,35 @@
     "href": "slides/lecture03-uncertainty.html#types-of-analyses",
     "title": "Dealing with uncertainty in analyzing decisions",
     "section": "Types of analyses",
-    "text": "Types of analyses\n\nReed et al. (2025)"
+    "text": "Types of analyses\n\nReed et al., (2025). Addressing Uncertainty in multisector dynamics research"
   },
   {
     "objectID": "slides/lecture03-uncertainty.html#analysis-methods",
     "href": "slides/lecture03-uncertainty.html#analysis-methods",
     "title": "Dealing with uncertainty in analyzing decisions",
     "section": "Analysis methods",
-    "text": "Analysis methods\n\n\n\nReed et al. (2025)"
+    "text": "Analysis methods\n\n\n\nReed et al., (2025). Addressing Uncertainty in multisector dynamics research"
   },
   {
     "objectID": "slides/lecture03-uncertainty.html#revisiting-the-managed-retreat-example",
     "href": "slides/lecture03-uncertainty.html#revisiting-the-managed-retreat-example",
     "title": "Dealing with uncertainty in analyzing decisions",
     "section": "Revisiting the managed retreat example",
-    "text": "Revisiting the managed retreat example\n\n\n\n\n\n(Hegde-etal-2025?)\n\n\n\n\n\n\n\n(Hegde-etal-2025?)"
+    "text": "Revisiting the managed retreat example\n\n\n\n\n\nHegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies. In Preparation.\n\n\n\n\n\n\n\nHegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies. In Preparation."
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#some-personal-observations",
-    "href": "slides/lecture03-uncertainty.html#some-personal-observations",
+    "objectID": "slides/lecture03-uncertainty.html#example-from-my-research",
+    "href": "slides/lecture03-uncertainty.html#example-from-my-research",
     "title": "Dealing with uncertainty in analyzing decisions",
-    "section": "Some personal observations",
-    "text": "Some personal observations\n\n\nAvoid using inconsistent uncertainty framing and analysis (e.g., calculating expected values when framing uncertainties as “deep”)\nI feel like there’s not good guidance out there on saying for decision analysis purposes, how to represent and analyze various types of uncertainty\nDon’t lose sight of why uncertainty matters for your decision analysis (i.e., don’t ignore uncertainty but don’t overcomplicate how you handle it)\nRemember that peer-reviewed studies are units of overall decision analysis projects (i.e., don’t overstuff these studies with too many analyses and points)\n\n\n\n\n\n\nDoss-Gollin, J., & Keller, K. (2023). A subjective bayesian framework for synthesizing deep uncertainties in climate risk management. Earths Future, 11(1). https://doi.org/10.1029/2022ef003044\n\n\nHausfather, Z., & Peters, G. P. (2020). RCP8.5 is a problematic scenario for near-term emissions. Proc. Natl. Acad. Sci. U. S. A., 117(45), 27791–27792. https://doi.org/10.1073/pnas.2017124117\n\n\nReed, P. M., Hadjimichael, A., Malek, K., Karimi, T., Vernon, C. R., Srikrishnan, V., et al. (2025). Addressing uncertainty in multisector dynamics research. Zenodo. https://doi.org/10.5281/ZENODO.15391962"
+    "section": "Example from my research",
+    "text": "Example from my research\n\n\nBecause of the stated goals of the Justice40 Initiative, our main analytical goal was to evaluate different funding rules on equity and economic objectives and identify which rules perform well. To make claims about policy performance, our decision analysis was built on the following modeling chain…\n\n\n\nPollack et al., (2025). Funding rules that promote equity in climate adaptation outcomes\n\n\nOne reviewer complimented us for our extensive accounting of uncertainty. However, our (narrowly scoped!) research and policy questions did not call for factor mapping or prioritization (though we call for this in our discussion)."
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#some-personal-reflections",
+    "href": "slides/lecture03-uncertainty.html#some-personal-reflections",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Some personal reflections",
+    "text": "Some personal reflections\n\n\nAvoid inconsistent uncertainty framing and analysis (e.g., calculating expected values when framing uncertainties as “deep”)\nI feel like there’s not good guidance out there on saying for decision analysis purposes, how to represent and analyze various types of uncertainty\nDon’t lose sight of why uncertainty matters for your decision analysis (i.e., don’t ignore uncertainty but don’t overcomplicate how you handle it)\nRemember that peer-reviewed studies are units of overall decision analysis projects (i.e., don’t overstuff these studies with too many analyses and points)"
   },
   {
     "objectID": "updates/uncertainty.html",
