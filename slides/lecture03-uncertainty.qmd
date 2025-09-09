@@ -73,23 +73,23 @@ Earth systems are open, posing fundamental limitations on our ability to reduce 
 
 ## Example: Climate scenario uncertainty is often called "deep" {.nostretch}
 
-![@Hausfather2020](../_assets/img/hausfather_scenarios_2020.jpg){width=500}
+![Hausfather and Peters (2020). [RCP8.5 is a problematic scenario for near-term emissions](http://dx.doi.org/10.1073/pnas.2017124117)](../_assets/img/hausfather_scenarios_2020.jpg){width=500}
 
 ## Example: Scenario and model choices reflect "deep" uncertainty in sea-level rise projections
-![@Doss-Gollin2023](../_assets/img/sea_level_deep.png)
+![Doss-Gollin and Keller (2023). [A subjective Bayesian framework for synthesizing deep uncertainties in climate risk management](https://onlinelibrary.wiley.com/doi/10.1029/2022EF003044)](../_assets/img/sea_level_deep.png)
 
 # Neglecting uncertainty can bias decisions
 
 ## Example: Triggering managed retreat
-![@Hegde-etal-2025](../_assets/img/prabhat_sys_rel.png)
+![Hegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies. In Preparation.](../_assets/img/prabhat_sys_rel.png)
 
 ## Myopic strategies
-![@Hegde-etal-2025](../_assets/img/prabhat_myopia.png)
+![Hegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies. In Preparation.](../_assets/img/prabhat_myopia.png)
 
 # Uncertainty characterization and sensitivity analysis
 
 ## Schematic Representation
-![@Reed-etal-2025](../_assets/img/uc_sa.png)
+![Reed et al., (2025). [Addressing Uncertainty in multisector dynamics research](http://dx.doi.org/10.5281/zenodo.15391962)](../_assets/img/uc_sa.png)
 
 ## Many purposes - a few highlights for decision analyses
 
@@ -109,28 +109,40 @@ Note the incremental nature of using uncertainty characterization and sensitivit
 
 ## Types of analyses 
 
-![@Reed-etal-2025](../_assets/img/factor_pri_map.png)
+![Reed et al., (2025). [Addressing Uncertainty in multisector dynamics research](http://dx.doi.org/10.5281/zenodo.15391962)](../_assets/img/factor_pri_map.png)
 
 ## Analysis methods {.nostretch}
-![@Reed-etal-2025](../_assets/img/sa_methods.png){width=800}
+![Reed et al., (2025). [Addressing Uncertainty in multisector dynamics research](http://dx.doi.org/10.5281/zenodo.15391962)](../_assets/img/sa_methods.png){width=800}
 
 ## Revisiting the managed retreat example
 ::: {.r-stack}
 ::: {.fragment .fade-out}
-![@Hegde-etal-2025](../_assets/img/prabhat_sys_rel.png)
+![Hegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies. In Preparation.](../_assets/img/prabhat_sys_rel.png)
 :::
 
 ::: {.fragment}
-![@Hegde-etal-2025](../_assets/img/prabhat_spider.jpeg)
+![Hegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies. In Preparation.](../_assets/img/prabhat_spider.jpeg)
 :::
 :::
 
 # Uncertainty analysis choices follow from problem framing
 
-## Some personal observations
+## Example from my research
+:::{.quote}
+> Because of the stated goals of the Justice40 Initiative, our main analytical goal was to evaluate different funding rules on equity and economic objectives and identify which rules perform well. To make claims about policy performance, our decision analysis was built on the following modeling chain...
+:::
+:::{.cite}
+Pollack et al., (2025). [Funding rules that promote equity in climate adaptation outcomes](https://www.pnas.org/doi/10.1073/pnas.2418711121)
+:::
+
+:::{.fragment}
+One reviewer complimented us for our extensive accounting of uncertainty. However, our (narrowly scoped!) research and policy questions did not call for factor mapping or prioritization (though we call for this in our discussion). 
+:::
+
+## Some personal reflections
 
 :::{.incremental}
-* Avoid using inconsistent uncertainty framing and analysis (e.g., calculating expected values when framing uncertainties as "deep")
+* Avoid inconsistent uncertainty framing and analysis (e.g., calculating expected values when framing uncertainties as "deep")
 * I feel like there's not good guidance out there on saying for decision analysis purposes, how to represent and analyze various types of uncertainty
 * Don't lose sight of **why** uncertainty matters for your decision analysis (*i.e.,* don't ignore uncertainty but don't overcomplicate how you handle it)
 * Remember that peer-reviewed studies are units of overall decision analysis projects (*i.e.,* don't overstuff these studies with too many analyses and points)
