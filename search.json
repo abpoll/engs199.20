@@ -75,6 +75,97 @@
     "text": "Tools and Generation Workflow\nThis course website was built with Quarto. All materials can be found at the GitHub Repository."
   },
   {
+    "objectID": "slides/lecture03-uncertainty.html#what-is-uncertainty",
+    "href": "slides/lecture03-uncertainty.html#what-is-uncertainty",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "What is uncertainty?",
+    "text": "What is uncertainty?\n\nA lack of certainty; an inability to exactly describe current or future states and values\n\nParphrased from the Wikipedia entry on Uncertainty"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#two-overarching-types-of-uncertainty",
+    "href": "slides/lecture03-uncertainty.html#two-overarching-types-of-uncertainty",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Two overarching types of uncertainty",
+    "text": "Two overarching types of uncertainty\n\nYu et al. (2022). Uncertainty quantification: Can we trust artificial intelligence in drug discovery?.\n\nAleatoric uncertainty results from randomness\n\nEpistemic uncertainty results from lack of knowledge"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#fundamental-limits-to-earth-systems-modeling",
+    "href": "slides/lecture03-uncertainty.html#fundamental-limits-to-earth-systems-modeling",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Fundamental limits to Earth systems modeling",
+    "text": "Fundamental limits to Earth systems modeling\nEarth systems are open, posing fundamental limitations on our ability to reduce all relevant areas of epistemic uncertainty.\n\n\n\nVerification and validation of numerical models of natural systems is impossible… because natural systems are never closed and because model results are always nonunique…\n\n\nThus, the primary value of models is heuristic: Models are representations, useful for guiding further study but not susceptible to proof.\n\n\n\n— Oreskes, N., Shrader-Frechette, K., & Belitz, K. (1994). Verification, validation, and confirmation of numerical models in the earth sciences. Science, 263(5147), 641-646."
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#example-climate-scenario-uncertainty-is-often-called-deep",
+    "href": "slides/lecture03-uncertainty.html#example-climate-scenario-uncertainty-is-often-called-deep",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Example: Climate scenario uncertainty is often called “deep”",
+    "text": "Example: Climate scenario uncertainty is often called “deep”\n\n\n\nHausfather & Peters (2020)"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#example-scenario-and-model-choices-reflect-deep-uncertainty-in-sea-level-rise-projections",
+    "href": "slides/lecture03-uncertainty.html#example-scenario-and-model-choices-reflect-deep-uncertainty-in-sea-level-rise-projections",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Example: Scenario and model choices reflect “deep” uncertainty in sea-level rise projections",
+    "text": "Example: Scenario and model choices reflect “deep” uncertainty in sea-level rise projections\n\nDoss-Gollin & Keller (2023)"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#example-triggering-managed-retreat",
+    "href": "slides/lecture03-uncertainty.html#example-triggering-managed-retreat",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Example: Triggering managed retreat",
+    "text": "Example: Triggering managed retreat\n\n(Hegde-etal-2025?)"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#myopic-strategies",
+    "href": "slides/lecture03-uncertainty.html#myopic-strategies",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Myopic strategies",
+    "text": "Myopic strategies\n\n(Hegde-etal-2025?)"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#schematic-representation",
+    "href": "slides/lecture03-uncertainty.html#schematic-representation",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Schematic Representation",
+    "text": "Schematic Representation\n\nReed et al. (2025)"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#many-purposes---a-few-highlights-for-decision-analyses",
+    "href": "slides/lecture03-uncertainty.html#many-purposes---a-few-highlights-for-decision-analyses",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Many purposes - a few highlights for decision analyses",
+    "text": "Many purposes - a few highlights for decision analyses\n\n\nHow can we simplify our model to run it faster and sample more scenarios?\nWhat are worst-case scenarios?\nWhich actions perform well in a wide range of scenarios?\nWhat causes actions to fail?\nWhat types of observations should we collect to improve our model and better evaluate actions?\n\n\n\n\n\n\n\n\n\nNote\n\n\nNote the incremental nature of using uncertainty characterization and sensitivity analysis to inform and assess strategies"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#types-of-analyses",
+    "href": "slides/lecture03-uncertainty.html#types-of-analyses",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Types of analyses",
+    "text": "Types of analyses\n\nReed et al. (2025)"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#analysis-methods",
+    "href": "slides/lecture03-uncertainty.html#analysis-methods",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Analysis methods",
+    "text": "Analysis methods\n\n\n\nReed et al. (2025)"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#revisiting-the-managed-retreat-example",
+    "href": "slides/lecture03-uncertainty.html#revisiting-the-managed-retreat-example",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Revisiting the managed retreat example",
+    "text": "Revisiting the managed retreat example\n\n\n\n\n\n(Hegde-etal-2025?)\n\n\n\n\n\n\n\n(Hegde-etal-2025?)"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#some-personal-observations",
+    "href": "slides/lecture03-uncertainty.html#some-personal-observations",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Some personal observations",
+    "text": "Some personal observations\n\n\nAvoid using inconsistent uncertainty framing and analysis (e.g., calculating expected values when framing uncertainties as “deep”)\nI feel like there’s not good guidance out there on saying for decision analysis purposes, how to represent and analyze various types of uncertainty\nDon’t lose sight of why uncertainty matters for your decision analysis (i.e., don’t ignore uncertainty but don’t overcomplicate how you handle it)\nRemember that peer-reviewed studies are units of overall decision analysis projects (i.e., don’t overstuff these studies with too many analyses and points)\n\n\n\n\n\n\nDoss-Gollin, J., & Keller, K. (2023). A subjective bayesian framework for synthesizing deep uncertainties in climate risk management. Earths Future, 11(1). https://doi.org/10.1029/2022ef003044\n\n\nHausfather, Z., & Peters, G. P. (2020). RCP8.5 is a problematic scenario for near-term emissions. Proc. Natl. Acad. Sci. U. S. A., 117(45), 27791–27792. https://doi.org/10.1073/pnas.2017124117\n\n\nReed, P. M., Hadjimichael, A., Malek, K., Karimi, T., Vernon, C. R., Srikrishnan, V., et al. (2025). Addressing uncertainty in multisector dynamics research. Zenodo. https://doi.org/10.5281/ZENODO.15391962"
+  },
+  {
     "objectID": "updates/uncertainty.html",
     "href": "updates/uncertainty.html",
     "title": "Accounting for Key Uncertainties",
@@ -172,7 +263,7 @@
     "href": "schedule/schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "This page contains a schedule of the topics, content, and assignments for the term, organized by module.\n\nSlides : On the schedule, this link contains the presentation for the day’s lecture.\nLab : This page contains a lab report rubric and links to each week’s lab. You can also access each week’s lab through the links in the schedule below.\nHW : This page contains the schedule and rubric for the project updates. At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I highly encourage you to work on these during the module to stay on track with your project. Note that there is no lab report the first week and the first assignment is to define your project’s decision problem.\nReading : On the schedule, this link takes you to a list of required and optional readings for the module. Please read the required reading before class. There will typically be one required reading per week. I suggest you read at least the abstracts of optional readings before class. The optional readings will help you understand lecture and can serve as core references in lab reports and project updates.\n\n\n\n\n\nYou should follow this general process for each module\n\nDo the Reading before Monday’s Lecture\nComplete the lab report within one week from the assignment date\nSubmit the homework within one week from the assignment date\n\n\n\n\n\n There are seven modules in this course:\n\n“Overview”: Overview of decision analysis for wicked climate problems\n“Uncertainty”: Uncertainty and Monte Carlo analysis\n“RDM”: Robust decision-making\n“Trade-offs”: Multiple objectives and navigating trade-offs\n“DMDU”: Decision making under deep uncertainty\n“Gaps”: Gaps between decision analysis and decision support\n“Projects”: Student project presentations\n\nNote that this schedule will be updated as necessary throughout the term.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nSlides\nLab\nHW\nReading\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n1\n9/15/25\nCourse Overview\n\n\n\n\n\n\n1\n9/16/25\nComputing setup\n\n\n\n\n\n\n1\n9/17/25\nFraming a decision analysis\n\n\n\n\n\n\n1\n9/19/25\nPython and GitHub Bootcamp\n\n\n\n\n\n\n\n\nUncertainty\n\n\n\n\n\n\n2\n9/22/25\nShallow and deep uncertainties\n\n\n\n\n\n\n2\n9/23/25\nPython and GitHub Bootcamp II\n\n\n\n\n\n\n2\n9/24/25\nDeep uncertainty game\n\n\n\n\n\n\n2\n9/26/25\nPitfalls of predict-then-act\n\n\n\n\n\n\n\n\nRDM\n\n\n\n\n\n\n3\n9/29/25\nRDM workflow\n\n\n\n\n\n\n3\n10/1/25\nJournal club\n\n\n\n\n\n\n3\n10/3/25\nHome elevation problem\n\n\n\n\n\n\n\n\nTrade-offs\n\n\n\n\n\n\n4\n10/6/25\nDA in a pluralistic society\n\n\n\n\n\n\n4\n10/8/25\nGuest panel\n\n\n\n\n\n\n4\n10/10/25\nNavigating trade-offs\n\n\n\n\n\n\n5\n10/13/25\nMulti-objective evolutionary algorithms\n\n\n\n\n\n\n5\n10/15/25\nRace to the best Pareto front\n\n\n\n\n\n\n5\n10/17/25\nRace to the best Pareto front\n\n\n\n\n\n\n\n\nDMDU\n\n\n\n\n\n\n6\n10/20/25\nDirect policy search\n\n\n\n\n\n\n6\n10/22/25\nReinforcement learning lab\n\n\n\n\n\n\n6\n10/24/25\nLab continued\n\n\n\n\n\n\n7\n10/27/25\nRobustness\n\n\n\n\n\n\n7\n10/29/25\nJournal club\n\n\n\n\n\n\n7\n10/31/25\nPutting it all together\n\n\n\n\n\n\n8\n11/3/25\nRobustness II\n\n\n\n\n\n\n8\n11/5/25\nPractice presentations\n\n\n\n\n\n\n8\n11/7/25\nPutting it all together II\n\n\n\n\n\n\n\n\nGaps\n\n\n\n\n\n\n9\n11/10/25\nMore useful decision analysis\n\n\n\n\n\n\n9\n11/12/25\nGuest panel\n\n\n\n\n\n\n9\n11/14/25\nPresentations\n\n\n\n\n\n\n\n\nProjects\n\n\n\n\n\n\n10\n11/17/25\nPresentations\n\n\n\n\n\n\n10\n11/18/25\nPresentations",
+    "text": "This page contains a schedule of the topics, content, and assignments for the term, organized by module.\n\nSlides : On the schedule, this link contains the presentation for the day’s lecture.\nLab : This page contains a lab report rubric and links to each week’s lab. You can also access each week’s lab through the links in the schedule below.\nHW : This page contains the schedule and rubric for the project updates. At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I highly encourage you to work on these during the module to stay on track with your project. Note that there is no lab report the first week and the first assignment is to define your project’s decision problem.\nReading : On the schedule, this link takes you to a list of required and optional readings for the module. Please read the required reading before class. There will typically be one required reading per week. I suggest you read at least the abstracts of optional readings before class. The optional readings will help you understand lecture and can serve as core references in lab reports and project updates.\n\n\n\n\n\nYou should follow this general process for each module\n\nDo the Reading before Monday’s Lecture\nComplete the lab report within one week from the assignment date\nSubmit the homework within one week from the assignment date\n\n\n\n\n\n There are seven modules in this course:\n\n“Overview”: Overview of decision analysis for wicked climate problems\n“Uncertainty”: Dealing with uncertainty in analyzing decisions\n“RDM”: Robust decision-making\n“Trade-offs”: Multiple objectives and navigating trade-offs\n“DMDU”: Decision making under deep uncertainty\n“Gaps”: Gaps between decision analysis and decision support\n“Projects”: Student project presentations\n\nNote that this schedule will be updated as necessary throughout the term.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nSlides\nLab\nHW\nReading\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n1\n9/15/25\nCourse Overview\n\n\n\n\n\n\n1\n9/16/25\nComputing setup\n\n\n\n\n\n\n1\n9/17/25\nFraming a decision analysis\n\n\n\n\n\n\n1\n9/19/25\nPython and GitHub Bootcamp\n\n\n\n\n\n\n\n\nUncertainty\n\n\n\n\n\n\n2\n9/22/25\nShallow and deep uncertainties\n\n\n\n\n\n\n2\n9/23/25\nPython and GitHub Bootcamp II\n\n\n\n\n\n\n2\n9/24/25\nDeep uncertainty game\n\n\n\n\n\n\n2\n9/26/25\nPitfalls of predict-then-act\n\n\n\n\n\n\n\n\nRDM\n\n\n\n\n\n\n3\n9/29/25\nRDM workflow\n\n\n\n\n\n\n3\n10/1/25\nJournal club\n\n\n\n\n\n\n3\n10/3/25\nHome elevation problem\n\n\n\n\n\n\n\n\nTrade-offs\n\n\n\n\n\n\n4\n10/6/25\nDA in a pluralistic society\n\n\n\n\n\n\n4\n10/8/25\nGuest panel\n\n\n\n\n\n\n4\n10/10/25\nNavigating trade-offs\n\n\n\n\n\n\n5\n10/13/25\nMulti-objective evolutionary algorithms\n\n\n\n\n\n\n5\n10/15/25\nRace to the best Pareto front\n\n\n\n\n\n\n5\n10/17/25\nRace to the best Pareto front\n\n\n\n\n\n\n\n\nDMDU\n\n\n\n\n\n\n6\n10/20/25\nDirect policy search\n\n\n\n\n\n\n6\n10/22/25\nReinforcement learning lab\n\n\n\n\n\n\n6\n10/24/25\nLab continued\n\n\n\n\n\n\n7\n10/27/25\nRobustness\n\n\n\n\n\n\n7\n10/29/25\nJournal club\n\n\n\n\n\n\n7\n10/31/25\nPutting it all together\n\n\n\n\n\n\n8\n11/3/25\nRobustness II\n\n\n\n\n\n\n8\n11/5/25\nPractice presentations\n\n\n\n\n\n\n8\n11/7/25\nPutting it all together II\n\n\n\n\n\n\n\n\nGaps\n\n\n\n\n\n\n9\n11/10/25\nMore useful decision analysis\n\n\n\n\n\n\n9\n11/12/25\nGuest panel\n\n\n\n\n\n\n9\n11/14/25\nPresentations\n\n\n\n\n\n\n\n\nProjects\n\n\n\n\n\n\n10\n11/17/25\nPresentations\n\n\n\n\n\n\n10\n11/18/25\nPresentations",
     "crumbs": [
       "Schedule"
     ]
@@ -334,7 +425,7 @@
     "href": "slides/lecture01-intro.html#expectations-from-students",
     "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
     "section": "Expectations from students",
-    "text": "Expectations from students\n\ncome prepared to class (e.g., by carefully reading and synthesizing the reading assignments before class and being ready to present their synthesis in class);\nactively contribute to the group discussions and activities;\nsubmit the assignments on time; and\nattend office hours as needed.\n\nStudents should expect to spend roughly three times the in-course hours outside the classroom for readings and assignments."
+    "text": "Expectations from students\n\ncome prepared to class (e.g., by carefully reading and synthesizing the reading assignments before class and being ready to present their synthesis in class);\nactively contribute to the group discussions and activities;\nsubmit the assignments on time; and\nattend office hours as needed.\n\nStudents should expect to spend roughly three times the in-course hours outside the classroom for readings and assignments.\n\n\n\n\n\n\nNote\n\n\nFor the training, I also expect you to provide structured feedback at the end of each module on how we can refine the course to make it better for students in the future. In exchange, you will get co-development credit on the final published version of this Fall 25 open-source course."
   },
   {
     "objectID": "slides/lecture01-intro.html#assignments-and-grading",
@@ -355,7 +446,7 @@
     "href": "slides/lecture01-intro.html#class-structure",
     "title": "Welcome to Decision Analysis for Wicked Climate Problems!",
     "section": "Class structure",
-    "text": "Class structure\nEmulating the 2 Spot (MWF 2:00-2:55pm, No Tu X-hr) Let’s discuss how we do the labs for this training\n\nMondays\n\nLecture\nTake notes and ask questions\nSlides posted by Sunday night (often earlier)\n\n\n\nWednesdays\n\nSerious (but fun!) game or student-led journal club\nBe prepared to synthesize lessons into your lab report and project update\nSometimes we will start longer labs on Wednesday\n\n\n\nFridays\n\nLab\nMake substantial progress together\nLab report due before next lab\n\n\n\nOther Notes\n\nAvailable for meetings by appointment\nWe can take labs offline and make them optional - let’s discuss"
+    "text": "Class structure\nEmulating the 2 Spot (MWF 2:00-2:55pm, No Tu X-hr)\n\n\n\n\n\n\nNote\n\n\nLet’s discuss how we do the labs for this training\n\n\n\n\nMondays\n\nLecture\nTake notes and ask questions\nSlides posted by Sunday night (often earlier)\n\n\n\nWednesdays\n\nSerious (but fun!) game or student-led journal club\nBe prepared to synthesize lessons into your lab report and project update\nSometimes we will start longer labs on Wednesday\n\n\n\nFridays\n\nLab\nMake substantial progress together\nLab report due before next lab\n\n\n\nOther Notes\n\nAvailable for meetings by appointment\nWe can take labs offline and make them optional - let’s discuss"
   },
   {
     "objectID": "slides/lecture01-intro.html#communication",
@@ -569,7 +660,7 @@
     "href": "readings/readings02.html#optional-reading",
     "title": "Week 2 Readings",
     "section": "Optional Reading",
-    "text": "Optional Reading\nI want to provide you with more references for identifying, characterizing, and quantifying uncertainties in general and in decision analysis papers.\nMore on uncertainty analysis in general: Srikrishnan et al. (2022)\nMore on deep uncertainty: Lempert et al. (2024)\nPapers with Methods sections (or Supplementary Info) worth reviewing to help with your module progress report (look at the presentation of the analysis workflow, how the authors represent and account for various types of uncertainty, etc.,):\n\nOddo et al. (2020)\nZarekarizi et al. (2020)\nPollack et al. (2025)\n\n\nReferences\n\n\nLempert, R. J., Lawrence, J., Kopp, R. E., Haasnoot, M., Reisinger, A., Grubb, M., & Pasqualino, R. (2024). The use of decision making under deep uncertainty in the IPCC. Frontiers in Climate, 6. https://doi.org/10.3389/fclim.2024.1380054\n\n\nOddo, P. C., Lee, B. S., Garner, G. G., Srikrishnan, V., Reed, P. M., Forest, C. E., & Keller, K. (2020). Deep uncertainties in sea-level rise and storm surge projections: Implications for coastal flood risk management. Risk Anal., 40(1), 153–168. https://doi.org/10.1111/risa.12888\n\n\nPollack, A. B., Santamaria-Aguilar, S., Maduwantha, P., Helgeson, C., Wahl, T., & Keller, K. (2025). Funding rules that promote equity in climate adaptation outcomes. Proceedings of the National Academy of Sciences, 122(2), e2418711121. https://doi.org/10.1073/pnas.2418711121\n\n\nSrikrishnan, V., Lafferty, D. C., Wong, T. E., Lamontagne, J. R., Quinn, J. D., Sharma, S., et al. (2022). Uncertainty analysis in multi‐sector systems: Considerations for risk analysis, projection, and planning for complex systems. Earths Future, 10(8). https://doi.org/10.1029/2021ef002644\n\n\nZarekarizi, M., Srikrishnan, V., & Keller, K. (2020). Neglecting uncertainties biases house-elevation decisions to manage riverine flood risks. Nat. Commun., 11(1), 5361. https://doi.org/10.1038/s41467-020-19188-9"
+    "text": "Optional Reading\nI want to provide you with more references for identifying, characterizing, and quantifying uncertainties in general and in decision analysis papers.\nMore on uncertainty analysis in general: Srikrishnan et al. (2022) and related e-book on uncertainty characterization and quantification in MSD analyses\nMore on deep uncertainty: Lempert et al. (2024)\nPapers with Methods sections (or Supplementary Info) worth reviewing to help with your module progress report (look at the presentation of the analysis workflow, how the authors represent and account for various types of uncertainty, etc.,):\n\nOddo et al. (2020)\nZarekarizi et al. (2020)\nPollack et al. (2025)\n\n\nReferences\n\n\nLempert, R. J., Lawrence, J., Kopp, R. E., Haasnoot, M., Reisinger, A., Grubb, M., & Pasqualino, R. (2024). The use of decision making under deep uncertainty in the IPCC. Frontiers in Climate, 6. https://doi.org/10.3389/fclim.2024.1380054\n\n\nOddo, P. C., Lee, B. S., Garner, G. G., Srikrishnan, V., Reed, P. M., Forest, C. E., & Keller, K. (2020). Deep uncertainties in sea-level rise and storm surge projections: Implications for coastal flood risk management. Risk Anal., 40(1), 153–168. https://doi.org/10.1111/risa.12888\n\n\nPollack, A. B., Santamaria-Aguilar, S., Maduwantha, P., Helgeson, C., Wahl, T., & Keller, K. (2025). Funding rules that promote equity in climate adaptation outcomes. Proceedings of the National Academy of Sciences, 122(2), e2418711121. https://doi.org/10.1073/pnas.2418711121\n\n\nSrikrishnan, V., Lafferty, D. C., Wong, T. E., Lamontagne, J. R., Quinn, J. D., Sharma, S., et al. (2022). Uncertainty analysis in multi‐sector systems: Considerations for risk analysis, projection, and planning for complex systems. Earths Future, 10(8). https://doi.org/10.1029/2021ef002644\n\n\nZarekarizi, M., Srikrishnan, V., & Keller, K. (2020). Neglecting uncertainties biases house-elevation decisions to manage riverine flood risks. Nat. Commun., 11(1), 5361. https://doi.org/10.1038/s41467-020-19188-9"
   },
   {
     "objectID": "syllabus.html",
