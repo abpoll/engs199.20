@@ -235,7 +235,7 @@ Zarekarizi et al. (2020): [How high to elevate a home?](https://doi.org/10.1038/
 
 ::: {.callout-note}
 Your first (ungraded) assignment is to take a short syllabus quiz on Canvas and confirm that you understand, and agree to abide, by course policies. You will have the opportunity to submit questions about the course and we will discuss these together next Monday. 
-:::
+::: 
 
 ## Expectations from students
 - come prepared to class (e.g., by carefully reading and synthesizing the reading assignments before class and being ready to present their synthesis in class);
@@ -244,6 +244,10 @@ Your first (ungraded) assignment is to take a short syllabus quiz on Canvas and 
 - attend office hours as needed.
 
 Students should expect to spend roughly three times the in-course hours outside the classroom for readings and assignments. 
+
+::: {.callout-note}
+For the training, I also expect you to provide structured feedback at the end of each module on how we can refine the course to make it better for students in the future. In exchange, you will get co-development credit on the final published version of this Fall 25 open-source course. 
+:::
 
 ## Assignments and grading
 * Active Participation (10%)
@@ -264,7 +268,10 @@ Students should expect to spend roughly three times the in-course hours outside 
 
 ## Class structure
 Emulating the 2 Spot (MWF 2:00-2:55pm, No Tu X-hr)
+
+::: {.callout-note}
 Let's discuss how we do the labs for this training
+:::
 
 ::: {.fragment}
 ### Mondays

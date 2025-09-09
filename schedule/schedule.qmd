@@ -38,7 +38,7 @@ This page contains a schedule of the topics, content, and assignments for the te
 There are seven modules in this course:
 
 * "Overview": Overview of decision analysis for wicked climate problems
-* "Uncertainty": Uncertainty and Monte Carlo analysis
+* "Uncertainty": Dealing with uncertainty in analyzing decisions
 * "RDM": Robust decision-making
 * "Trade-offs": Multiple objectives and navigating trade-offs
 * "DMDU":  Decision making under deep uncertainty

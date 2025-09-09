@@ -30,10 +30,108 @@ execute:
     echo: false
 ---
 
-# Uncertainty in Earth sytems modeling
+# Uncertainty in Earth systems modeling
+
+## What is uncertainty?
+
+:::{.fragment}
+A lack of certainty; an inability to exactly describe current or future states and values
+
+::: {.cite} 
+Parphrased from the [Wikipedia entry on Uncertainty](https://en.wikipedia.org/wiki/Uncertainty)
+:::
+
+:::
+
+## Two overarching types of uncertainty
+
+![Yu et al. (2022). [Uncertainty quantification: Can we trust artificial intelligence in drug discovery?.](https://doi.org/10.1016/j.isci.2022.104814)](../_assets/img/unc_type.jpg){fig-align=left}
+
+::: {.columns}
+::: {.column width="50%"}
+**Aleatoric** uncertainty results from randomness 
+:::
+::: {.column width="50%"}
+**Epistemic** uncertainty results from lack of knowledge
+:::
+:::
+
+## Fundamental limits to Earth systems modeling
+Earth systems are open, posing fundamental limitations on our ability to reduce all relevant areas of epistemic uncertainty. 
+
+:::{.fragment}
+::: {.quote}
+> Verification and validation of numerical models of natural systems is impossible... because natural systems are never closed and because model results are always nonunique...
+
+> Thus, the primary value of models is heuristic: Models are representations, useful for guiding further study but not susceptible to proof.
+:::
+
+::: {.cite} 
+--- Oreskes, N., Shrader-Frechette, K., & Belitz, K. (1994). [Verification, validation, and confirmation of numerical models in the earth sciences.](https://doi.org/10.1126/science.263.5147.641) Science, 263(5147), 641-646.
+:::
+:::
+
+## Example: Climate scenario uncertainty is often called "deep" {.nostretch}
+
+![@Hausfather2020](../_assets/img/hausfather_scenarios_2020.jpg){width=500}
+
+## Example: Scenario and model choices reflect "deep" uncertainty in sea-level rise projections
+![@Doss-Gollin2023](../_assets/img/sea_level_deep.png)
 
 # Neglecting uncertainty can bias decisions
 
-# Uncertainty characterization
+## Example: Triggering managed retreat
+![@Hegde-etal-2025](../_assets/img/prabhat_sys_rel.png)
 
-# Uncertainty quantification
+## Myopic strategies
+![@Hegde-etal-2025](../_assets/img/prabhat_myopia.png)
+
+# Uncertainty characterization and sensitivity analysis
+
+## Schematic Representation
+![@Reed-etal-2025](../_assets/img/uc_sa.png)
+
+## Many purposes - a few highlights for decision analyses
+
+:::{.incremental}
+* How can we simplify our model to run it faster and sample more scenarios?
+* What are worst-case scenarios?
+* Which actions perform well in a wide range of scenarios?
+* What causes actions to fail?
+* What types of observations should we collect to improve our model and better evaluate actions?
+:::
+
+:::{.fragment}
+:::{.callout-note}
+Note the incremental nature of using uncertainty characterization and sensitivity analysis to inform and assess strategies
+:::
+:::
+
+## Types of analyses 
+
+![@Reed-etal-2025](../_assets/img/factor_pri_map.png)
+
+## Analysis methods {.nostretch}
+![@Reed-etal-2025](../_assets/img/sa_methods.png){width=800}
+
+## Revisiting the managed retreat example
+::: {.r-stack}
+::: {.fragment .fade-out}
+![@Hegde-etal-2025](../_assets/img/prabhat_sys_rel.png)
+:::
+
+::: {.fragment}
+![@Hegde-etal-2025](../_assets/img/prabhat_spider.jpeg)
+:::
+:::
+
+# Uncertainty analysis choices follow from problem framing
+
+## Some personal observations
+
+:::{.incremental}
+* Avoid using inconsistent uncertainty framing and analysis (e.g., calculating expected values when framing uncertainties as "deep")
+* I feel like there's not good guidance out there on saying for decision analysis purposes, how to represent and analyze various types of uncertainty
+* Don't lose sight of **why** uncertainty matters for your decision analysis (*i.e.,* don't ignore uncertainty but don't overcomplicate how you handle it)
+* Remember that peer-reviewed studies are units of overall decision analysis projects (*i.e.,* don't overstuff these studies with too many analyses and points)
+:::

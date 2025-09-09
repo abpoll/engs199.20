@@ -18,7 +18,7 @@ sidebar: main
 
 I want to provide you with more references for identifying, characterizing, and quantifying uncertainties in general and in decision analysis papers. 
 
-More on uncertainty analysis in general: @Srikrishnan-etal-2022
+More on uncertainty analysis in general: @Srikrishnan-etal-2022 and related [e-book on uncertainty characterization and quantification in MSD analyses](https://uc-ebook.org/docs/html/index.html)
 
 More on deep uncertainty: @Lempert-etal-2024
 
