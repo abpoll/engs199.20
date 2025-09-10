@@ -1,0 +1,3 @@
+# Decisions for the Decade
+
+In the future, the instructors will facilitate the Decisions for the Decade game as taught at The Society for Decision Making Under Deep Uncertainty (DMDU) Annual Summer School. A former facilitator shared their slides with me, along with some suggestions for running the game. Since these materials are not open-source, I will not share these publicly. A very similar alternative is run by the Red Cross, with an overview video and facilitation instructions [here](https://www.climatecentre.org/games/2520/decisions-for-the-decade/). Please checkout the video to get the gist of the game. I'm sorry that we cannot run this for the online training. 

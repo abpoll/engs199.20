@@ -53,7 +53,7 @@ Labs will be graded on a scale of 0-5:
 |:----------:|:------------:|:---------|
 | Lab 1 | [{{< fa sharp laptop-code >}}](labs/lab01-setup.qmd) | --- |
 | Lab 2 | [{{< fa sharp laptop-code >}}](labs/lab02-intro.qmd) | --- |
-| Lab 3 | [{{< fa sharp laptop-code >}}]{style="color:grey"} | 10/3/2025 |
+| Lab 3 | [{{< fa sharp laptop-code >}}](labs/labs03-ucuq.qmd) | 10/3/2025 |
 | Lab 4 | [{{< fa sharp laptop-code >}}]{style="color:grey"} | 10/10/2025 |
 | Lab 5 | [{{< fa sharp laptop-code >}}]{style="color:grey"} | 10/17/2025 |
 | Lab 6 | [{{< fa sharp laptop-code >}}]{style="color:grey"} | 10/24/2025 |
