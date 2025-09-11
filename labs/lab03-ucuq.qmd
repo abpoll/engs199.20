@@ -40,7 +40,7 @@ We are interested in running the MSD e-book tutorials locally, so we will adapt 
 
 ### Choose the tutorial to run and adapt for your project data
 
-Take a look at the [online tutorials](https://uc-ebook.org/docs/html/A2_Jupyter_Notebooks.html) and see identify the uncertainty analyses that you can envision running with your project data. Pick the one that you feel is the most relevant for your decision analysis goals and run this notebook locally. If you feel that none of these tutorials map well to your goals, let's chat ;) 
+Take a look at the [online tutorials](https://uc-ebook.org/docs/html/A2_Jupyter_Notebooks.html) and identify the uncertainty analyses that you can envision running with your project data. Pick the one that you feel is the most relevant for your decision analysis goals and run this notebook locally. If you feel that none of these tutorials map well to your goals, let's chat ;) 
 
 ### Run the uncertainty analysis you chose on your project data
 
@@ -58,7 +58,7 @@ For your lab report, please submit a concise write-up on the uncertainty analysi
 * thoughtful interpretation
   - this includes highlighting key assumptions
 * accurate references
-  - you might only cite the MSD book and references within it, but you might also find it helpful to look beyond
+  - you might only cite the MSD book and references within it, but you might also find it helpful to look beyond those
 
 If you ran the analysis on your project data, you only have to explain the analysis and interpretation for that example. 
 

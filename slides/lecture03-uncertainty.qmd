@@ -103,7 +103,7 @@ Earth systems are open, posing fundamental limitations on our ability to reduce 
 
 :::{.fragment}
 :::{.callout-note}
-Note the incremental nature of using uncertainty characterization and sensitivity analysis to inform and assess strategies
+Note the iterative nature of using uncertainty characterization and sensitivity analysis to inform and assess strategies
 :::
 :::
 
