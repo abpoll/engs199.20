@@ -45,8 +45,6 @@ Parphrased from the [Wikipedia entry on Uncertainty](https://en.wikipedia.org/wi
 
 ## Two overarching types of uncertainty
 
-![Yu et al. (2022). [Uncertainty quantification: Can we trust artificial intelligence in drug discovery?.](https://doi.org/10.1016/j.isci.2022.104814)](../_assets/img/unc_type.jpg){fig-align=left}
-
 ::: {.columns}
 ::: {.column width="50%"}
 **Aleatoric** uncertainty results from randomness 
@@ -81,10 +79,10 @@ Earth systems are open, posing fundamental limitations on our ability to reduce 
 # Neglecting uncertainty can bias decisions
 
 ## Example: Triggering managed retreat
-![Hegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies. In Preparation.](../_assets/img/prabhat_sys_rel.png)
+![Hegde et al., (2025). [Timing managed retreat for robust coastal adaptation strategies.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5410803) Preprint.](../_assets/img/prabhat_sys_rel.png)
 
 ## Myopic strategies
-![Hegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies. In Preparation.](../_assets/img/prabhat_myopia.png)
+![Hegde et al., (2025). [Timing managed retreat for robust coastal adaptation strategies.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5410803). Preprint](../_assets/img/prabhat_myopia.png)
 
 # Uncertainty characterization and sensitivity analysis
 
@@ -117,11 +115,11 @@ Note the iterative nature of using uncertainty characterization and sensitivity 
 ## Revisiting the managed retreat example
 ::: {.r-stack}
 ::: {.fragment .fade-out}
-![Hegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies. In Preparation.](../_assets/img/prabhat_sys_rel.png){width="50%" fig-align="center"}
+![Hegde et al., (2025). [Timing managed retreat for robust coastal adaptation strategies.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5410803). Preprint](../_assets/img/prabhat_sys_rel.png){width="50%" fig-align="center"}
 :::
 
 ::: {.fragment}
-![Hegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies. In Preparation.](../_assets/img/prabhat_spider.jpeg){width="50%" fig-align="center"}
+![Hegde et al., (2025). [Timing managed retreat for robust coastal adaptation strategies.](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5410803). Preprint](../_assets/img/prabhat_spider.jpeg){width="50%" fig-align="center"}
 :::
 :::
 

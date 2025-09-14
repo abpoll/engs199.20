@@ -116,23 +116,15 @@ What examples can you think of where inaction has negative consequences?
 [{{< fa camera-retro >}}: Figure SPM.2 in IPCC, 2021: Summary for Policymakers.](https://dx.doi.org/10.1017/9781009157896.001)
 :::
 
-## This intersects with many dimensions of global change
+## This intersects with many dimensions of global change {.nostretch}
 
 ::: {#fig-haz-exp-vuln-ipcc}
-![](../_assets/img/haz_exp_vuln_ipcc.png)
+![](../_assets/img/haz_exp_vuln_ipcc.png){width=500}
 
 [{{< fa camera-retro >}}: Figure SPM.1 in IPCC, 2022: Summary for Policymakers.](https://doi.org/10.1017/9781009325844.001)
 :::
 
-## The impacts of global change are unequal
-
-::: {#fig-unequal_ben_cost}
-![](../_assets/img/cc_us_damage_het.jpeg)
-
-[{{< fa camera-retro >}}: Hsiang et al., Estimating economic damage from climate change in the United States. Science. (2017)](https://doi.org/10.1126/science.aal4369)
-:::
-
-## Actors throughout society are already planning and making decisions to manage their risks
+## Many already plan and make decisions to manage their risks
 
 ::: {.incremental}
 * International agreements to reduce emissions
@@ -210,7 +202,7 @@ Zarekarizi et al. (2020): [How high to elevate a home?](https://doi.org/10.1038/
 * I research:
   - Flood-risk management
   - Problems where people don't agree on success
-  - Developing tools to make decision analysis more useful
+  - Ways to make decision analysis more useful
 * From Port Washington, NY (via Boston, MA and Centerport, NY)
 * I used to own a popcorn business
 
@@ -233,15 +225,17 @@ Zarekarizi et al. (2020): [How high to elevate a home?](https://doi.org/10.1038/
 * Check out the [syllabus](https://abpoll.github.io/engs199.20/syllabus.html)
 * Check out the [schedule](https://abpoll.github.io/engs199.20/schedule/schedule.html) 
 
+<!-- 
+For the training, this note is not relevant. For future versions, can use this note. 
 ::: {.callout-note}
 Your first (ungraded) assignment is to take a short syllabus quiz on Canvas and confirm that you understand, and agree to abide, by course policies. You will have the opportunity to submit questions about the course and we will discuss these together next Monday. 
-::: 
+:::  -->
 
 ## Expectations from students
 - come prepared to class (e.g., by carefully reading and synthesizing the reading assignments before class and being ready to present their synthesis in class);
 - actively contribute to the group discussions and activities;
 - submit the assignments on time; and
-- attend office hours as needed.
+- schedule office hours as needed.
 
 Students should expect to spend roughly three times the in-course hours outside the classroom for readings and assignments. 
 
@@ -294,15 +288,9 @@ Let's discuss how we do the labs for this training
 * Lab report due before next lab
 :::
 
-::: {.fragment}
-### Other Notes
-* Available for meetings by appointment
-* We can take labs offline and make them optional - let's discuss
-:::
-
 ## Communication
 * Questions during class is best
-* Canvas is great - not as good as in class, but still promotes open discussion (this is not relevant for the training)
+* Slack is great - not as good as in class, but still promotes open discussion
 * Office hours are great (including when the issue is urgent and/or private)
 * Email is ok if issue is urgent and/or private and you can't make office hours
 
@@ -320,16 +308,16 @@ Decision analysis is values-laden and good decision analysis is explicit about n
 # Upcoming Schedule
 ## This week
 ### Class 
-* Tuesday: computing setup (do on your own if you want to work through labs)
+* Tuesday (No Meeting): computing setup (do on your own if you want to work through labs)
 * Wednesday: lecture on framing a decision analysis
-* Friday: getting comfortable with our computing setup (no lab report) - let's discuss
+* Friday (No Meeting): getting comfortable with our computing setup
 
 ### Assignments
 * Catch up on Readings
 * Project progress report 1
   - What decision problem will you focus on this term?
   - See [here](../updates/overview.qmd) for more guidance
-  - Due next Friday before lab
+  - Due next Friday
 
 ## Next week
 * Starting Uncertainty module

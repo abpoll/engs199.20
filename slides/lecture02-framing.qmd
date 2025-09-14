@@ -37,7 +37,7 @@ execute:
 ::: {.incremental}
 1. What did you eat for your last meal?
 2. What colleges did you apply to?
-3. Why Dartmouth?
+3. How did you choose your PhD program?
 :::
 
 ::: {.fragment}
@@ -108,7 +108,7 @@ A few hints from our examples:
 * We got to the bottom of my travel goals quickly
 * I have (most of) the decision-making agency and chose my favorite option
 
-# Some good practices
+# Some helpful boundary objects
 
 ## Conceptual models
 
