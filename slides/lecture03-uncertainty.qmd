@@ -146,3 +146,10 @@ One reviewer complimented us for our extensive accounting of uncertainty. Howeve
 * Don't lose sight of **why** uncertainty matters for your decision analysis (*i.e.,* don't ignore uncertainty but don't overcomplicate how you handle it)
 * Remember that peer-reviewed studies are units of overall decision analysis projects (*i.e.,* don't overstuff these studies with too many analyses and points)
 :::
+
+# Upcoming Schedule
+## Next week
+* Do the 9/22 readings
+* Starting Uncertainty module
+* We will only meet Monday next week - prioritize your project proposal and schedule office hours as needed
+* Let me know if you are testing out the labs and need any help

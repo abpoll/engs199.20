@@ -11,7 +11,7 @@ sidebar: main
 ## Required Reading
 
 1. [Syllabus](../syllabus.qmd) and [Schedule](../schedule/schedule.qmd)
-    - Don't forget to take the short syllabus quiz on Canvas! (will upload with link when ready)
+    <!-- - Don't forget to take the short syllabus quiz on Canvas! (will upload with link when ready) -->
 
 2. @Keller-etal-2021
 
