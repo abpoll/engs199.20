@@ -25,21 +25,21 @@
     "href": "readings/readings03.html",
     "title": "Week 3 Readings",
     "section": "",
-    "text": "Lempert (2019)\n\nI usually like to recommend seminal papers where possible, but I think this later piece is a better starting place. I will include a few of the seminar papers as optional reading."
+    "text": "R. J. Lempert (2019)\n\nI usually like to recommend seminal papers where possible, but I think this later piece is a better starting place.\n\nRobert J. Lempert & Collins (2007)\n\nThis is the paper we’re going to review for our case study on Wednesday. I’ll lead this one to give you a working example on how to lead a case study review."
   },
   {
     "objectID": "readings/readings03.html#required-reading",
     "href": "readings/readings03.html#required-reading",
     "title": "Week 3 Readings",
     "section": "",
-    "text": "Lempert (2019)\n\nI usually like to recommend seminal papers where possible, but I think this later piece is a better starting place. I will include a few of the seminar papers as optional reading."
+    "text": "R. J. Lempert (2019)\n\nI usually like to recommend seminal papers where possible, but I think this later piece is a better starting place.\n\nRobert J. Lempert & Collins (2007)\n\nThis is the paper we’re going to review for our case study on Wednesday. I’ll lead this one to give you a working example on how to lead a case study review."
   },
   {
     "objectID": "readings/readings03.html#optional-reading",
     "href": "readings/readings03.html#optional-reading",
     "title": "Week 3 Readings",
     "section": "Optional Reading",
-    "text": "Optional Reading\nYou might have better intuition and instincts than me, but it took me many, many readings of the above, papers below, and external material (e.g., presentations, webinars, conversations, etc.,) to feel comfortable with the concept of robustness in the context of robust decision-making - and I still make conceptual mistakes and have a lot to learn. I keep the optional readings to just a few papers because I know some of you will push yourself to read all required and optional readings each week, and I don’t want you to burnout when it’s going to take more than just one reading to feel comfortable with this concept.\n\nGroves et al. (2019)\nHerman Jonathan D. et al. (2015)\nQuinn et al. (2020)\nDoss-Gollin & Keller (2023)\n\n\nReferences\n\n\nDoss-Gollin, J., & Keller, K. (2023). A subjective bayesian framework for synthesizing deep uncertainties in climate risk management. Earths Future, 11(1). https://doi.org/10.1029/2022ef003044\n\n\nGroves, D. G., Molina-Perez, E., Bloom, E., & Fischbach, J. R. (2019). Robust decision making (RDM): Application to water planning and climate policy. In Decision making under deep uncertainty (pp. 135–163). Cham: Springer International Publishing. https://doi.org/10.1007/978-3-030-05252-2\\_7\n\n\nHerman Jonathan D., Reed Patrick M., Zeff Harrison B., & Characklis Gregory W. (2015). How should robustness be defined for water systems planning under change? Journal of Water Resources Planning and Management, 141(10), 04015012. https://doi.org/10.1061/(ASCE)WR.1943-5452.0000509\n\n\nLempert, R. J. (2019). Robust decision making (RDM). In Decision making under deep uncertainty (pp. 23–51). Cham: Springer International Publishing. https://doi.org/10.1007/978-3-030-05252-2\\_2\n\n\nQuinn, J. D., Hadjimichael, A., Reed, P. M., & Steinschneider, S. (2020). Can exploratory modeling of water scarcity vulnerabilities and robustness be scenario neutral? Earths Future, 8(11). https://doi.org/10.1029/2020ef001650"
+    "text": "Optional Reading\nYou might have better intuition and instincts than me, but it took me many, many readings of the above, papers below, and external material (e.g., presentations, webinars, conversations, etc.,) to feel comfortable with the concept of robustness in the context of robust decision-making - and I still make conceptual mistakes and have a lot to learn. I keep the optional readings to just a few papers because I know some of you will push yourself to read all required and optional readings each week, and I don’t want you to burnout when it’s going to take more than just one reading to feel comfortable with this concept.\n\nGroves et al. (2019)\nHerman Jonathan D. et al. (2015)\nQuinn et al. (2020)\nDoss-Gollin & Keller (2023)\n\n\nReferences\n\n\nDoss-Gollin, J., & Keller, K. (2023). A subjective bayesian framework for synthesizing deep uncertainties in climate risk management. Earths Future, 11(1). https://doi.org/10.1029/2022ef003044\n\n\nGroves, D. G., Molina-Perez, E., Bloom, E., & Fischbach, J. R. (2019). Robust decision making (RDM): Application to water planning and climate policy. In Decision making under deep uncertainty (pp. 135–163). Cham: Springer International Publishing. https://doi.org/10.1007/978-3-030-05252-2\\_7\n\n\nHerman Jonathan D., Reed Patrick M., Zeff Harrison B., & Characklis Gregory W. (2015). How should robustness be defined for water systems planning under change? Journal of Water Resources Planning and Management, 141(10), 04015012. https://doi.org/10.1061/(ASCE)WR.1943-5452.0000509\n\n\nLempert, R. J. (2019). Robust decision making (RDM). In Decision making under deep uncertainty (pp. 23–51). Cham: Springer International Publishing. https://doi.org/10.1007/978-3-030-05252-2\\_2\n\n\nLempert, Robert J., & Collins, M. T. (2007). Managing the risk of uncertain threshold responses: Comparison of robust, optimum, and precautionary approaches. Risk Anal., 27(4), 1009–1026. https://doi.org/10.1111/j.1539-6924.2007.00940.x\n\n\nQuinn, J. D., Hadjimichael, A., Reed, P. M., & Steinschneider, S. (2020). Can exploratory modeling of water scarcity vulnerabilities and robustness be scenario neutral? Earths Future, 8(11). https://doi.org/10.1029/2020ef001650"
   },
   {
     "objectID": "project/updates.html",
@@ -116,95 +116,109 @@
     ]
   },
   {
-    "objectID": "slides/lecture04-rdm.html#the-quitoxic-quest-for-predictions",
-    "href": "slides/lecture04-rdm.html#the-quitoxic-quest-for-predictions",
+    "objectID": "slides/lecture04-rdm.html#the-dmdu-argument-against-predict-then-act",
+    "href": "slides/lecture04-rdm.html#the-dmdu-argument-against-predict-then-act",
     "title": "Robust decision-making",
-    "section": "The (Quitoxic) Quest for Predictions",
-    "text": "The (Quitoxic) Quest for Predictions"
+    "section": "The DMDU Argument Against Predict-Then-Act",
+    "text": "The DMDU Argument Against Predict-Then-Act\n\n\n\nwicked problems are not well-bounded, are framed differently by various stakeholders, and are not well-understood until after formulation of a solution. Using predictions to adjudicate such problems skews attention toward the proverbial lamp post, not the true location of the keys to a policy solution.\n\n\n— Lempert, 2019. Robust Decision Making (RDM)."
   },
   {
-    "objectID": "slides/lecture04-rdm.html#seeing-good-enough-solutions-over-a-wide-range-of-futures",
-    "href": "slides/lecture04-rdm.html#seeing-good-enough-solutions-over-a-wide-range-of-futures",
+    "objectID": "slides/lecture04-rdm.html#finding-robust-solutions-that-perform-well-over-a-wide-range-of-futures",
+    "href": "slides/lecture04-rdm.html#finding-robust-solutions-that-perform-well-over-a-wide-range-of-futures",
     "title": "Robust decision-making",
-    "section": "Seeing “good enough” solutions over a “wide range” of futures",
-    "text": "Seeing “good enough” solutions over a “wide range” of futures"
+    "section": "Finding robust solutions that “perform well” over a “wide range” of futures",
+    "text": "Finding robust solutions that “perform well” over a “wide range” of futures\n\nRob Lempert, PhD; & Michelle Miro, PhD. Online Training for Water Utilities—WUCA / Chapter 3: Plan"
   },
   {
-    "objectID": "slides/lecture04-rdm.html#defining-and-measuring-robustness",
-    "href": "slides/lecture04-rdm.html#defining-and-measuring-robustness",
+    "objectID": "slides/lecture04-rdm.html#measuring-robustness",
+    "href": "slides/lecture04-rdm.html#measuring-robustness",
     "title": "Robust decision-making",
-    "section": "Defining and measuring robustness",
-    "text": "Defining and measuring robustness"
+    "section": "Measuring robustness",
+    "text": "Measuring robustness\n\n\n\nMcPhail et al. (2019)"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#regret-the-cost-of-choosing-incorrectly",
+    "href": "slides/lecture04-rdm.html#regret-the-cost-of-choosing-incorrectly",
+    "title": "Robust decision-making",
+    "section": "Regret: The “cost” of choosing “incorrectly”",
+    "text": "Regret: The “cost” of choosing “incorrectly”\nAdaptating notation in Lempert and Collins (2007), the regret of action a in state x is:\n\\(R_{a}(x) = Max_{a'}[PV(U_{a'}(x))] - PV(U_{a}(x))\\),\nthe difference between the present value expected utility of the optimal action in a considered state of the world and the considered action’s present value expected utility in that state of the world.\nNote: There are many ways to go from an action’s regret metric in one state (i.e., \\(T_{1}\\)) to evaluating its overall robustness (i.e., \\(T_{2}\\) and \\(T_{3}\\))."
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#satisficing",
+    "href": "slides/lecture04-rdm.html#satisficing",
+    "title": "Robust decision-making",
+    "section": "Satisficing",
+    "text": "Satisficing\nFollowing McPhail et al. (2019), this approach “seeks to meet a minimum performance threshold.”\nLooking across states (i.e., \\(T_{2}\\) and \\(T_{3}\\)), the domain criterion is a common approach (e.g., see Herman et al., (2015)), which analysts often implement as the fraction of states of the world in which the performance threshold is met."
   },
   {
     "objectID": "slides/lecture04-rdm.html#schematic",
     "href": "slides/lecture04-rdm.html#schematic",
     "title": "Robust decision-making",
     "section": "Schematic",
-    "text": "Schematic"
+    "text": "Schematic\n\nLempert, 2019. Robust Decision Making (RDM)."
   },
   {
     "objectID": "slides/lecture04-rdm.html#framing",
     "href": "slides/lecture04-rdm.html#framing",
     "title": "Robust decision-making",
     "section": "Framing",
-    "text": "Framing"
+    "text": "Framing\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
   },
   {
-    "objectID": "slides/lecture04-rdm.html#evaluating-strategies-across-many-futures",
-    "href": "slides/lecture04-rdm.html#evaluating-strategies-across-many-futures",
+    "objectID": "slides/lecture04-rdm.html#identifying-vulnerabilities",
+    "href": "slides/lecture04-rdm.html#identifying-vulnerabilities",
     "title": "Robust decision-making",
-    "section": "Evaluating strategies across many futures",
-    "text": "Evaluating strategies across many futures"
+    "section": "Identifying Vulnerabilities",
+    "text": "Identifying Vulnerabilities\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
   },
   {
-    "objectID": "slides/lecture04-rdm.html#scenario-discovery",
-    "href": "slides/lecture04-rdm.html#scenario-discovery",
+    "objectID": "slides/lecture04-rdm.html#designing-strategies-adaptive-to-vulnerabilities",
+    "href": "slides/lecture04-rdm.html#designing-strategies-adaptive-to-vulnerabilities",
     "title": "Robust decision-making",
-    "section": "Scenario discovery",
-    "text": "Scenario discovery"
+    "section": "Designing Strategies Adaptive to Vulnerabilities",
+    "text": "Designing Strategies Adaptive to Vulnerabilities\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
   },
   {
     "objectID": "slides/lecture04-rdm.html#tradeoff-analysis",
     "href": "slides/lecture04-rdm.html#tradeoff-analysis",
     "title": "Robust decision-making",
-    "section": "Tradeoff analysis",
-    "text": "Tradeoff analysis"
+    "section": "Tradeoff Analysis",
+    "text": "Tradeoff Analysis\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
   },
   {
-    "objectID": "slides/lecture04-rdm.html#identifying-and-evaluating-more-strategies",
-    "href": "slides/lecture04-rdm.html#identifying-and-evaluating-more-strategies",
+    "objectID": "slides/lecture04-rdm.html#evaluating-robustness",
+    "href": "slides/lecture04-rdm.html#evaluating-robustness",
     "title": "Robust decision-making",
-    "section": "Identifying and evaluating more strategies",
-    "text": "Identifying and evaluating more strategies"
+    "section": "Evaluating Robustness",
+    "text": "Evaluating Robustness\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
   },
   {
-    "objectID": "slides/lecture04-rdm.html#reframing",
-    "href": "slides/lecture04-rdm.html#reframing",
+    "objectID": "slides/lecture04-rdm.html#iterating-with-decision-makers",
+    "href": "slides/lecture04-rdm.html#iterating-with-decision-makers",
     "title": "Robust decision-making",
-    "section": "Reframing",
-    "text": "Reframing"
+    "section": "Iterating with Decision-makers",
+    "text": "Iterating with Decision-makers\nMany potential conditions where current strategies insufficient:\n\n\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
   },
   {
-    "objectID": "slides/lecture04-rdm.html#rival-framings",
-    "href": "slides/lecture04-rdm.html#rival-framings",
+    "objectID": "slides/lecture04-rdm.html#we-are-not-completely-ignorant-about-future-probabilities",
+    "href": "slides/lecture04-rdm.html#we-are-not-completely-ignorant-about-future-probabilities",
     "title": "Robust decision-making",
-    "section": "Rival framings",
-    "text": "Rival framings"
+    "section": "We are not completely ignorant about future probabilities",
+    "text": "We are not completely ignorant about future probabilities\n\n\n\nHausfather and Peters (2020). RCP8.5 is a problematic scenario for near-term emissions"
   },
   {
-    "objectID": "slides/lecture04-rdm.html#synthesizing-subjective-beliefs-about-deep-uncertainties",
-    "href": "slides/lecture04-rdm.html#synthesizing-subjective-beliefs-about-deep-uncertainties",
+    "objectID": "slides/lecture04-rdm.html#alternative-synthesize-subjective-beliefs-about-deep-uncertainties",
+    "href": "slides/lecture04-rdm.html#alternative-synthesize-subjective-beliefs-about-deep-uncertainties",
     "title": "Robust decision-making",
-    "section": "Synthesizing subjective beliefs about deep uncertainties",
-    "text": "Synthesizing subjective beliefs about deep uncertainties"
+    "section": "Alternative: Synthesize subjective beliefs about deep uncertainties",
+    "text": "Alternative: Synthesize subjective beliefs about deep uncertainties\n\nDoss-Gollin and Keller (2023)"
   },
   {
     "objectID": "slides/lecture04-rdm.html#this-week",
     "href": "slides/lecture04-rdm.html#this-week",
     "title": "Robust decision-making",
     "section": "This week",
-    "text": "This week\n\nJournal club on Wednesday\nLet me know if you’re working on the lab and want to meet"
+    "text": "This week\n\nCase study on Wednesday\nLet me know if you’re working on the lab and want to meet"
   },
   {
     "objectID": "slides/lecture04-rdm.html#next-week",
@@ -398,7 +412,7 @@
     "href": "schedule/schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "This page contains a schedule of the topics, content, and assignments for the term, organized by module.\n\nSlides : On the schedule, this link contains the presentation for the day’s lecture.\nLab : This page contains a lab report rubric and links to each week’s lab. You can also access each week’s lab through the links in the schedule below.\nHW : This page contains the schedule and rubric for the project updates. At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I highly encourage you to work on these during the module to stay on track with your project. Note that there is no lab report the first week and the first assignment is to define your project’s decision problem.\nReading : On the schedule, this link takes you to a list of required and optional readings for the module. Please read the required reading before class. There will typically be one required reading per week. I suggest you read at least the abstracts of optional readings before class. The optional readings will help you understand lecture and can serve as core references in lab reports and project updates.\n\n\n\n\n\nYou should follow this general process for each module\n\nDo the Reading before Monday’s Lecture\nComplete the lab report within one week from the assignment date\nSubmit the homework within one week from the assignment date\n\n\n\n\n\n There are seven modules in this course:\n\n“Overview”: Overview of decision analysis for wicked climate problems\n“Uncertainty”: Dealing with uncertainty in analyzing decisions\n“RDM”: Robust decision-making\n“Trade-offs”: Multiple objectives and navigating trade-offs\n“DMDU”: Decision making under deep uncertainty\n“Gaps”: Gaps between decision analysis and decision support\n“Projects”: Student project presentations\n\nNote that this schedule will be updated as necessary throughout the term.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nSlides\nLab\nHW\nReading\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n1\n9/15/25\nCourse Overview\n\n\n\n\n\n\n1\n9/16/25\nComputing setup\n\n\n\n\n\n\n1\n9/17/25\nFraming a decision analysis\n\n\n\n\n\n\n1\n9/19/25\nPython and GitHub Bootcamp\n\n\n\n\n\n\n\n\nUncertainty\n\n\n\n\n\n\n2\n9/22/25\nShallow and deep uncertainties\n\n\n\n\n\n\n2\n9/23/25\nPython and GitHub Bootcamp II\n\n\n\n\n\n\n2\n9/24/25\nDeep uncertainty game\n\n\n\n\n\n\n2\n9/26/25\nMSD UC/UQ tutorials\n\n\n\n\n\n\n\n\nRDM\n\n\n\n\n\n\n3\n9/29/25\nRobust decision-making\n\n\n\n\n\n\n3\n10/1/25\nJournal club\n\n\n\n\n\n\n3\n10/3/25\nPitfalls of predict-then-act\n\n\n\n\n\n\n\n\nTrade-offs\n\n\n\n\n\n\n4\n10/6/25\nDA in a pluralistic society\n\n\n\n\n\n\n4\n10/8/25\nJournal Club\n\n\n\n\n\n\n4\n10/10/25\nNavigating trade-offs\n\n\n\n\n\n\n5\n10/13/25\nMulti-objective evolutionary algorithms\n\n\n\n\n\n\n5\n10/15/25\nRace to the best Pareto front\n\n\n\n\n\n\n5\n10/17/25\nRace to the best Pareto front\n\n\n\n\n\n\n\n\nDMDU\n\n\n\n\n\n\n6\n10/20/25\nDirect policy search\n\n\n\n\n\n\n6\n10/22/25\nReinforcement learning lab\n\n\n\n\n\n\n6\n10/24/25\nLab continued\n\n\n\n\n\n\n7\n10/27/25\nRobustness\n\n\n\n\n\n\n7\n10/29/25\nJournal club\n\n\n\n\n\n\n7\n10/31/25\nPutting it all together\n\n\n\n\n\n\n8\n11/3/25\nRobustness II\n\n\n\n\n\n\n8\n11/5/25\nPractice presentations\n\n\n\n\n\n\n8\n11/7/25\nPutting it all together II\n\n\n\n\n\n\n\n\nGaps\n\n\n\n\n\n\n9\n11/10/25\nMore useful decision analysis\n\n\n\n\n\n\n9\n11/12/25\nGuest panel\n\n\n\n\n\n\n9\n11/14/25\nPresentations\n\n\n\n\n\n\n\n\nProjects\n\n\n\n\n\n\n10\n11/17/25\nPresentations\n\n\n\n\n\n\n10\n11/18/25\nPresentations",
+    "text": "This page contains a schedule of the topics, content, and assignments for the term, organized by module.\n\nSlides : On the schedule, this link contains the presentation for the day’s lecture.\nLab : This page contains a lab report rubric and links to each week’s lab. You can also access each week’s lab through the links in the schedule below.\nHW : This page contains the schedule and rubric for the project updates. At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I highly encourage you to work on these during the module to stay on track with your project. Note that there is no lab report the first week and the first assignment is to define your project’s decision problem.\nReading : On the schedule, this link takes you to a list of required and optional readings for the module. Please read the required reading before class. There will typically be one required reading per week. I suggest you read at least the abstracts of optional readings before class. The optional readings will help you understand lecture and can serve as core references in lab reports and project updates.\n\n\n\n\n\nYou should follow this general process for each module\n\nDo the Reading before the following Monday’s Lecture\nComplete the lab report within one week from the assignment date\nSubmit the homework before the start of the next module\n\n\n\n\n\n There are seven modules in this course:\n\n“Overview”: Overview of decision analysis for wicked climate problems\n“Uncertainty”: Dealing with uncertainty in analyzing decisions\n“RDM”: Robust decision-making\n“Trade-offs”: Multiple objectives and navigating trade-offs\n“DMDU”: Decision making under deep uncertainty\n“Gaps”: Gaps between decision analysis and decision support\n“Projects”: Student project presentations\n\nNote that this schedule will be updated as necessary throughout the term.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nSlides\nLab\nHW\nReading\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n1\n9/15/25\nCourse Overview\n\n\n\n\n\n\n1\n9/16/25\nComputing setup\n\n\n\n\n\n\n1\n9/17/25\nFraming a decision analysis\n\n\n\n\n\n\n1\n9/19/25\nPython and GitHub Bootcamp\n\n\n\n\n\n\n\n\nUncertainty\n\n\n\n\n\n\n2\n9/22/25\nShallow and deep uncertainties\n\n\n\n\n\n\n2\n9/23/25\nPython and GitHub Bootcamp II\n\n\n\n\n\n\n2\n9/24/25\nDeep uncertainty game\n\n\n\n\n\n\n2\n9/26/25\nMSD UC/UQ tutorials\n\n\n\n\n\n\n\n\nRDM\n\n\n\n\n\n\n3\n9/29/25\nRobust decision-making\n\n\n\n\n\n\n3\n10/1/25\nCase study\n\n\n\n\n\n\n3\n10/3/25\nPotential pitfalls of predict-then-act\n\n\n\n\n\n\n\n\nTrade-offs\n\n\n\n\n\n\n4\n10/6/25\nDA in a pluralistic society\n\n\n\n\n\n\n4\n10/8/25\nCase study\n\n\n\n\n\n\n4\n10/10/25\nNavigating trade-offs\n\n\n\n\n\n\n5\n10/13/25\nMORDM\n\n\n\n\n\n\n5\n10/15/25\nRobustly evaluating robustness\n\n\n\n\n\n\n5\n10/17/25\nLab continued\n\n\n\n\n\n\n\n\nDMDU\n\n\n\n\n\n\n6\n10/20/25\nDirect policy search\n\n\n\n\n\n\n6\n10/22/25\nAdaptive policies\n\n\n\n\n\n\n6\n10/24/25\nLab continued\n\n\n\n\n\n\n7\n10/27/25\nCase study\n\n\n\n\n\n\n7\n10/29/25\nCase study\n\n\n\n\n\n\n7\n10/31/25\nPutting it all together\n\n\n\n\n\n\n8\n11/3/25\nCase study\n\n\n\n\n\n\n8\n11/5/25\nPractice presentations\n\n\n\n\n\n\n8\n11/7/25\nPutting it all together II\n\n\n\n\n\n\n\n\nGaps\n\n\n\n\n\n\n9\n11/10/25\nMore useful decision analysis\n\n\n\n\n\n\n9\n11/12/25\nGuest panel\n\n\n\n\n\n\n9\n11/14/25\nPresentations\n\n\n\n\n\n\n\n\nProjects\n\n\n\n\n\n\n10\n11/17/25\nPresentations\n\n\n\n\n\n\n10\n11/18/25\nPresentations",
     "crumbs": [
       "Schedule"
     ]
