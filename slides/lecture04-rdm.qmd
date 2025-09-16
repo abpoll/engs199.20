@@ -1,0 +1,68 @@
+---
+title: "Robust decision-making"
+subtitle: "Lecture 04"
+author: "{{< var instructor.name_no_title >}}"
+course: "{{< var course.number >}}"
+institution: "{{< var university.name >}}"
+date: "September 29, 2025"
+format:
+    revealjs:
+        scrollable: true
+        slide-number: c/t
+        show-slide-number: all
+        center-title-slide: true
+        transition: none
+        toc: true
+        toc-depth: 1
+        toc-title: "Overview"
+        history: false
+        link-external-newwindow: true
+        theme: ../_assets/sass/slides.scss
+        template-partials:
+            - title-slide.html
+        menu:
+            numbers: true
+        date-format: long
+        email-obfuscation: javascript
+        controls: true
+execute:
+    freeze: auto
+    echo: false
+---
+
+# Predict-Then-Act vs. Agree-On-Decisions
+## The (Quitoxic) Quest for Predictions
+
+## Seeing "good enough" solutions over a "wide range" of futures
+
+## Defining and measuring robustness
+
+# RDM Workflow
+## Schematic
+
+## Framing
+
+## Evaluating strategies across many futures
+
+## Scenario discovery
+
+## Tradeoff analysis
+
+## Identifying and evaluating more strategies
+
+## Reframing
+
+# Alternative Perspectives
+## Rival framings
+
+## Synthesizing subjective beliefs about deep uncertainties
+
+
+# Upcoming Schedule
+## This week
+* Journal club on Wednesday
+* Let me know if you're working on the lab and want to meet
+
+## Next week
+* Lecture on Monday - area I have most experience in re: MORDM
+* Journal Club Wednesday

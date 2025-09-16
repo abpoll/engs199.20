@@ -1,0 +1,28 @@
+---
+format:
+  html:
+    title: Week 3 Readings
+
+reference-location: document
+citation-location: document
+sidebar: main
+---
+
+## Required Reading
+
+1. @Lempert2019
+
+    - I usually like to recommend seminal papers where possible, but I think this later piece is a better starting place. I will include a few of the seminar papers as optional reading. 
+
+## Optional Reading
+
+You might have better intuition and instincts than me, but it took me many, many readings of the above, papers below, and external material (e.g., presentations, webinars, conversations, etc.,) to feel comfortable with the concept of robustness in the context of robust decision-making - and I still make conceptual mistakes and have a lot to learn. I keep the optional readings to just a few papers because I know some of you will push yourself to read all required and optional readings each week, and I don't want you to burnout when it's going to take more than just one reading to feel comfortable with this concept. 
+
+- @Groves-etal-2019
+- @Herman_etal-2015
+- @Quinn-etal-2020
+- @Doss-Gollin2023
+
+### References
+::: {#refs}
+:::

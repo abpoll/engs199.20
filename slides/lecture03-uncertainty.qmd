@@ -148,8 +148,10 @@ One reviewer complimented us for our extensive accounting of uncertainty. Howeve
 :::
 
 # Upcoming Schedule
+## This week
+* We will only meet today this week - prioritize your project proposal and schedule office hours as needed
+* Let me know if you are testing out the lab and need any help
+
 ## Next week
-* Do the 9/22 readings
-* Starting Uncertainty module
-* We will only meet Monday next week - prioritize your project proposal and schedule office hours as needed
-* Let me know if you are testing out the labs and need any help
+* Starting RDM module
+* Journal club next Wednesday (stay on track with 9/29 readings)

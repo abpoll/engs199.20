@@ -34,15 +34,12 @@ execute:
 
 ## How did you make these decisions?
 
-::: {.incremental}
 1. What did you eat for your last meal?
 2. What colleges did you apply to?
 3. How did you choose your PhD program?
-:::
 
-::: {.fragment}
 ![https://xkcd.com/1445/](../_assets/img/efficiency_2x.png){width="50%"}
-:::
+
 
 ## Framing refers to how you structure a decision problem
 Framing breakfast decisions
@@ -127,12 +124,10 @@ A few hints from our examples:
 ![From @Pollack-etal-2025](../_assets/img/xlrm_ex.jpeg){fig-align="center"}
 
 # Upcoming Schedule
-## This week
-* We will only meet today this week - prioritize your project proposal and schedule office hours as needed
-* Let me know if you are testing out the lab and need any help
-
 ## Next week
-* Starting RDM module
-* Journal club next Wednesday (stay on track with 9/29 readings)
+* Do the 9/22 readings
+* Starting Uncertainty module
+* We will only meet Monday next week - prioritize your project proposal and schedule office hours as needed
+* Let me know if you are testing out the labs and need any help
 
 ## Works cited
