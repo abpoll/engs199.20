@@ -21,58 +21,197 @@
     "text": "Optional Reading\nI want to provide you with opportunities to go into various focus areas of Keller et al. (2021) in more detail. I don’t expect you to read all of these in detail. However, I think it will benefit you to at least read all the abstracts and choose one to read in detail that speaks to you.\nMore on wicked problems: Rittel & Webber (1973)\nMore on analyzing complex systems: Reed et al. (2022)\nMore on robust decision-making: Lempert (2002)\nMore on framing a decision analysis: Helgeson et al. (2024)\n\nReferences\n\n\nGregory, R., Failing, L., Harstone, M., Long, G., McDaniels, T., & Ohlson, D. (2012). Structuring environmental management choices. In Structured decision making (pp. 1–20). Chichester, UK: John Wiley & Sons, Ltd. https://doi.org/10.1002/9781444398557.ch1\n\n\nHelgeson, C., Keller, K., Nicholas, R. E., Srikrishnan, V., Cooper, C., Smithwick, E. A. H., & Tuana, N. (2024). Integrating values to improve the relevance of climate‐risk research. Earths Future, 12(10), e2022EF003025. https://doi.org/10.1029/2022ef003025\n\n\nKeller, K., Helgeson, C., & Srikrishnan, V. (2021). Climate risk management. Annual Review of Earth and Planetary Sciences, 49(1), 95–116. https://doi.org/10.1146/annurev-earth-080320-055847\n\n\nLempert, R. J. (2002). A new decision sciences for complex systems. Proc. Natl. Acad. Sci. U. S. A., 99 Suppl 3(Suppl 3), 7309–7313. https://doi.org/10.1073/pnas.082081699\n\n\nReed, P. M., Hadjimichael, A., Moss, R. H., Brelsford, C., Burleyson, C. D., Cohen, S., et al. (2022). Multisector dynamics: Advancing the science of complex adaptive human‐earth systems. Earths Future, 10(3). https://doi.org/10.1029/2021ef002621\n\n\nRittel, H. W. J., & Webber, M. M. (1973). Dilemmas in a general theory of planning. Policy Sci., 4(2), 155–169. https://doi.org/10.1007/BF01405730"
   },
   {
-    "objectID": "project/presentation.html",
-    "href": "project/presentation.html",
-    "title": "Project Presentation Instructions",
+    "objectID": "readings/readings03.html",
+    "href": "readings/readings03.html",
+    "title": "Week 3 Readings",
     "section": "",
-    "text": "Your project presentation will provide a narrative overview of your project. You are allowed 12-15 minutes for your presentation, which should cover the following:\n\nWhat is your decision problem?\nWhat is the state of the art in addressing this problem?\nWhat is wrong with the status quo?\nWhat knowledge gaps are there and which do you address?\nHow will you address these knowledge gaps (not too technical)?\nWhat are your hypotheses about your planned decision analysis?\nWhat are the implications?\n\nYou can find some links to good practices on presentations in the Other Resources section of the course webpage.\nAs an audience member, you will be responsible for one short summary and round of moderation of group discussion for a colleague’s project. Your summary should focus on the story of the project and should clarify any parts of the story that were not clear to you. Your round of moderation should facilitate specific attention from the other audience members. For example, you can prompt other students to comment on potential limitations in proposed methods or you can prompt the presenter to clarify a specific narrative point.",
+    "text": "Lempert (2019)\n\nI usually like to recommend seminal papers where possible, but I think this later piece is a better starting place. I will include a few of the seminar papers as optional reading."
+  },
+  {
+    "objectID": "readings/readings03.html#required-reading",
+    "href": "readings/readings03.html#required-reading",
+    "title": "Week 3 Readings",
+    "section": "",
+    "text": "Lempert (2019)\n\nI usually like to recommend seminal papers where possible, but I think this later piece is a better starting place. I will include a few of the seminar papers as optional reading."
+  },
+  {
+    "objectID": "readings/readings03.html#optional-reading",
+    "href": "readings/readings03.html#optional-reading",
+    "title": "Week 3 Readings",
+    "section": "Optional Reading",
+    "text": "Optional Reading\nYou might have better intuition and instincts than me, but it took me many, many readings of the above, papers below, and external material (e.g., presentations, webinars, conversations, etc.,) to feel comfortable with the concept of robustness in the context of robust decision-making - and I still make conceptual mistakes and have a lot to learn. I keep the optional readings to just a few papers because I know some of you will push yourself to read all required and optional readings each week, and I don’t want you to burnout when it’s going to take more than just one reading to feel comfortable with this concept.\n\nGroves et al. (2019)\nHerman Jonathan D. et al. (2015)\nQuinn et al. (2020)\nDoss-Gollin & Keller (2023)\n\n\nReferences\n\n\nDoss-Gollin, J., & Keller, K. (2023). A subjective bayesian framework for synthesizing deep uncertainties in climate risk management. Earths Future, 11(1). https://doi.org/10.1029/2022ef003044\n\n\nGroves, D. G., Molina-Perez, E., Bloom, E., & Fischbach, J. R. (2019). Robust decision making (RDM): Application to water planning and climate policy. In Decision making under deep uncertainty (pp. 135–163). Cham: Springer International Publishing. https://doi.org/10.1007/978-3-030-05252-2\\_7\n\n\nHerman Jonathan D., Reed Patrick M., Zeff Harrison B., & Characklis Gregory W. (2015). How should robustness be defined for water systems planning under change? Journal of Water Resources Planning and Management, 141(10), 04015012. https://doi.org/10.1061/(ASCE)WR.1943-5452.0000509\n\n\nLempert, R. J. (2019). Robust decision making (RDM). In Decision making under deep uncertainty (pp. 23–51). Cham: Springer International Publishing. https://doi.org/10.1007/978-3-030-05252-2\\_2\n\n\nQuinn, J. D., Hadjimichael, A., Reed, P. M., & Steinschneider, S. (2020). Can exploratory modeling of water scarcity vulnerabilities and robustness be scenario neutral? Earths Future, 8(11). https://doi.org/10.1029/2020ef001650"
+  },
+  {
+    "objectID": "project/updates.html",
+    "href": "project/updates.html",
+    "title": "Project Progress Reports",
+    "section": "",
+    "text": "At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I highly encourage you to work on these during the module to stay on track with your project.",
     "crumbs": [
       "Course Project",
-      "Presentation"
+      "Module Reports"
     ]
   },
   {
-    "objectID": "project/presentation.html#overview",
-    "href": "project/presentation.html#overview",
-    "title": "Project Presentation Instructions",
+    "objectID": "project/updates.html#overview",
+    "href": "project/updates.html#overview",
+    "title": "Project Progress Reports",
     "section": "",
-    "text": "Your project presentation will provide a narrative overview of your project. You are allowed 12-15 minutes for your presentation, which should cover the following:\n\nWhat is your decision problem?\nWhat is the state of the art in addressing this problem?\nWhat is wrong with the status quo?\nWhat knowledge gaps are there and which do you address?\nHow will you address these knowledge gaps (not too technical)?\nWhat are your hypotheses about your planned decision analysis?\nWhat are the implications?\n\nYou can find some links to good practices on presentations in the Other Resources section of the course webpage.\nAs an audience member, you will be responsible for one short summary and round of moderation of group discussion for a colleague’s project. Your summary should focus on the story of the project and should clarify any parts of the story that were not clear to you. Your round of moderation should facilitate specific attention from the other audience members. For example, you can prompt other students to comment on potential limitations in proposed methods or you can prompt the presenter to clarify a specific narrative point.",
+    "text": "At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I highly encourage you to work on these during the module to stay on track with your project.",
     "crumbs": [
       "Course Project",
-      "Presentation"
+      "Module Reports"
     ]
   },
   {
-    "objectID": "project/presentation.html#rubric",
-    "href": "project/presentation.html#rubric",
-    "title": "Project Presentation Instructions",
+    "objectID": "project/updates.html#schedule",
+    "href": "project/updates.html#schedule",
+    "title": "Project Progress Reports",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\n\n\n\n\n\nModule\nInstructions\nDue Date\n\n\n\n\nOverview\n\n9/26/25\n\n\nUncertainty\n\n10/3/25\n\n\nRDM\n\n10/10/25\n\n\nTrade-offs\n\n10/24/25\n\n\nDMDU\n\n11/14/25\n\n\nGaps\n\n11/21/25",
+    "crumbs": [
+      "Course Project",
+      "Module Reports"
+    ]
+  },
+  {
+    "objectID": "project/updates.html#rubric",
+    "href": "project/updates.html#rubric",
+    "title": "Project Progress Reports",
     "section": "Rubric",
-    "text": "Rubric\nYou can receive a maximum of 20 points, with credit opportunities as follows:\n\nUp to 10 points based on instructor’s rating\nUp to 8 points based on average of peer rating (low quality dropped)\nUp to 2 points for summary and moderation\n1 point for strong and constructive peer evaluation\nUp to 2 points for submitting a revised and improved recorded presentation on Canvas within the following week\n\nYou can lose points as follows:\n\n-5 points for going over 15 minutes on either presentation opportunity\n-2 points for low quality peer evaluation\n\nNote: Low quality peer evaluations are ones that suggest you were not paying attention to your colleague’s presentation. Even if you struggle to understand some material, your colleague deserves your respect. In fact, conveying clearly that you struggled to understand some material can be very helpful to your colleague in synthesizing feedback and working on their final report.",
+    "text": "Rubric\nYour grade is based on your perceived effort. Even if you do not fully understand how to apply lessons from a module to your project, you can receive full credit for a report if you understand your knowledge gaps and form strong questions for me to provide clarification and direction for you. You can receive 0-3 points on each assignment.\n\n0: No perceived effort\n1: Low perceived effort\n\nE.g., incomplete, no synthesis, no self awareness of knowledge gaps, no questions for me\n\n2: Moderate perceived effort\n\nE.g., Complete but synthesis has important shortcomings and questions are too open ended for me to provide helpful guidance\n\n3: High perceived effort\n\nE.g., Complete and synthesis has important shortcomings but questions are specific and allow me to provide helpful guidance.\n\n\nThe instructions for each report will include examples of specific questions about the module that you can use for free in your report to help boost your grade. I will not be able to anticipate all questions that apply to your understanding and decision problem, so it is no guarantee you receive a 3 if you use some of these example questions.\nI will provide as much detailed feedback on each report as I can. This means that the more thought and effort you put into your report, the more guidance you will receive. This will help you on your project presentation and report. However, you must apply discretion when writing your report and should not include too much or irrelevant details. Concision is a very important feature of strong synthesis.\nLate submissions receive a 25% downgrading of the full credit score for each l ate day. Extension requests must be made 24 hours before the submission deadline with a submission of what you have achieved so far.",
     "crumbs": [
       "Course Project",
-      "Presentation"
+      "Module Reports"
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "project/overview.html",
+    "href": "project/overview.html",
+    "title": "Course Project",
     "section": "",
-    "text": "This website contains course materials for the Fall 2025 edition of Decision Analysis for Wicked Climate Problems, taught by Adam Pollack at Dartmouth College."
+    "text": "The goal of the course project is to develop and report on an actionable plan for implementing a quantitative decision analysis. This project can be highly synergistic with thesis projects.",
+    "crumbs": [
+      "Course Project"
+    ]
   },
   {
-    "objectID": "about.html#acknowledgements",
-    "href": "about.html#acknowledgements",
-    "title": "About",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nThe layout for this site draws heavily from Environmental Systems Analysis by Dr. Vivek Srikrishnan at Cornell University, Data Science for Climate Risk Assessment by Dr. James Doss-Gollin at Rice University, and course materials by Dr. Andrew Heiss at Georgia State University."
+    "objectID": "project/overview.html#overview",
+    "href": "project/overview.html#overview",
+    "title": "Course Project",
+    "section": "",
+    "text": "The goal of the course project is to develop and report on an actionable plan for implementing a quantitative decision analysis. This project can be highly synergistic with thesis projects.",
+    "crumbs": [
+      "Course Project"
+    ]
   },
   {
-    "objectID": "about.html#tools-and-generation-workflow",
-    "href": "about.html#tools-and-generation-workflow",
-    "title": "About",
-    "section": "Tools and Generation Workflow",
-    "text": "Tools and Generation Workflow\nThis course website was built with Quarto. All materials can be found at the GitHub Repository."
+    "objectID": "project/overview.html#schedule",
+    "href": "project/overview.html#schedule",
+    "title": "Course Project",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\n\n\n\n\n\nMilestone\nInstructions\nDue Date\n\n\n\n\nProgress Reports\n\nWeekly\n\n\nPresentation\n\nNov. 16, 2025\n\n\nReport\n\nNov. 26, 2025",
+    "crumbs": [
+      "Course Project"
+    ]
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#the-quitoxic-quest-for-predictions",
+    "href": "slides/lecture04-rdm.html#the-quitoxic-quest-for-predictions",
+    "title": "Robust decision-making",
+    "section": "The (Quitoxic) Quest for Predictions",
+    "text": "The (Quitoxic) Quest for Predictions"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#seeing-good-enough-solutions-over-a-wide-range-of-futures",
+    "href": "slides/lecture04-rdm.html#seeing-good-enough-solutions-over-a-wide-range-of-futures",
+    "title": "Robust decision-making",
+    "section": "Seeing “good enough” solutions over a “wide range” of futures",
+    "text": "Seeing “good enough” solutions over a “wide range” of futures"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#defining-and-measuring-robustness",
+    "href": "slides/lecture04-rdm.html#defining-and-measuring-robustness",
+    "title": "Robust decision-making",
+    "section": "Defining and measuring robustness",
+    "text": "Defining and measuring robustness"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#schematic",
+    "href": "slides/lecture04-rdm.html#schematic",
+    "title": "Robust decision-making",
+    "section": "Schematic",
+    "text": "Schematic"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#framing",
+    "href": "slides/lecture04-rdm.html#framing",
+    "title": "Robust decision-making",
+    "section": "Framing",
+    "text": "Framing"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#evaluating-strategies-across-many-futures",
+    "href": "slides/lecture04-rdm.html#evaluating-strategies-across-many-futures",
+    "title": "Robust decision-making",
+    "section": "Evaluating strategies across many futures",
+    "text": "Evaluating strategies across many futures"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#scenario-discovery",
+    "href": "slides/lecture04-rdm.html#scenario-discovery",
+    "title": "Robust decision-making",
+    "section": "Scenario discovery",
+    "text": "Scenario discovery"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#tradeoff-analysis",
+    "href": "slides/lecture04-rdm.html#tradeoff-analysis",
+    "title": "Robust decision-making",
+    "section": "Tradeoff analysis",
+    "text": "Tradeoff analysis"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#identifying-and-evaluating-more-strategies",
+    "href": "slides/lecture04-rdm.html#identifying-and-evaluating-more-strategies",
+    "title": "Robust decision-making",
+    "section": "Identifying and evaluating more strategies",
+    "text": "Identifying and evaluating more strategies"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#reframing",
+    "href": "slides/lecture04-rdm.html#reframing",
+    "title": "Robust decision-making",
+    "section": "Reframing",
+    "text": "Reframing"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#rival-framings",
+    "href": "slides/lecture04-rdm.html#rival-framings",
+    "title": "Robust decision-making",
+    "section": "Rival framings",
+    "text": "Rival framings"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#synthesizing-subjective-beliefs-about-deep-uncertainties",
+    "href": "slides/lecture04-rdm.html#synthesizing-subjective-beliefs-about-deep-uncertainties",
+    "title": "Robust decision-making",
+    "section": "Synthesizing subjective beliefs about deep uncertainties",
+    "text": "Synthesizing subjective beliefs about deep uncertainties"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#this-week",
+    "href": "slides/lecture04-rdm.html#this-week",
+    "title": "Robust decision-making",
+    "section": "This week",
+    "text": "This week\n\nJournal club on Wednesday\nLet me know if you’re working on the lab and want to meet"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#next-week",
+    "href": "slides/lecture04-rdm.html#next-week",
+    "title": "Robust decision-making",
+    "section": "Next week",
+    "text": "Next week\n\nLecture on Monday - area I have most experience in re: MORDM\nJournal Club Wednesday"
   },
   {
     "objectID": "slides/lecture03-uncertainty.html#what-is-uncertainty",
@@ -173,11 +312,18 @@
     "text": "Some personal reflections\n\n\nAvoid inconsistent uncertainty framing and analysis (e.g., calculating expected values when framing uncertainties as “deep”)\nI feel like there’s not good guidance out there on saying for decision analysis purposes, how to represent and analyze various types of uncertainty\nDon’t lose sight of why uncertainty matters for your decision analysis (i.e., don’t ignore uncertainty but don’t overcomplicate how you handle it)\nRemember that peer-reviewed studies are units of overall decision analysis projects (i.e., don’t overstuff these studies with too many analyses and points)"
   },
   {
+    "objectID": "slides/lecture03-uncertainty.html#this-week",
+    "href": "slides/lecture03-uncertainty.html#this-week",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "This week",
+    "text": "This week\n\nWe will only meet today this week - prioritize your project proposal and schedule office hours as needed\nLet me know if you are testing out the lab and need any help"
+  },
+  {
     "objectID": "slides/lecture03-uncertainty.html#next-week",
     "href": "slides/lecture03-uncertainty.html#next-week",
     "title": "Dealing with uncertainty in analyzing decisions",
     "section": "Next week",
-    "text": "Next week\n\nDo the 9/22 readings\nStarting Uncertainty module\nWe will only meet Monday next week - prioritize your project proposal and schedule office hours as needed\nLet me know if you are testing out the labs and need any help"
+    "text": "Next week\n\nStarting RDM module\nJournal club next Wednesday (stay on track with 9/29 readings)"
   },
   {
     "objectID": "slides/game01-decisionsfordecade.html",
@@ -516,7 +662,7 @@
     "href": "slides/lecture02-framing.html#how-did-you-make-these-decisions",
     "title": "Framing a decision analysis",
     "section": "How did you make these decisions?",
-    "text": "How did you make these decisions?\n\n\nWhat did you eat for your last meal?\nWhat colleges did you apply to?\nHow did you choose your PhD program?\n\n\n\n\n\n\nhttps://xkcd.com/1445/"
+    "text": "How did you make these decisions?\n\nWhat did you eat for your last meal?\nWhat colleges did you apply to?\nHow did you choose your PhD program?\n\n\nhttps://xkcd.com/1445/"
   },
   {
     "objectID": "slides/lecture02-framing.html#framing-refers-to-how-you-structure-a-decision-problem",
@@ -596,18 +742,11 @@
     "text": "XLRM diagrams\n\nFrom Pollack et al. (2025)"
   },
   {
-    "objectID": "slides/lecture02-framing.html#this-week",
-    "href": "slides/lecture02-framing.html#this-week",
-    "title": "Framing a decision analysis",
-    "section": "This week",
-    "text": "This week\n\nWe will only meet today this week - prioritize your project proposal and schedule office hours as needed\nLet me know if you are testing out the lab and need any help"
-  },
-  {
     "objectID": "slides/lecture02-framing.html#next-week",
     "href": "slides/lecture02-framing.html#next-week",
     "title": "Framing a decision analysis",
     "section": "Next week",
-    "text": "Next week\n\nStarting RDM module\nJournal club next Wednesday (stay on track with 9/29 readings)"
+    "text": "Next week\n\nDo the 9/22 readings\nStarting Uncertainty module\nWe will only meet Monday next week - prioritize your project proposal and schedule office hours as needed\nLet me know if you are testing out the labs and need any help"
   },
   {
     "objectID": "slides/lecture02-framing.html#works-cited",
@@ -617,77 +756,57 @@
     "text": "Works cited\n\n\n\n\nGregory, R., Failing, L., Harstone, M., Long, G., McDaniels, T., & Ohlson, D. (2012). Structuring environmental management choices. In Structured decision making (pp. 1–20). Chichester, UK: John Wiley & Sons, Ltd. https://doi.org/10.1002/9781444398557.ch1\n\n\nHelgeson, C., Keller, K., Nicholas, R. E., Srikrishnan, V., Cooper, C., Smithwick, E. A. H., & Tuana, N. (2024). Integrating values to improve the relevance of climate‐risk research. Earths Future, 12(10), e2022EF003025. https://doi.org/10.1029/2022ef003025\n\n\nLempert, R. J. (2019). Robust decision making (RDM). In Decision making under deep uncertainty (pp. 23–51). Cham: Springer International Publishing. https://doi.org/10.1007/978-3-030-05252-2\\_2\n\n\nPollack, A. B., Santamaria-Aguilar, S., Maduwantha, P., Helgeson, C., Wahl, T., & Keller, K. (2025). Funding rules that promote equity in climate adaptation outcomes. Proceedings of the National Academy of Sciences, 122(2), e2418711121. https://doi.org/10.1073/pnas.2418711121"
   },
   {
-    "objectID": "project/overview.html",
-    "href": "project/overview.html",
-    "title": "Course Project",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "The goal of the course project is to develop and report on an actionable plan for implementing a quantitative decision analysis. This project can be highly synergistic with thesis projects.",
-    "crumbs": [
-      "Course Project"
-    ]
+    "text": "This website contains course materials for the Fall 2025 edition of Decision Analysis for Wicked Climate Problems, taught by Adam Pollack at Dartmouth College."
   },
   {
-    "objectID": "project/overview.html#overview",
-    "href": "project/overview.html#overview",
-    "title": "Course Project",
-    "section": "",
-    "text": "The goal of the course project is to develop and report on an actionable plan for implementing a quantitative decision analysis. This project can be highly synergistic with thesis projects.",
-    "crumbs": [
-      "Course Project"
-    ]
+    "objectID": "about.html#acknowledgements",
+    "href": "about.html#acknowledgements",
+    "title": "About",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nThe layout for this site draws heavily from Environmental Systems Analysis by Dr. Vivek Srikrishnan at Cornell University, Data Science for Climate Risk Assessment by Dr. James Doss-Gollin at Rice University, and course materials by Dr. Andrew Heiss at Georgia State University."
   },
   {
-    "objectID": "project/overview.html#schedule",
-    "href": "project/overview.html#schedule",
-    "title": "Course Project",
-    "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\n\n\n\nMilestone\nInstructions\nDue Date\n\n\n\n\nProgress Reports\n\nWeekly\n\n\nPresentation\n\nNov. 16, 2025\n\n\nReport\n\nNov. 26, 2025",
-    "crumbs": [
-      "Course Project"
-    ]
+    "objectID": "about.html#tools-and-generation-workflow",
+    "href": "about.html#tools-and-generation-workflow",
+    "title": "About",
+    "section": "Tools and Generation Workflow",
+    "text": "Tools and Generation Workflow\nThis course website was built with Quarto. All materials can be found at the GitHub Repository."
   },
   {
-    "objectID": "project/updates.html",
-    "href": "project/updates.html",
-    "title": "Project Progress Reports",
+    "objectID": "project/presentation.html",
+    "href": "project/presentation.html",
+    "title": "Project Presentation Instructions",
     "section": "",
-    "text": "At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I highly encourage you to work on these during the module to stay on track with your project.",
+    "text": "Your project presentation will provide a narrative overview of your project. You are allowed 12-15 minutes for your presentation, which should cover the following:\n\nWhat is your decision problem?\nWhat is the state of the art in addressing this problem?\nWhat is wrong with the status quo?\nWhat knowledge gaps are there and which do you address?\nHow will you address these knowledge gaps (not too technical)?\nWhat are your hypotheses about your planned decision analysis?\nWhat are the implications?\n\nYou can find some links to good practices on presentations in the Other Resources section of the course webpage.\nAs an audience member, you will be responsible for one short summary and round of moderation of group discussion for a colleague’s project. Your summary should focus on the story of the project and should clarify any parts of the story that were not clear to you. Your round of moderation should facilitate specific attention from the other audience members. For example, you can prompt other students to comment on potential limitations in proposed methods or you can prompt the presenter to clarify a specific narrative point.",
     "crumbs": [
       "Course Project",
-      "Module Reports"
+      "Presentation"
     ]
   },
   {
-    "objectID": "project/updates.html#overview",
-    "href": "project/updates.html#overview",
-    "title": "Project Progress Reports",
+    "objectID": "project/presentation.html#overview",
+    "href": "project/presentation.html#overview",
+    "title": "Project Presentation Instructions",
     "section": "",
-    "text": "At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I highly encourage you to work on these during the module to stay on track with your project.",
+    "text": "Your project presentation will provide a narrative overview of your project. You are allowed 12-15 minutes for your presentation, which should cover the following:\n\nWhat is your decision problem?\nWhat is the state of the art in addressing this problem?\nWhat is wrong with the status quo?\nWhat knowledge gaps are there and which do you address?\nHow will you address these knowledge gaps (not too technical)?\nWhat are your hypotheses about your planned decision analysis?\nWhat are the implications?\n\nYou can find some links to good practices on presentations in the Other Resources section of the course webpage.\nAs an audience member, you will be responsible for one short summary and round of moderation of group discussion for a colleague’s project. Your summary should focus on the story of the project and should clarify any parts of the story that were not clear to you. Your round of moderation should facilitate specific attention from the other audience members. For example, you can prompt other students to comment on potential limitations in proposed methods or you can prompt the presenter to clarify a specific narrative point.",
     "crumbs": [
       "Course Project",
-      "Module Reports"
+      "Presentation"
     ]
   },
   {
-    "objectID": "project/updates.html#schedule",
-    "href": "project/updates.html#schedule",
-    "title": "Project Progress Reports",
-    "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\n\n\n\nModule\nInstructions\nDue Date\n\n\n\n\nOverview\n\n9/26/25\n\n\nUncertainty\n\n10/3/25\n\n\nRDM\n\n10/10/25\n\n\nTrade-offs\n\n10/24/25\n\n\nDMDU\n\n11/14/25\n\n\nGaps\n\n11/21/25",
-    "crumbs": [
-      "Course Project",
-      "Module Reports"
-    ]
-  },
-  {
-    "objectID": "project/updates.html#rubric",
-    "href": "project/updates.html#rubric",
-    "title": "Project Progress Reports",
+    "objectID": "project/presentation.html#rubric",
+    "href": "project/presentation.html#rubric",
+    "title": "Project Presentation Instructions",
     "section": "Rubric",
-    "text": "Rubric\nYour grade is based on your perceived effort. Even if you do not fully understand how to apply lessons from a module to your project, you can receive full credit for a report if you understand your knowledge gaps and form strong questions for me to provide clarification and direction for you. You can receive 0-3 points on each assignment.\n\n0: No perceived effort\n1: Low perceived effort\n\nE.g., incomplete, no synthesis, no self awareness of knowledge gaps, no questions for me\n\n2: Moderate perceived effort\n\nE.g., Complete but synthesis has important shortcomings and questions are too open ended for me to provide helpful guidance\n\n3: High perceived effort\n\nE.g., Complete and synthesis has important shortcomings but questions are specific and allow me to provide helpful guidance.\n\n\nThe instructions for each report will include examples of specific questions about the module that you can use for free in your report to help boost your grade. I will not be able to anticipate all questions that apply to your understanding and decision problem, so it is no guarantee you receive a 3 if you use some of these example questions.\nI will provide as much detailed feedback on each report as I can. This means that the more thought and effort you put into your report, the more guidance you will receive. This will help you on your project presentation and report. However, you must apply discretion when writing your report and should not include too much or irrelevant details. Concision is a very important feature of strong synthesis.\nLate submissions receive a 25% downgrading of the full credit score for each l ate day. Extension requests must be made 24 hours before the submission deadline with a submission of what you have achieved so far.",
+    "text": "Rubric\nYou can receive a maximum of 20 points, with credit opportunities as follows:\n\nUp to 10 points based on instructor’s rating\nUp to 8 points based on average of peer rating (low quality dropped)\nUp to 2 points for summary and moderation\n1 point for strong and constructive peer evaluation\nUp to 2 points for submitting a revised and improved recorded presentation on Canvas within the following week\n\nYou can lose points as follows:\n\n-5 points for going over 15 minutes on either presentation opportunity\n-2 points for low quality peer evaluation\n\nNote: Low quality peer evaluations are ones that suggest you were not paying attention to your colleague’s presentation. Even if you struggle to understand some material, your colleague deserves your respect. In fact, conveying clearly that you struggled to understand some material can be very helpful to your colleague in synthesizing feedback and working on their final report.",
     "crumbs": [
       "Course Project",
-      "Module Reports"
+      "Presentation"
     ]
   },
   {
