@@ -31,36 +31,82 @@ execute:
 ---
 
 # Predict-Then-Act vs. Agree-On-Decisions
-## The (Quitoxic) Quest for Predictions
+## The DMDU Argument Against Predict-Then-Act
 
-## Seeing "good enough" solutions over a "wide range" of futures
+::: {.columns}
 
-## Defining and measuring robustness
+::: {.column #vcenter width="50%"}
+
+:::{.quote}
+wicked problems are not well-bounded, are framed differently by various stakeholders, and are not well-understood until after formulation of a solution. Using predictions to adjudicate such problems skews attention toward the proverbial lamp post, not the true location of the keys to a policy solution.
+:::
+::: {.cite} 
+--- Lempert, 2019. [Robust Decision Making (RDM).
+](https://link.springer.com/chapter/10.1007/978-3-030-05252-2_2)
+:::
+:::
+
+::: {.column #vcenter width="50%"}
+![](../_assets/img/lampppost-robustness.png)
+:::
+
+:::
+
+## Finding robust solutions that "perform well" over a "wide range" of futures
+![Rob Lempert, PhD; & Michelle Miro, PhD. [Online Training for Water Utilities—WUCA / Chapter 3: Plan](https://toolkit.climate.gov/course-lesson/decision-making-under-deep-uncertainty)](../_assets/img/compare_predictthenact.png)
+
+## Measuring robustness {.nostretch}
+![McPhail et al. ([2019](https://doi.org/10.1002/2017EF000649))](../_assets/img/unify_robust.png){width=700}
+
+## Regret: The "cost" of choosing "incorrectly"
+Adaptating notation in [Lempert and Collins (2007)](https://doi.org/10.1111/j.1539-6924.2007.00940.x), the regret of action *a* in state *x* is:
+
+$R_{a}(x) = Max_{a'}[PV(U_{a'}(x))] - PV(U_{a}(x))$, 
+
+the difference between the present value expected utility of the *optimal* action in a considered state of the world and the *considered* action's present value expected utility in that state of the world.   
+
+**Note**: There are many ways to go from an action's regret metric in one state (*i.e.,* $T_{1}$) to evaluating its overall robustness (*i.e.,* $T_{2}$ and $T_{3}$). 
+
+## Satisficing
+Following [McPhail et al. (2019)](https://doi.org/10.1002/2017EF000649), this approach "seeks to meet a minimum performance threshold." 
+
+Looking across states (*i.e.,* $T_{2}$ and $T_{3}$), the domain criterion is a common approach (e.g., see [Herman et al., (2015)](https://doi.org/10.1061/(ASCE)WR.1943-5452.0000509)), which analysts often implement as the fraction of states of the world in which the performance threshold is met. 
 
 # RDM Workflow
 ## Schematic
+![Lempert, 2019. [Robust Decision Making (RDM).
+](https://link.springer.com/chapter/10.1007/978-3-030-05252-2_2)](../_assets/img/rdm_workflow.png)
 
 ## Framing
+![Groves et al., 2019. [Robust Decision Making (RDM): Application to Water Planning and Climate Policy.](https://doi.org/10.1007/978-3-030-05252-2_7)](../_assets/img/dmdu_framing_ex.png)
 
-## Evaluating strategies across many futures
+## Identifying Vulnerabilities
+![Groves et al., 2019. [Robust Decision Making (RDM): Application to Water Planning and Climate Policy.](https://doi.org/10.1007/978-3-030-05252-2_7)](../_assets/img/rdm_vuln_ex.png)
 
-## Scenario discovery
+## Designing Strategies Adaptive to Vulnerabilities 
+![Groves et al., 2019. [Robust Decision Making (RDM): Application to Water Planning and Climate Policy.](https://doi.org/10.1007/978-3-030-05252-2_7)](../_assets/img/policy_ex.png)
 
-## Tradeoff analysis
+## Tradeoff Analysis
+![Groves et al., 2019. [Robust Decision Making (RDM): Application to Water Planning and Climate Policy.](https://doi.org/10.1007/978-3-030-05252-2_7)](../_assets/img/tradeoff_ex.png)
 
-## Identifying and evaluating more strategies
+## Evaluating Robustness
+![Groves et al., 2019. [Robust Decision Making (RDM): Application to Water Planning and Climate Policy.](https://doi.org/10.1007/978-3-030-05252-2_7)](../_assets/img/robustness_ex.png)
 
-## Reframing
+## Iterating with Decision-makers {.nostretch}
+Many potential conditions where current strategies insufficient:
 
-# Alternative Perspectives
-## Rival framings
+![Groves et al., 2019. [Robust Decision Making (RDM): Application to Water Planning and Climate Policy.](https://doi.org/10.1007/978-3-030-05252-2_7)](../_assets/img/iterate_ex.png){width=700}
 
-## Synthesizing subjective beliefs about deep uncertainties
+# Critique and Alternative Perspective
+## We are not completely ignorant about future probabilities{.nostretch}
+![Hausfather and Peters (2020). [RCP8.5 is a problematic scenario for near-term emissions](http://dx.doi.org/10.1073/pnas.2017124117)](../_assets/img/hausfather_scenarios_2020.jpg){width=500}
 
+## Alternative: Synthesize subjective beliefs about deep uncertainties
+![[Doss-Gollin and Keller (2023)](https://doi.org/10.1029/2022EF003044)](../_assets/img/james_priors.png)
 
 # Upcoming Schedule
 ## This week
-* Journal club on Wednesday
+* Case study on Wednesday
 * Let me know if you're working on the lab and want to meet
 
 ## Next week

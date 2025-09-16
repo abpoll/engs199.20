@@ -12,7 +12,11 @@ sidebar: main
 
 1. @Lempert2019
 
-    - I usually like to recommend seminal papers where possible, but I think this later piece is a better starting place. I will include a few of the seminar papers as optional reading. 
+    - I usually like to recommend seminal papers where possible, but I think this later piece is a better starting place. 
+
+2. @Lempert2007
+
+    - This is the paper we're going to review for our case study on Wednesday. I'll lead this one to give you a working example on how to lead a case study review. 
 
 ## Optional Reading
 

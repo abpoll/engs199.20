@@ -25,9 +25,9 @@ This page contains a schedule of the topics, content, and assignments for the te
 
 **You should follow this general process for each module**
 
-- Do the Reading before Monday's Lecture
+- Do the Reading before the following Monday's Lecture
 - Complete the lab report within one week from the assignment date
-- Submit the homework within one week from the assignment date
+- Submit the homework before the start of the next module
 
 :::
 ::::

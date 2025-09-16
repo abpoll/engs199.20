@@ -75,7 +75,7 @@
         "\n",
         "Below, I reproduce a plot from the [seaborn Gallery](seaborn.pydata.org/examples/grouped_boxplot.html). Make sure the `lab1` kernel is set up in the notebook and then run the code block. \n"
       ],
-      "id": "3217b831"
+      "id": "6b1ed10a"
     },
     {
       "cell_type": "code",
@@ -93,7 +93,7 @@
         "            data=tips)\n",
         "sns.despine(offset=10, trim=True)"
       ],
-      "id": "02c0625f",
+      "id": "8f10b2f0",
       "execution_count": null,
       "outputs": []
     },
@@ -103,7 +103,7 @@
       "source": [
         "Attractive and clear figures are very important in decision analysis. Run the cell below, which makes the figure higher resolution and makes the font more legible. Some changes reflect my personal style preferences. \n"
       ],
-      "id": "ef520be2"
+      "id": "4503625a"
     },
     {
       "cell_type": "code",
@@ -180,7 +180,7 @@
         "Because we included `nbconvert` in our computational environment, we should be able to export the .ipynb to .pdf using VS Code and get a nicely formatted file. \n",
         ":::"
       ],
-      "id": "a6d27bf4"
+      "id": "859b39f7"
     }
   ],
   "metadata": {
