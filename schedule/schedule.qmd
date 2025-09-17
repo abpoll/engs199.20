@@ -12,9 +12,9 @@ This page contains a schedule of the topics, content, and assignments for the te
 
 - **Slides** {{< fa sharp presentation-screen >}}: On the schedule, this link contains the presentation for the day's lecture.
 
-- [**Lab**](../labs.qmd) {{< fa sharp laptop-code >}}: This page contains a lab report rubric and links to each week's lab. You can also access each week's lab through the links in the schedule below. 
+- [**Lab**](../labs.qmd) {{< fa sharp laptop-code >}}: This page contains a lab report rubric and links to each week's lab. You can also access each week's lab through the links in the schedule below. Please check this page to stay on top of the due dates for each lab. 
 
-- [**HW**](../project/updates.qmd) {{< fa sharp pen-field >}}: This page contains the schedule and rubric for the project updates. At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I **highly** encourage you to work on these during the module to stay on track with your project. **Note that there is no lab report the first week and the first assignment is to define your project's decision problem.**
+- [**HW**](../project/updates.qmd) {{< fa sharp pen-field >}}: This page contains the schedule and rubric for the project updates. At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I **highly** encourage you to work on these during the module to stay on track with your project. Please check this page to stay on top of the due dates for each progress report.  **Note that there is no lab report the first week and the first assignment is to define your project's decision problem.** 
 
 - **Reading** {{< fa sharp book-open >}}: On the schedule, this link takes you to a list of required and optional readings for the module. Please read the required reading before class. There will typically be one required reading per week. I suggest you read at least the abstracts of optional readings before class. The optional readings will help you understand lecture and can serve as core references in lab reports and project updates.
 
@@ -25,9 +25,9 @@ This page contains a schedule of the topics, content, and assignments for the te
 
 **You should follow this general process for each module**
 
-- Do the Reading before the following Monday's Lecture
+- Do the reading before the corresponding Monday's Lecture
 - Complete the lab report within one week from the assignment date
-- Submit the homework before the start of the next module
+- Submit the project progress report one week after the end of a module
 
 :::
 ::::

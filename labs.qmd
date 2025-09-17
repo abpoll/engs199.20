@@ -5,6 +5,8 @@ tbl-colwidths: [10, 5, 10]
 
 This page contains the lab report rubric and a schedule of the lab assignments for the semester.
 
+**Note** that for the training, you are not required to do the labs, but it would be great to get your feedback on them. Is the rubric fair? Are the labs relevant and interesting? Are they too much work? 
+
 ## General Information
 
 - You can get to the lab assignment through the link on the schedule below (or at the overall term [schedule](schedule/schedule.qmd)).

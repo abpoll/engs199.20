@@ -5,6 +5,8 @@ tbl-colwidths: [20, 5, 10]
 ## Overview
 At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I **highly** encourage you to work on these during the module to stay on track with your project.
 
+Note that the Gaps module does not have a progress report.
+
 ## Schedule
 | Module | Instructions | Due Date |
 |:------:|:------------:|:--------:|
@@ -13,7 +15,6 @@ At the end of each module, you will have one week to submit your responses to gu
 | RDM | {{< fa sharp pen-field >}} | 10/10/25 |
 | Trade-offs | {{< fa sharp pen-field >}} | 10/24/25 |
 | DMDU | {{< fa sharp pen-field >}} | 11/14/25 |
-| Gaps | {{< fa sharp pen-field >}} | 11/21/25 |
 
 ## Rubric
 Your grade is based on your perceived effort. Even if you do not fully understand how to apply lessons from a module to your project, you can receive full credit for a report if you understand your knowledge gaps and form strong questions for me to provide clarification and direction for you. You can receive 0-3 points on each assignment.
