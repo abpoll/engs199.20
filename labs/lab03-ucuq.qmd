@@ -1,7 +1,8 @@
 ---
 title: "Lab 3: Addressing Uncertainty in Multisector Dynamics Tutorials"
 author: "ENGS 199.20"
-date: last-modified
+date: "10/03/2025"
+published-title: "Due Date:"
 format:
     html:        
         warning: true

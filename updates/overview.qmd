@@ -1,5 +1,7 @@
 ---
 title: "Project Proposal"
+date: "09/26/2025"
+published-title: "Due Date:"
 format:
     html:        
         warning: true
