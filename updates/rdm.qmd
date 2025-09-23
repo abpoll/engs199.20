@@ -1,0 +1,39 @@
+---
+title: "Robust Decision-Making"
+date: "10/10/2025"
+published-title: "Due Date:"
+format:
+    html:        
+        warning: true
+        error: true
+sidebar: main
+---
+## Instructions
+
+Unlike your previous project updates, this one doesn't have a single guiding question. 
+
+For your report this week, challenge yourself to: (i) identify gaps in your understanding about robustness; and (ii) apply your current understanding on robustness to aspects of your decision analysis. Your report does not have to be in a complete narrative form, but it should be logically structured with complete sentences and should be accessible to outside readers to provide feedback. Things to consider in this report include, but are not limited to:
+
+1. If you were explaining your research to a non-scientist friend, how would you describe the concepts of robustness, regret, and satisficing? For what types of problems might it be valuable to consider robustness, regret, and/or satisficing? 
+2. How salient do you find the two robustness criteria we covered in lab from this week? Do you think they add clarity to evaluating the options at hand? Do you think considering robustness would change a decisionmaker's mind about what option to take?
+3. What limitations do you find with the criteria covered in lab? This can relate to conceptual or mathematical implementation.  
+4. Which kinds of visualizations of robustness metrics (in this paper or beyond) do you find appealing, if any? How come? While some visual languages may be difficult to understand at first, does the effort pay off once you understand the correct interpretation?
+5. What aspects of your decision analysis are deeply uncertain?
+6. How do decisionmakers address this deep uncertainty now?
+7. How can the concepts of robustness, regret, and satisficing relate to your problem?
+8. Which robustness criteria and visualization of metrics (you can think beyond those in the lab, including metrics from this week's [readings](../readings/readings03.qmd)) do you think could be salient and helpful for your decision problem?
+
+This report is open-ended to facilitate your thinking on this crucial concept for your decision analysis. Even **if** you ultimately decide that the concept of robustness is not appropriate for your decision analysis (good luck convincing Klaus!), you will have to be an expert on this topic in order to prepare and present strong arguments against the increasingly mainstream conceptions of robust decision-making for wicked climate problems. I encourage you to be honest with yourself in this report in documenting your understanding and knowledge gaps, and crosswalking that self-awareness to your decision problem. 
+
+::: {.callout-important}
+I know that not knowing can feel uncomfortable, and that there is additional pressure in academia about not looking "wrong." I can give you the most feedback and best help on your project if you work to overcome that discomfort and trust me to work with you on: 
+
+(i) understanding the important concepts from this module; 
+(ii) identifying resources relevant specifically for your project; 
+(iii) recommending how to apply concepts in conceptually and technically sound ways to your project; and 
+(iv) recognizing areas of general poor understanding or ambiguity and being transparent about defensible but nonverifiable assumptions. 
+:::
+
+## Submitting the Report
+
+Export your writeup as a PDF and submit it to me over Slack. You can upload it to our course channel or direct message me, whichever you prefer. 

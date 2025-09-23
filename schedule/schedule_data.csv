@@ -7,7 +7,7 @@ Week,Module,Date,Topic,Slides,Lab,HW,Reading
 2,Uncertainty,9/23/25,Python and GitHub Bootcamp II,,../labs/lab02-intro.qmd,,
 2,Uncertainty,9/24/25,Deep uncertainty game,../slides/game01-decisionsfordecade.qmd,,,
 2,Uncertainty,9/26/25,MSD UC/UQ tutorials,,../labs/lab03-ucuq.qmd,,
-3,RDM,9/29/25,Robust decision-making,../slides/lecture04-rdm.qmd,,,
+3,RDM,9/29/25,Robust decision-making,../slides/lecture04-rdm.qmd,,../updates/rdm.qmd,../readings/readings03.qmd
 3,RDM,10/1/25,Case study,,,,
 3,RDM,10/3/25,Potential pitfalls of predict-then-act,,,,
 4,Trade-offs,10/6/25,DA in a pluralistic society,,,,
