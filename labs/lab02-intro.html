@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="ENGS 199.20">
-<meta name="dcterms.date" content="2025-09-08">
+<meta name="dcterms.date" content="2025-09-19">
 
 <title>Lab 2: Python and GitHub Bootcamp – ENGS 199.20 - Fall 2025</title>
 <style>
@@ -258,7 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 8, 2025</p>
+      <p class="date">September 19, 2025</p>
     </div>
   </div>
   
@@ -321,7 +321,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="setting-up-our-computing-environment" class="level3">
 <h3 class="anchored" data-anchor-id="setting-up-our-computing-environment">Setting up our computing environment</h3>
-<p>Create a file called <code>env-lock.yml</code> in your project directory. Add the following contents and save:</p>
+<p>Create a file called <code>environment.yml</code> in your project directory. Add the following contents and save:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> lab2</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">channels</span><span class="kw">:</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> conda-forge</span></span>
@@ -333,14 +333,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> nbconvert</span><span class="co"> # for converting our notebook to pdf for submission</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> ipykernel</span><span class="co"> # for setting up the kernel for using this env in jupyter</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> seaborn</span><span class="co"> # good for exploratory data analysis and some final figures</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> jupyter </span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> conda-lock</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Run <code>mamba create -f env-lock.yml</code>. Run <code>mamba activate lab2</code>. Set up the kernel for the environment with <code>python -m ipykernel install --user --name lab2 --display-name lab2</code>.</p>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> jupyter </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Run <code>mamba create -f envvironment.yml</code>. Run <code>mamba activate lab2</code>. Set up the kernel for the environment with <code>python -m ipykernel install --user --name lab2</code>.</p>
 </section>
 <section id="setting-up-our-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="setting-up-our-analysis">Setting up our analysis</h3>
 <p>Create a new .ipynb file in the <code>notebooks/</code> subdirectory. In the first cell, let’s import our tools for the analysis.</p>
-<div id="c9ebc95f" class="cell" data-execution_count="1">
+<div id="e35d27a6" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Core numerical computing</span></span>
@@ -360,7 +359,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Our city is fake, so we have to build it. We will create a fake digital elevation grid, a fake built environment, and fake flood scenarios.</p>
 <p>Below, we define a <a href="https://docs.python.org/3/tutorial/controlflow.html#defining-functions">function</a> to create an elevation grid for the city. We use <code>numpy</code> because it’s a great tool for setting up our 2d array. We will use a <a href="https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html">meshgrid</a> to set up our grid.</p>
 <p>Please read the comments and test out any lines of code you want to understand better. I encourage you to reference the <code>numpy</code> documentation to read about any functions you’re seeing for the first time.</p>
-<div id="94d0c967" class="cell" data-execution_count="2">
+<div id="623d91c0" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_terrain(width<span class="op">=</span><span class="dv">100</span>, height<span class="op">=</span><span class="dv">80</span>):</span>
@@ -453,7 +452,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Now we’ll use both <code>numpy</code> and <code>pandas</code> to set up our building inventory. There are a lot of things that go into where people build &amp; occupy buildings with respect to flood hazard, but we’re going to ignore that in setting up this problem. (You have no idea how uncommon it is for your instructor to let explanations on those things slide!)</p>
-<div id="85254dbd" class="cell" data-execution_count="3">
+<div id="74cf3a4a" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generate_building_inventory(terrain, n_buildings<span class="op">=</span><span class="dv">500</span>, min_elevation<span class="op">=</span><span class="dv">10</span>):</span>
@@ -560,7 +559,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Now we’ll generate two flood scenarios. We’ll organize our parameterizations for each scenario using dictionaries. Then we’ll simulate the floods in a highly stylized fashion to get depth grids.</p>
-<div id="5b4cae6d" class="cell" data-execution_count="4">
+<div id="b73d9d29" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>scenarios <span class="op">=</span> {</span>
@@ -728,7 +727,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="analyzing-risk" class="level3">
 <h3 class="anchored" data-anchor-id="analyzing-risk">Analyzing risk</h3>
 <p>Now it’s time to calculate flood damages. We will identify which buildings face flooding in each scenario, then will apply (made up) depth-damage functions to translate exposure into damages. These functions return damage as a fraction of building value, so we will scale these outputs by each building’s value.</p>
-<div id="2f4f134f" class="cell" data-execution_count="5">
+<div id="e52ce75d" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get building depths for each scenario</span></span>
@@ -920,7 +919,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Now we compare different flood mitigation options. We will make very rudimentary assumptions about costs and benefits for different actions. While the text table does not render colors on the website, checkout what happens in your Jupyter notebook!</p>
-<div id="cf31029f" class="cell" data-execution_count="6">
+<div id="5c0cdbbf" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> analyze_mitigation_strategies_multi_scenario(buildings):</span>
@@ -1057,8 +1056,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Baseline damages:
-  Moderate flood: $2,917,443
-  Extreme flood: $9,537,486
+  Moderate flood: $2,900,119
+  Extreme flood: $9,469,829
 
  MITIGATION STRATEGY ANALYSIS - MULTI-SCENARIO
 ====================================================================================================
