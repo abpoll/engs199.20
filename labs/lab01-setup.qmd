@@ -45,9 +45,11 @@ Today we will:
     - Run `git add .` to track the notebook. 
     - Run `git commit -m [message]` with your own helpful message.
     - Use this simple workflow when you make changes to files. If you don't want to track a file, you can add the specific file's location (or use wildcards and file prefixes or suffixes) to avoid tracking.
-9. For this lab, we are going to create a small environment that allows us to plot using the `seaborn` package. `conda-lock` allows us to create multi-platform instances of the exact package versions others need to reproduce our computational environment. After following these next instructions, we will be ready to run our notebook. 
+9. For this lab, we are going to create a small environment that allows us to plot using the `seaborn` package. After following these next instructions, we will be ready to run our notebook. 
 
-Create a file called `env-lock.yml` in your lab1 directory. Add the following contents and save:
+Sometimes the steps above can cause trouble! Please loop me into these struggles so we can troubleshoot together and save you time. It's also a good opportunity to get to know the very nice and smart folks at IT who are experts with these setup problems!
+
+Create a file called `env-lab1.yml` in your lab1 directory. Add the following contents and save:
 ```yaml
 name: lab1
 channels:
@@ -58,9 +60,8 @@ dependencies:
   - ipykernel
   - seaborn
   - jupyter
-  - conda-lock
 ```
-Run `mamba create -f env-lock.yml`. 
+Run `mamba create -f env-lab1.yml`. 
 Run `mamba activate lab1`. 
 Set up the kernel for the environment with `python -m ipykernel install --user --name lab1 --display-name lab1`.
 
