@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="ENGS 199.20">
-<meta name="dcterms.date" content="2025-09-19">
+<meta name="dcterms.date" content="2025-09-24">
 
 <title>Lab 2: Python and GitHub Bootcamp – ENGS 199.20 - Fall 2025</title>
 <style>
@@ -258,7 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 19, 2025</p>
+      <p class="date">September 24, 2025</p>
     </div>
   </div>
   
@@ -334,12 +334,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> ipykernel</span><span class="co"> # for setting up the kernel for using this env in jupyter</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> seaborn</span><span class="co"> # good for exploratory data analysis and some final figures</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> jupyter </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Run <code>mamba create -f envvironment.yml</code>. Run <code>mamba activate lab2</code>. Set up the kernel for the environment with <code>python -m ipykernel install --user --name lab2</code>.</p>
+<p>Run <code>mamba env create -f envvironment.yml</code>. Run <code>mamba activate lab2</code>. Set up the kernel for the environment with <code>python -m ipykernel install --user --name lab2</code>.</p>
 </section>
 <section id="setting-up-our-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="setting-up-our-analysis">Setting up our analysis</h3>
 <p>Create a new .ipynb file in the <code>notebooks/</code> subdirectory. In the first cell, let’s import our tools for the analysis.</p>
-<div id="e35d27a6" class="cell" data-execution_count="1">
+<div id="dd055df3" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Core numerical computing</span></span>
@@ -359,7 +359,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Our city is fake, so we have to build it. We will create a fake digital elevation grid, a fake built environment, and fake flood scenarios.</p>
 <p>Below, we define a <a href="https://docs.python.org/3/tutorial/controlflow.html#defining-functions">function</a> to create an elevation grid for the city. We use <code>numpy</code> because it’s a great tool for setting up our 2d array. We will use a <a href="https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html">meshgrid</a> to set up our grid.</p>
 <p>Please read the comments and test out any lines of code you want to understand better. I encourage you to reference the <code>numpy</code> documentation to read about any functions you’re seeing for the first time.</p>
-<div id="623d91c0" class="cell" data-execution_count="2">
+<div id="865168c9" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_terrain(width<span class="op">=</span><span class="dv">100</span>, height<span class="op">=</span><span class="dv">80</span>):</span>
@@ -452,7 +452,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Now we’ll use both <code>numpy</code> and <code>pandas</code> to set up our building inventory. There are a lot of things that go into where people build &amp; occupy buildings with respect to flood hazard, but we’re going to ignore that in setting up this problem. (You have no idea how uncommon it is for your instructor to let explanations on those things slide!)</p>
-<div id="74cf3a4a" class="cell" data-execution_count="3">
+<div id="8240fb3c" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generate_building_inventory(terrain, n_buildings<span class="op">=</span><span class="dv">500</span>, min_elevation<span class="op">=</span><span class="dv">10</span>):</span>
@@ -559,7 +559,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Now we’ll generate two flood scenarios. We’ll organize our parameterizations for each scenario using dictionaries. Then we’ll simulate the floods in a highly stylized fashion to get depth grids.</p>
-<div id="b73d9d29" class="cell" data-execution_count="4">
+<div id="fa8576a8" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>scenarios <span class="op">=</span> {</span>
@@ -727,7 +727,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="analyzing-risk" class="level3">
 <h3 class="anchored" data-anchor-id="analyzing-risk">Analyzing risk</h3>
 <p>Now it’s time to calculate flood damages. We will identify which buildings face flooding in each scenario, then will apply (made up) depth-damage functions to translate exposure into damages. These functions return damage as a fraction of building value, so we will scale these outputs by each building’s value.</p>
-<div id="e52ce75d" class="cell" data-execution_count="5">
+<div id="0af5a3f9" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get building depths for each scenario</span></span>
@@ -919,7 +919,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Now we compare different flood mitigation options. We will make very rudimentary assumptions about costs and benefits for different actions. While the text table does not render colors on the website, checkout what happens in your Jupyter notebook!</p>
-<div id="5c0cdbbf" class="cell" data-execution_count="6">
+<div id="93dd0bce" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> analyze_mitigation_strategies_multi_scenario(buildings):</span>
@@ -1056,8 +1056,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Baseline damages:
-  Moderate flood: $2,900,119
-  Extreme flood: $9,469,829
+  Moderate flood: $3,071,919
+  Extreme flood: $8,794,570
 
  MITIGATION STRATEGY ANALYSIS - MULTI-SCENARIO
 ====================================================================================================
@@ -1065,11 +1065,11 @@ Strategy             Cost         Avoided Damage            Net Benefit
                      ($M)         Mod/Ext ($M)              Mod/Ext ($M)             
 ----------------------------------------------------------------------------------------------------
 Do Nothing           $0.0        $0.0/$0.0                  $0.0/$0.0        
-Early Warning        $0.5        $0.4/$1.1                  $-0.1/$0.6       
-Levees               $25.0       $2.0/$4.3                  $-23.0/$-20.7    
-Buyouts              $15.0       $1.0/$3.8                  $-14.0/$-11.2    
-Green Infrastructure $12.0       $0.9/$3.3                  $-11.1/$-8.7     
-Combined Approach    $18.0       $1.5/$5.7                  $-16.5/$-12.3    
+Early Warning        $0.5        $0.5/$1.1                  $-0.0/$0.6       
+Levees               $25.0       $2.2/$4.0                  $-22.8/$-21.0    
+Buyouts              $15.0       $1.1/$3.5                  $-13.9/$-11.5    
+Green Infrastructure $12.0       $0.9/$3.1                  $-11.1/$-8.9     
+Combined Approach    $18.0       $1.5/$5.3                  $-16.5/$-12.7    
 
 ====================================================================================================
 Legend:

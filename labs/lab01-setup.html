@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="ENGS 199.20">
-<meta name="dcterms.date" content="2025-07-16">
+<meta name="dcterms.date" content="2025-09-24">
 
 <title>Lab 1: Computing Setup – ENGS 199.20 - Fall 2025</title>
 <style>
@@ -255,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 16, 2025</p>
+      <p class="date">September 24, 2025</p>
     </div>
   </div>
   
@@ -300,9 +300,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Run <code>git commit -m [message]</code> with your own helpful message.</li>
 <li>Use this simple workflow when you make changes to files. If you don’t want to track a file, you can add the specific file’s location (or use wildcards and file prefixes or suffixes) to avoid tracking.</li>
 </ul></li>
-<li>For this lab, we are going to create a small environment that allows us to plot using the <code>seaborn</code> package. <code>conda-lock</code> allows us to create multi-platform instances of the exact package versions others need to reproduce our computational environment. After following these next instructions, we will be ready to run our notebook.</li>
+<li>For this lab, we are going to create a small environment that allows us to plot using the <code>seaborn</code> package. After following these next instructions, we will be ready to run our notebook.</li>
 </ol>
-<p>Create a file called <code>env-lock.yml</code> in your lab1 directory. Add the following contents and save:</p>
+<p>Sometimes the steps above can cause trouble! Please loop me into these struggles so we can troubleshoot together and save you time. It’s also a good opportunity to get to know the very nice and smart folks at IT who are experts with these setup problems!</p>
+<p>Create a file called <code>env-lab1.yml</code> in your lab1 directory. Add the following contents and save:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> lab1</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">channels</span><span class="kw">:</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> conda-forge</span></span>
@@ -311,14 +312,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> nbconvert</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> ipykernel</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> seaborn</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> jupyter</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> conda-lock</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Run <code>mamba create -f env-lock.yml</code>. Run <code>mamba activate lab1</code>. Set up the kernel for the environment with <code>python -m ipykernel install --user --name lab1 --display-name lab1</code>.</p>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> jupyter</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Run <code>mamba env create -f env-lab1.yml</code>. Run <code>mamba activate lab1</code>. Set up the kernel for the environment with <code>python -m ipykernel install --user --name lab1 --display-name lab1</code>.</p>
 </section>
 <section id="run-code" class="level3">
 <h3 class="anchored" data-anchor-id="run-code">Run Code</h3>
 <p>Below, I reproduce a plot from the <a href="seaborn.pydata.org/examples/grouped_boxplot.html">seaborn Gallery</a>. Make sure the <code>lab1</code> kernel is set up in the notebook and then run the code block.</p>
-<div id="50030f0f" class="cell" data-execution_count="1">
+<div id="3dbe7cae" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
