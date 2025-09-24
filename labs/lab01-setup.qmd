@@ -61,7 +61,7 @@ dependencies:
   - seaborn
   - jupyter
 ```
-Run `mamba create -f env-lab1.yml`. 
+Run `mamba env create -f env-lab1.yml`. 
 Run `mamba activate lab1`. 
 Set up the kernel for the environment with `python -m ipykernel install --user --name lab1 --display-name lab1`.
 

@@ -84,7 +84,7 @@ dependencies:
   - seaborn # good for exploratory data analysis and some final figures
   - jupyter 
 ```
-Run `mamba create -f envvironment.yml`. 
+Run `mamba env create -f envvironment.yml`. 
 Run `mamba activate lab2`. 
 Set up the kernel for the environment with `python -m ipykernel install --user --name lab2`.
 
