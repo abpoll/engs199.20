@@ -1,3 +1,8 @@
+# helpful for me to have folders
+# for notes and reports, etc., 
+# should not track these
+submitted_work/
+
 syllabus/_cache
 syllabus/*.bib
 syllabus/*.pdf

@@ -1,0 +1,84 @@
+---
+title: "Robust decision-making"
+subtitle: "Case Study 1: [Lempert and Collins (2007)](http://dx.doi.org/10.1111/j.1539-6924.2007.00940.x)"
+author: "{{< var instructor.name_no_title >}}"
+course: "{{< var course.number >}}"
+institution: "{{< var university.name >}}"
+date: "October 1, 2025"
+format:
+    revealjs:
+        scrollable: true
+        slide-number: c/t
+        show-slide-number: all
+        center-title-slide: true
+        transition: none
+        toc: true
+        toc-depth: 1
+        toc-title: "Overview"
+        history: false
+        link-external-newwindow: true
+        theme: ../_assets/sass/slides.scss
+        template-partials:
+            - title-slide.html
+        menu:
+            numbers: true
+        date-format: long
+        email-obfuscation: javascript
+        controls: true
+execute:
+    freeze: auto
+    echo: false
+---
+
+# Test your recall
+
+## Define key concepts
+Spend a few minutes writing down your definitions of: 
+
+* Well-characterized uncertainty
+* Optimal expected utility
+* Deep uncertainty
+* Precautionary principle
+* Robust decision
+* Regret
+* Satisficing
+* Keeping options open
+
+## Discuss results
+
+::: {.incremental}
+* What visual languages accompany different types of robustness metrics?
+* What strategy should the decision-makers choose?
+:::
+
+## Scrutinize key concepts
+Let's discuss: 
+
+::: {.incremental}
+* Well-characterized vs. deep uncertainty
+* Optimal expected utility vs. robustness
+* Precautionary principle vs. robustness
+* Regret vs. satisficing
+* Considering too little vs. too much
+:::
+
+# Applying concepts to our decision problems
+
+## Example - home elevation problem
+
+::: {.incremental}
+* What can I do to know what robustness metrics are relevant? 
+* Do beliefs about uncertain drivers or problem scope uncertainties matter more? 
+:::
+
+## Your examples
+Let's take turns applying some new concepts to our problem framing. 
+
+# Logistics
+## This week
+* We'll go over the RDM tutorial on Friday together
+
+## Next week
+* Monday - high-level overview of considering and navigating tradeoffs in our decision problems
+* Wednesday - case study (who can lead?)
+* Friday - tutorial on visualizing trade-offs
