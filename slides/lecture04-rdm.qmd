@@ -107,8 +107,9 @@ Many potential conditions where current strategies insufficient:
 # Upcoming Schedule
 ## This week
 * Case study on Wednesday
-* Let me know if you're working on the lab and want to meet
+* Tutorial on RDM on Friday
 
 ## Next week
 * Lecture on Monday - area I have most experience in re: MORDM
 * Journal Club Wednesday
+* Tutorial on visualizing tradeoffs
