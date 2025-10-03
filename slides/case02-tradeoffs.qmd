@@ -1,0 +1,100 @@
+---
+title: "Representing trade-offs"
+subtitle: "Case Study 2: [Daw et al. (2015)](https://doi.org/10.1073/pnas.1414900112)"
+author: "{{< var instructor.name_no_title >}}"
+course: "{{< var course.number >}}"
+institution: "{{< var university.name >}}"
+date: "October 8, 2025"
+format:
+    revealjs:
+        scrollable: true
+        slide-number: c/t
+        show-slide-number: all
+        center-title-slide: true
+        transition: none
+        toc: true
+        toc-depth: 1
+        toc-title: "Overview"
+        history: false
+        link-external-newwindow: true
+        theme: ../_assets/sass/slides.scss
+        template-partials:
+            - title-slide.html
+        menu:
+            numbers: true
+        date-format: long
+        email-obfuscation: javascript
+        controls: true
+execute:
+    freeze: auto
+    echo: false
+---
+
+# Test your comprehension
+
+## Apply concepts on trade-offs
+See if you can come up with examples of trade-offs that can occur across: 
+
+::: {.incremental}
+* Objectives
+* Time scales
+* Spatial scales
+* Perspectives
+* Groups
+* Secular values
+* Sacred values
+* Sacred vs. secular values
+:::
+
+## Discuss the study's approach
+What role did the following methods play?
+::: {.incremental}
+* Group discussions
+* Model calibration
+* Participatory conceptual modeling
+* Toy model
+* Workshop observation and qualitative interviews
+
+## Discuss results
+
+::: {.incremental}
+* What did the conventional profit/conservation analysis suggest?
+* How did considering different resource users produce new insights?
+* How did considering secular and sacred values produce new insights?
+* How did interaction with stakeholders affect their understanding of the management problem?
+:::
+
+::: {.fragment}
+A stakeholder takeaway that resonated with me: "We sometimes have issues with poor stakeholders because they normally oppose whatever you propose. During the workshop, I actually came to understand why they normally oppose, and when I get a negative answer from them, I now understand why."
+:::
+
+## Let's discuss the following claims
+
+::: {.incremental}
+* "We propose that assertions of unconditional win-wins in ecosystem management should be scrutinized for losses of marginalized, undervalued, and less obvious stakeholders."
+* "To reveal [overlooked] trade-offs, analysis needs to reflect complexities in the biophysical system producing the trade-offs... assessments also need to map out the processes that determine who benefits from ecosystem services"
+* "...well-being trade-offs may be overlooked if losers, through poverty or political marginalization, have no voice in decision making"
+* "...conflicts can arise if primary stakeholders hold different sacred values than managers and government, or if sacred values are not reflected in the framing of decision making"
+* "Explicit consideration of the diversity of values and possible taboos help explain the deeply felt conflicts that can result from ecosystem service trade-offs, and ultimately support improved decision making processes."
+:::
+
+## Scrutinizing claims, continued
+::: {.incremental}
+* "Values can be secularized to frame trade-offs as routine, as with the quantitative, monetary valuation and benefit-cost analyses that dominate ecosystem services assessment... however, this approach hides the incommensurable value conflicts, common in environmental decision making, that need to be deliberated and negotiated"
+* "The combination of participatory modeling and scenarios can enhance transparency (through participatory modeling), accountability (through explicitly mapping winners and losers), and relevance (through a focus on people’s well-being)... has a greater chance of achieving socially equitable and sustainable decision making."
+:::
+
+# Applying concepts to our decision problems
+
+## Your examples
+Let's take turns applying some new concepts to our problem framings. 
+
+# Logistics
+## Friday
+* We'll rate and discuss some trade-off visualizations
+* HW3 due (Sunday ok)
+
+## Next week
+* Monday: bringing things together with MORDM (guest lecture)
+* Wednesday: case study
+* Friday: case study and HW 4 due (Sunday ok)
