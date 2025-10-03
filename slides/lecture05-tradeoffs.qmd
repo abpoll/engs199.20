@@ -116,4 +116,5 @@ Take turns naming one
 # Upcoming Schedule
 ## Remainder of week
 * Case study on Wednesday
-* Tutorial on visualizing tradeoffs on Friday
+* Critiquing ways to visualize tradeoffs on Friday
+* HW 3 due Friday (Sunday ok)
