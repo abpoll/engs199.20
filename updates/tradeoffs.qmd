@@ -1,0 +1,28 @@
+---
+title: "Navigating Trade-offs"
+date: "10/17/2025"
+published-title: "Due Date:"
+format:
+    html:        
+        warning: true
+        error: true
+sidebar: main
+---
+## Instructions
+
+Your guiding questions for this week are: 
+
+1. What objectives are relevant for your decision analysis?
+2. What trade-offs or win-wins are relevant for your decision analysis?
+3. What objectives can you quantify? 
+4. What trade-offs and win-wins do you hypothesize? 
+
+In answering these, and related, questions, it is important for you to justify your answers with strong evidence and reasoning. For example, you may invoke policy documents, stakeholder interactions, and other sources that articulate values and goals about a particular problem and management strategies. Our Wednesday case study is an excellent example of connecting broad conceptualizations of types of objectives relevant to environmental problems, and then operationalizing that in a real-world case study based on input from real people about what is relevant. To the extent that you do not feel ready to give confident answers to 1-4, you should explain boundary tools and methods you can employ to answer those questions in the future. 
+
+Note that questions 1 and 2 take a broad view on your decision problem in general, whereas questions 3 and 4 ask you to focus on what is practical. To the extent that there are gaps between what is relevant and what you can measure, you should practice justifying why your decision analysis can still be useful (this will be very important for reviewers of your study, along with demonstrating salience to potential decision-making partners). 
+
+For guiding question 4, I would like you to submit figure sketches that represent your hypotheses. The most salient hypotheses will respond to compelling research and decision questions. In other words, evaluating 5-dimensional trade-offs and win-wins in a parallel axis plot may (or may not) be most relevant to questions at hand. I expect you to provide strong justification for why the visual language you choose for figures sketches effectively conveys the results of your experiment and answers salient questions. 
+
+## Submitting the Report
+
+Export your writeup as a PDF and submit it to me over Slack. You can upload it to our course channel or direct message me, whichever you prefer. 

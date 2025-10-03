@@ -1,0 +1,30 @@
+---
+format:
+  html:
+    title: Week 4 Readings
+
+reference-location: document
+citation-location: document
+sidebar: main
+---
+
+## Required Reading
+
+1. @Daw-etal-2015
+
+    - This is the paper we're going to review for our case study on Wednesday. I'll lead this one. 
+
+## Optional Reading
+
+I higly recommend reading @Banzhaf2009. [Here](https://www.jstor.org/stable/27647862) is a stable URL to the pdf. Benefit-cost analysis (BCA) is a requirement for many public resource allocation decisions. This history of the intellectual debate and political considerations between two visions for BCA in the U.S. -- multi-objective and single-objective analysis -- is illuminating. You will learn about theoretical and practical strengths/limitations of each approach and how that relates to different views of the role of the scientist/analyst in conducting a decision analysis to inform decisions. In addition, because BCA is a prevailing paradigm, you should be familiar with its conceptual underpinnings and assumptions. 
+
+I also recommend reading the papers below to get exposure to papers that focus on trade-offs and synergies as key framing points of the decision analysis. 
+
+- @Pollack-etal-2025
+- @Jafino-etal-2022
+- @Ciullo-etal-2020
+- @Hadka-etal-2015
+
+### References
+::: {#refs}
+:::

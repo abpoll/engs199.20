@@ -1,0 +1,108 @@
+---
+title: "Scrutinizing trade-off visualizations"
+subtitle: "'Lab' 05"
+author: "{{< var instructor.name_no_title >}}"
+course: "{{< var course.number >}}"
+institution: "{{< var university.name >}}"
+date: "October 10, 2025"
+format:
+    revealjs:
+        scrollable: true
+        slide-number: c/t
+        show-slide-number: all
+        center-title-slide: true
+        transition: none
+        toc: true
+        toc-depth: 1
+        toc-title: "Overview"
+        history: false
+        link-external-newwindow: true
+        theme: ../_assets/sass/slides.scss
+        template-partials:
+            - ../slides/title-slide.html
+        menu:
+            numbers: true
+        date-format: long
+        email-obfuscation: javascript
+        controls: true
+execute:
+    freeze: auto
+    echo: false
+---
+
+# Overview of today's "lab"
+
+## Goals
+* Scrutinize different trade-off visualization techniques and implementation
+* Critique general visualization implementation
+* Propose good practices you will follow when making visualizations
+
+## Instructions
+
+* Review each example for 1 minute and rate the figure from 1-5, with 5 being the best
+* After time is up, write down your rating in the Zoom chat
+* The raters who give the lowest and highest ratings will explain their ratings
+* As a group, discuss what the (potentially) pessimistic/optimistic raters are missing
+
+# Scatter plots
+
+## 2d trade-offs {.nostretch}
+![[Hegde et al., (2025)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5410803)](../_assets/img/prabhat_myopia_sub.png){width=800}
+
+## 3d trade-offs
+![[Hadka et al. (2015)](https://doi.org/10.1016/j.envsoft.2015.07.014)](../_assets/img/pareto_points.jpg)
+
+# Parallel axis plots
+
+## 4d trade-offs
+![[Hadka et al. (2015)](https://doi.org/10.1016/j.envsoft.2015.07.014)](../_assets/img/parallel_axis.jpg)
+
+## 6d trade-offs with brushing {.nostretch}
+![[Hadjimichael et al. (2020)](https://doi.org/10.1155/2020/4170453)](../_assets/img/hadj_tradeoffs.jpg){width=900}
+
+# Small multiples
+
+## Several 2d trade-offs via scatterplots
+![[Daw et al. (2015)](https://doi.org/10.1073/pnas.1414900112)](../_assets/img/small_multiples.png)
+
+## Several 2d trade-offs via scatterplots {.nostretch}
+![[Pollack et al., (2025)](https://doi.org/10.1111/risa.13527)](../_assets/img/pollack_tradeoffs.jpg){width=600}
+
+## Many 2d trade-offs via scatterplots {.nostretch}
+![[Ciullo et al., (2020)](https://doi.org/10.1111/risa.13527)](../_assets/img/ciullo_tradeoffs_many.jpg){width=700}
+
+## 2d & 3d trade-offs via scatterplots {.nostretch}
+![[Ciullo et al., (2020)](https://doi.org/10.1111/risa.13527)](../_assets/img/ciullo_tradeoffs.png){width=700}
+
+## 4d trade-offs with parallel axis {.nostretch}
+![[Gold et al. (2023)](https://doi.org/10.1029/2022WR033671)](../_assets/img/gold_tradeoffs.jpg){width=600}
+
+## 4d trade-offs via parallel axis {.nostretch}
+![[Hegde et al., (2025)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5410803)](../_assets/img/prabhat_tradeoffs.png){width=600}
+
+# Some other approaches not often seen in MORDM studies
+
+## 2d trade-offs via barplots
+
+![[Groves et al., (2019)](https://doi.org/10.1007/978-3-030-05252-2_7)](../_assets/img/tradeoff_ex.png)
+
+## 6d trade-offs via radial plot
+![[Padilha et al., (2024)](https://doi.org/10.1007/s00267-023-01916-8)](../_assets/img/radial_tradeoffs.jpg)
+
+## 7d trade-offs via heatmap
+![[Jafino et al. (2022)](https://doi.org/10.1007/s10584-022-03395-y)](../_assets/img/eq_eq_tradeoffs.png){width=500}
+
+# Synthesizing our reactions
+
+## What worked and what didn't?
+* Are there specific visual languages you prefer? 
+* Do you think there are objective criteria for saying whether a trade-off plot is effective?
+* Do you think there are objective criteria for saying whether a visualization is effective?
+* What are your takeaways for your decision analysis project?  
+* What will be your visualization check list? 
+
+# Upcoming calendar
+## Next week
+* Monday: bringing things together with MORDM (guest lecture)
+* Wednesday: case study
+* Friday: case study and hw 4 due (Sunday ok)

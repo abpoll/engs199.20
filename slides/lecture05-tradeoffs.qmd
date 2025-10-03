@@ -1,0 +1,119 @@
+---
+title: "Quantifying trade-offs"
+subtitle: "Lecture 05"
+author: "{{< var instructor.name_no_title >}}"
+course: "{{< var course.number >}}"
+institution: "{{< var university.name >}}"
+date: "October 6, 2025"
+format:
+    revealjs:
+        scrollable: true
+        slide-number: c/t
+        show-slide-number: all
+        center-title-slide: true
+        transition: none
+        toc: true
+        toc-depth: 1
+        toc-title: "Overview"
+        history: false
+        link-external-newwindow: true
+        theme: ../_assets/sass/slides.scss
+        template-partials:
+            - title-slide.html
+        menu:
+            numbers: true
+        date-format: long
+        email-obfuscation: javascript
+        controls: true
+execute:
+    freeze: auto
+    echo: false
+---
+
+
+# Decisions often involve trade-offs
+
+## Who has evaluated a decision like this?
+
+![[Apple 2025 MacBook Pro Comparison](https://www.amazon.com/Apple-2025-MacBook-13-inch-Laptop/dp/B0DZD91W4F/ref=sr_1_1_sspa?crid=YZ0O5TGE9VCE&dib=eyJ2IjoiMSJ9.eDBDBGDrPliCUiN-gbY7zntk7-Jni1AqRFo5kuhfms6VxRA1umjP4jPH9CXz4jjRXoIfsRCOexPgJlpSmWlksVzCMwYiMDTFDk2KxQePrWcfPhFeGgYsaQ-FGPqhMHruKI2S_84J2h5rDslBahTbYOgNrHnTOwCICyQFhLa97Kxt2oSm40A5Vg8ZBOr2XZ_s00pBq3EHZUN7Sc0eFQYabAHEf5JjbnA9ep7lVNmCFqg.nQEvTJeDq4dIB9N0EVa9timRcIFCZsxzntei9aP5VDk&dib_tag=se&keywords=macbook&qid=1759440152&sprefix=macboo%2Caps%2C109&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1)](../_assets/img/laptops.png)
+
+# Examples of trade-offs in wicked climate problems
+
+## Robustness vs. cost
+Our example from last week:
+
+![Groves et al., 2019. [Robust Decision Making (RDM): Application to Water Planning and Climate Policy.](https://doi.org/10.1007/978-3-030-05252-2_7)](../_assets/img/tradeoff_ex.png)
+
+## Robustness vs. "optimality"
+Think back to our lab from Friday. Anyone want to explain why this trade-off exists?
+
+::: {.incremental}
+* Optimizing for a particular state of the world often produces strategies that are vulnerable to different-looking states of the world
+* Similarly, optimizing for robustness will sacrifice optimality within any single state of the world
+:::
+
+::: {.fragment}
+We'll spend next week talking about analyzing trade-offs and robustness together next week
+:::
+
+## Economic vs. ecological
+Who can offer examples from their project?
+
+## Efficiency vs. equity
+
+::: {.columns}
+::: {.column #vcenter width="40%"}
+Note that this represents a *theorized* trade-off between economic efficiency and one conception of equity.
+:::
+::: {.column #vcenter width="50%"}
+![[Pollack et al. (2025)](https://doi.org/10.1073/pnas.2418711121)](../_assets/img/eff_eq_tradeoffs.jpg){width=500}
+:::
+:::{.column #vcenter width="10%"}
+:::
+:::
+
+## Equity vs. equity
+
+![[Jafino et al. (2022)](https://doi.org/10.1007/s10584-022-03395-y)](../_assets/img/eq_eq_tradeoffs.png){width=500}
+
+## Other considerations to keep in mind
+
+* How outcomes take shape over time
+* The spatial scale of the outcomes
+* The distribution of the outcomes
+* Secular vs. sacred values
+* We may also see win-wins!
+
+::: {.fragment}
+::: {.callout-note}
+### What trade-offs and other considerations are relevant for your project?
+Take turns naming one
+:::
+:::
+
+# Visualizing trade-offs
+
+## Typically, focus on the Pareto front
+
+![[Nazari et al. (2023)](https://doi.org/10.1002/eng2.12726)](../_assets/img/pareto_front.png)
+
+## N-d objective scatter plot
+
+![[Hadka et al. (2015)](https://doi.org/10.1016/j.envsoft.2015.07.014)](../_assets/img/pareto_points.jpg)
+
+## Parllel axis plot
+![[Hadka et al. (2015)](https://doi.org/10.1016/j.envsoft.2015.07.014)](../_assets/img/parallel_axis.jpg)
+
+## Small multiples {.nostretch}
+![[Daw et al. (2015)](https://doi.org/10.1073/pnas.1414900112)](../_assets/img/small_multiples.png)
+
+## Practical considerations
+
+* Framing analyses inform which objectives to include (e.g., ViMMs) and trade-offs to present  
+* Analysts map transparent trade-offs; aggregation is the normative decision-maker role
+* Use multiple visualizations and experiment with new ones
+
+# Upcoming Schedule
+## Remainder of week
+* Case study on Wednesday
+* Tutorial on visualizing tradeoffs on Friday

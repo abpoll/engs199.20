@@ -12,8 +12,8 @@ Note that the Gaps module does not have a progress report.
 |:------:|:------------:|:--------:|
 | Overview | [{{< fa sharp pen-field >}}](../updates/overview.qmd) | 9/26/25 |
 | Uncertainty | [{{< fa sharp pen-field >}}](../updates/uncertainty.qmd) | 10/3/25 |
-| RDM | {{< fa sharp pen-field >}} | 10/10/25 |
-| Trade-offs | {{< fa sharp pen-field >}} | 10/24/25 |
+| RDM | [{{< fa sharp pen-field >}}](../updates/rdm.qmd) | 10/10/25 |
+| Trade-offs | [{{< fa sharp pen-field >}}](../updates/tradeoffs.qmd) | 10/17/25 |
 | DMDU | {{< fa sharp pen-field >}} | 11/14/25 |
 
 ## Rubric
