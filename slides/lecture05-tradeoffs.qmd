@@ -101,7 +101,7 @@ Take turns naming one
 
 ![[Hadka et al. (2015)](https://doi.org/10.1016/j.envsoft.2015.07.014)](../_assets/img/pareto_points.jpg)
 
-## Parllel axis plot
+## Parallel axis plot
 ![[Hadka et al. (2015)](https://doi.org/10.1016/j.envsoft.2015.07.014)](../_assets/img/parallel_axis.jpg)
 
 ## Small multiples {.nostretch}
