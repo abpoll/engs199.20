@@ -10,8 +10,8 @@
   <meta name="generator" content="quarto-1.6.39">
 
   <meta name="author" content="Adam Pollack">
-  <meta name="dcterms.date" content="2025-10-08">
-  <title>ENGS 199.20 - Fall 2025 – Representing trade-offs</title>
+  <meta name="dcterms.date" content="2025-10-13">
+  <title>ENGS 199.20 - Fall 2025 – Quantitative approaches for supporting decision-making under deep uncertainty</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -123,8 +123,8 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Representing trade-offs – ENGS 199.20 - Fall 2025">
-<meta property="og:description" content="Case Study 2: Daw et al.&nbsp;(2015)">
+<meta property="og:title" content="Quantitative approaches for supporting decision-making under deep uncertainty – ENGS 199.20 - Fall 2025">
+<meta property="og:description" content="Lecture 06">
 <meta property="og:site_name" content="ENGS 199.20 - Fall 2025">
 </head>
 <body class="quarto-light">
@@ -132,117 +132,220 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-    <h1 class="title">Representing trade-offs</h1>
+    <h1 class="title">Quantitative approaches for supporting decision-making under deep uncertainty</h1>
   <hr>
-<p class="subtitle">Case Study 2: <a href="https://doi.org/10.1073/pnas.1414900112">Daw et al.&nbsp;(2015)</a></p>
-<p class="date">October 8, 2025</p>
+<p class="subtitle">Lecture 06</p>
+<p class="date">October 13, 2025</p>
 </section><section id="TOC">
 <nav role="doc-toc"> 
 <h2 id="toc-title">Overview</h2>
 <ul>
-<li><a href="#/test-your-comprehension" id="/toc-test-your-comprehension">Test your comprehension</a></li>
-<li><a href="#/applying-concepts-to-our-decision-problems" id="/toc-applying-concepts-to-our-decision-problems">Applying concepts to our decision problems</a></li>
-<li><a href="#/logistics" id="/toc-logistics">Logistics</a></li>
+<li><a href="#/building-blocks-of-a-dmdu-analysis" id="/toc-building-blocks-of-a-dmdu-analysis">Building blocks of a DMDU analysis</a></li>
+<li><a href="#/disambiguating-approaches-that-optimize-strategies-across-multiple-objectives" id="/toc-disambiguating-approaches-that-optimize-strategies-across-multiple-objectives">Disambiguating approaches that optimize strategies across multiple objectives</a></li>
+<li><a href="#/composing-context-specific-approaches-for-your-problem" id="/toc-composing-context-specific-approaches-for-your-problem">Composing context-specific approaches for your problem</a></li>
 </ul>
 </nav>
 </section>
 <section>
-<section id="test-your-comprehension" class="title-slide slide level1 center">
-<h1>Test your comprehension</h1>
+<section id="building-blocks-of-a-dmdu-analysis" class="title-slide slide level1 center">
+<h1>Building blocks of a DMDU analysis</h1>
+<p>This first section of slides draws extensively from <a href="https://doi.org/10.1007/978-3-030-05252-2_15">Kwakkel, J.H., Haasnoot, M. (2019). Supporting DMDU: A Taxonomy of Approaches and Tools.</a></p>
+</section>
+<section id="defining-challenges" class="slide level2">
+<h2>Defining challenges</h2>
+<p>Coming to grips with irreducible uncertainty:</p>
+<ul>
+<li>Limits in predictability of complex systems</li>
+<li>Different perspectives on the problem, system, and objectives</li>
+<li>Dynamic and unknowable futures</li>
+</ul>
+</section>
+<section id="finding-strategies-that-are-robust-to-irreducible-uncertainties" class="slide level2">
+<h2>Finding strategies that are robust to irreducible uncertainties</h2>
+<p>This entails:</p>
+<ul>
+<li>Exploratory modeling</li>
+<li>Adaptive planning</li>
+<li>Decision support</li>
+</ul>
+</section>
+<section id="weve-seen-this-before" class="slide level2 scrollable">
+<h2>We’ve seen this before!</h2>
+<p><a href="https://doi.org/10.1111/j.1539-6924.2007.00940.x">Lempert and Collins (2007)</a></p>
+<ol type="1">
+<li>Exploratory modeling</li>
+</ol>
+<ul>
+<li>Simple model of lake dynamics</li>
+<li>Evaluates decisions optimal for one critical P over a wide range of critical P scenarios</li>
+</ul>
+<ol start="2" type="1">
+<li>Adaptive planning</li>
+</ol>
+<ul>
+<li>The town learns about critical P over time and determines their anthropogenic inflows based on observed P and best-guess critical P</li>
+</ul>
+<ol start="3" type="1">
+<li>Decision support</li>
+</ol>
+<ul>
+<li>Calculates two robustness metrics and visualizes results in several ways</li>
+</ul>
+</section>
+<section id="exploratory-modeling" class="slide level2">
+<h2>Exploratory modeling</h2>
+<div>
+<ul>
+<li class="fragment">What?
+<ul>
+<li class="fragment">Scenario-based, what-if modeling</li>
+</ul></li>
+<li class="fragment">How?
+<ul>
+<li class="fragment">Running computational models (often simple) many times</li>
+<li class="fragment">Often search for strategies using optimization algorithms</li>
+</ul></li>
+<li class="fragment">Why?
+<ul>
+<li class="fragment">Deriving the consequences of actions on complex systems with mental models alone is infeasible</li>
+<li class="fragment">Considering only pre-specified strategies limits the ability of decision-makers to learn about the problem and identify robust solutions</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="adaptive-planning" class="slide level2">
+<h2>Adaptive planning</h2>
+<div>
+<ul>
+<li class="fragment">What?
+<ul>
+<li class="fragment">Strategies guide future decisions based on how the future unfolds</li>
+</ul></li>
+<li class="fragment">How?
+<ul>
+<li class="fragment">Explore a wide variety of futures during plan design</li>
+<li class="fragment">Identify actions that are best suited to different futures, as well as what signals ensure the timely implementation of those actions</li>
+</ul></li>
+<li class="fragment">Why?
+<ul>
+<li class="fragment">Adaptive strategies are flexible, which contributes to robustness in the face of deep and dynamic uncertainties</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="decision-support" class="slide level2">
+<h2>Decision support</h2>
+<ul>
+<li>What?
+<ul>
+<li>An iterative, collaborative approach that facilitates learning across alternative framings of the problem and learning about stakeholder preferences and trade-offs</li>
+</ul></li>
+<li>How?
+<ul>
+<li>Good question! This is an area with little guidance in the field…</li>
+</ul></li>
+<li>Why?
+<ul>
+<li>Under deep uncertainty, decision support moves away from trying to define what is the “right” choice and instead enable decision-makers to converge on an acceptable decision</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="disambiguating-approaches-that-optimize-strategies-across-multiple-objectives" class="title-slide slide level1 center">
+<h1>Disambiguating approaches that optimize strategies across multiple objectives</h1>
 
 </section>
-<section id="apply-concepts-on-trade-offs" class="slide level2">
-<h2>Apply concepts on trade-offs</h2>
-<p>See if you can come up with examples of trade-offs that can occur across:</p>
-<div>
+<section id="high-level-overview" class="slide level2">
+<h2>High-level overview</h2>
+
+<img data-src="../_assets/img/mordm_approaches.jpg" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://doi.org/10.1016/j.envsoft.2020.104699">Bartholomew and Kwakkel (2020)</a></p></section>
+<section id="what-these-approaches-share" class="slide level2">
+<h2>What these approaches share</h2>
 <ul>
-<li class="fragment">Objectives</li>
-<li class="fragment">Time scales</li>
-<li class="fragment">Spatial scales</li>
-<li class="fragment">Perspectives</li>
-<li class="fragment">Groups</li>
-<li class="fragment">Secular values</li>
-<li class="fragment">Sacred values</li>
-<li class="fragment">Sacred vs.&nbsp;secular values</li>
+<li>All three building blocks discussed earlier</li>
+<li>The use of a multi-objective evolutionary algorithm (MOEA) to identify a large, diverse set of strategies that capture trade-offs</li>
 </ul>
+</section>
+<section id="whats-wrong-with-mordm" class="slide level2">
+<h2>What’s “wrong” with MORDM?</h2>
+<div class="columns">
+<div id="vcenter" class="column" style="width:40%;">
+<p>The main idea for Multi-Scenario MORDM or Many-Objective Robust Optimization comes the observation that solutions found through optimization for a reference scenario can have very poor performance in other scenarios.</p>
+</div><div id="vcenter" class="column" style="width:60%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../_assets//img/regret_lab.png"></p>
+<figcaption>Remember lab?</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="why-multi-scenario-mordm" class="slide level2">
+<h2>Why Multi-Scenario MORDM?</h2>
+<ul>
+<li>The main innovation of MORDM is using a MOEA to obtain a large, diverse set of strategies that capture trade-offs</li>
+<li>Multi-Scenario MORDM builds on this by adding more reference scenarios (based on scenario discovery) to enhance diversity of strategy alternatives that are Pareto optimal strategies under different scenarios</li>
+</ul>
+<div class="fragment">
+<p><a href="https://doi.org/10.1016/j.envsoft.2020.104699">Bartholomew and Kwakkel (2020)</a> recommend this approach as a good balance for identifying candidates that are optimal within scenarios, robust across scenarios, and not too computationally challenging to find.</p>
 </div>
 </section>
-<section id="discuss-the-studys-approach" class="slide level2">
-<h2>Discuss the study’s approach</h2>
-<p>What role did the following methods play?</p>
-<div>
-<ul>
-<li class="fragment">Group discussions</li>
-<li class="fragment">Model calibration</li>
-<li class="fragment">Participatory conceptual modeling</li>
-<li class="fragment">Toy model</li>
-<li class="fragment">Workshop observation and qualitative interviews</li>
-</ul>
+<section id="why-moro" class="slide level2">
+<h2>Why MORO?</h2>
+<div class="quote">
+<blockquote>
+<p>Since the overarching aim of supporting decision making under deep uncertainty is the identification of robust strategies that offer an acceptable performance across multiple competing objectives, why not include these robustness considerations already in the search phase for candidate solutions?</p>
+</blockquote>
+</div>
+<p><a href="https://doi.org/10.1016/j.envsoft.2020.104699">Bartholomew and Kwakkel (2020)</a></p>
+<div class="fragment">
+<p>But this approach is computationally intense and can sacrifice identifying strategies that are optimal in any given scenario!</p>
 </div>
 </section>
-<section id="discuss-results" class="slide level2">
-<h2>Discuss results</h2>
-<div>
+<section id="approaches-that-go-by-different-names-but-fit-into-the-above-classes" class="slide level2">
+<h2>Approaches that go by different names, but fit into the above classes</h2>
 <ul>
-<li class="fragment">What did the conventional profit/conservation analysis suggest?</li>
-<li class="fragment">How did considering different resource users produce new insights?</li>
-<li class="fragment">How did considering secular and sacred values produce new insights?</li>
-<li class="fragment">How did interaction with stakeholders affect their understanding of the management problem?</li>
+<li>Deeply uncertain pathways, a variant of MORO, by <a href="https://doi.org/10.1016/j.advwatres.2019.103442">Trindade et al.&nbsp;(2019)</a></li>
+<li>A novel approach to scenario discovery to enhance Multi-Scenario MORDM by <a href="https://doi.org/10.1016/j.envsoft.2021.105134">Shavazipour et al.&nbsp;(2021)</a></li>
 </ul>
+</section></section>
+<section>
+<section id="composing-context-specific-approaches-for-your-problem" class="title-slide slide level1 center">
+<h1>Composing context-specific approaches for your problem</h1>
+
+</section>
+<section id="key-features-to-consider-in-reviewing-studies" class="slide level2">
+<h2>Key features to consider in reviewing studies</h2>
+<ul>
+<li>Identify how the optimization handles “shallow” uncertainties</li>
+<li>Identify whether robustness is an objective in the MOEA
+<ul>
+<li>Even when robustness is an objective, studies often evaluate robustness on a new set of samples as a form of “validation”</li>
+</ul></li>
+<li>In evaluating the performance of strategies, do they assume all scenarios are equally likely?
+<ul>
+<li>Multi-scenario MORDM and MORO make it really important to understand how a study calculates objective values for strategies</li>
+</ul></li>
+</ul>
+</section>
+<section id="what-you-shouldnt-implement" class="slide level2">
+<h2>What you shouldn’t implement</h2>
+<p><strong>Do not:</strong></p>
+<ul>
+<li>Use an approach you don’t understand and can’t write clearly about</li>
+<li>Evaluate objectives across scenarios without an explicit probability distribution (but then is your problem really deeply uncertain?)</li>
+<li>Neglect well-characterized uncertainties</li>
+</ul>
+</section>
+<section id="what-should-you-implement" class="slide level2">
+<h2>What should you implement?</h2>
+<p>The uncomfortable truth is that the literature does not provide clear guidance on this question, and that’s probably a major reason you were all interested in taking this course.</p>
+<div class="fragment">
+<p>As always, you can justify your choice with strong framing :)</p>
 </div>
 <div class="fragment">
-<p>A stakeholder takeaway that resonated with me: “We sometimes have issues with poor stakeholders because they normally oppose whatever you propose. During the workshop, I actually came to understand why they normally oppose, and when I get a negative answer from them, I now understand why.”</p>
+<p>And this is what the strong papers and analyses do. Reach out to someone whose work you admire!</p>
 </div>
-</section>
-<section id="lets-discuss-the-following-claims" class="slide level2">
-<h2>Let’s discuss the following claims</h2>
-<div>
-<ul>
-<li class="fragment">“We propose that assertions of unconditional win-wins in ecosystem management should be scrutinized for losses of marginalized, undervalued, and less obvious stakeholders.”</li>
-<li class="fragment">“To reveal [overlooked] trade-offs, analysis needs to reflect complexities in the biophysical system producing the trade-offs… assessments also need to map out the processes that determine who benefits from ecosystem services”</li>
-<li class="fragment">“…well-being trade-offs may be overlooked if losers, through poverty or political marginalization, have no voice in decision making”</li>
-<li class="fragment">“…conflicts can arise if primary stakeholders hold different sacred values than managers and government, or if sacred values are not reflected in the framing of decision making”</li>
-<li class="fragment">“Explicit consideration of the diversity of values and possible taboos help explain the deeply felt conflicts that can result from ecosystem service trade-offs, and ultimately support improved decision making processes.”</li>
-</ul>
-</div>
-</section>
-<section id="scrutinizing-claims-continued" class="slide level2">
-<h2>Scrutinizing claims, continued</h2>
-<div>
-<ul>
-<li class="fragment">“Values can be secularized to frame trade-offs as routine, as with the quantitative, monetary valuation and benefit-cost analyses that dominate ecosystem services assessment… however, this approach hides the incommensurable value conflicts, common in environmental decision making, that need to be deliberated and negotiated”</li>
-<li class="fragment">“The combination of participatory modeling and scenarios can enhance transparency (through participatory modeling), accountability (through explicitly mapping winners and losers), and relevance (through a focus on people’s well-being)… has a greater chance of achieving socially equitable and sustainable decision making.”</li>
-</ul>
-</div>
-</section></section>
-<section>
-<section id="applying-concepts-to-our-decision-problems" class="title-slide slide level1 center">
-<h1>Applying concepts to our decision problems</h1>
-
-</section>
-<section id="your-examples" class="slide level2">
-<h2>Your examples</h2>
-<p>Let’s take turns applying some new concepts to our problem framings.</p>
-</section></section>
-<section>
-<section id="logistics" class="title-slide slide level1 center">
-<h1>Logistics</h1>
-
-</section>
-<section id="friday" class="slide level2">
-<h2>Friday</h2>
-<ul>
-<li>We’ll rate and discuss some trade-off visualizations</li>
-<li>HW3 due (Sunday ok)</li>
-</ul>
-</section>
-<section id="next-week" class="slide level2">
-<h2>Next week</h2>
-<ul>
-<li>Monday: bringing things together with MORDM (guest lecture)</li>
-<li>Wednesday: case study</li>
-<li>Friday: case study and HW 4 due (Sunday ok)</li>
-</ul>
 
 
 </section></section>
