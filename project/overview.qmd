@@ -11,4 +11,4 @@ The goal of the course project is to develop and report on an actionable plan fo
 |:---------:|:-----------|:---------:|
 | Progress Reports | [{{< fa sharp pen-field >}}](./updates.qmd)  |  Weekly |
 | Presentation | [{{< fa sharp pen-field >}}](./presentation.qmd) | Nov. 16, 2025 |
-| Report | {{< fa sharp pen-field >}}|  Nov. 26, 2025 |
+| Report | [{{< fa sharp pen-field >}}](./report.qmd)|  Nov. 26, 2025 |
