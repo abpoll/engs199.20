@@ -103,6 +103,6 @@ execute:
 
 # Upcoming calendar
 ## Next week
-* Monday: bringing things together with MORDM (guest lecture)
+* Monday: bringing things together with MORDM 
 * Wednesday: case study
-* Friday: case study and hw 4 due (Sunday ok)
+* Friday: lab and hw 4 due (Sunday ok)

@@ -14,7 +14,7 @@ Week,Module,Date,Topic,Slides,Lab,HW,Reading
 4,Trade-offs,10/8/25,Case study,../slides/case02-tradeoffs.qmd,,,
 4,Trade-offs,10/10/25,Techniques for visualizing trade-offs,,../labs/lab05-tradeoffs.qmd,,
 5,DMDU,10/13/25,Taxonomy of DMDU approaches,../slides/lecture06-dmdu.qmd,,../updates/dmdu.qmd,../readings/readings05.qmd
-5,DMDU,10/15/25,Case study,,,,
+5,DMDU,10/15/25,Case study (No Slides),,,,
 5,DMDU,10/17/25,Optimization lab,,,,
 6,DMDU,10/20/25,Direct policy search,,,,
 6,DMDU,10/22/25,Adaptive policies,,,,
