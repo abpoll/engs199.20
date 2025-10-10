@@ -1,0 +1,167 @@
+---
+title: "Quantitative approaches for supporting decision-making under deep uncertainty"
+subtitle: "Lecture 06"
+author: "{{< var instructor.name_no_title >}}"
+course: "{{< var course.number >}}"
+institution: "{{< var university.name >}}"
+date: "October 13, 2025"
+format:
+    revealjs:
+        scrollable: true
+        slide-number: c/t
+        show-slide-number: all
+        center-title-slide: true
+        transition: none
+        toc: true
+        toc-depth: 1
+        toc-title: "Overview"
+        history: false
+        link-external-newwindow: true
+        theme: ../_assets/sass/slides.scss
+        template-partials:
+            - title-slide.html
+        menu:
+            numbers: true
+        date-format: long
+        email-obfuscation: javascript
+        controls: true
+execute:
+    freeze: auto
+    echo: false
+---
+
+# Building blocks of a DMDU analysis
+
+This first section of slides draws extensively from [Kwakkel, J.H., Haasnoot, M. (2019). Supporting DMDU: A Taxonomy of Approaches and Tools.](https://doi.org/10.1007/978-3-030-05252-2_15) 
+
+## Defining challenges
+Coming to grips with irreducible uncertainty:
+
+* Limits in predictability of complex systems
+* Different perspectives on the problem, system, and objectives
+* Dynamic and unknowable futures
+
+## Finding strategies that are robust to irreducible uncertainties
+This entails:
+
+* Exploratory modeling
+* Adaptive planning
+* Decision support
+
+## We've seen this before!
+[Lempert and Collins (2007)](https://doi.org/10.1111/j.1539-6924.2007.00940.x)
+
+1. Exploratory modeling
+  - Simple model of lake dynamics
+  - Evaluates decisions optimal for one critical P over a wide range of critical P scenarios
+2. Adaptive planning
+  - The town learns about critical P over time and determines their anthropogenic inflows based on observed P and best-guess critical P
+3. Decision support
+  - Calculates two robustness metrics and visualizes results in several ways
+
+## Exploratory modeling
+
+::: {.incremental}
+* What? 
+  - Scenario-based, what-if modeling
+* How? 
+  - Running computational models (often simple) many times
+  - Often search for strategies using optimization algorithms
+* Why? 
+  - Deriving the consequences of actions on complex systems with mental models alone is infeasible
+  - Considering only pre-specified strategies limits the ability of decision-makers to learn about the problem and identify robust solutions
+:::
+
+## Adaptive planning
+
+::: {.incremental}
+* What? 
+  - Strategies guide future decisions based on how the future unfolds
+* How? 
+  - Explore a wide variety of futures during plan design
+  - Identify actions that are best suited to different futures, as well as what signals ensure the timely implementation of those actions
+* Why? 
+  - Adaptive strategies are flexible, which contributes to robustness in the face of deep and dynamic uncertainties
+:::
+
+## Decision support
+
+* What? 
+  - An iterative, collaborative approach that facilitates learning across alternative framings of the problem and learning about stakeholder preferences and trade-offs
+* How?
+  - Good question! This is an area with little guidance in the field... 
+* Why?
+  - Under deep uncertainty, decision support moves away from trying to define what is the "right" choice and instead enable decision-makers to converge on an acceptable decision
+
+# Disambiguating approaches that optimize strategies across multiple objectives
+
+## High-level overview
+![[Bartholomew and Kwakkel (2020)](https://doi.org/10.1016/j.envsoft.2020.104699)](../_assets/img/mordm_approaches.jpg)
+
+## What these approaches share
+* All three building blocks discussed earlier
+* The use of a multi-objective evolutionary algorithm (MOEA) to identify a large, diverse set of strategies that capture trade-offs
+
+## What's "wrong" with MORDM?
+::: {.columns}
+
+::: {.column #vcenter width="40%"}
+The main idea for Multi-Scenario MORDM or Many-Objective Robust Optimization comes the observation that solutions found through optimization for a reference scenario can have very poor performance
+in other scenarios.
+:::
+
+::: {.column #vcenter width="60%"}
+![Remember lab?](../_assets//img/regret_lab.png)
+:::
+
+:::
+
+## Why Multi-Scenario MORDM?
+* The main innovation of MORDM is using a MOEA to obtain a large, diverse set of strategies that capture trade-offs
+* Multi-Scenario MORDM builds on this by adding more reference scenarios (based on scenario discovery) to enhance diversity of strategy alternatives that are Pareto optimal strategies under different scenarios
+
+::: {.fragment}
+[Bartholomew and Kwakkel (2020)](https://doi.org/10.1016/j.envsoft.2020.104699) recommend this approach as a good balance for identifying candidates that are optimal within scenarios, robust across scenarios, and not too computationally challenging to find.
+:::
+
+## Why MORO?
+::: {.quote}
+> Since the overarching aim of supporting decision making under deep uncertainty is the identification of robust strategies that offer an acceptable performance across multiple competing objectives, why not include these robustness considerations already in the search phase for candidate solutions? 
+:::
+[Bartholomew and Kwakkel (2020)](https://doi.org/10.1016/j.envsoft.2020.104699)
+
+::: {.fragment}
+But this approach is computationally intense and can sacrifice identifying strategies that are optimal in any given scenario!
+:::
+
+## Approaches that go by different names, but fit into the above classes
+* Deeply uncertain pathways, a variant of MORO, by [Trindade et al. (2019)](https://doi.org/10.1016/j.advwatres.2019.103442)
+* A novel approach to scenario discovery to enhance Multi-Scenario MORDM by [Shavazipour et al. (2021)](https://doi.org/10.1016/j.envsoft.2021.105134)
+
+
+# Composing context-specific approaches for your problem
+
+## Key features to consider in reviewing studies
+- Identify how the optimization handles "shallow" uncertainties 
+- Identify whether robustness is an objective in the MOEA
+  - Even when robustness is an objective, studies often evaluate robustness on a new set of samples as a form of "validation"
+- In evaluating the performance of strategies, do they assume all scenarios are equally likely?
+  - Multi-scenario MORDM and MORO make it really important to understand how a study calculates objective values for strategies
+
+## What you shouldn't implement
+**Do not:**
+
+* Use an approach you don't understand and can't write clearly about
+* Evaluate objectives across scenarios without an explicit probability distribution (but then is your problem really deeply uncertain?)
+* Neglect well-characterized uncertainties
+
+## What should you implement?
+The uncomfortable truth is that the literature does not provide clear guidance on this question, and that's probably a major reason you were all interested in taking this course. 
+
+::: {.fragment}
+As always, you can justify your choice with strong framing :) 
+:::
+
+::: {.fragment}
+And this is what the strong papers and analyses do. Reach out to someone whose work you admire!
+:::

@@ -1,0 +1,29 @@
+---
+format:
+  html:
+    title: Week 5 Readings
+
+reference-location: document
+citation-location: document
+sidebar: main
+---
+
+## Required Reading
+
+1. @KwakkelHaasnoot2019
+    - This is a relatively short read and is good for thinking about the overall picture. 
+2. @BartholomewKwakkel2020
+    - This is the paper we're going to review for our case study on Wednesday. I'll lead this one. 
+
+## Optional Reading
+
+There are a few approaches since the DMDU taxonomy chapter that I think are worth knowing about and considering as potentially relevant for your study. 
+
+- @Trindade-etal-2019
+- @Shavazipour-etal-2021
+- @Doss-Gollin2023
+- @Ciullo-etal-2023
+
+### References
+::: {#refs}
+:::

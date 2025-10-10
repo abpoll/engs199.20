@@ -1,0 +1,75 @@
+---
+title: "Your presentation and report outlines"
+date: "10/31/2025"
+published-title: "Due Date:"
+format:
+    html:        
+        warning: true
+        error: true
+sidebar: main
+---
+## Instructions
+
+This is your opportunity to get feedback on how you're structuring your ideas for your final presentation and report. Your presentation and report should tell the same story, but they should be appropriate for the context and audience. Your presentation is 15 minutes, so you need to deliver a tight and clear high-level story about your decision analysis. Your report is a draft of several sections of your next peer-reviewed publication about your decision analysis. You can, and should, extrapolate on context and details in this format but should not depart much from the narrative arc of your presentation. The two are great to work on simultaneously. 
+
+In this module, the main thing we are learning how to do is tie together the concepts from previous modules into a coherent and appropriate end-to-end analytical framework that address our decision problem. As such, this is the time for you in both presentation and report form to lay out:
+
+1. What is the decision problem?
+2. Why is it important?
+3. How are decisions made right now?
+4. What is the state-of-the-art in understanding this problem and status quo?
+5. What room is there for progress?
+6. What gap do you address?
+    - How can you simply characterize your main refinement and contribution?
+    - One way to do this convincingly is to frame it as a "status quo + 1" type of story (or something analogous)
+    - It can help to focus on one key part of the logic of the overarching DMDU approach (e.g., this study focuses on trade-offs, this study focuses on how accounting for deep uncertainties reveals that currently preferred strategies may have high regret)
+7. How will you address this in *your study*?
+    - What is "real" and "stylized" in your approach?
+    - What is out of scope? 
+8. What do you hypothesize you will find? 
+9. What are your plans to connect your decision analysis insights to decision-makers?
+
+For both your presentation and report, imagine a general science audience. This means that you don't have to completely simplify your language like you might for interviews with journalists, but you should define concepts that are specific to your field and the kind of decision analysis we learned in this course. For example, if you refer to parameters in your model without clarification (e.g., with a schematic representation of your model and avoiding abbreviations when possible), your colleagues in the course and I will likely not be able to follow your talk (or report). Similarly, if you do not define robustness, a more general audience will not follow your talk. And, if you do not define how you operationalize robustness in your setting, and why, your colleagues in the course and I will have a hard time evaluating your approach. 
+
+### Specific presentation outline instructions
+Consider the [presentation instructions and rubric](../project/presentation.qmd). Your presentation outline should document each slide and a clear description of the main point and associated content. For example:
+
+* Title slide
+* 1: The Justice40 Initiative is one of the main policies that the US government employs to address equity concerns.
+  - This is a short presentation so jump right into the current policy approach to deal with the decision problem
+  - Introduce the key elements of the Justice40 Initiative (very quickly) and highlight parts of it that the study focuses on
+  - Specifically need to introduce the spatial mismatch problem of intended goals and what they measure
+* 2: Can prioritizing funding at coarse spatial scales achieve equity across households?
+  - Show figure that captures this main idea
+  - Introduce short bullets with animation on the figure that really emphasizes this potential spatial mismatch problem
+* 3: Adaptation outcomes are shaped by multi-level policy contexts, calling for a local case study.
+  - Justify case study approach
+  - Explain what is in and out of scope
+  - For the Justice40 context, it's relevant to highlight flooding issues in the case study, how the city has not obtained funds before from the programs "covered" by Justice40, etc., 
+
+I recommend targeting an average of 1.5 minutes per slide, which translates to 10 slides. Note that some slides will take more or less time, so 10 is guidance but not an expectation. You don't want to rush through any detail-heavy slides or crucial points. 
+
+### Specific report outline instructions
+Consider the [report instructions and rubric](../project/report.qmd). Your report outline should consist of the following:
+
+1. A full outline of your introduction
+    - Use strong signal sentences for each paragraph to trace the high-level narrative
+    - Include sub-bullets under each signal sentence bullet to indicate key references, important evidence, any figures you plan to cite
+2. A partial outline of your methods (not nec. in the following order)
+    - Overview of the overall decision analysis workflow
+      - Take this opportunity to really highlight what your paper's goals are and how the workflow accommodates answering your specific research questions
+      - Talk about any framing activities (e.g., workshops or meetings with stakeholders, policy document review, etc.,)
+    - Highlight the key uncertainties relevant to your decision analyslis (specifically your paper's goals), explain the role uncertainty plays in your analysis (e.g., robustness considerations, scenario discovery, factor fixing, etc.,) and how you will address that
+    - The relevant objectives (and trade-offs/synergies) for your study, how you identified them, and how you will measure them
+    - If relevant, how you define and measure robustness and the justification for that
+    - Your exploratory modeling approach 
+      - You do not have to describe your model entirely here (though you might for your paper). For yoru report, you should think of this as being at the level of deatil for the "main" manuscript, but not for the supplementary info (e.g., extensive details on validation or calibration, data sources, etc.,)
+    - Your policy search approach (prespecified or generating solutions?) - if generating solutions, how will you handle deep uncertainties and do you consider robustness in your search?
+      - You should comment on the justification for your policy search approach, including how you represent the policy structure. Is it reasonable in your setting for a decision-maker to implement policies in this form? How stylized is this representation? 
+3. Figure sketches and bullet points of what question these anticipated results address and what hypotheses you represent in the figures
+
+## Submitting the Report
+
+You can submit one report, but please clearly separate the presentation outline and report outline.
+
+Export your writeup as a PDF and submit it to me over Slack. You can upload it to our course channel or direct message me, whichever you prefer. I will return my feedback to you before your practice presentation with ample time for you to incorporate it into your practice talk. 

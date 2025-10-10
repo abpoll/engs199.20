@@ -14,7 +14,7 @@ Note that the Gaps module does not have a progress report.
 | Uncertainty | [{{< fa sharp pen-field >}}](../updates/uncertainty.qmd) | 10/3/25 |
 | RDM | [{{< fa sharp pen-field >}}](../updates/rdm.qmd) | 10/10/25 |
 | Trade-offs | [{{< fa sharp pen-field >}}](../updates/tradeoffs.qmd) | 10/17/25 |
-| DMDU | {{< fa sharp pen-field >}} | 11/14/25 |
+| DMDU | [{{< fa sharp pen-field >}}](../updates/dmdu.qmd) | 10/31/25 |
 
 ## Rubric
 Your grade is based on your perceived effort. Even if you do not fully understand how to apply lessons from a module to your project, you can receive full credit for a report if you understand your knowledge gaps and form strong questions for me to provide clarification and direction for you. You can receive 0-3 points on each assignment.
@@ -31,4 +31,4 @@ The instructions for each report will include examples of specific questions abo
 
 I will provide as much detailed feedback on each report as I can. This means that the more thought and effort you put into your report, the more guidance you will receive. This will help you on your project presentation and report. However, you must apply discretion when writing your report and should not include too much or irrelevant details. Concision is a very important feature of strong synthesis. 
 
-Late submissions receive a 25% downgrading of the full credit score for each l ate day. Extension requests must be made 24 hours before the submission deadline with a submission of what you have achieved so far.
+Late submissions receive a 25% downgrading of the full credit score for each late day. Extension requests must be made 24 hours before the submission deadline with a submission of what you have achieved so far.

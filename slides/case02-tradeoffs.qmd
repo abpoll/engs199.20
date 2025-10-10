@@ -48,12 +48,14 @@ See if you can come up with examples of trade-offs that can occur across:
 
 ## Discuss the study's approach
 What role did the following methods play?
+
 ::: {.incremental}
 * Group discussions
 * Model calibration
 * Participatory conceptual modeling
 * Toy model
 * Workshop observation and qualitative interviews
+:::
 
 ## Discuss results
 

@@ -1,0 +1,49 @@
+---
+title: "Project Report Instructions"
+---
+
+## Overview
+Your project report is a *draft* of several sections of your paper:
+
+1. Your introduction
+2. Several parts of your methods section
+3. The hypothesized results from your decision analysis
+
+Going into more detail on each section:
+
+### Your introduction
+With all the attention we've paid to framing, you are ready to write a first (or more refined) draft of your paper's introduction. You can follow other structures, but one way to do an effective structure mirrors your presentation by answering:
+
+* What is your decision problem?
+* What is the state of the art in addressing this problem?
+* What is wrong with the status quo?
+* What knowledge gaps are there and which do you address?
+* How will you address these knowledge gaps (not too technical)?
+* What are your hypotheses about your planned decision analysis?
+* What are the implications?
+
+For some journals, especially those with space constraints, the last two bullets are not necessary (or possible) to include. For your report, I would like you to include these for completeness. You can always use that text in other sections. 
+
+### Your methods
+One of the main things we learned in this course is that our analytical choices stem from our framing choices, and that we should have strong justifications for why our methods appropriately operationalize these choices. Here are the types of analytical choices you can write a draft about in your report: 
+
+- Overview of the overall decision analysis workflow
+    - Take this opportunity to really highlight what your paper's goals are and how the workflow accommodates answering your specific research questions
+    - Talk about any framing activities (e.g., workshops or meetings with stakeholders, policy document review, etc.,)
+- Highlight the key uncertainties relevant to your decision analyslis (specifically your paper's goals), explain the role uncertainty plays in your analysis (e.g., robustness considerations, scenario discovery, factor fixing, etc.,) and how you will address that
+- The relevant objectives (and trade-offs/synergies) for your study, how you identified them, and how you will measure them
+- If relevant, how you define and measure robustness and the justification for that
+- Your exploratory modeling approach 
+    - You do not have to describe your model entirely here (though you might for your paper). For yoru report, you should think of this as being at the level of deatil for the "main" manuscript, but not for the supplementary info (e.g., extensive details on validation or calibration, data sources, etc.,)
+- Your policy search approach (prespecified or generating solutions?) - if generating solutions, how will you handle deep uncertainties and do you consider robustness in your search?
+    - You should comment on the justification for your policy search approach, including how you represent the policy structure. Is it reasonable in your setting for a decision-maker to implement policies in this form? How stylized is this representation? 
+
+### Your results
+It is important for you to form hypotheses before you start your analysis. Given the exploratory nature of our modeling, and the many uncertainties involved with framing and data and projections, hypotheses are a good way to safeguard against errors in implementation. More importantly, they require you to think hard and encourage you to treat your modeling exercise as a complement to your reasoning instead of replacement. Importantly, one reason that we use exploratory modeling is that it can be *a priori* infeasible to anticipate the consequences of our complex system of study and the decision space we consider. You can form hypotheses about the types of mechanisms that could explain results in different directions. You can also explain the types of analyses you will do to get to the bottom of reuslts you find.  
+
+In our trade-offs module report, we proposed figure sketches about how the strategies under consideration might navigate trade-offs in our problem. Now, we will apply the figure sketch technique more broadly to the results-based narrative of our study. What are the key results you will generate in response to your research questions? Sketch these out, include figure captions, and write text summarizing your hypotheses. Compared to the other sections, you do not have to write these summaries in the same narrative style but they should be in complete sentences and reflect your reasoning about the complex system and decision space.  
+
+## Rubric
+For the purposes of the training, there is no grade assigned. For credit-based versions of this course, it is up to instructor discretion to design a grading scheme. 
+
+That said, there will be a peer evaluation aspect to the final report in the training, and I propose this for credit-based versions of the course as well. 

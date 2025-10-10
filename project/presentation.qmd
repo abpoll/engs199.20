@@ -3,7 +3,7 @@ title: "Project Presentation Instructions"
 ---
 
 ## Overview
-Your project presentation will provide a narrative overview of your project. You are allowed 12-15 minutes for your presentation, which should cover the following:
+Your project presentation will provide a narrative overview of your project. You are allowed 15 minutes for your presentation, which should cover the following:
 
 * What is your decision problem?
 * What is the state of the art in addressing this problem?
@@ -18,6 +18,8 @@ You can find some links to good practices on presentations in the [Other Resourc
 As an audience member, you will be responsible for one short summary and round of moderation of group discussion for a colleague's project. Your summary should focus on the story of the project and should clarify any parts of the story that were not clear to you. Your round of moderation should facilitate specific attention from the other audience members. For example, you can prompt other students to comment on potential limitations in proposed methods or you can prompt the presenter to clarify a specific narrative point. 
 
 ## Rubric
+
+The below is a proposed grading scheme for future credit-based versions of the course. For the purposes of the training, there is no grade assigned. We will do the peer evaluation, though. 
 
 You can receive a maximum of 20 points, with credit opportunities as follows:
 
