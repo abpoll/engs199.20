@@ -51,6 +51,7 @@ This entails:
 ## We've seen this before!
 [Lempert and Collins (2007)](https://doi.org/10.1111/j.1539-6924.2007.00940.x)
 
+::: {.incremental}
 1. Exploratory modeling
   - Simple model of lake dynamics
   - Evaluates decisions optimal for one critical P over a wide range of critical P scenarios
@@ -58,6 +59,7 @@ This entails:
   - The town learns about critical P over time and determines their anthropogenic inflows based on observed P and best-guess critical P
 3. Decision support
   - Calculates two robustness metrics and visualizes results in several ways
+:::
 
 ## Exploratory modeling
 
@@ -86,12 +88,14 @@ This entails:
 
 ## Decision support
 
+::: {.incremental}
 * What? 
   - An iterative, collaborative approach that facilitates learning across alternative framings of the problem and learning about stakeholder preferences and trade-offs
 * How?
   - Good question! This is an area with little guidance in the field... 
 * Why?
   - Under deep uncertainty, decision support moves away from trying to define what is the "right" choice and instead enable decision-makers to converge on an acceptable decision
+:::
 
 # Disambiguating approaches that optimize strategies across multiple objectives
 
@@ -142,18 +146,23 @@ But this approach is computationally intense and can sacrifice identifying strat
 # Composing context-specific approaches for your problem
 
 ## Key features to consider in reviewing studies
+
+::: {.incremental}
 - Identify how the optimization handles "shallow" uncertainties 
 - Identify whether robustness is an objective in the MOEA
   - Even when robustness is an objective, studies often evaluate robustness on a new set of samples as a form of "validation"
 - In evaluating the performance of strategies, do they assume all scenarios are equally likely?
   - Multi-scenario MORDM and MORO make it really important to understand how a study calculates objective values for strategies
+:::
 
 ## What you shouldn't implement
 **Do not:**
 
+::: {.incremental}
 * Use an approach you don't understand and can't write clearly about
 * Evaluate objectives across scenarios without an explicit probability distribution (but then is your problem really deeply uncertain?)
 * Neglect well-characterized uncertainties
+:::
 
 ## What should you implement?
 The uncomfortable truth is that the literature does not provide clear guidance on this question, and that's probably a major reason you were all interested in taking this course. 
@@ -165,3 +174,8 @@ As always, you can justify your choice with strong framing :)
 ::: {.fragment}
 And this is what the strong papers and analyses do. Reach out to someone whose work you admire!
 :::
+
+# Logistics
+## This week
+* Case study Wednesday
+* Possibly a tutorial Friday, otherwise open Q&A/take stock

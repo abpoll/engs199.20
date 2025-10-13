@@ -25,16 +25,16 @@ With all the attention we've paid to framing, you are ready to write a first (or
 For some journals, especially those with space constraints, the last two bullets are not necessary (or possible) to include. For your report, I would like you to include these for completeness. You can always use that text in other sections. 
 
 ### Your methods
-One of the main things we learned in this course is that our analytical choices stem from our framing choices, and that we should have strong justifications for why our methods appropriately operationalize these choices. Here are the types of analytical choices you can write a draft about in your report: 
+One of the main things we learned in this course is that our analytical choices stem from our framing choices and that we should have strong justifications for why our methods appropriately operationalize these choices. Here are the types of analytical choices you can write a draft about in your report: 
 
 - Overview of the overall decision analysis workflow
     - Take this opportunity to really highlight what your paper's goals are and how the workflow accommodates answering your specific research questions
     - Talk about any framing activities (e.g., workshops or meetings with stakeholders, policy document review, etc.,)
-- Highlight the key uncertainties relevant to your decision analyslis (specifically your paper's goals), explain the role uncertainty plays in your analysis (e.g., robustness considerations, scenario discovery, factor fixing, etc.,) and how you will address that
+- Highlight the key uncertainties relevant to your decision analysis (specifically your paper's goals), explain the role uncertainty plays in your analysis (e.g., robustness considerations, scenario discovery, factor fixing, etc.,) and how you will address that
 - The relevant objectives (and trade-offs/synergies) for your study, how you identified them, and how you will measure them
 - If relevant, how you define and measure robustness and the justification for that
 - Your exploratory modeling approach 
-    - You do not have to describe your model entirely here (though you might for your paper). For yoru report, you should think of this as being at the level of deatil for the "main" manuscript, but not for the supplementary info (e.g., extensive details on validation or calibration, data sources, etc.,)
+    - You do not have to describe your model entirely here (though you might for your paper). For your report, you should think of this as being at the level of deatil for the "main" manuscript, but not for the supplementary info (e.g., extensive details on validation or calibration, data sources, etc.,)
 - Your policy search approach (prespecified or generating solutions?) - if generating solutions, how will you handle deep uncertainties and do you consider robustness in your search?
     - You should comment on the justification for your policy search approach, including how you represent the policy structure. Is it reasonable in your setting for a decision-maker to implement policies in this form? How stylized is this representation? 
 

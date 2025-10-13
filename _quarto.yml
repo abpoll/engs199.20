@@ -59,8 +59,6 @@ website:
             text: Presentation
           - href: project/report.qmd
             text: Final Report
-      - href: resources.qmd
-        text: Other Resources
 
 echo: true
 
