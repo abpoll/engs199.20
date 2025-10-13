@@ -13,8 +13,6 @@ Your project presentation will provide a narrative overview of your project. You
 * What are your hypotheses about your planned decision analysis?
 * What are the implications?
 
-You can find some links to good practices on presentations in the [Other Resources](../resources.qmd) section of the course webpage. 
-
 As an audience member, you will be responsible for one short summary and round of moderation of group discussion for a colleague's project. Your summary should focus on the story of the project and should clarify any parts of the story that were not clear to you. Your round of moderation should facilitate specific attention from the other audience members. For example, you can prompt other students to comment on potential limitations in proposed methods or you can prompt the presenter to clarify a specific narrative point. 
 
 ## Rubric
