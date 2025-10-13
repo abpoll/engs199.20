@@ -143,6 +143,7 @@
 <li><a href="#/building-blocks-of-a-dmdu-analysis" id="/toc-building-blocks-of-a-dmdu-analysis">Building blocks of a DMDU analysis</a></li>
 <li><a href="#/disambiguating-approaches-that-optimize-strategies-across-multiple-objectives" id="/toc-disambiguating-approaches-that-optimize-strategies-across-multiple-objectives">Disambiguating approaches that optimize strategies across multiple objectives</a></li>
 <li><a href="#/composing-context-specific-approaches-for-your-problem" id="/toc-composing-context-specific-approaches-for-your-problem">Composing context-specific approaches for your problem</a></li>
+<li><a href="#/logistics" id="/toc-logistics">Logistics</a></li>
 </ul>
 </nav>
 </section>
@@ -172,25 +173,27 @@
 <section id="weve-seen-this-before" class="slide level2 scrollable">
 <h2>We’ve seen this before!</h2>
 <p><a href="https://doi.org/10.1111/j.1539-6924.2007.00940.x">Lempert and Collins (2007)</a></p>
+<div>
 <ol type="1">
-<li>Exploratory modeling</li>
+<li class="fragment">Exploratory modeling</li>
 </ol>
 <ul>
-<li>Simple model of lake dynamics</li>
-<li>Evaluates decisions optimal for one critical P over a wide range of critical P scenarios</li>
+<li class="fragment">Simple model of lake dynamics</li>
+<li class="fragment">Evaluates decisions optimal for one critical P over a wide range of critical P scenarios</li>
 </ul>
 <ol start="2" type="1">
-<li>Adaptive planning</li>
+<li class="fragment">Adaptive planning</li>
 </ol>
 <ul>
-<li>The town learns about critical P over time and determines their anthropogenic inflows based on observed P and best-guess critical P</li>
+<li class="fragment">The town learns about critical P over time and determines their anthropogenic inflows based on observed P and best-guess critical P</li>
 </ul>
 <ol start="3" type="1">
-<li>Decision support</li>
+<li class="fragment">Decision support</li>
 </ol>
 <ul>
-<li>Calculates two robustness metrics and visualizes results in several ways</li>
+<li class="fragment">Calculates two robustness metrics and visualizes results in several ways</li>
 </ul>
+</div>
 </section>
 <section id="exploratory-modeling" class="slide level2">
 <h2>Exploratory modeling</h2>
@@ -235,20 +238,22 @@
 </section>
 <section id="decision-support" class="slide level2">
 <h2>Decision support</h2>
+<div>
 <ul>
-<li>What?
+<li class="fragment">What?
 <ul>
-<li>An iterative, collaborative approach that facilitates learning across alternative framings of the problem and learning about stakeholder preferences and trade-offs</li>
+<li class="fragment">An iterative, collaborative approach that facilitates learning across alternative framings of the problem and learning about stakeholder preferences and trade-offs</li>
 </ul></li>
-<li>How?
+<li class="fragment">How?
 <ul>
-<li>Good question! This is an area with little guidance in the field…</li>
+<li class="fragment">Good question! This is an area with little guidance in the field…</li>
 </ul></li>
-<li>Why?
+<li class="fragment">Why?
 <ul>
-<li>Under deep uncertainty, decision support moves away from trying to define what is the “right” choice and instead enable decision-makers to converge on an acceptable decision</li>
+<li class="fragment">Under deep uncertainty, decision support moves away from trying to define what is the “right” choice and instead enable decision-makers to converge on an acceptable decision</li>
 </ul></li>
 </ul>
+</div>
 </section></section>
 <section>
 <section id="disambiguating-approaches-that-optimize-strategies-across-multiple-objectives" class="title-slide slide level1 center">
@@ -316,26 +321,30 @@
 </section>
 <section id="key-features-to-consider-in-reviewing-studies" class="slide level2">
 <h2>Key features to consider in reviewing studies</h2>
+<div>
 <ul>
-<li>Identify how the optimization handles “shallow” uncertainties</li>
-<li>Identify whether robustness is an objective in the MOEA
+<li class="fragment">Identify how the optimization handles “shallow” uncertainties</li>
+<li class="fragment">Identify whether robustness is an objective in the MOEA
 <ul>
-<li>Even when robustness is an objective, studies often evaluate robustness on a new set of samples as a form of “validation”</li>
+<li class="fragment">Even when robustness is an objective, studies often evaluate robustness on a new set of samples as a form of “validation”</li>
 </ul></li>
-<li>In evaluating the performance of strategies, do they assume all scenarios are equally likely?
+<li class="fragment">In evaluating the performance of strategies, do they assume all scenarios are equally likely?
 <ul>
-<li>Multi-scenario MORDM and MORO make it really important to understand how a study calculates objective values for strategies</li>
+<li class="fragment">Multi-scenario MORDM and MORO make it really important to understand how a study calculates objective values for strategies</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="what-you-shouldnt-implement" class="slide level2">
 <h2>What you shouldn’t implement</h2>
 <p><strong>Do not:</strong></p>
+<div>
 <ul>
-<li>Use an approach you don’t understand and can’t write clearly about</li>
-<li>Evaluate objectives across scenarios without an explicit probability distribution (but then is your problem really deeply uncertain?)</li>
-<li>Neglect well-characterized uncertainties</li>
+<li class="fragment">Use an approach you don’t understand and can’t write clearly about</li>
+<li class="fragment">Evaluate objectives across scenarios without an explicit probability distribution (but then is your problem really deeply uncertain?)</li>
+<li class="fragment">Neglect well-characterized uncertainties</li>
 </ul>
+</div>
 </section>
 <section id="what-should-you-implement" class="slide level2">
 <h2>What should you implement?</h2>
@@ -346,6 +355,18 @@
 <div class="fragment">
 <p>And this is what the strong papers and analyses do. Reach out to someone whose work you admire!</p>
 </div>
+</section></section>
+<section>
+<section id="logistics" class="title-slide slide level1 center">
+<h1>Logistics</h1>
+
+</section>
+<section id="this-week" class="slide level2">
+<h2>This week</h2>
+<ul>
+<li>Case study Wednesday</li>
+<li>Possibly a tutorial Friday, otherwise open Q&amp;A/take stock</li>
+</ul>
 
 
 </section></section>
