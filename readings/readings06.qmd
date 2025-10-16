@@ -1,0 +1,31 @@
+---
+format:
+  html:
+    title: Week 6 Readings
+
+reference-location: document
+citation-location: document
+sidebar: main
+---
+
+## Required Reading
+
+1. @Herman-etal-2020
+    - Very helpful overview for thinking about policy search in water resources (and presented in a way that makes it easier to think about applications in other areas). 
+2. @Quinn-etal-2017
+    - This is the paper we're going to review for our case study on Wednesday. I'll lead this one. 
+
+## Optional Reading
+
+Below are a combination of example applications of policy search, along with some more theory-based papers that offer helpful classifications for thinking about different approaches to optimization and understanding where policy search sits in general. 
+
+- @CohenHerman2021
+    - This is a unique study because the authors consider a very wide variety of indicators, thresholds, and actions to find the optimal policy structure and form instead of prespecifying the policy. 
+- @HermanGiuliani2018
+    - This is a unique study because the authors explicitly aim to find interpretable policies using a policy tree structure. 
+- @Giuliani-etal-2021
+    - This is a helpful study to review because it situates policy search in a broader set of approaches for optimization in water resources. 
+
+### References
+::: {#refs}
+:::

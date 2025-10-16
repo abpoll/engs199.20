@@ -1,0 +1,146 @@
+---
+title: "Direct policy search"
+subtitle: "Lecture 06"
+author: "{{< var instructor.name_no_title >}}"
+course: "{{< var course.number >}}"
+institution: "{{< var university.name >}}"
+date: "October 20, 2025"
+format:
+    revealjs:
+        scrollable: true
+        slide-number: c/t
+        show-slide-number: all
+        center-title-slide: true
+        transition: none
+        toc: true
+        toc-depth: 1
+        toc-title: "Overview"
+        history: false
+        link-external-newwindow: true
+        theme: ../_assets/sass/slides.scss
+        template-partials:
+            - title-slide.html
+        menu:
+            numbers: true
+        date-format: long
+        email-obfuscation: javascript
+        controls: true
+execute:
+    freeze: auto
+    echo: false
+---
+
+# Dynamic planning
+## Basic idea
+Recall: RDM aims to identify strategies that perform well over a wide range of future conditions
+
+::: {.incremental}
+* What if we identify strategies that respond to new information over time?
+* Goal: Optimize the sequence, timing, and/or threshold values of observed variables to initiate actions 
+:::
+
+## A few technical considerations
+* Optimizing dynamic strategies is highly sensitive to uncertainty characterization
+    - UC determines how extreme stressors are and the sequence of events
+* There are many methods to implement this optimization and we will spend most of our time on one approach - direct policy search 
+
+# Climate adaptation as a control problem
+
+## Problem overview {.nostretch}
+![[Herman et al., (2020)](https://doi.org/10.1029/2019WR025502)](../_assets/img/herman_control.jpg){height=600}
+
+## In math
+\begin{aligned}
+& \min_{\pi} \mathbb{E}_{e_{1}, \ldots, e_{H+1}} \sum_{t=0}^{H-1} J_{t}(x_{t}, a_{t}, e_{t}) + J_{H+1}(x_{H+1}) \\
+\text{subject to:} \quad
+& x_{t+1} = f_{t}(x_{t}, a_{t}, e_{t+1}), \quad t=0,\ldots,H-1 \\
+& a_{t} = \pi(I_{t}), \quad t=0,\ldots,H-1
+\end{aligned}
+
+where $x_{t}$ are system states, $a_{t}$ are discrete actions, $e_{t}$ are external forcings, $I_{t}$ is the information, and $J$ are objectives. The system follows the state transition equation $x_{t+1} = f_{t}(x_{t}, a_{t}, e_{t+1})$ in a single realization of the external disturbance with a single action.
+
+## Open loop
+
+\begin{aligned}
+& \min_{\pi} \mathbb{E}_{e_{1}, \ldots, e_{H+1}} \sum_{t=0}^{H-1} J_{t}(x_{t}, a_{t}, e_{t}) + J_{H+1}(x_{H+1}) \\
+\text{subject to:} \quad
+& x_{t+1} = f_{t}(x_{t}, a_{t}, e_{t+1}), \quad t=0,\ldots,H-1 \\
+& a_{t} = \pi(I_{t}), \quad t=0,\ldots,H-1
+\end{aligned}
+
+Open loop directly optimizes directly optimizes the sequence of actions over the time horizon, $a_{t} = \pi(t)$. In theory, you can use any optimization method (e.g., linear programming, nonlinear programming, heuristics, enumeration).
+
+## Closed loop
+In contrast to open loop, closed loop approaches direct actions based on observed conditions. At a high level, there are three main approaches: 
+
+* Stochastic dynamic programming
+* Find the optimal sequence of decisions based on approximating the optimal value function
+* Approximate the optimal sequence of decisions based on optimizing a particular policy structure
+
+**Most MORDM studies employ one class of methods in that last approach.**
+
+# Direct policy search
+## Intuition
+Specify a policy with a functional form and parameters such that $a_{t} = \pi(I_{t}, \theta)$.
+
+After reformulating the optimization problem this way, what we identify is a mapping of observations to actions. The "optimal" policy is limited by the functional form of $\pi$ and the numerical convergence of the optimization. 
+
+## Why "Optimal" in quotes?
+We usually can't guarantee that we can find an optimum (or even quantify an *optimality gap*) because:
+
+- Simulation-optimization is applied in very general settings;
+- May not have much *a priori* information about the response surface;
+- The response surface can be highly nonlinear.
+
+::: {.footer}
+Credit to Vivek Srikrishnan, [Environmental Systems Analysis](https://envsys.viveks.me/)
+::: 
+
+## Why "Optimal" in quotes?
+::: {.quote}
+The  **optimal  solution  of  a  model  is  not  an  optimal  solution  of  a  problem  unless  the  model  is a  perfect  representation  of the  problem**,  which  it  **never**  is.
+
+::: {.cite}
+--- Ackoff, R. L. (1979). "The Future of Operational Research is Past." *The Journal of the Operational Research Society*, 30(2), 93–104. <https://doi.org/10.1057/jors.1979.22>
+:::
+:::
+
+::: {.footer}
+Credit to Vivek Srikrishnan, [Environmental Systems Analysis](https://envsys.viveks.me/)
+::: 
+
+## Some more technical details
+Studies consider many functional forms for $\pi$ including linear decision rules, neural networks, radial basis functions, and binary trees. 
+
+Evolutionary algorithms are widely used to support policy search because the relationship between policy parameters and objective functions may be multimodal or discontinuous (which makes gradient-based techniques complicated or infeasible).
+
+## Policy search schematic
+![[Herman et al., (2020)](https://doi.org/10.1029/2019WR025502)](../_assets/img/herman_policy.jpg)
+
+## DPS example - radial basis function 
+![[Quinn et al., (2017)](https://doi.org/10.1016/j.envsoft.2017.02.017)](../_assets/img/quinn_dps.jpg)
+
+## DPS example - radial basis function
+![[Marangoni et al., (2021)](https://doi.org/10.1007/s10584-021-03132-x)](../_assets/img/marangoni_dps.jpg)
+
+## DPS example - policy tree
+![[Herman and Giuliani (2018)](https://doi.org/10.1016/j.envsoft.2017.09.016)](../_assets/img/herman_dps.jpg)
+
+## DPS example - infrastructure pathways {.nostretch}
+![[Trindade et al. (2019)](https://doi.org/10.1016/j.advwatres.2019.103442)](../_assets/img/trindade_dps.jpg){height=600}
+
+# Keeping decision support in mind
+## Who will implement these policies?
+* Studies document limited uptake of optimization-based methods by practitioners (e.g., [Pianosi et al., (2020)](https://doi.org/10.1061/(ASCE)WR.1943-5452.0001301))
+* Decision-makers may prefer simpler and more understandable tools
+
+## Even with promised uptake, remember these challenges
+* Pay attention to convergence
+* Consider your computational budget
+* You may not be able to gurantee more than a local "optimum"
+* MOEAs are less "transparent" than conventional OR-based approaches and may have important but hidden assumptions
+
+# Upcoming schedule
+## This week
+* Case study Wednesday
+* Tutorial on DPS for lake problem Friday
