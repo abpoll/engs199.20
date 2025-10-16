@@ -1,6 +1,6 @@
 ---
 title: "Direct policy search"
-subtitle: "Lecture 06"
+subtitle: "Lecture 07"
 author: "{{< var instructor.name_no_title >}}"
 course: "{{< var course.number >}}"
 institution: "{{< var university.name >}}"
