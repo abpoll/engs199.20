@@ -33,80 +33,88 @@
     <lastmod>2025-09-16T12:48:45.906Z</lastmod>
   </url>
   <url>
-    <loc>https://abpoll.github.io/engs199.20/slides/lecture03-uncertainty.html</loc>
-    <lastmod>2025-09-14T20:36:54.007Z</lastmod>
+    <loc>https://abpoll.github.io/engs199.20/slides/case03-dps.html</loc>
+    <lastmod>2025-10-22T17:11:50.015Z</lastmod>
   </url>
   <url>
-    <loc>https://abpoll.github.io/engs199.20/slides/case02-tradeoffs.html</loc>
-    <lastmod>2025-10-08T19:19:09.547Z</lastmod>
-  </url>
-  <url>
-    <loc>https://abpoll.github.io/engs199.20/slides/lecture05-tradeoffs.html</loc>
-    <lastmod>2025-10-06T19:02:06.911Z</lastmod>
-  </url>
-  <url>
-    <loc>https://abpoll.github.io/engs199.20/updates/tradeoffs.html</loc>
-    <lastmod>2025-10-03T16:28:23.292Z</lastmod>
-  </url>
-  <url>
-    <loc>https://abpoll.github.io/engs199.20/updates/rdm.html</loc>
-    <lastmod>2025-09-23T20:56:32.117Z</lastmod>
-  </url>
-  <url>
-    <loc>https://abpoll.github.io/engs199.20/updates/overview.html</loc>
-    <lastmod>2025-09-17T19:52:07.612Z</lastmod>
-  </url>
-  <url>
-    <loc>https://abpoll.github.io/engs199.20/labs.html</loc>
-    <lastmod>2025-10-03T17:15:31.902Z</lastmod>
-  </url>
-  <url>
-    <loc>https://abpoll.github.io/engs199.20/schedule/schedule.html</loc>
-    <lastmod>2025-09-17T19:31:29.359Z</lastmod>
-  </url>
-  <url>
-    <loc>https://abpoll.github.io/engs199.20/labs/lab05-tradeoffs.html</loc>
-    <lastmod>2025-10-10T19:03:27.155Z</lastmod>
-  </url>
-  <url>
-    <loc>https://abpoll.github.io/engs199.20/labs/lab01-setup.html</loc>
-    <lastmod>2025-09-24T13:24:47.929Z</lastmod>
-  </url>
-  <url>
-    <loc>https://abpoll.github.io/engs199.20/labs/lab04-rdm.html</loc>
-    <lastmod>2025-09-23T20:48:24.557Z</lastmod>
-  </url>
-  <url>
-    <loc>https://abpoll.github.io/engs199.20/labs/lab02-intro.html</loc>
-    <lastmod>2025-09-24T13:24:52.963Z</lastmod>
-  </url>
-  <url>
-    <loc>https://abpoll.github.io/engs199.20/labs/lab03-ucuq.html</loc>
-    <lastmod>2025-09-17T19:51:14.319Z</lastmod>
-  </url>
-  <url>
-    <loc>https://abpoll.github.io/engs199.20/index.html</loc>
-    <lastmod>2025-09-14T18:10:38.304Z</lastmod>
-  </url>
-  <url>
-    <loc>https://abpoll.github.io/engs199.20/updates/uncertainty.html</loc>
-    <lastmod>2025-09-17T19:52:25.266Z</lastmod>
-  </url>
-  <url>
-    <loc>https://abpoll.github.io/engs199.20/updates/dmdu.html</loc>
-    <lastmod>2025-10-09T21:20:41.788Z</lastmod>
-  </url>
-  <url>
-    <loc>https://abpoll.github.io/engs199.20/slides/game01-decisionsfordecade.html</loc>
-    <lastmod>2025-09-09T20:31:56.155Z</lastmod>
+    <loc>https://abpoll.github.io/engs199.20/slides/lecture06-dmdu.html</loc>
+    <lastmod>2025-10-13T16:46:21.764Z</lastmod>
   </url>
   <url>
     <loc>https://abpoll.github.io/engs199.20/slides/lecture01-intro.html</loc>
     <lastmod>2025-09-14T18:08:55.637Z</lastmod>
   </url>
   <url>
-    <loc>https://abpoll.github.io/engs199.20/slides/lecture06-dmdu.html</loc>
-    <lastmod>2025-10-13T16:46:21.764Z</lastmod>
+    <loc>https://abpoll.github.io/engs199.20/slides/game01-decisionsfordecade.html</loc>
+    <lastmod>2025-09-09T20:31:56.155Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/updates/dmdu.html</loc>
+    <lastmod>2025-10-09T21:20:41.788Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/updates/uncertainty.html</loc>
+    <lastmod>2025-09-17T19:52:25.266Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/index.html</loc>
+    <lastmod>2025-09-14T18:10:38.304Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/labs/lab03-ucuq.html</loc>
+    <lastmod>2025-09-17T19:51:14.319Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/labs/lab02-intro.html</loc>
+    <lastmod>2025-09-24T13:24:52.963Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/labs/lab06-dps.html</loc>
+    <lastmod>2025-10-22T17:07:47.559Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/labs/lab04-rdm.html</loc>
+    <lastmod>2025-09-23T20:48:24.557Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/labs/lab01-setup.html</loc>
+    <lastmod>2025-09-24T13:24:47.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/labs/lab05-tradeoffs.html</loc>
+    <lastmod>2025-10-10T19:03:27.155Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/schedule/schedule.html</loc>
+    <lastmod>2025-09-17T19:31:29.359Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/labs.html</loc>
+    <lastmod>2025-10-03T17:15:31.902Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/updates/overview.html</loc>
+    <lastmod>2025-09-17T19:52:07.612Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/updates/rdm.html</loc>
+    <lastmod>2025-09-23T20:56:32.117Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/updates/tradeoffs.html</loc>
+    <lastmod>2025-10-03T16:28:23.292Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/slides/lecture05-tradeoffs.html</loc>
+    <lastmod>2025-10-06T19:02:06.911Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/slides/case02-tradeoffs.html</loc>
+    <lastmod>2025-10-08T19:19:09.547Z</lastmod>
+  </url>
+  <url>
+    <loc>https://abpoll.github.io/engs199.20/slides/lecture03-uncertainty.html</loc>
+    <lastmod>2025-09-14T20:36:54.007Z</lastmod>
   </url>
   <url>
     <loc>https://abpoll.github.io/engs199.20/slides/case01-rdm.html</loc>

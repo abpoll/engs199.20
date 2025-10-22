@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="ENGS 199.20">
+<meta name="dcterms.date" content="2025-10-31">
+
+<title>Lab 6: Implementing Direct Policy Search – ENGS 199.20 - Fall 2025</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-51708a3f6fe96a8431666b02a5f1c25b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-857b89ac35367dc1dc1487267b3a483d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/all.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-1.2.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Lab 6: Implementing Direct Policy Search – ENGS 199.20 - Fall 2025">
+<meta property="og:description" content="Homepage for ENGS 199.20, Decision Analysis for Wicked Climate Problems, at Dartmouth College, Fall 2025.">
+<meta property="og:image" content="https://abpoll.github.io/engs199.20/_assets/img/quinn_nonlinear.jpg">
+<meta property="og:site_name" content="ENGS 199.20 - Fall 2025">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+          <h1 class="quarto-secondary-nav-title">Lab 6: Implementing Direct Policy Search</h1>
+        </a>     
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../_assets/logos/D-Pine_all_formats/D-Pine_RGB.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">ENGS 199.20</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://www.github.com/abpoll/engs199.20" title="Github Repository" class="quarto-navigation-tool px-1" aria-label="Github Repository"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../schedule/schedule.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Labs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../project/overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Project</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/updates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Module Reports</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/presentation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Final Report</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#lab-workflow" id="toc-lab-workflow" class="nav-link" data-scroll-target="#lab-workflow">Lab Workflow</a>
+  <ul class="collapse">
+  <li><a href="#repository-setup" id="toc-repository-setup" class="nav-link" data-scroll-target="#repository-setup">Repository Setup</a></li>
+  <li><a href="#environment-setup" id="toc-environment-setup" class="nav-link" data-scroll-target="#environment-setup">Environment Setup</a></li>
+  <li><a href="#our-analysis" id="toc-our-analysis" class="nav-link" data-scroll-target="#our-analysis">Our Analysis</a></li>
+  <li><a href="#wrapping-up-lab" id="toc-wrapping-up-lab" class="nav-link" data-scroll-target="#wrapping-up-lab">Wrapping up lab</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://www.github.com/abpoll/engs199.20/edit/main/labs/lab06-dps.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://www.github.com/abpoll/engs199.20/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lab06-dps.ipynb" download="lab06-dps.ipynb"><i class="bi bi-journal-code"></i>Jupyter</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Lab 6: Implementing Direct Policy Search</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>ENGS 199.20 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Due Date:</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 31, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Today we’re going to compare open loop intertemporal and closed loop (via direct policy search with a radial basis function) optimization. This lab replicates and adapts various analyses in Quinn, J.D., Reed, P.M., Keller, K. (2017). <a href="https://www.sciencedirect.com/science/article/pii/S1364815216302250">Direct policy search for robust multi-objective management of deeply uncertain socio-ecological tipping points.</a> Environmental Modelling &amp; Software 92, 125-141.</p>
+<p>Today’s objectives:</p>
+<ol type="1">
+<li>Learn about Pareto optimal strategies for the simple lake problem obtained using the open loop and closed loop approaches<br>
+</li>
+<li>Evaluate and explain the solution dynamics from various strategies from both approaches</li>
+<li>Calculate performance metrics for different strategies</li>
+<li>Demonstrate your conceptual understanding of dynamic planning and how it relates to robustness</li>
+<li>Describe how you could incorporate dynamic planning into your decision analysis</li>
+</ol>
+</section>
+<section id="lab-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="lab-workflow">Lab Workflow</h2>
+<section id="repository-setup" class="level3">
+<h3 class="anchored" data-anchor-id="repository-setup">Repository Setup</h3>
+<p>You can call the repository <code>dps_lab/</code>.</p>
+<p>If you need a reminder on how to set up your project directory and create a GitHub repository, check the workflow and directory structure from lab 2.</p>
+<p>You can directly export these lab instructions as a <code>.ipynb</code> file (look at the top right of the page). I put this file file directly under my <code>dps_lab/</code> dps directory. If you organize your directory different, please update relative filepaths in the code below accordingly.</p>
+</section>
+<section id="environment-setup" class="level3">
+<h3 class="anchored" data-anchor-id="environment-setup">Environment Setup</h3>
+<p>Environment wise, you can use the one we set up for the previous lab.</p>
+<p>Be sure to include instructions in your <code>README.md</code> about how others can prepare the computational environment to run your notebook.</p>
+</section>
+<section id="our-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="our-analysis">Our Analysis</h3>
+<p>Make sure your environment is set up and active to run the code cells below.</p>
+<section id="revised-lake-problem-overview" class="level4">
+<h4 class="anchored" data-anchor-id="revised-lake-problem-overview">Revised lake problem overview</h4>
+<p>Quinn et al., (2017) share the general concept of our problem statement in Lab 4 but introduce a different representation of system dynamics, new planning objectives, and new policy search approaches.</p>
+<p>Due to ongoing economic activity, a town emits phosphorous into a shallow lake (with a concentration of <span class="math inline">\(a_t\)</span>), which also receives non-point source runoff (concentration <span class="math inline">\(y_t\)</span>) from the surrounding area. The concentration of the lake at time <span class="math inline">\(t+1\)</span> is given by <span class="math display">\[X_{t+1} = X_t + a_t + y_t + \frac{X_t^q}{1+X_t^q} - bX_t,\]</span></p>
+<p>where:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Parameter</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(a_t\)</span></td>
+<td style="text-align: left;">point-source phosphorous concentration from the town</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(y_t\)</span></td>
+<td style="text-align: left;">non-point-source phosphorous concentration</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(q\)</span></td>
+<td style="text-align: left;">rate at which phosphorous is recycled from sediment</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(b\)</span></td>
+<td style="text-align: left;">rate at which phosphorous leaves the lake</td>
+</tr>
+</tbody>
+</table>
+<p>and <span class="math inline">\(X_0 = 0\)</span>, <span class="math inline">\(y_t \sim LogNormal(\log(0.03), 0.25)\)</span>, <span class="math inline">\(q=2.5\)</span>, and <span class="math inline">\(b=0.4\)</span>.</p>
+<p>The goal of the optimization is to meet several objectices:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 30%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Objective</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: center;">Preference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Economic Benefits</td>
+<td style="text-align: left;">Discounted economic benefits, assumed proportional to discounted P emissions</td>
+<td style="text-align: center;">Max</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Lake P Concentration</td>
+<td style="text-align: left;">Measure of the lake quality, where lower P concentrations correspond to clearer lakes</td>
+<td style="text-align: center;">Min</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Policy Inertia</td>
+<td style="text-align: left;">Measure of the stability of the control policy, where stable policies are favored</td>
+<td style="text-align: center;">Max</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Reliability</td>
+<td style="text-align: left;">Percentage of simulations that the lake P concentration is below the critical P threshold</td>
+<td style="text-align: center;">Max</td>
+</tr>
+</tbody>
+</table>
+<p>Please consult Section 3.1 of the paper to see the mathematical formulation of the objectives.</p>
+</section>
+<section id="non-linear-dynamics-in-the-shallow-lake-problem" class="level4">
+<h4 class="anchored" data-anchor-id="non-linear-dynamics-in-the-shallow-lake-problem">Non-linear dynamics in the shallow lake problem</h4>
+<p>Let’s take a closer look at the non-linear dynamics of the shallow lake problem.</p>
+<p>Each time step, the P concentration in the lake changes due to a natural inflow (+), an anthropogenic contribution (+), P recycled from sediments (+), and losses of P through outflow or sediment absorption (-). The critical P threshold exists where natural P recycling exceeds natural P losses as a function of the current P level in the lake. The paper has this helpful figure that illustrates the dynamics and critical P thresholds as a function of changing parameter values that determine natural recycling and loss rates.</p>
+<p><img src="../_assets/img/quinn_nonlinear.jpg" class="img-fluid"></p>
+<p>As posed in this and related studies, b &amp; q are deeply uncertain parameters. In a given state of the world, we can calculate critical P by finding the roots (the values of X that make the equation equal to 0) of: <span class="math inline">\(\frac{X_t^q}{1+X_t^q} - bX_t\)</span>.</p>
+<p>The intertemporal apporach will test out many possible combinations of <span class="math inline">\(a_t\)</span> over 100 years. With enough training, this approach could find the sequences of <span class="math inline">\(a_t\)</span> that are Pareto optimal and avoid the critical P threshold of the considered SOW. However, keep in mind that there are 100 decision variables! With <span class="math inline">\(.01 &lt; a_t &lt; .1, \forall t\)</span>, there are an infeasible number of candidate solutions to test.</p>
+<p>In contrast, by using direct policy search with radial basis functions, we completely transform the decision space. Following Section 3.2.2, we now represent the decision levers as: <span class="math display">\[
+a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) \quad \forall {t, i}
+\]</span></p>
+<p>This is a cubic radial basis function that parameterizes how to map P concentrations to P release decisions. <span class="math inline">\(c_j\)</span>, <span class="math inline">\(r_j\)</span> and <span class="math inline">\(w_j\)</span> are the centers, radii, and weights of <em>n</em> cubic radial basis functions. The decision variables are these <span class="math inline">\(3*n\)</span> parameters, rather than the <em>T</em> decision variables in the intertemporal optimization. The authors used 2 radial basis functions in this study, so the DPS and intertemporal approaches consider 6 vs.&nbsp;100 decision variables, respectively. The authors emphasize – and this is important! – that with the DPS approach, different P release decisions can be made in each of the N simulations (note the <em>i</em> indexing) because the decisions are informed by the lake P concentrations in a time step. We are searching for the values of <span class="math inline">\(c_1\)</span>, <span class="math inline">\(r_1\)</span>, <span class="math inline">\(w_1\)</span>, <span class="math inline">\(c_2\)</span>, <span class="math inline">\(r_2\)</span>, and <span class="math inline">\(w_2\)</span>.</p>
+<p>In addition to evaluating open loop vs.&nbsp;closed loop strategies for their expected performance on objectives (and how robustly they do well on objectives across SOWs), we are going to pay close attention to how the various strategies act as the P level in the lake gets close to the critical P threshold in both the SOW the policy was trained on and in new SOWs.</p>
+</section>
+<section id="comparing-intertemporal-and-dps" class="level4">
+<h4 class="anchored" data-anchor-id="comparing-intertemporal-and-dps">Comparing Intertemporal and DPS</h4>
+<p>Instead of running the optimization (which takes a very long time), we are fortunate that we can directly use the reuslts from Quinn et al., (2017) due to their very well-formatted <a href="https://github.com/julianneq/Lake_Problem_DPS">repository</a>. Download the repo, which you can do <a href="https://codeload.github.com/julianneq/Lake_Problem_DPS/zip/refs/heads/master">here</a>, and extract the data from the <code>DataInPaper</code> subdirectory. I created a subdirectory called <code>data</code> which is at the same level in the lab directory as my <code>.ipynb</code> file. I put all the contents of <code>DataInPaper</code> into <code>data</code>.</p>
+<p>To help build intuition about how the optimization works, we’ll break down the process a bit.</p>
+<p>Firt, let’s orient ourselves to the state of the world the optimization takes place in.</p>
+<div id="4bec343a" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Lake model parameters, number of years simulated, and number of samples generated</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="fl">0.42</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="fl">0.4</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>delta <span class="op">=</span> <span class="fl">0.98</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>mu <span class="op">=</span> <span class="fl">0.03</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> np.sqrt(<span class="dv">10</span><span class="op">**</span>(<span class="op">-</span><span class="fl">5.0</span>))</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>lake0 <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>nYears <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>nSamples <span class="op">=</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We can find the critical P threshold by identifying the value of X at which the natural P recycling and losses are equal to each other: <span class="math inline">\(\frac{X^q}{1+X^q} - bX = 0\)</span> -&gt; <span class="math inline">\(\frac{X^2}{1+X^2} - .42*X = 0\)</span>. There are several options to calculate this in python. We will use Brent’s method as implemented in <code>scipy</code>.</p>
+<div id="9ef7e09a" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> brentq</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>xs <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="fl">2.5</span>, <span class="fl">0.01</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recycling(x, q<span class="op">=</span>q):</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">**</span>q <span class="op">/</span> (<span class="fl">1.0</span> <span class="op">+</span> x<span class="op">**</span>q)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> losses(x, b<span class="op">=</span>b):</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> b <span class="op">*</span> x</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> recycling(xs)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> losses(xs)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>p_crit <span class="op">=</span> brentq(<span class="kw">lambda</span> x: x<span class="op">**</span>q <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> x<span class="op">**</span>q) <span class="op">-</span> b <span class="op">*</span> x, <span class="fl">0.01</span>, <span class="fl">1.5</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>ax.plot(xs, R, label<span class="op">=</span><span class="st">"Recycling when q=</span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(q), color<span class="op">=</span><span class="st">"C0"</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>ax.plot(xs, L, label<span class="op">=</span><span class="st">"Losses when b=</span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(b), color<span class="op">=</span><span class="st">"C1"</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>ax.axvline(p_crit, color<span class="op">=</span><span class="st">"k"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>ax.scatter([p_crit], [recycling(p_crit)], color<span class="op">=</span><span class="st">"red"</span>, zorder<span class="op">=</span><span class="dv">5</span>, label<span class="op">=</span><span class="ss">f"Critical P = </span><span class="sc">{</span>p_crit<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"P concentration"</span>, size<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"P Flux"</span>, size<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>ax.legend(fontsize<span class="op">=</span><span class="st">'large'</span>)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Critical P: </span><span class="sc">{</span>p_crit<span class="sc">:.4f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Critical P: 0.5445</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab06-dps_files/figure-html/cell-3-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Pay attention to the gap between losses and recycling in this state of the world to the left of the unstable equilibrium.</p>
+<p>When we do intertemporal optimization, we are considering anthropogenic releases between 0.01 and 0.1 at each time step. Crucially, we are considering the full sequence of those releases over 100 time steps. In the MOEA framework, the optimization considers a candidate sequence of 100 releases and tests this against each simulation of natural inflows (because this is stochastic). The optimization looks for the candidate sequences that do “best” on the expected value of the multiple objectives. Then, it continues searching based on the EA design.</p>
+<p>Let’s take a closer look at the intertemporal strategies highlighted in the paper that are best on the reliability and benefits objectives, respecitvely.</p>
+<div id="197abfc1" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> ss</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Intertemporal lake problem</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># We set a seed for consistent results with the paper</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># We pass in the 100 actions for the strategy</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> LakeModel_IT(seed, actions):</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set inflow distribution parameters</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    log_std <span class="op">=</span> np.sqrt(np.log(<span class="dv">1</span><span class="op">+</span>sigma<span class="op">**</span><span class="dv">2</span><span class="op">/</span>mu<span class="op">**</span><span class="dv">2</span>))</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    log_mu <span class="op">=</span> np.log(mu) <span class="op">-</span> <span class="fl">0.5</span><span class="op">*</span>(log_std<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialize arrays to store P level in the lake at each time step</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    lake_state <span class="op">=</span> np.zeros([nYears<span class="op">+</span><span class="dv">1</span>])</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Randomly generate nSamples of nYears of natural P inflows</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    natFlow <span class="op">=</span> np.zeros([nYears])</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    np.random.seed(seed)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    natFlow<span class="op">=</span> np.exp(ss.norm.rvs(log_mu, log_std, nYears))</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Run lake model simulation</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    lake_state[<span class="dv">0</span>] <span class="op">=</span> lake0</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(nYears):</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        lake_state[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> lake_state[i]<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>b) <span class="op">+</span> (lake_state[i]<span class="op">**</span>q)<span class="op">/</span>(<span class="dv">1</span><span class="op">+</span>(lake_state[i]<span class="op">**</span>q)) <span class="op">+</span> actions[i] <span class="op">+</span> natFlow[i]</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Return natural inflows and actions as well      </span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (lake_state, natFlow, actions)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the intertemporal results</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a><span class="co"># The rows are different strategies</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="co"># The first 100 columns are the actions</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="co"># The remaining columns are objective values, calculated</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="co"># as expected values over the simulated natural inflows</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="co"># The last column is the reliability objective</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>IT <span class="op">=</span> np.loadtxt(<span class="st">'./data/Intertemporal/Intertemporal.resultfile'</span>)</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="co"># The best reliability strategy minimizes the percentage of</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="co"># simulations within a SOW where we pass critical P</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>ITmostRel <span class="op">=</span> np.argmin(IT[:,<span class="dv">103</span>]) </span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="co"># The best benefits strategy maximizes net present value</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>ITmostBen <span class="op">=</span> np.argmin(IT[:,<span class="dv">100</span>])</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>years <span class="op">=</span> np.arange(nYears <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>mostRel_states_all <span class="op">=</span> []</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>mostBen_states_all <span class="op">=</span> []</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>),</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>                       dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> sim <span class="kw">in</span> <span class="bu">range</span>(nSamples):</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    IT_states_mostRel <span class="op">=</span> LakeModel_IT(sim, IT[ITmostRel, <span class="dv">0</span>:<span class="dv">100</span>])</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>    IT_states_mostBen <span class="op">=</span> LakeModel_IT(sim, IT[ITmostBen, <span class="dv">0</span>:<span class="dv">100</span>])</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>    mostRel_states_all.append(IT_states_mostRel[<span class="dv">0</span>])</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>    mostBen_states_all.append(IT_states_mostBen[<span class="dv">0</span>])</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot total P time series with low alpha for clarity</span></span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>    ax.plot(years, IT_states_mostRel[<span class="dv">0</span>], color<span class="op">=</span><span class="st">'tab:green'</span>, alpha<span class="op">=</span><span class="fl">0.01</span>)</span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>    ax.plot(years, IT_states_mostBen[<span class="dv">0</span>], color<span class="op">=</span><span class="st">'tab:green'</span>, alpha<span class="op">=</span><span class="fl">0.01</span>)</span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot mean total P for both strategies</span></span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>ax.plot(years, np.array(mostRel_states_all).mean(axis<span class="op">=</span><span class="dv">0</span>), color<span class="op">=</span><span class="st">'tab:green'</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">'-'</span>)</span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>ax.plot(years, np.array(mostBen_states_all).mean(axis<span class="op">=</span><span class="dv">0</span>), color<span class="op">=</span><span class="st">'tab:green'</span>, ls<span class="op">=</span><span class="st">'--'</span>, lw<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot actions (anthropogenic emissions) for both strategies</span></span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>ax.plot(years[:<span class="op">-</span><span class="dv">1</span>], IT_states_mostRel[<span class="dv">2</span>], color<span class="op">=</span><span class="st">'tab:blue'</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">'-'</span>)</span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>ax.plot(years[:<span class="op">-</span><span class="dv">1</span>], IT_states_mostBen[<span class="dv">2</span>], color<span class="op">=</span><span class="st">'tab:blue'</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a><span class="co"># Critical phosphorus concentration line</span></span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>ax.axhline(p_crit, color<span class="op">=</span><span class="st">'red'</span>, ls<span class="op">=</span><span class="st">'-.'</span>, label<span class="op">=</span><span class="st">'Critical P (threshold)'</span>)</span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a><span class="co"># Labels and title</span></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Year'</span>, size<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Phosphorus concentration / Emission flow'</span>, size<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>ax.set_ylim([<span class="dv">0</span>, <span class="dv">1</span>])</span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a><span class="co"># Custom legend</span></span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.lines <span class="im">import</span> Line2D</span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.patches <span class="im">import</span> Patch</span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>legend_elements <span class="op">=</span> [Line2D([<span class="dv">0</span>], [<span class="dv">0</span>], color<span class="op">=</span><span class="st">'gray'</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">'-'</span>, label<span class="op">=</span><span class="st">'Best Reliability Strategy'</span>),</span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>                   Line2D([<span class="dv">0</span>], [<span class="dv">0</span>], color<span class="op">=</span><span class="st">'gray'</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'Best Benefits Strategy'</span>),</span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>                   Patch(facecolor<span class="op">=</span><span class="st">'tab:blue'</span>, edgecolor<span class="op">=</span><span class="st">'tab:blue'</span>,</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>                         label<span class="op">=</span><span class="st">'Anthropogenic P'</span>),</span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a>                   Patch(facecolor<span class="op">=</span><span class="st">'tab:green'</span>, edgecolor<span class="op">=</span><span class="st">'tab:green'</span>,</span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a>                         label<span class="op">=</span><span class="st">'Total P'</span>),</span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a>                   Line2D([<span class="dv">0</span>], [<span class="dv">0</span>], color<span class="op">=</span><span class="st">'red'</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">'-.'</span>, label<span class="op">=</span><span class="st">'Critical P'</span>),]</span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>ax.legend(handles<span class="op">=</span>legend_elements,</span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>          loc<span class="op">=</span><span class="st">'upper left'</span>,</span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a>          fontsize<span class="op">=</span><span class="st">'large'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab06-dps_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Note that in order to see the anthropogenic P lines, I clipped the upper y limit, which goes well above 1 for Total P in the best benefits strategy case!</p>
+<p>Both strategies are assessed over identical natural P inflow realizations. What do you recognize about the different strategy behaviors?</p>
+<p>As an exercise, add subplots the P Flux from the natural P recycling and losses for each strategy across each realization. What do you notice about how the best benefits strategy manages the non-linear dynamics past the critical P threshold? Check equations 6-9 in the paper, which describe the intertemporal optimizaton, and explain how mathematical formulation choices influence the dynamics of the best benefits strategy. (Hint: consider constraints and the time horizon).</p>
+<p>Now, let’s take a look at the analagous policies the authors found with direct policy search. We’ll look at the state-action mappings from each as well as how that plays out over time.</p>
+<p>To start, we’ll plot the best reliability and benefits strategies:</p>
+<div id="61f7f8aa" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Getting the actions from a given DPS parameterization</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DPSpolicy(lake_state, <span class="bu">vars</span>):</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Determine centers, radii and weights of RBFs</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    C <span class="op">=</span> <span class="bu">vars</span>[<span class="dv">0</span>::<span class="dv">3</span>]</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    B <span class="op">=</span> <span class="bu">vars</span>[<span class="dv">1</span>::<span class="dv">3</span>]</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    W <span class="op">=</span> <span class="bu">vars</span>[<span class="dv">2</span>::<span class="dv">3</span>]</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    newW <span class="op">=</span> np.zeros(<span class="bu">len</span>(W))</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Normalize weights to sum to 1</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="bu">sum</span>(W)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> total <span class="op">!=</span> <span class="fl">0.0</span>:</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(W)):</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>            newW[i] <span class="op">=</span> W[i]<span class="op">/</span>total</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(W)):</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>            newW[i] <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>n</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Determine pollution emission decision, Y</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    Y <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(C)):</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> B[i] <span class="op">!=</span> <span class="dv">0</span>:</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            Y <span class="op">=</span> Y <span class="op">+</span> W[i]<span class="op">*</span>((np.absolute(lake_state<span class="op">-</span>C[i])<span class="op">/</span>B[i])<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    Y <span class="op">=</span> <span class="bu">min</span>(<span class="fl">0.1</span>,<span class="bu">max</span>(Y,<span class="fl">0.01</span>))</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Y</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the intertemporal results</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="co"># The rows are different strategies</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="co"># The first 100 columns are the actions</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="co"># The remaining columns are objective values, calculated</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="co"># as expected values over the simulated natural inflows</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="co"># The last column is the reliability objective</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>DPS <span class="op">=</span> np.loadtxt(<span class="st">'./data/DPS/DPS.resultfile'</span>)</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a><span class="co"># The best reliability strategy minimizes the percentage of</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a><span class="co"># simulations within a SOW where we pass critical P</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a><span class="co"># There are only 6 decision variables so the </span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="co"># reliability objective is in the 10th column (index 9)</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>DPSmostRel <span class="op">=</span> np.argmin(DPS[:,<span class="dv">9</span>]) </span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a><span class="co"># The best benefits strategy maximizes net present value</span></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>DPSmostBen <span class="op">=</span> np.argmin(DPS[:,<span class="dv">6</span>])</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the policy curves from the solutions</span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>lake_states <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="fl">2.5</span>, <span class="fl">0.01</span>)</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>rbf_list <span class="op">=</span> []</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> pol, var <span class="kw">in</span> <span class="bu">zip</span>([<span class="st">'Most Reliable'</span>, <span class="st">'Most Benefits'</span>, <span class="st">'Most Reliable (From Paper)'</span>], [DPSmostRel, DPSmostBen, <span class="dv">26</span>]):</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>    rbf <span class="op">=</span> pd.DataFrame()</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    rbf[<span class="st">'Lake P'</span>] <span class="op">=</span> pd.Series(lake_states)</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>    rbf[<span class="st">'Anthropogenic P'</span>] <span class="op">=</span> rbf[<span class="st">'Lake P'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: DPSpolicy(x, DPS[var, <span class="dv">0</span>:<span class="dv">6</span>]))</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>    rbf[<span class="st">'Strategy'</span>] <span class="op">=</span> pol</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    rbf_list.append(rbf)</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>rbfs <span class="op">=</span> pd.concat(rbf_list, axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>),</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>                       dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data<span class="op">=</span>rbfs, x<span class="op">=</span><span class="st">'Lake P'</span>, y<span class="op">=</span><span class="st">'Anthropogenic P'</span>, hue<span class="op">=</span><span class="st">'Strategy'</span>, style<span class="op">=</span><span class="st">'Strategy'</span>, ax<span class="op">=</span>ax)</span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>ax.set_xlim([<span class="dv">0</span>, <span class="dv">1</span>])</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>ax.axvline(p_crit, color<span class="op">=</span><span class="st">'red'</span>, ls<span class="op">=</span><span class="st">'-.'</span>, lw<span class="op">=</span><span class="dv">3</span>, label<span class="op">=</span><span class="st">'Critical P'</span>)</span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>ax.legend(fontsize<span class="op">=</span><span class="st">'large'</span>, loc<span class="op">=</span><span class="st">'lower right'</span>)</span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>ax.tick_params(<span class="st">'both'</span>, labelsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Anthropogenic P'</span>, size<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Lake P'</span>, size<span class="op">=</span><span class="dv">14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<pre><code>Text(0.5, 0, 'Lake P')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab06-dps_files/figure-html/cell-5-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>It turns out that many Pareto optimal strategies achieve the best reliability possible. We will consider an arbitrary strategy with the best reliability possible (blue) and the one used in the paper (green) for teaching purposes.</p>
+<p>Let’s see what Lake P we take actions on based on a single stochastic realization of natural inflows with these various control policies. You can run this code with different seeds to see different results.</p>
+<div id="064b2438" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> LakeModel_DPS_adapted(seed, <span class="bu">vars</span>):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    log_std <span class="op">=</span> np.sqrt(np.log(<span class="dv">1</span> <span class="op">+</span> sigma<span class="op">**</span><span class="dv">2</span> <span class="op">/</span> mu<span class="op">**</span><span class="dv">2</span>))</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    log_mu <span class="op">=</span> np.log(mu) <span class="op">-</span> <span class="fl">0.5</span><span class="op">*</span>(log_std<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    lake_state <span class="op">=</span> np.zeros([nYears <span class="op">+</span> <span class="dv">1</span>])</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    np.random.seed(seed)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    natFlow <span class="op">=</span> np.exp(ss.norm.rvs(log_mu, log_std, nYears))</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    recycling <span class="op">=</span> np.zeros(nYears)  <span class="co"># Store recycling term at each step</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> np.zeros(nYears)       <span class="co"># Store loss term (B * X_t) at each step</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    lake_state[<span class="dv">0</span>] <span class="op">=</span> lake0</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    Y <span class="op">=</span> np.zeros(nYears)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    Y[<span class="dv">0</span>] <span class="op">=</span> DPSpolicy(lake_state[<span class="dv">0</span>], <span class="bu">vars</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(nYears):</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        recycling[i] <span class="op">=</span> (lake_state[i]<span class="op">**</span>q) <span class="op">/</span> (<span class="dv">1</span> <span class="op">+</span> (lake_state[i]<span class="op">**</span>q))</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        loss[i] <span class="op">=</span> lake_state[i] <span class="op">*</span> b  <span class="co"># assuming 'b' is the retention/loss factor</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>        lake_state[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">=</span> lake_state[i] <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> b) <span class="op">+</span> recycling[i] <span class="op">+</span> Y[i] <span class="op">+</span> natFlow[i]</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">&lt;</span> nYears <span class="op">-</span> <span class="dv">1</span>:</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>            Y[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">=</span> DPSpolicy(lake_state[i <span class="op">+</span> <span class="dv">1</span>], <span class="bu">vars</span>)</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Return lake_state, natural inflows, emissions, recycling, and loss arrays</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> lake_state, natFlow, Y, recycling, loss</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>lake_state_rel, natFlow_rel, Y_rel, recycling_rel, loss_rel <span class="op">=</span> LakeModel_DPS_adapted(seed, DPS[DPSmostRel, <span class="dv">0</span>:<span class="dv">6</span>])</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>lake_state_ben, natFlow_ben, Y_ben, recycling_ben, loss_ben <span class="op">=</span> LakeModel_DPS_adapted(seed, DPS[DPSmostBen, <span class="dv">0</span>:<span class="dv">6</span>])</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>lake_state_paper, natFlow_paper, Y_paper, recycling_paper, loss_paper <span class="op">=</span> LakeModel_DPS_adapted(seed, DPS[<span class="dv">26</span>, <span class="dv">0</span>:<span class="dv">6</span>])</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>policies <span class="op">=</span> [<span class="st">'Most Reliable'</span>, <span class="st">'Most Benefits'</span>, <span class="st">'Most Reliable (From Paper)'</span>]</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>nat_flows <span class="op">=</span> [natFlow_rel, natFlow_ben, natFlow_paper]</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>rec_flows <span class="op">=</span> [recycling_rel, recycling_ben, recycling_paper]</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>loss_flows <span class="op">=</span> [loss_rel, loss_ben, loss_paper]</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>emissions <span class="op">=</span> [Y_rel, Y_ben, Y_paper]</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>lake_states_list <span class="op">=</span> [lake_state_rel, lake_state_ben, lake_state_paper]</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Create figure with 3 columns and 3 rows: histograms above &amp; below, curves in middle</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>height_ratios <span class="op">=</span> [<span class="fl">0.75</span>, <span class="dv">1</span>, <span class="fl">0.75</span>]  <span class="co"># lake P hist, policy curve, natural inflows hist</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">3</span>, <span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>), sharex<span class="op">=</span><span class="st">'col'</span>, sharey<span class="op">=</span><span class="st">'row'</span>,</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>                         gridspec_kw<span class="op">=</span>{<span class="st">'height_ratios'</span>: height_ratios, <span class="st">'hspace'</span>: <span class="fl">0.1</span>})</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>policies <span class="op">=</span> [<span class="st">'Most Reliable'</span>, <span class="st">'Most Benefits'</span>, <span class="st">'Most Reliable (From Paper)'</span>]</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Top row: Lake P histograms (less tall)</span></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axes[<span class="dv">0</span>]):</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>    sns.histplot(lake_states_list[i], binwidth<span class="op">=</span><span class="fl">.1</span>, color<span class="op">=</span><span class="st">'tab:blue'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, ax<span class="op">=</span>ax)</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="ss">f"</span><span class="sc">{</span>policies[i]<span class="sc">}</span><span class="ss">"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'Lake P Histogram'</span>)</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(axis<span class="op">=</span><span class="st">'x'</span>, labelbottom<span class="op">=</span><span class="va">False</span>)  <span class="co"># hide x labels on top row</span></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">''</span>)</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Middle row: Control policy curves (taller)</span></span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axes[<span class="dv">1</span>]):</span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> rbf_list[i]</span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>    sns.lineplot(data<span class="op">=</span>df, x<span class="op">=</span><span class="st">'Lake P'</span>, y<span class="op">=</span><span class="st">'Anthropogenic P'</span>, color<span class="op">=</span><span class="st">'tab:green'</span>, ax<span class="op">=</span>ax)</span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>    ax.axvline(p_crit, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'Critical P'</span>)</span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'Anthropogenic P'</span>)</span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(axis<span class="op">=</span><span class="st">'x'</span>, labelbottom<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>    ax.legend(fontsize<span class="op">=</span><span class="dv">9</span>, loc<span class="op">=</span><span class="st">'lower right'</span>)</span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">''</span>)</span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a><span class="co"># Bottom row: Natural inflows histograms (less tall)</span></span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axes[<span class="dv">2</span>]):</span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>    sns.histplot(nat_flows[i] <span class="op">+</span> rec_flows[i] <span class="op">+</span> loss_flows[i], binwidth<span class="op">=</span><span class="fl">.1</span>, color<span class="op">=</span><span class="st">'tab:orange'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, ax<span class="op">=</span>ax)</span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'P Concentration'</span>)</span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'Non Anthropogenic P Histogram'</span>)</span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">''</span>)</span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab06-dps_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>I intentionally chose a seed that leads to very high concentrations for the most benefits strategy. Check out a few other seeds. What seeds did you choose and do they produce the same patterns for each strategy?</p>
+<p>Here’s an example with a different seed:</p>
+<div id="04df817c" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="dv">42</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>lake_state_rel, natFlow_rel, Y_rel, recycling_rel, loss_rel <span class="op">=</span> LakeModel_DPS_adapted(seed, DPS[DPSmostRel, <span class="dv">0</span>:<span class="dv">6</span>])</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>lake_state_ben, natFlow_ben, Y_ben, recycling_ben, loss_ben <span class="op">=</span> LakeModel_DPS_adapted(seed, DPS[DPSmostBen, <span class="dv">0</span>:<span class="dv">6</span>])</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>lake_state_paper, natFlow_paper, Y_paper, recycling_paper, loss_paper <span class="op">=</span> LakeModel_DPS_adapted(seed, DPS[<span class="dv">26</span>, <span class="dv">0</span>:<span class="dv">6</span>])</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>policies <span class="op">=</span> [<span class="st">'Most Reliable'</span>, <span class="st">'Most Benefits'</span>, <span class="st">'Most Reliable (From Paper)'</span>]</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>nat_flows <span class="op">=</span> [natFlow_rel, natFlow_ben, natFlow_paper]</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>rec_flows <span class="op">=</span> [recycling_rel, recycling_ben, recycling_paper]</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>loss_flows <span class="op">=</span> [loss_rel, loss_ben, loss_paper]</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>emissions <span class="op">=</span> [Y_rel, Y_ben, Y_paper]</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>lake_states_list <span class="op">=</span> [lake_state_rel, lake_state_ben, lake_state_paper]</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Create figure with 3 columns and 3 rows: histograms above &amp; below, curves in middle</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>height_ratios <span class="op">=</span> [<span class="fl">0.75</span>, <span class="dv">1</span>, <span class="fl">0.75</span>]  <span class="co"># lake P hist, policy curve, natural inflows hist</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">3</span>, <span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>), sharex<span class="op">=</span><span class="st">'col'</span>, sharey<span class="op">=</span><span class="st">'row'</span>,</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>                         gridspec_kw<span class="op">=</span>{<span class="st">'height_ratios'</span>: height_ratios, <span class="st">'hspace'</span>: <span class="fl">0.1</span>})</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>policies <span class="op">=</span> [<span class="st">'Most Reliable'</span>, <span class="st">'Most Benefits'</span>, <span class="st">'Most Reliable (From Paper)'</span>]</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Top row: Lake P histograms (less tall)</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axes[<span class="dv">0</span>]):</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    sns.histplot(lake_states_list[i], binwidth<span class="op">=</span><span class="fl">.1</span>, color<span class="op">=</span><span class="st">'tab:blue'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, ax<span class="op">=</span>ax)</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="ss">f"</span><span class="sc">{</span>policies[i]<span class="sc">}</span><span class="ss">"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'Lake P Histogram'</span>)</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(axis<span class="op">=</span><span class="st">'x'</span>, labelbottom<span class="op">=</span><span class="va">False</span>)  <span class="co"># hide x labels on top row</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">''</span>)</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Middle row: Control policy curves (taller)</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axes[<span class="dv">1</span>]):</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> rbf_list[i]</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>    sns.lineplot(data<span class="op">=</span>df, x<span class="op">=</span><span class="st">'Lake P'</span>, y<span class="op">=</span><span class="st">'Anthropogenic P'</span>, color<span class="op">=</span><span class="st">'tab:green'</span>, ax<span class="op">=</span>ax)</span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>    ax.axvline(p_crit, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'Critical P'</span>)</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'Anthropogenic P'</span>)</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(axis<span class="op">=</span><span class="st">'x'</span>, labelbottom<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>    ax.legend(fontsize<span class="op">=</span><span class="dv">9</span>, loc<span class="op">=</span><span class="st">'lower right'</span>)</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">''</span>)</span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Bottom row: Natural inflows histograms (less tall)</span></span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axes[<span class="dv">2</span>]):</span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>    sns.histplot(nat_flows[i] <span class="op">+</span> rec_flows[i] <span class="op">+</span> loss_flows[i], binwidth<span class="op">=</span><span class="fl">.1</span>, color<span class="op">=</span><span class="st">'tab:orange'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, ax<span class="op">=</span>ax)</span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'P Concentration'</span>)</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'Non Anthropogenic P Histogram'</span>)</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">''</span>)</span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab06-dps_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>What do you see about the distribution of all observed P concentrations across the realizations you evaluated of both naturally (inflows, recycling, loss summed on bottom row) and including the anthropogenic P concentration (top row)?</p>
+<p>Now, let’s look across many stochastic realizations.</p>
+<div id="60d33827" class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>lake_state_rel, natFlow_rel, Y_rel, recycling_rel, loss_rel <span class="op">=</span> LakeModel_DPS_adapted(seed, DPS[DPSmostRel, <span class="dv">0</span>:<span class="dv">6</span>])</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>lake_state_ben, natFlow_ben, Y_ben, recycling_ben, loss_ben <span class="op">=</span> LakeModel_DPS_adapted(seed, DPS[DPSmostBen, <span class="dv">0</span>:<span class="dv">6</span>])</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>lake_state_paper, natFlow_paper, Y_paper, recycling_paper, loss_paper <span class="op">=</span> LakeModel_DPS_adapted(seed, DPS[<span class="dv">26</span>, <span class="dv">0</span>:<span class="dv">6</span>])</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>policies <span class="op">=</span> [<span class="st">'Most Reliable'</span>, <span class="st">'Most Benefits'</span>, <span class="st">'Most Reliable (From Paper)'</span>]</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>nat_flows <span class="op">=</span> [natFlow_rel, natFlow_ben, natFlow_paper]</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>rec_flows <span class="op">=</span> [recycling_rel, recycling_ben, recycling_paper]</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>loss_flows <span class="op">=</span> [loss_rel, loss_ben, loss_paper]</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>emissions <span class="op">=</span> [Y_rel, Y_ben, Y_paper]</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>lake_states_list <span class="op">=</span> [lake_state_rel, lake_state_ben, lake_state_paper]</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Create figure with 3 columns and 3 rows: histograms above &amp; below, curves in middle</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>height_ratios <span class="op">=</span> [<span class="fl">0.75</span>, <span class="dv">1</span>, <span class="fl">0.75</span>]  <span class="co"># lake P hist, policy curve, natural inflows hist</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">3</span>, <span class="dv">3</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>), sharex<span class="op">=</span><span class="st">'col'</span>, sharey<span class="op">=</span><span class="st">'row'</span>,</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>                         gridspec_kw<span class="op">=</span>{<span class="st">'height_ratios'</span>: height_ratios, <span class="st">'hspace'</span>: <span class="fl">0.1</span>})</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>policies <span class="op">=</span> [<span class="st">'Most Reliable'</span>, <span class="st">'Most Benefits'</span>, <span class="st">'Most Reliable (From Paper)'</span>]</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Top row: Lake P histograms (over all runs) - log scale y-axis</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axes[<span class="dv">0</span>]):</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    sns.histplot(lake_states_list[i], binwidth<span class="op">=</span><span class="fl">.1</span>, color<span class="op">=</span><span class="st">'tab:blue'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, ax<span class="op">=</span>ax)</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>    ax.set_yscale(<span class="st">'log'</span>) </span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="ss">f"</span><span class="sc">{</span>policies[i]<span class="sc">}</span><span class="ss">"</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'Lake P Histogram'</span>)</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    ax.set_xlim([<span class="dv">0</span>, <span class="dv">1</span>])</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(axis<span class="op">=</span><span class="st">'x'</span>, labelbottom<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">''</span>)</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Middle row: Control policy curves (taller)</span></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axes[<span class="dv">1</span>]):</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> rbf_list[i]</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>    sns.lineplot(data<span class="op">=</span>df, x<span class="op">=</span><span class="st">'Lake P'</span>, y<span class="op">=</span><span class="st">'Anthropogenic P'</span>, color<span class="op">=</span><span class="st">'tab:green'</span>, ax<span class="op">=</span>ax)</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>    ax.axvline(p_crit, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'Critical P'</span>)</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'Anthropogenic P'</span>)</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(axis<span class="op">=</span><span class="st">'x'</span>, labelbottom<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>    ax.legend(fontsize<span class="op">=</span><span class="dv">9</span>, loc<span class="op">=</span><span class="st">'lower right'</span>)</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">''</span>)</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Bottom row: Natural inflows histograms (less tall)</span></span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axes[<span class="dv">2</span>]):</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>    combined <span class="op">=</span> nat_flows[i] <span class="op">+</span> rec_flows[i] <span class="op">+</span> loss_flows[i]</span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>    sns.histplot(combined, binwidth<span class="op">=</span><span class="fl">.1</span>, color<span class="op">=</span><span class="st">'tab:orange'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, ax<span class="op">=</span>ax)</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>    ax.set_yscale(<span class="st">'log'</span>)</span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'P Concentration'</span>)</span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'Non Anthropogenic P Histogram'</span>)</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>    ax.set_xlim([<span class="dv">0</span>, <span class="dv">1</span>])</span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>        ax.set_ylabel(<span class="st">''</span>)</span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab06-dps_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>What do you see about the distribution of all observed P concentrations across all the realizations of both naturally (inflows, recycling, loss summed on bottom row) and including the anthropogenic P concentration (top row)?</p>
+<p>Let’s take a look at these P concentrations across all of these states. Each realization can have a different anthropogenic P sequence, so we’re not going to plot exactly the same way we did for the intertemporal.</p>
+<div id="5e02b886" class="cell" data-execution_count="8">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>policy_names <span class="op">=</span> [<span class="st">'Most Reliable'</span>, <span class="st">'Most Benefits'</span>, <span class="st">'Most Reliable (From Paper)'</span>]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>policy_indices <span class="op">=</span> [DPSmostRel, DPSmostBen, <span class="dv">26</span>]</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Preallocate storage for states for all simulations and policies</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>nSamples <span class="op">=</span> <span class="dv">100</span>  <span class="co"># your number of Monte Carlo simulations</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>nYears <span class="op">=</span> <span class="dv">100</span>    <span class="co"># length of simulation</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>years <span class="op">=</span> np.arange(nYears <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>totalP_all <span class="op">=</span> {name: [] <span class="cf">for</span> name <span class="kw">in</span> policy_names}</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>anthP_all <span class="op">=</span> {name: [] <span class="cf">for</span> name <span class="kw">in</span> policy_names}</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>natP_all <span class="op">=</span> {name: [] <span class="cf">for</span> name <span class="kw">in</span> policy_names}</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>recP_all <span class="op">=</span> {name: [] <span class="cf">for</span> name <span class="kw">in</span> policy_names}</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>lossP_all <span class="op">=</span> {name: [] <span class="cf">for</span> name <span class="kw">in</span> policy_names}</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Run all simulations for each policy</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> sim <span class="kw">in</span> <span class="bu">range</span>(nSamples):</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, idx <span class="kw">in</span> <span class="bu">zip</span>(policy_names, policy_indices):</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>        lake_state, natFlow, actions, recs, losses <span class="op">=</span> LakeModel_DPS_adapted(sim <span class="op">+</span> <span class="dv">1000</span>, DPS[idx, <span class="dv">0</span>:<span class="dv">6</span>])</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># collect total phosphorus time series (index 0 of returned tuple)</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>        totalP_all[name].append(lake_state)</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># collect anthro P time series</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>        anthP_all[name].append(actions)</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>        <span class="co"># collect the rest</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>        natP_all[name].append(natFlow)</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>        recP_all[name].append(recs)</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>        lossP_all[name].append(losses)</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting setup</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">7</span>), dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> {<span class="st">'Most Reliable'</span>: <span class="st">'tab:green'</span>,</span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>          <span class="st">'Most Benefits'</span>: <span class="st">'tab:orange'</span>,</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>          <span class="st">'Most Reliable (From Paper)'</span>: <span class="st">'tab:purple'</span>}</span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>linestyles <span class="op">=</span> {<span class="st">'Most Reliable'</span>: <span class="st">'-'</span>,</span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>              <span class="st">'Most Benefits'</span>: <span class="st">'--'</span>,</span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>              <span class="st">'Most Reliable (From Paper)'</span>: <span class="st">'-.'</span>}</span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot individual simulation total P flows with very low alpha</span></span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> policy_names:</span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> run <span class="kw">in</span> totalP_all[name]:</span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>        ax.plot(years, run, color<span class="op">=</span>colors[name], alpha<span class="op">=</span><span class="fl">0.05</span>)</span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot mean total P time series for each policy</span></span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> policy_names:</span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>    mean_totalP <span class="op">=</span> np.mean(totalP_all[name], axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>    ax.plot(years, mean_totalP, color<span class="op">=</span>colors[name], lw<span class="op">=</span><span class="dv">2</span>, linestyle<span class="op">=</span>linestyles[name], label<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> Mean Total P'</span>)</span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot critical phosphorus concentration line</span></span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>ax.axhline(p_crit, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'-.'</span>, lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'Critical P (threshold)'</span>)</span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Labels and limits</span></span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Year'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Phosphorus concentration / Emission flow'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a>ax.set_ylim([<span class="dv">0</span>, <span class="dv">1</span>])</span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Construct a clear custom legend</span></span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a>legend_elements <span class="op">=</span> [</span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>    Line2D([<span class="dv">0</span>], [<span class="dv">0</span>], color<span class="op">=</span>colors[<span class="st">'Most Reliable'</span>], lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span>linestyles[<span class="st">'Most Reliable'</span>], label<span class="op">=</span><span class="st">'Most Reliable Mean Total P'</span>),</span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>    Line2D([<span class="dv">0</span>], [<span class="dv">0</span>], color<span class="op">=</span>colors[<span class="st">'Most Benefits'</span>], lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span>linestyles[<span class="st">'Most Benefits'</span>], label<span class="op">=</span><span class="st">'Most Benefits Mean Total P'</span>),</span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>    Line2D([<span class="dv">0</span>], [<span class="dv">0</span>], color<span class="op">=</span>colors[<span class="st">'Most Reliable (From Paper)'</span>], lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span>linestyles[<span class="st">'Most Reliable (From Paper)'</span>], label<span class="op">=</span><span class="st">'Most Reliable (From Paper) Mean Total P'</span>),</span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a>    Line2D([<span class="dv">0</span>], [<span class="dv">0</span>], color<span class="op">=</span><span class="st">'red'</span>, lw<span class="op">=</span><span class="dv">2</span>, ls<span class="op">=</span><span class="st">'-.'</span>, label<span class="op">=</span><span class="st">'Critical P (threshold)'</span>)</span>
+<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a>ax.legend(handles<span class="op">=</span>legend_elements, loc<span class="op">=</span><span class="st">'upper right'</span>, fontsize<span class="op">=</span><span class="st">'large'</span>)</span>
+<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Lake Phosphorus Concentrations and Emissions Across DPS Policies'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab06-dps_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>How would you characterize the behavior of the different strategies? Is the mean P a good way to characterize the strategies’ dynamics?</p>
+<p>Let’s take a closer look at those realizations where the max benefit policy leads to eutrophication.</p>
+<div id="89c4f69b" class="cell" data-execution_count="9">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.gridspec <span class="im">import</span> GridSpec</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> pd.DataFrame(totalP_all[<span class="st">'Most Benefits'</span>])</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Runs that exceed critical P</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>eutrophic_runs_idx <span class="op">=</span> temp[(temp <span class="op">&gt;</span> p_crit).<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>) <span class="op">&gt;</span> <span class="dv">0</span>].index</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>non_eutrophic_runs_idx <span class="op">=</span> temp[(temp <span class="op">&gt;</span> p_crit).<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>) <span class="op">==</span> <span class="dv">0</span>].index</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the eutrophic realizations data</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>totalP_eutrophic <span class="op">=</span> [totalP_all[<span class="st">'Most Benefits'</span>][i] <span class="cf">for</span> i <span class="kw">in</span> eutrophic_runs_idx]</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>anthP_eutrophic <span class="op">=</span> [anthP_all[<span class="st">'Most Benefits'</span>][i] <span class="cf">for</span> i <span class="kw">in</span> eutrophic_runs_idx]</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>natFlow_eutrophic <span class="op">=</span> [natP_all[<span class="st">'Most Benefits'</span>][i] <span class="cf">for</span> i <span class="kw">in</span> eutrophic_runs_idx]</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>recycling_eutrophic <span class="op">=</span> [recP_all[<span class="st">'Most Benefits'</span>][i] <span class="cf">for</span> i <span class="kw">in</span> eutrophic_runs_idx]</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>loss_eutrophic <span class="op">=</span> [lossP_all[<span class="st">'Most Benefits'</span>][i] <span class="cf">for</span> i <span class="kw">in</span> eutrophic_runs_idx]</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co"># And non eutrophic</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>totalP_non_eutrophic <span class="op">=</span> [totalP_all[<span class="st">'Most Benefits'</span>][i] <span class="cf">for</span> i <span class="kw">in</span> non_eutrophic_runs_idx]</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>anthP_non_eutrophic <span class="op">=</span> [anthP_all[<span class="st">'Most Benefits'</span>][i] <span class="cf">for</span> i <span class="kw">in</span> non_eutrophic_runs_idx]</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>natFlow_non_eutrophic <span class="op">=</span> [natP_all[<span class="st">'Most Benefits'</span>][i] <span class="cf">for</span> i <span class="kw">in</span> non_eutrophic_runs_idx]</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>recycling_non_eutrophic <span class="op">=</span> [recP_all[<span class="st">'Most Benefits'</span>][i] <span class="cf">for</span> i <span class="kw">in</span> non_eutrophic_runs_idx]</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>loss_non_eutrophic <span class="op">=</span> [lossP_all[<span class="st">'Most Benefits'</span>][i] <span class="cf">for</span> i <span class="kw">in</span> non_eutrophic_runs_idx]</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>years <span class="op">=</span> np.arange(<span class="bu">len</span>(totalP_eutrophic[<span class="dv">0</span>]))</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Net recycling/loss:</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>net_recycling_eutrophic <span class="op">=</span> [r <span class="op">-</span> l <span class="cf">for</span> r, l <span class="kw">in</span> <span class="bu">zip</span>(recycling_eutrophic, loss_eutrophic)]</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>net_recycling_non_eutrophic <span class="op">=</span> [r <span class="op">-</span> l <span class="cf">for</span> r, l <span class="kw">in</span> <span class="bu">zip</span>(recycling_non_eutrophic, loss_non_eutrophic)]</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine and create figure</span></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>), dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>gs <span class="op">=</span> GridSpec(nrows<span class="op">=</span><span class="dv">2</span>, ncols<span class="op">=</span><span class="dv">2</span>, figure<span class="op">=</span>fig, width_ratios<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">1</span>], wspace<span class="op">=</span><span class="fl">0.1</span>, hspace<span class="op">=</span><span class="fl">0.25</span>, </span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>              height_ratios<span class="op">=</span>[<span class="fl">.3</span>, <span class="dv">1</span>])</span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Top panel: RBF control policies ---</span></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>ax0 <span class="op">=</span> fig.add_subplot(gs[<span class="dv">0</span>, :])</span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data<span class="op">=</span>rbfs[rbfs[<span class="st">'Strategy'</span>] <span class="op">==</span> <span class="st">'Most Benefits'</span>], x<span class="op">=</span><span class="st">'Lake P'</span>, y<span class="op">=</span><span class="st">'Anthropogenic P'</span>, hue<span class="op">=</span><span class="st">'Strategy'</span>, style<span class="op">=</span><span class="st">'Strategy'</span>, ax<span class="op">=</span>ax0)</span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>ax0.axvline(p_crit, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'-.'</span>, lw<span class="op">=</span><span class="dv">3</span>, label<span class="op">=</span><span class="st">'Critical P'</span>)</span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>ax0.set_title(<span class="st">'RBF Control Policy - Most Benefits'</span>, size<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>ax0.set_ylabel(<span class="st">'Anthropogenic P'</span>)</span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>ax0.set_xlabel(<span class="st">''</span>)</span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>ax0.set_xlim([<span class="dv">0</span>, <span class="fl">.6</span>])</span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>ax0.legend(fontsize<span class="op">=</span><span class="st">'medium'</span>)</span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Bottom panel, Left: Dynamics of eutrophic runs ---</span></span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>ax10 <span class="op">=</span> fig.add_subplot(gs[<span class="dv">1</span>, <span class="dv">0</span>])</span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(eutrophic_runs_idx)):</span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot each realization with low alpha for clarity:</span></span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>    ax10.plot(years, totalP_eutrophic[i], color<span class="op">=</span><span class="st">'tab:orange'</span>, alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>    ax10.plot(years[:<span class="op">-</span><span class="dv">1</span>], anthP_eutrophic[i], color<span class="op">=</span><span class="st">'tab:blue'</span>, alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a>    ax10.plot(years[:<span class="op">-</span><span class="dv">1</span>], natFlow_eutrophic[i], color<span class="op">=</span><span class="st">'tab:green'</span>, alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>    ax10.plot(years[:<span class="op">-</span><span class="dv">1</span>], net_recycling_eutrophic[i], color<span class="op">=</span><span class="st">'tab:red'</span>, alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Bottom panel, right: dynamics of non eutrophic runs</span></span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a>ax11 <span class="op">=</span> fig.add_subplot(gs[<span class="dv">1</span>, <span class="dv">1</span>])</span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(eutrophic_runs_idx)):</span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot each realization with low alpha for clarity:</span></span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a>    ax11.plot(years, totalP_non_eutrophic[i], color<span class="op">=</span><span class="st">'tab:orange'</span>, alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a>    ax11.plot(years[:<span class="op">-</span><span class="dv">1</span>], anthP_non_eutrophic[i], color<span class="op">=</span><span class="st">'tab:blue'</span>,  alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a>    ax11.plot(years[:<span class="op">-</span><span class="dv">1</span>], natFlow_non_eutrophic[i], color<span class="op">=</span><span class="st">'tab:green'</span>, alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a>    ax11.plot(years[:<span class="op">-</span><span class="dv">1</span>], net_recycling_non_eutrophic[i], color<span class="op">=</span><span class="st">'tab:red'</span>, alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a>ax10.axhline(p_crit, color<span class="op">=</span><span class="st">'black'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'Critical P'</span>)</span>
+<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a>ax10.set_xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a>ax10.set_ylabel(<span class="st">'P concentration / flux'</span>)</span>
+<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a>ax10.set_title(<span class="st">'Eutrophic Realizations'</span>)</span>
+<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a>ax10.set_xlim(<span class="dv">0</span>, <span class="dv">20</span>)</span>
+<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a>ax10.set_ylim([<span class="op">-</span><span class="fl">.1</span>, <span class="fl">.6</span>])</span>
+<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a>ax11.plot(years, np.mean(totalP_non_eutrophic, axis<span class="op">=</span><span class="dv">0</span>), color<span class="op">=</span><span class="st">'tab:orange'</span>, lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'Mean Total P'</span>)</span>
+<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a>ax11.plot(years[:<span class="op">-</span><span class="dv">1</span>], np.mean(anthP_non_eutrophic, axis<span class="op">=</span><span class="dv">0</span>), color<span class="op">=</span><span class="st">'tab:blue'</span>, lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'Mean Anthropogenic P'</span>)</span>
+<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a>ax11.plot(years[:<span class="op">-</span><span class="dv">1</span>], np.mean(natFlow_non_eutrophic, axis<span class="op">=</span><span class="dv">0</span>), color<span class="op">=</span><span class="st">'tab:green'</span>, lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'Mean Natural Inflow'</span>)</span>
+<span id="cb11-72"><a href="#cb11-72" aria-hidden="true" tabindex="-1"></a>ax11.plot(years[:<span class="op">-</span><span class="dv">1</span>], np.mean(net_recycling_non_eutrophic, axis<span class="op">=</span><span class="dv">0</span>), color<span class="op">=</span><span class="st">'tab:red'</span>, lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'Mean Net Recycling/Loss'</span>)</span>
+<span id="cb11-73"><a href="#cb11-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a>ax11.axhline(p_crit, color<span class="op">=</span><span class="st">'black'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'Critical P'</span>)</span>
+<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a>ax11.set_xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a>ax11.set_ylabel(<span class="st">''</span>)</span>
+<span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a>ax11.set_title(<span class="st">'Non-Eutrophic Realizations'</span>)</span>
+<span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a>ax11.legend(fontsize<span class="op">=</span><span class="st">'medium'</span>)</span>
+<span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a>ax11.set_xlim(<span class="dv">0</span>, <span class="dv">20</span>)</span>
+<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a>ax11.set_ylim([<span class="op">-</span><span class="fl">.1</span>, <span class="fl">.6</span>])</span>
+<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>/var/folders/d2/g0h08s551zb2hz_ws2g4ggh400hbd0/T/ipykernel_26686/1823386331.py:82: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab06-dps_files/figure-html/cell-10-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Can you see what the difference is between the eutrophic and non-eutrophic realizations? Recall that these are using the exact same control policies. Let’s try zooming in even more on the early years of the problem and focus on the total P trajectories, along with our RBF and where it tells us to emit less. Recall that in our optimization formulation, we set .01 as our minimum allowable emission.</p>
+<div id="98a9e1eb" class="cell" data-execution_count="10">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine and create figure</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">8</span>), dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>gs <span class="op">=</span> GridSpec(nrows<span class="op">=</span><span class="dv">2</span>, ncols<span class="op">=</span><span class="dv">2</span>, figure<span class="op">=</span>fig, width_ratios<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">1</span>], wspace<span class="op">=</span><span class="fl">0.1</span>, hspace<span class="op">=</span><span class="fl">0.25</span>, </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>              height_ratios<span class="op">=</span>[<span class="fl">.3</span>, <span class="dv">1</span>])</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Top panel: RBF control policies ---</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>ax0 <span class="op">=</span> fig.add_subplot(gs[<span class="dv">0</span>, :])</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data<span class="op">=</span>rbfs[rbfs[<span class="st">'Strategy'</span>] <span class="op">==</span> <span class="st">'Most Benefits'</span>], x<span class="op">=</span><span class="st">'Lake P'</span>, y<span class="op">=</span><span class="st">'Anthropogenic P'</span>, hue<span class="op">=</span><span class="st">'Strategy'</span>, style<span class="op">=</span><span class="st">'Strategy'</span>, ax<span class="op">=</span>ax0)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>ax0.set_title(<span class="st">'RBF Control Policy - Most Benefits'</span>, size<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>ax0.set_ylabel(<span class="st">'Anthropogenic P'</span>)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>ax0.set_xlabel(<span class="st">''</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>ax0.set_xlim([<span class="fl">.20</span>, <span class="fl">.32</span>])</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>ax0.legend(fontsize<span class="op">=</span><span class="st">'medium'</span>)</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Bottom panel, Left: Dynamics of eutrophic runs ---</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>ax10 <span class="op">=</span> fig.add_subplot(gs[<span class="dv">1</span>, <span class="dv">0</span>])</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(eutrophic_runs_idx)):</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot each realization with low alpha for clarity:</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    ax10.plot(years, totalP_eutrophic[i], color<span class="op">=</span><span class="st">'tab:orange'</span>, alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    ax10.plot(years[:<span class="op">-</span><span class="dv">1</span>], anthP_eutrophic[i], color<span class="op">=</span><span class="st">'tab:blue'</span>, alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    ax10.plot(years[:<span class="op">-</span><span class="dv">1</span>], natFlow_eutrophic[i], color<span class="op">=</span><span class="st">'tab:green'</span>, alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    ax10.plot(years[:<span class="op">-</span><span class="dv">1</span>], net_recycling_eutrophic[i], color<span class="op">=</span><span class="st">'tab:red'</span>, alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Bottom panel, right: dynamics of non eutrophic runs</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>ax11 <span class="op">=</span> fig.add_subplot(gs[<span class="dv">1</span>, <span class="dv">1</span>])</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(eutrophic_runs_idx)):</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot each realization with low alpha for clarity:</span></span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>    ax11.plot(years, totalP_non_eutrophic[i], color<span class="op">=</span><span class="st">'tab:orange'</span>, alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>    ax11.plot(years[:<span class="op">-</span><span class="dv">1</span>], anthP_non_eutrophic[i], color<span class="op">=</span><span class="st">'tab:blue'</span>,  alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>    ax11.plot(years[:<span class="op">-</span><span class="dv">1</span>], natFlow_non_eutrophic[i], color<span class="op">=</span><span class="st">'tab:green'</span>, alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>    ax11.plot(years[:<span class="op">-</span><span class="dv">1</span>], net_recycling_non_eutrophic[i], color<span class="op">=</span><span class="st">'tab:red'</span>, alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>ax10.axhline(p_crit, color<span class="op">=</span><span class="st">'black'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'Critical P'</span>)</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>ax10.set_xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>ax10.set_ylabel(<span class="st">'P concentration'</span>)</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>ax10.set_title(<span class="st">'Eutrophic Realizations'</span>)</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>ax10.set_xlim(<span class="dv">0</span>, <span class="dv">5</span>)</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>ax10.set_ylim([<span class="fl">.20</span>, <span class="fl">.32</span>])</span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>ax11.plot(years, np.mean(totalP_non_eutrophic, axis<span class="op">=</span><span class="dv">0</span>), color<span class="op">=</span><span class="st">'tab:orange'</span>, lw<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'Mean Total P'</span>)</span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>ax11.set_xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>ax11.set_ylabel(<span class="st">''</span>)</span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>ax11.set_title(<span class="st">'Non-Eutrophic Realizations'</span>)</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>ax11.legend(fontsize<span class="op">=</span><span class="st">'medium'</span>)</span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>ax11.set_xlim(<span class="dv">0</span>, <span class="dv">5</span>)</span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>ax11.set_ylim([<span class="fl">.20</span>, <span class="fl">.32</span>])</span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>ax11.tick_params(left<span class="op">=</span><span class="va">False</span>, labelleft<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a>ax11.fill_between([<span class="dv">0</span>, <span class="dv">5</span>], <span class="fl">.24</span>, <span class="fl">.27</span>, color<span class="op">=</span><span class="st">'gray'</span>, alpha<span class="op">=</span><span class="fl">.1</span>)</span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a>ax10.fill_between([<span class="dv">0</span>, <span class="dv">5</span>], <span class="fl">.24</span>, <span class="fl">.27</span>, color<span class="op">=</span><span class="st">'gray'</span>, alpha<span class="op">=</span><span class="fl">.1</span>)</span>
+<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a>ax0.fill_between([<span class="fl">.24</span>, <span class="fl">.27</span>], <span class="dv">0</span>, <span class="fl">.1</span>, color<span class="op">=</span><span class="st">'gray'</span>, alpha<span class="op">=</span><span class="fl">.1</span>)</span>
+<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>/var/folders/d2/g0h08s551zb2hz_ws2g4ggh400hbd0/T/ipykernel_26686/1156415406.py:54: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab06-dps_files/figure-html/cell-11-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>We can roughly highlight a region of P concentration at year 3 where the eutrophic and non-eutrophic realizations begin to look different from one another. The non-eutrophic realizations do not cross .27 in year 3, but many of the eutrophic realizations do.</p>
+<p>Let’s revisit our P recycling and loss plot and zoom in on the area below the threshold. We’ll add a shaded area to indicate the mean natural P inflow so that we can get a better sense for what P concentrations are dangerous.</p>
+<div id="b00a75a2" class="cell" data-execution_count="11">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>ax.plot(xs, R, label<span class="op">=</span><span class="st">"Recycling when q=</span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(q), color<span class="op">=</span><span class="st">"C0"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>ax.plot(xs, L, label<span class="op">=</span><span class="st">"Losses when b=</span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(b), color<span class="op">=</span><span class="st">"C1"</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>ax.fill_between(xs, R, [r <span class="op">+</span> <span class="fl">.03</span> <span class="cf">for</span> r <span class="kw">in</span> R], label<span class="op">=</span><span class="st">'Recycling + Mean P inflow (.03)'</span>, color<span class="op">=</span><span class="st">'gray'</span>, alpha<span class="op">=</span><span class="fl">.25</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>ax.fill_between(xs, [r <span class="op">+</span> <span class="fl">.03</span> <span class="cf">for</span> r <span class="kw">in</span> R], [r <span class="op">+</span> <span class="fl">.04</span> <span class="cf">for</span> r <span class="kw">in</span> R], label<span class="op">=</span><span class="st">'"" + small emission (.01)'</span>, color<span class="op">=</span><span class="st">'green'</span>, alpha<span class="op">=</span><span class="fl">.25</span>)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>ax.axvline(p_crit, color<span class="op">=</span><span class="st">"k"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>ax.scatter([p_crit], [recycling(p_crit)], color<span class="op">=</span><span class="st">"red"</span>, zorder<span class="op">=</span><span class="dv">5</span>, label<span class="op">=</span><span class="ss">f"Critical P = </span><span class="sc">{</span>p_crit<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"P concentration"</span>, size<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"P Flux"</span>, size<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>ax.set_xlim([<span class="dv">0</span>, <span class="fl">.55</span>])</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>ax.set_ylim([<span class="dv">0</span>, <span class="fl">.25</span>])</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>ax.legend(fontsize<span class="op">=</span><span class="st">'large'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab06-dps_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This plot suggests that even at relatively low P concentrations, the net P loss that occurs below the critical P threshold might be too low to support anthropogenic emissions that help us do well on our economic objective. For example, in between around .18 and .3, we see a very small margin of net loss. In some realizations, we might get unlucky and the variance in the natural P inflow will push us into net P gains at relatively low P concentrations. These P concentrations correspond to high emission actions for our max benefits policy, quickly taking us over the critical P threshold.</p>
+<p>Not that in the previous plot, the eutrophic realizations that were below .27 never lose enough P to avoid crossing the threshold (because we set our min P to .01). The interaction of emitting at least .01, along with the very small net loss at P concentrations at around .27 mean that a year with a large positive natural P (due to the variance) will be on its way to the critical P threshold with no turning back. Instead of a small emission, let’s look at the same plot in terms of our max benefits and tw0 reliability policies.</p>
+<div id="a183143b" class="cell" data-execution_count="12">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">3</span>, dpi<span class="op">=</span><span class="dv">300</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">12</span>), sharex<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, s_group <span class="kw">in</span> <span class="bu">enumerate</span>(rbfs.groupby([<span class="st">'Strategy'</span>])):</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    ax[i].plot(xs, R, label<span class="op">=</span><span class="st">"Recycling when q=</span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(q), color<span class="op">=</span><span class="st">"C0"</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    ax[i].plot(xs, L, label<span class="op">=</span><span class="st">"Losses when b=</span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(b), color<span class="op">=</span><span class="st">"C1"</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    ax[i].fill_between(xs, R, [r <span class="op">+</span> <span class="fl">.03</span> <span class="cf">for</span> r <span class="kw">in</span> R], label<span class="op">=</span><span class="st">'Recycling + Mean inflow'</span>, color<span class="op">=</span><span class="st">'gray'</span>, alpha<span class="op">=</span><span class="fl">.25</span>)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    ax[i].fill_between(xs, [r <span class="op">+</span> <span class="fl">.03</span> <span class="cf">for</span> r <span class="kw">in</span> R], s_group[<span class="dv">1</span>][<span class="st">'Anthropogenic P'</span>].values <span class="op">+</span> np.array(R), label<span class="op">=</span><span class="st">'"" + Anthropogenic'</span>, color<span class="op">=</span><span class="st">'green'</span>, alpha<span class="op">=</span><span class="fl">.25</span>)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    ax[i].axvline(p_crit, color<span class="op">=</span><span class="st">"k"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.8</span>)</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    ax[i].scatter([p_crit], [recycling(p_crit)], color<span class="op">=</span><span class="st">"red"</span>, zorder<span class="op">=</span><span class="dv">5</span>, label<span class="op">=</span><span class="ss">f"Critical P = </span><span class="sc">{</span>p_crit<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    ax[i].set_ylabel(<span class="st">"P Flux"</span>, size<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    ax[i].set_xlim([<span class="dv">0</span>, <span class="fl">.55</span>])</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    ax[i].set_ylim([<span class="dv">0</span>, <span class="fl">.25</span>])</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    ax[i].tick_params(<span class="st">'both'</span>, labelsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    ax[i].set_title(s_group[<span class="dv">0</span>][<span class="dv">0</span>] <span class="op">+</span> <span class="st">" Strategy"</span>, size<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>        ax[i].legend(fontsize<span class="op">=</span><span class="st">'large'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>        ax[i].set_xlabel(<span class="st">"P concentration"</span>, size<span class="op">=</span><span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lab06-dps_files/figure-html/cell-13-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Note the P concentration where the most benefits strategy contributes its lowest emission. Do the non-eutrophic realizations ever cross this point?</p>
+</section>
+</section>
+<section id="wrapping-up-lab" class="level3">
+<h3 class="anchored" data-anchor-id="wrapping-up-lab">Wrapping up lab</h3>
+<p>In today’s lab, we scrutinized different strategies from the open loop and closed loop optimization approaches for how they manage the tipping point dynamics. To wrap up your lab, please include the following analysis and any visualizations that help you summarize your findings:</p>
+<ol type="1">
+<li><p>Calculate performance metrics for the different strategies we reviewed (both the open loop and closed loop) over time across realizations.</p></li>
+<li><p>Calculate the robustness of the most benefits and most reliable strategies from the different optimization approaches to different SOWs using the same metric as in the paper. I encourage you to check the repository and to reproduce figure 8. Do it for intertemporal most reliability and most benefits. Then do it for closed loop most reliability (you can use either one we looked at - please be explicit) and most benefits.</p></li>
+<li><p>Considering your analysis from #1, our attention to dynamics in lab, and the results in Figure 11 in the paper, explain why the different optimization approaches (i.e., open vs.&nbsp;closed loop) lead to different robustness results.</p></li>
+<li><p>Considering #3, what would you consider for updating the policy search approach to improve robustness while still performing well on key objectives in the reference scenario?</p></li>
+<li><p>Discuss the role that dynamic planning and closed loop optimization can play in your decision analysis.</p></li>
+</ol>
+<p>Please submit your lab report to me as a pdf. Please include a link to your GitHub repository.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/abpoll\.github\.io\/engs199\.20");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+      for (let i=0; i<annoteTargets.length; i++) {
+        const annoteTarget = annoteTargets[i];
+        const targetCell = annoteTarget.getAttribute("data-target-cell");
+        const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+        const contentFn = () => {
+          const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          if (content) {
+            const tipContent = content.cloneNode(true);
+            tipContent.classList.add("code-annotation-tip-content");
+            return tipContent.outerHTML;
+          }
+        }
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          onShow: (instance) => {
+            selectCodeLines(instance.reference);
+            instance.reference.classList.add('code-annotation-active');
+            window.tippy.hideAll();
+          },
+          onHide: (instance) => {
+            unselectCodeLines();
+            instance.reference.classList.remove('code-annotation-active');
+          },
+          maxWidth: 300,
+          delay: [50, 0],
+          duration: [200, 0],
+          offset: [5, 10],
+          arrow: true,
+          trigger: 'click',
+          appendTo: function(el) {
+            return el.parentElement.parentElement.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto',
+          placement: 'right',
+          positionFixed: true,
+          popperOptions: {
+            modifiers: [
+            {
+              name: 'flip',
+              options: {
+                flipVariations: false, // true by default
+                allowedAutoPlacements: ['right'],
+                fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+              },
+            },
+            {
+              name: 'preventOverflow',
+              options: {
+                mainAxis: false,
+                altAxis: false
+              }
+            }
+            ]        
+          }      
+        };
+        window.tippy(annoteTarget, config); 
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Content <i class="fa-solid fa-copyright" aria-label="copyright"></i> 2025 by <a href="https://abpoll.github.io">Adam Pollack</a>. All content licensed under a <i class="fa-brands fa-creative-commons" aria-label="creative-commons"></i> <i class="fa-brands fa-creative-commons-by" aria-label="creative-commons-by"></i> <i class="fa-brands fa-creative-commons-nc" aria-label="creative-commons-nc"></i> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license (CC BY-NC-SA 4.0)</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p><strong>Page still under construction.</strong></p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://www.github.com/abpoll/engs199.20/edit/main/labs/lab06-dps.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://www.github.com/abpoll/engs199.20/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+<p>Made with <a href="https://www.python.org/">Python</a> and <a href="https://quarto.org/">Quarto</a><br> <a href="https://www.github.com/abpoll/engs199.20">View the source on <i class="fa-brands fa-github" aria-label="github"></i> GitHub</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
