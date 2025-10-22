@@ -1,0 +1,87 @@
+---
+title: "Direct policy search"
+subtitle: "Case Study 3: [Quinn et al. (2017)](https://www.sciencedirect.com/science/article/pii/S1364815216302250)"
+author: "{{< var instructor.name_no_title >}}"
+course: "{{< var course.number >}}"
+institution: "{{< var university.name >}}"
+date: "October 21, 2025"
+format:
+    revealjs:
+        scrollable: true
+        slide-number: c/t
+        show-slide-number: all
+        center-title-slide: true
+        transition: none
+        toc: true
+        toc-depth: 1
+        toc-title: "Overview"
+        history: false
+        link-external-newwindow: true
+        theme: ../_assets/sass/slides.scss
+        template-partials:
+            - title-slide.html
+        menu:
+            numbers: true
+        date-format: long
+        email-obfuscation: javascript
+        controls: true
+execute:
+    freeze: auto
+    echo: false
+---
+
+# Test your comprehension
+
+## Optimization concepts
+Define the following, and explain how it connects to the study:
+
+::: {.incremental}
+* Deeply uncertain tipping point
+* Open loop, intertemporal optimization
+* Curse of dimensionality
+* Direct policy search
+* Multi-objective evolutionary algorithms
+* Policy inertia
+* Hypervolume
+* Robustness analysis
+* Scenario discovery
+:::
+
+## Discuss the study's approach
+Answer the following questions:
+
+::: {.incremental}
+* How did the authors implement MORDM?
+* Which optimization approach converges faster?
+* Which optimization approach is "better?" How?
+* How robust are any of the "optimal" strategies?
+* Are there reasons to prefer DPS beyond the study's results?
+:::
+
+## Which strategy is better in the reference scenario? {.nostretch}
+
+![[Quinn et al., (2017)](https://doi.org/10.1016/j.envsoft.2017.02.017)](../_assets/img/quinn_performance.png)
+
+
+## How do the strategies manage the tipping point? {.nostretch}
+
+![[Quinn et al., (2017)](https://doi.org/10.1016/j.envsoft.2017.02.017)](../_assets/img/quinn_tipping.png)
+
+## Why do the DPS strategies fail? {.nostretch}
+![[Quinn et al., (2017)](https://doi.org/10.1016/j.envsoft.2017.02.017)](../_assets/img/quinn_robust.png){width=700}
+
+::: {.fragment}
+A stakeholder takeaway that resonated with me: "We sometimes have issues with poor stakeholders because they normally oppose whatever you propose. During the workshop, I actually came to understand why they normally oppose, and when I get a negative answer from them, I now understand why."
+:::
+
+## Open discussion
+What would you like to discuss about the paper and/or optimization/DPS connections to your project?
+
+# Logistics
+## Friday
+* DPS tutorial
+
+## Next week
+* Monday: Scenario discovery lecture
+* Wednesday: Prabhat leads optimization tutorial
+* Friday: case study 
