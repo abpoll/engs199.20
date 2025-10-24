@@ -117,7 +117,7 @@ def add_bbox(ax, x_bounds, y_bounds, color='red', label=None):
     rect = Rectangle((x_bounds[0], y_bounds[0]), width, height, fill=False, color=color, lw=2, label=label)
     ax.add_patch(rect)
 
-fig, axes = plt.subplots(1, 2, figsize=(12,5), sharey=True)
+fig, axes = plt.subplots(1, 2, figsize=(12,5), dpi=300, sharey=True)
 
 for ax in axes:
     # Plot success and failure points
