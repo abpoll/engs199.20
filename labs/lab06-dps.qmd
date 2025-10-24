@@ -62,7 +62,7 @@ where:
 | $q$ | rate at which phosphorous is recycled from sediment |
 | $b$| rate at which phosphorous leaves the lake |
 
-and $X_0 = 0$, $y_t \sim LogNormal(\log(0.03), 0.25)$, $q=2.5$, and $b=0.4$.
+and $X_0 = 0$, $y_t \sim LogNormal(0.03, \sqrt(10^{-5}))$, $q=2.5$, and $b=0.4$.
 
 The goal of the optimization is to meet several objectices:
 
@@ -791,7 +791,7 @@ ax.legend(fontsize='large')
 
 This plot suggests that even at relatively low P concentrations, the net P loss that occurs below the critical P threshold might be too low to support anthropogenic emissions that help us do well on our economic objective. For example, in between around .18 and .3, we see a very small margin of net loss. In some realizations, we might get unlucky and the variance in the natural P inflow will push us into net P gains at relatively low P concentrations. These P concentrations correspond to high emission actions for our max benefits policy, quickly taking us over the critical P threshold. 
 
-Not that in the previous plot, the eutrophic realizations that were below .27 never lose enough P to avoid crossing the threshold (because we set our min P to .01). The interaction of emitting at least .01, along with the very small net loss at P concentrations at around .27 mean that a year with a large positive natural P (due to the variance) will be on its way to the critical P threshold with no turning back. Instead of a small emission, let's look at the same plot in terms of our max benefits and tw0 reliability policies. 
+Note that in the previous plot, the eutrophic realizations that were below .27 never lose enough P to avoid crossing the threshold (because we set our min P to .01). The interaction of emitting at least .01, along with the very small net loss at P concentrations at around .27 means that a year with certain natural P inflows (due to the variance) will be on its way to the critical P threshold with no turning back. Instead of a small emission, let's look at the same plot in terms of our max benefits and two reliability policies. 
 
 ```{python}
 
@@ -832,5 +832,8 @@ In today's lab, we scrutinized different strategies from the open loop and close
 4. Considering #3, what would you consider for updating the policy search approach to improve robustness while still performing well on key objectives in the reference scenario? 
 
 5. Discuss the role that dynamic planning and closed loop optimization can play in your decision analysis. 
+
+6. Optional challenge: Can you pinpoint the bifurcation point from the most benefits strategy? What dynamics produce this in eutrophication realizations? Calibrate your explanation and any figures for a non-expert audience, such as a community gathering at town hall waiting to hear the results of a scientific assessment for regulating emissions into a lake.
+    - Hint: Pay attention to years 1, 2, and 3 and experiment with visualizations that help identify a clear signal. You may find it helpful to map typical values of eutrophic and non-eutrophic states onto the visual language we introduced in the last figure of lab. 
 
 Please submit your lab report to me as a pdf. Please include a link to your GitHub repository. 
