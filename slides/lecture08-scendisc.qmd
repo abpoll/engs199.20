@@ -1,0 +1,207 @@
+---
+title: "Scenario discovery"
+subtitle: "Lecture 08"
+author: "{{< var instructor.name_no_title >}}"
+course: "{{< var course.number >}}"
+institution: "{{< var university.name >}}"
+date: "October 27, 2025"
+format:
+    revealjs:
+        scrollable: true
+        slide-number: c/t
+        show-slide-number: all
+        center-title-slide: true
+        transition: none
+        toc: true
+        toc-depth: 1
+        toc-title: "Overview"
+        history: false
+        link-external-newwindow: true
+        theme: ../_assets/sass/slides.scss
+        template-partials:
+            - title-slide.html
+        menu:
+            numbers: true
+        date-format: long
+        email-obfuscation: javascript
+        controls: true
+jupyter: engs199
+engine: jupyter
+execute:
+    freeze: auto
+    echo: false
+---
+
+# Computer-assisted scenario development
+
+## Why is scenario-based planning so common?
+As [Bryant and Lempert (2010)](https://doi.org/10.1016/j.techfore.2009.08.002) write, "Scenarios provide a commonly used and intuitively appealing means to communicate and characterize uncertainty in many decision support applications." They often:
+
+::: {.incremental}
+* "Build a narrative description that captures decision makers' imaginations"
+* "Aim to reduce overconfidence"
+* "Encourage... groups to reflect on a broader range of futures"
+* "Make it easier for decision makers to consider inconvenient or contentious futures"
+:::
+
+## Limitations to traditional scenarios
+
+::: {.incremental}
+* Often seen as arbitrary or biased
+* It is difficult to *a priori* choose a small number of *policy-relevant* scenarios to summarize the breadth of uncertainty about the future
+* Can work well with small groups of clients who have strong relationships with scenario developers, but can fail to work for wicked problems (e.g., diverse views, many large uncertainties, etc.,)
+:::
+
+## How scenario discovery addresses traditional scenario limitations
+
+::: {.incremental}
+* Defines scenarios as a set of future states of the world that represent vulnerabilities of proposed policies
+* Typically, but not necessarily, uses statistical or data-mining algorithms in an effort to find easy-to-interpret, policy-relevant regions in the space of uncertain input parameters to computer simulation models
+:::
+
+::: {.fragment}
+**In more accessible terms: scenario discovery is a method to find, rather than pre-specify, decision-relevant scenarios to plan for. Thish is particularly relevant for a robust decision-making analysis.** 
+:::
+
+# The scenario discovery workflow
+
+## The steps
+1. Generate data
+2. Find scenarios
+3. Assess scenarios
+    - Generate more data?
+    - Find more scenarios?
+4. Select scenarios to plan for
+
+## Generate data from a simulation model
+* Define an experimental design over the uncertain inputs while holding constant a candidate strategy
+    - [Bryant and Lempert (2010)](https://doi.org/10.1016/j.techfore.2009.08.002) argue for Latin Hypercube sampling, which is common. 
+* Define a policy-relevant criteria to identify "cases of interest" that meet this threshold or fail
+
+## Find scenarios 
+Often, studies use supervised classification machine learning to identify regions or rules that best differentiate successes and failures. The goals are:
+
+* High coverage (analagous to recall)
+* High density (analagous to precision)
+* High interpretability (highly subjective!)
+
+## Trade-offs in achieving scenario "quality"
+Often, coverage, density, and interpretability compete with one another
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
+
+np.random.seed(42)
+
+# Generate points
+n_success = 50
+n_failure = 80
+
+# Success: cluster at low values in x and y, with some scattered
+success_x = np.concatenate([np.random.uniform(0, 3, int(n_success*0.8)),
+                            np.random.uniform(3, 6, int(n_success*0.2))])
+success_y = np.concatenate([np.random.uniform(0, 3, int(n_success*0.8)),
+                            np.random.uniform(3, 6, int(n_success*0.2))])
+
+# Failure: scattered broadly, more spread out
+failure_x = np.random.uniform(0, 6, n_failure)
+failure_y = np.random.uniform(0, 6, n_failure)
+# Add a few additional 
+
+# Function to add bounding box
+def add_bbox(ax, x_bounds, y_bounds, color='red', label=None):
+    width = x_bounds[1] - x_bounds[0]
+    height = y_bounds[1] - y_bounds[0]
+    rect = Rectangle((x_bounds[0], y_bounds[0]), width, height, fill=False, color=color, lw=2, label=label)
+    ax.add_patch(rect)
+
+fig, axes = plt.subplots(1, 2, figsize=(12,5), sharey=True)
+
+for ax in axes:
+    # Plot success and failure points
+    ax.scatter(success_x, success_y, marker='o', label='Success', s=80, edgecolor='black')
+    ax.scatter(failure_x, failure_y, marker='x', label='Failure', s=80, color='red')
+    ax.set_xlim(-0.5, 6.5)
+    ax.set_ylim(-0.5, 6.5)
+    ax.set_xlabel('Variable 1', size=12)
+    ax.grid(True, linestyle=':', alpha=0.5)
+
+axes[0].set_ylabel('Variable 2', size=12)
+axes[0].legend(loc='upper right')
+
+# Panel 1: tight bounding box (high density, low coverage)
+axes[0].set_title('Tight Bounding Box: Prioritizing Density', size=12)
+x_bounds_tight = (0, 3.2)
+y_bounds_tight = (0, 3.2)
+add_bbox(axes[0], x_bounds_tight, y_bounds_tight, color='blue', label='Bounding Box')
+
+# Panel 2: enlarged bounding box (higher coverage, lower density)
+axes[1].set_title('Trading off density more higher coverage', size=12)
+x_bounds_wide = (0, 5.0)
+y_bounds_wide = (0, 5.0)
+add_bbox(axes[1], x_bounds_wide, y_bounds_wide, color='green', label='Bounding Box')
+
+plt.tight_layout()
+plt.show()
+```
+
+## Scenario discovery algorithms
+
+::: {.incremental}
+* You often see classification & regression trees (CART) or patient rule induction method (PRIM) - examples to follow
+* But, keep your goal in mind a use your imagination!
+* No matter what you implement, calculate diagnostics!  
+:::
+
+# Scenario discovery examples
+## Patient Rule Induction Method 
+
+![](../_assets/img/bryant_prim.jpg){fig-align="center"}
+
+::: {.fragment}
+![[Bryant and Lempert (2010)](https://doi.org/10.1016/j.techfore.2009.08.002)](../_assets/img/bryant_prim_points.jpg){fig-align="center"}
+:::
+
+## Classification and Regression Trees
+![[Hadka et al., (2025)](https://doi.org/10.1016/j.envsoft.2015.07.014)](../_assets/img/hadka_cart.jpg)
+
+## Multi-trait Scenario Storyline Discovery
+![[Hadjimichael et al., (2024)](https://doi.org/10.1029/2023EF004252)](../_assets/img/hadjimichael_sd.jpg)
+
+# Broader considerations
+
+## Scenario discovery was conceived as part of a deliberative, iterative process
+
+::: {.incremental}
+* This is one of the best opportunities for learning in the co-production process
+* It's also a great opportunity for producing science insights (even outside of co-production settings!) 
+    - Several optional readings demonstrate this by considering a wide range of ensembles beyond the limited SSP-RCP ones
+:::
+
+## Don't let exploratory modeling taking your judgement out of the equation
+
+:::{.columns}
+
+:::{.column #vcenter width="40%"}
+:::{.incremental}
+* Scenario discovery is a process
+* Simple visual analysis can inform algorithmic choices, but can also be effective in-and-of itself
+:::
+:::
+
+:::{.column #vcenter #unpad-fig width="60%"}
+![[Quinn et al., (2017)](https://doi.org/10.1016/j.envsoft.2017.02.017)](../_assets/img/quinn_robust.png){width=500}
+:::
+
+:::
+
+# Logistics
+## This week
+* Optimization tutorial on Wed. by Prabhat
+* Case study on Friday
+
+## Next week
+* Discussion about revisiting decision analysis framing
+* Practice presentations Wed. & Fri.

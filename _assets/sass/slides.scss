@@ -156,6 +156,13 @@ strong {color: #EF4035;}
     padding-top: 0;
 }
 
+#unpad-fig {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .reveal tr:nth-child(even){
     background-color: #f7f7f7;
 }

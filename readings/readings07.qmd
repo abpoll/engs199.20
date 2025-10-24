@@ -1,0 +1,37 @@
+---
+format:
+  html:
+    title: Week 7 Readings
+
+reference-location: document
+citation-location: document
+sidebar: main
+---
+
+## Required Reading
+
+1. @BryantLempert2010
+    - This is a seminal paper on the role of scenario discovery in the RDM workflow.
+2. @Hadjimichael2023-dmdu
+    - These are the slides from one of the top 3 research presentations I have seen. It really transformed my understanding and appreciation for the role of scenario discovery in the RDM workflow. As far as I know, there is no recording of this presentation, but the slides are so well-designed that you can make a lot of the key takeaways. You may reference the corresponding paper @Hadjimichael2024 for more detail, but it is not required reading due to its length. 
+3. @Jafino2021
+    - This will be the case study paper for the week. You don't have to read it by Monday, but come prepared to discuss it for Friday's session. 
+
+## Optional Reading
+
+Scenario discovery is highly context specific and I think it's helpful to be exposed to many different examples. Below, I highlight a few additional papers focused on scenario discovery, as well papers that employ scenario discovery as part of a larger analysis, to provide you with a broad set of examples to draw from in attempting to apply these methods to your problem. 
+
+- @Groves-etal-2019
+    - See section 7.3.2 and 7.3.7. 
+- @Quinn-etal-2017
+    - See section 5.3.2.
+- @Gold2023
+    - See section 5.4.
+- @Gold2019
+    - Creative application of scenario discovery to consider the influence of *implementation* uncertainty on decision performance.
+- @Lamontagne2018 and @Wessel2024
+    - Good demonstrations of how to conduct an insightful analysis when you have a large ensemble of scenarios. 
+
+### References
+::: {#refs}
+:::
