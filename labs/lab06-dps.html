@@ -349,7 +349,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>and <span class="math inline">\(X_0 = 0\)</span>, <span class="math inline">\(y_t \sim LogNormal(\log(0.03), 0.25)\)</span>, <span class="math inline">\(q=2.5\)</span>, and <span class="math inline">\(b=0.4\)</span>.</p>
+<p>and <span class="math inline">\(X_0 = 0\)</span>, <span class="math inline">\(y_t \sim LogNormal(0.03, \sqrt(10^{-5}))\)</span>, <span class="math inline">\(q=2.5\)</span>, and <span class="math inline">\(b=0.4\)</span>.</p>
 <p>The goal of the optimization is to meet several objectices:</p>
 <table class="caption-top table">
 <colgroup>
@@ -407,7 +407,7 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 <p>Instead of running the optimization (which takes a very long time), we are fortunate that we can directly use the reuslts from Quinn et al., (2017) due to their very well-formatted <a href="https://github.com/julianneq/Lake_Problem_DPS">repository</a>. Download the repo, which you can do <a href="https://codeload.github.com/julianneq/Lake_Problem_DPS/zip/refs/heads/master">here</a>, and extract the data from the <code>DataInPaper</code> subdirectory. I created a subdirectory called <code>data</code> which is at the same level in the lab directory as my <code>.ipynb</code> file. I put all the contents of <code>DataInPaper</code> into <code>data</code>.</p>
 <p>To help build intuition about how the optimization works, we’ll break down the process a bit.</p>
 <p>Firt, let’s orient ourselves to the state of the world the optimization takes place in.</p>
-<div id="1bfdc259" class="cell" data-execution_count="1">
+<div id="47823aab" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -423,7 +423,7 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>nSamples <span class="op">=</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can find the critical P threshold by identifying the value of X at which the natural P recycling and losses are equal to each other: <span class="math inline">\(\frac{X^q}{1+X^q} - bX = 0\)</span> -&gt; <span class="math inline">\(\frac{X^2}{1+X^2} - .42*X = 0\)</span>. There are several options to calculate this in python. We will use Brent’s method as implemented in <code>scipy</code>.</p>
-<div id="f44c5ccc" class="cell" data-execution_count="2">
+<div id="22818a7e" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> brentq</span>
@@ -467,7 +467,7 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 <p>Pay attention to the gap between losses and recycling in this state of the world to the left of the unstable equilibrium.</p>
 <p>When we do intertemporal optimization, we are considering anthropogenic releases between 0.01 and 0.1 at each time step. Crucially, we are considering the full sequence of those releases over 100 time steps. In the MOEA framework, the optimization considers a candidate sequence of 100 releases and tests this against each simulation of natural inflows (because this is stochastic). The optimization looks for the candidate sequences that do “best” on the expected value of the multiple objectives. Then, it continues searching based on the EA design.</p>
 <p>Let’s take a closer look at the intertemporal strategies highlighted in the paper that are best on the reliability and benefits objectives, respecitvely.</p>
-<div id="d9f05f08" class="cell" data-execution_count="3">
+<div id="1ec4a69e" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> ss</span>
@@ -574,7 +574,7 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 <p>As an exercise, add subplots the P Flux from the natural P recycling and losses for each strategy across each realization. What do you notice about how the best benefits strategy manages the non-linear dynamics past the critical P threshold? Check equations 6-9 in the paper, which describe the intertemporal optimizaton, and explain how mathematical formulation choices influence the dynamics of the best benefits strategy. (Hint: consider constraints and the time horizon).</p>
 <p>Now, let’s take a look at the analagous policies the authors found with direct policy search. We’ll look at the state-action mappings from each as well as how that plays out over time.</p>
 <p>To start, we’ll plot the best reliability and benefits strategies:</p>
-<div id="ab052380" class="cell" data-execution_count="4">
+<div id="866be1b2" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -650,7 +650,7 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 <span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Anthropogenic P'</span>, size<span class="op">=</span><span class="dv">14</span>)</span>
 <span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Lake P'</span>, size<span class="op">=</span><span class="dv">14</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="40">
 <pre><code>Text(0.5, 0, 'Lake P')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -663,7 +663,7 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 </div>
 <p>It turns out that many Pareto optimal strategies achieve the best reliability possible. We will consider an arbitrary strategy with the best reliability possible (blue) and the one used in the paper (green) for teaching purposes.</p>
 <p>Let’s see what Lake P we take actions on based on a single stochastic realization of natural inflows with these various control policies. You can run this code with different seeds to see different results.</p>
-<div id="183b5f03" class="cell" data-execution_count="5">
+<div id="0b803a4c" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> LakeModel_DPS_adapted(seed, <span class="bu">vars</span>):</span>
@@ -752,7 +752,7 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 </div>
 <p>I intentionally chose a seed that leads to very high concentrations for the most benefits strategy. Check out a few other seeds. What seeds did you choose and do they produce the same patterns for each strategy?</p>
 <p>Here’s an example with a different seed:</p>
-<div id="b634828a" class="cell" data-execution_count="6">
+<div id="a3c2dc37" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="dv">42</span></span>
@@ -816,7 +816,7 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 </div>
 <p>What do you see about the distribution of all observed P concentrations across the realizations you evaluated of both naturally (inflows, recycling, loss summed on bottom row) and including the anthropogenic P concentration (top row)?</p>
 <p>Now, let’s look across many stochastic realizations.</p>
-<div id="7eee7501" class="cell" data-execution_count="7">
+<div id="68e7b0f9" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="dv">100</span></span>
@@ -885,7 +885,7 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 </div>
 <p>What do you see about the distribution of all observed P concentrations across all the realizations of both naturally (inflows, recycling, loss summed on bottom row) and including the anthropogenic P concentration (top row)?</p>
 <p>Let’s take a look at these P concentrations across all of these states. Each realization can have a different anthropogenic P sequence, so we’re not going to plot exactly the same way we did for the intertemporal.</p>
-<div id="c3a24101" class="cell" data-execution_count="8">
+<div id="e831a768" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>policy_names <span class="op">=</span> [<span class="st">'Most Reliable'</span>, <span class="st">'Most Benefits'</span>, <span class="st">'Most Reliable (From Paper)'</span>]</span>
@@ -966,7 +966,7 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 </div>
 <p>How would you characterize the behavior of the different strategies? Is the mean P a good way to characterize the strategies’ dynamics?</p>
 <p>Let’s take a closer look at those realizations where the max benefit policy leads to eutrophication.</p>
-<div id="c5a5103a" class="cell" data-execution_count="9">
+<div id="cb9d7a21" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.gridspec <span class="im">import</span> GridSpec</span>
@@ -1054,7 +1054,7 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 <span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/d2/g0h08s551zb2hz_ws2g4ggh400hbd0/T/ipykernel_30027/1823386331.py:82: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+<pre><code>/var/folders/d2/g0h08s551zb2hz_ws2g4ggh400hbd0/T/ipykernel_79224/1823386331.py:82: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
   plt.tight_layout()</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -1066,7 +1066,7 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 </div>
 </div>
 <p>Can you see what the difference is between the eutrophic and non-eutrophic realizations? Recall that these are using the exact same control policies. Let’s try zooming in even more on the early years of the problem and focus on the total P trajectories, along with our RBF and where it tells us to emit less. Recall that in our optimization formulation, we set .01 as our minimum allowable emission.</p>
-<div id="11385795" class="cell" data-execution_count="10">
+<div id="dada3db5" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine and create figure</span></span>
@@ -1126,7 +1126,7 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 <span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
-<pre><code>/var/folders/d2/g0h08s551zb2hz_ws2g4ggh400hbd0/T/ipykernel_30027/1156415406.py:54: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+<pre><code>/var/folders/d2/g0h08s551zb2hz_ws2g4ggh400hbd0/T/ipykernel_79224/1156415406.py:54: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
   plt.tight_layout()</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -1139,7 +1139,7 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 </div>
 <p>We can roughly highlight a region of P concentration at year 3 where the eutrophic and non-eutrophic realizations begin to look different from one another. The non-eutrophic realizations do not cross .27 in year 3, but many of the eutrophic realizations do.</p>
 <p>Let’s revisit our P recycling and loss plot and zoom in on the area below the threshold. We’ll add a shaded area to indicate the mean natural P inflow so that we can get a better sense for what P concentrations are dangerous.</p>
-<div id="f290eeca" class="cell" data-execution_count="11">
+<div id="b7a182b9" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(dpi<span class="op">=</span><span class="dv">300</span>)</span>
@@ -1166,8 +1166,8 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 </div>
 </div>
 <p>This plot suggests that even at relatively low P concentrations, the net P loss that occurs below the critical P threshold might be too low to support anthropogenic emissions that help us do well on our economic objective. For example, in between around .18 and .3, we see a very small margin of net loss. In some realizations, we might get unlucky and the variance in the natural P inflow will push us into net P gains at relatively low P concentrations. These P concentrations correspond to high emission actions for our max benefits policy, quickly taking us over the critical P threshold.</p>
-<p>Not that in the previous plot, the eutrophic realizations that were below .27 never lose enough P to avoid crossing the threshold (because we set our min P to .01). The interaction of emitting at least .01, along with the very small net loss at P concentrations at around .27 mean that a year with a large positive natural P (due to the variance) will be on its way to the critical P threshold with no turning back. Instead of a small emission, let’s look at the same plot in terms of our max benefits and tw0 reliability policies.</p>
-<div id="490c72da" class="cell" data-execution_count="12">
+<p>Note that in the previous plot, the eutrophic realizations that were below .27 never lose enough P to avoid crossing the threshold (because we set our min P to .01). The interaction of emitting at least .01, along with the very small net loss at P concentrations at around .27 means that a year with certain natural P inflows (due to the variance) will be on its way to the critical P threshold with no turning back. Instead of a small emission, let’s look at the same plot in terms of our max benefits and two reliability policies.</p>
+<div id="431ef0ae" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">3</span>, dpi<span class="op">=</span><span class="dv">300</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">12</span>), sharex<span class="op">=</span><span class="va">True</span>)</span>
@@ -1212,6 +1212,10 @@ a_{t, i} = \min(\max(\sum_{j=1}^n w_j |\frac{X_{t,i} - c_j}{r_j}|^3, 0.01),0.1) 
 <li><p>Considering your analysis from #1, our attention to dynamics in lab, and the results in Figure 11 in the paper, explain why the different optimization approaches (i.e., open vs.&nbsp;closed loop) lead to different robustness results.</p></li>
 <li><p>Considering #3, what would you consider for updating the policy search approach to improve robustness while still performing well on key objectives in the reference scenario?</p></li>
 <li><p>Discuss the role that dynamic planning and closed loop optimization can play in your decision analysis.</p></li>
+<li><p>Optional challenge: Can you pinpoint the bifurcation point from the most benefits strategy? What dynamics produce this in eutrophication realizations? Calibrate your explanation and any figures for a non-expert audience, such as a community gathering at town hall waiting to hear the results of a scientific assessment for regulating emissions into a lake.</p>
+<ul>
+<li>Hint: Pay attention to years 1, 2, and 3 and experiment with visualizations that help identify a clear signal. You may find it helpful to map typical values of eutrophic and non-eutrophic states onto the visual language we introduced in the last figure of lab.</li>
+</ul></li>
 </ol>
 <p>Please submit your lab report to me as a pdf. Please include a link to your GitHub repository.</p>
 
