@@ -60,7 +60,7 @@ As [Bryant and Lempert (2010)](https://doi.org/10.1016/j.techfore.2009.08.002) w
 :::
 
 ::: {.fragment}
-**In more accessible terms: scenario discovery is a method to find, rather than pre-specify, decision-relevant scenarios to plan for. Thish is particularly relevant for a robust decision-making analysis.** 
+**In more accessible terms: scenario discovery is a method to find, rather than pre-specify, decision-relevant scenarios to plan for. This is particularly relevant for a robust decision-making analysis.** 
 :::
 
 # The scenario discovery workflow
