@@ -10,8 +10,8 @@
   <meta name="generator" content="quarto-1.6.39">
 
   <meta name="author" content="Adam Pollack">
-  <meta name="dcterms.date" content="2025-10-27">
-  <title>ENGS 199.20 - Fall 2025 – Scenario discovery</title>
+  <meta name="dcterms.date" content="2025-11-03">
+  <title>ENGS 199.20 - Fall 2025 – Communicating your analysis framing</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -123,8 +123,8 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Scenario discovery – ENGS 199.20 - Fall 2025">
-<meta property="og:description" content="Lecture 08">
+<meta property="og:title" content="Communicating your analysis framing – ENGS 199.20 - Fall 2025">
+<meta property="og:description" content="Lecture 09">
 <meta property="og:site_name" content="ENGS 199.20 - Fall 2025">
 </head>
 <body class="quarto-light">
@@ -132,178 +132,127 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-    <h1 class="title">Scenario discovery</h1>
+    <h1 class="title">Communicating your analysis framing</h1>
   <hr>
-<p class="subtitle">Lecture 08</p>
-<p class="date">October 27, 2025</p>
+<p class="subtitle">Lecture 09</p>
+<p class="date">November 3, 2025</p>
 </section><section id="TOC">
 <nav role="doc-toc"> 
 <h2 id="toc-title">Overview</h2>
 <ul>
-<li><a href="#/computer-assisted-scenario-development" id="/toc-computer-assisted-scenario-development">Computer-assisted scenario development</a></li>
-<li><a href="#/the-scenario-discovery-workflow" id="/toc-the-scenario-discovery-workflow">The scenario discovery workflow</a></li>
-<li><a href="#/scenario-discovery-examples" id="/toc-scenario-discovery-examples">Scenario discovery examples</a></li>
-<li><a href="#/broader-considerations" id="/toc-broader-considerations">Broader considerations</a></li>
+<li><a href="#/framing-your-analysis" id="/toc-framing-your-analysis">Framing your analysis</a></li>
+<li><a href="#/framing-as-narrative" id="/toc-framing-as-narrative">Framing as narrative</a></li>
 <li><a href="#/logistics" id="/toc-logistics">Logistics</a></li>
 </ul>
 </nav>
 </section>
 <section>
-<section id="computer-assisted-scenario-development" class="title-slide slide level1 center">
-<h1>Computer-assisted scenario development</h1>
+<section id="framing-your-analysis" class="title-slide slide level1 center">
+<h1>Framing your analysis</h1>
 
 </section>
-<section id="why-is-scenario-based-planning-so-common" class="slide level2">
-<h2>Why is scenario-based planning so common?</h2>
-<p>As <a href="https://doi.org/10.1016/j.techfore.2009.08.002">Bryant and Lempert (2010)</a> write, “Scenarios provide a commonly used and intuitively appealing means to communicate and characterize uncertainty in many decision support applications.” They often:</p>
+<section id="how-you-structure" class="slide level2">
+<h2>How you structure</h2>
+<p>We “answer” questions like:</p>
+<ul>
+<li>What is the decision problem?</li>
+<li>Who are the decision-makers?</li>
+<li>What are the goals?</li>
+<li>What are the possible actions?</li>
+<li>What are the relevant processes?</li>
+<li>What are the uncertainties?</li>
+</ul>
+</section>
+<section id="how-you-analyze" class="slide level2">
+<h2>How you analyze</h2>
+<p>We “answer” questions like:</p>
+<ul>
+<li>What is feasible to analyze?</li>
+<li>Do I optimize or not?</li>
+<li>What model(s) do I use?</li>
+<li>How do I sample uncertainties?</li>
+<li>How do I measure objectives?</li>
+</ul>
+</section>
+<section id="discussion-questions" class="slide level2">
+<h2>Discussion questions</h2>
 <div>
 <ul>
-<li class="fragment">“Build a narrative description that captures decision makers’ imaginations”</li>
-<li class="fragment">“Aim to reduce overconfidence”</li>
-<li class="fragment">“Encourage… groups to reflect on a broader range of futures”</li>
-<li class="fragment">“Make it easier for decision makers to consider inconvenient or contentious futures”</li>
-</ul>
-</div>
-</section>
-<section id="limitations-to-traditional-scenarios" class="slide level2">
-<h2>Limitations to traditional scenarios</h2>
-<div>
-<ul>
-<li class="fragment">Often seen as arbitrary or biased</li>
-<li class="fragment">It is difficult to <em>a priori</em> choose a small number of <em>policy-relevant</em> scenarios to summarize the breadth of uncertainty about the future</li>
-<li class="fragment">Can work well with small groups of clients who have strong relationships with scenario developers, but can fail to work for wicked problems (e.g., diverse views, many large uncertainties, etc.,)</li>
-</ul>
-</div>
-</section>
-<section id="how-scenario-discovery-addresses-traditional-scenario-limitations" class="slide level2">
-<h2>How scenario discovery addresses traditional scenario limitations</h2>
-<div>
-<ul>
-<li class="fragment">Defines scenarios as a set of future states of the world that represent vulnerabilities of proposed policies</li>
-<li class="fragment">Typically, but not necessarily, uses statistical or data-mining algorithms in an effort to find easy-to-interpret, policy-relevant regions in the space of uncertain input parameters to computer simulation models</li>
-</ul>
-</div>
-<div class="fragment">
-<p><strong>In more accessible terms: scenario discovery is a method to find, rather than pre-specify, decision-relevant scenarios to plan for. This is particularly relevant for a robust decision-making analysis.</strong></p>
-</div>
-</section></section>
-<section>
-<section id="the-scenario-discovery-workflow" class="title-slide slide level1 center">
-<h1>The scenario discovery workflow</h1>
-
-</section>
-<section id="the-steps" class="slide level2 scrollable">
-<h2>The steps</h2>
-<ol type="1">
-<li>Generate data</li>
-<li>Find scenarios</li>
-<li>Assess scenarios
-<ul>
-<li>Generate more data?</li>
-<li>Find more scenarios?</li>
-</ul></li>
-<li>Select scenarios to plan for</li>
-</ol>
-</section>
-<section id="generate-data-from-a-simulation-model" class="slide level2">
-<h2>Generate data from a simulation model</h2>
-<ul>
-<li>Define an experimental design over the uncertain inputs while holding constant a candidate strategy
-<ul>
-<li><a href="https://doi.org/10.1016/j.techfore.2009.08.002">Bryant and Lempert (2010)</a> argue for Latin Hypercube sampling, which is common.</li>
-</ul></li>
-<li>Define a policy-relevant criteria to identify “cases of interest” that meet this threshold or fail</li>
-</ul>
-</section>
-<section id="find-scenarios" class="slide level2">
-<h2>Find scenarios</h2>
-<p>Often, studies use supervised classification machine learning to identify regions or rules that best differentiate successes and failures. The goals are:</p>
-<ul>
-<li>High coverage (analagous to recall)</li>
-<li>High density (analagous to precision)</li>
-<li>High interpretability (highly subjective!)</li>
-</ul>
-</section>
-<section id="trade-offs-in-achieving-scenario-quality" class="slide level2">
-<h2>Trade-offs in achieving scenario “quality”</h2>
-<p>Often, coverage, density, and interpretability compete with one another</p>
-
-<img data-src="lecture08-scendisc_files/figure-revealjs/cell-2-output-1.png" class="r-stretch"></section>
-<section id="scenario-discovery-algorithms" class="slide level2">
-<h2>Scenario discovery algorithms</h2>
-<div>
-<ul>
-<li class="fragment">You often see classification &amp; regression trees (CART) or patient rule induction method (PRIM) - examples to follow</li>
-<li class="fragment">But, keep your goal in mind a use your imagination!</li>
-<li class="fragment">No matter what you implement, calculate diagnostics!<br>
-</li>
+<li class="fragment">How are the tasks of structuring and analyzing related?</li>
+<li class="fragment">Which task did the course provide more guidance on?</li>
+<li class="fragment">What are some differences between a DA project, paper, and presentation?</li>
 </ul>
 </div>
 </section></section>
 <section>
-<section id="scenario-discovery-examples" class="title-slide slide level1 center">
-<h1>Scenario discovery examples</h1>
+<section id="framing-as-narrative" class="title-slide slide level1 center">
+<h1>Framing as narrative</h1>
 
 </section>
-<section id="patient-rule-induction-method" class="slide level2">
-<h2>Patient Rule Induction Method</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../_assets/img/bryant_prim.jpg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-<div class="fragment">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../_assets/img/bryant_prim_points.jpg"></p>
-<figcaption><a href="https://doi.org/10.1016/j.techfore.2009.08.002">Bryant and Lempert (2010)</a></figcaption>
-</figure>
-</div>
-</div>
-</section>
-<section id="classification-and-regression-trees" class="slide level2">
-<h2>Classification and Regression Trees</h2>
-
-<img data-src="../_assets/img/hadka_cart.jpg" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://doi.org/10.1016/j.envsoft.2015.07.014">Hadka et al., (2025)</a></p></section>
-<section id="multi-trait-scenario-storyline-discovery" class="slide level2">
-<h2>Multi-trait Scenario Storyline Discovery</h2>
-
-<img data-src="../_assets/img/hadjimichael_sd.jpg" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://doi.org/10.1029/2023EF004252">Hadjimichael et al., (2024)</a></p></section></section>
-<section>
-<section id="broader-considerations" class="title-slide slide level1 center">
-<h1>Broader considerations</h1>
-
-</section>
-<section id="scenario-discovery-was-conceived-as-part-of-a-deliberative-iterative-process" class="slide level2">
-<h2>Scenario discovery was conceived as part of a deliberative, iterative process</h2>
-<div>
+<section id="general-guidance" class="slide level2">
+<h2>General guidance</h2>
 <ul>
-<li class="fragment">This is one of the best opportunities for learning in the co-production process</li>
-<li class="fragment">It’s also a great opportunity for producing science insights (even outside of co-production settings!)
+<li>Who is the audience?</li>
+<li>Assert how decisions are made</li>
+<li>Emphasize decision relevance</li>
+<li>Emphasize structure</li>
+<li>Justify technical details and describe them as simply as possible</li>
+</ul>
+</section>
+<section id="project-level-guidance" class="slide level2">
+<h2>Project-level guidance</h2>
 <ul>
-<li class="fragment">Several optional readings demonstrate this by considering a wide range of ensembles beyond the limited SSP-RCP ones</li>
+<li>Audience: funders, clients, stakeholders</li>
+<li>Emphasis: improving a real-world decision</li>
+<li>Technical: be as good as the best and improve a few key things</li>
+</ul>
+</section>
+<section id="paper-level-guidance" class="slide level2">
+<h2>Paper-level guidance</h2>
+<ul>
+<li>Audience: scientists, funders, agencies</li>
+<li>Emphasis: decision insights or better method to analyze decisions</li>
+<li>Technical: be as good as the best and improve one or two things</li>
+</ul>
+</section>
+<section id="abstract-level-guidance" class="slide level2">
+<h2>Abstract-level guidance</h2>
+<div class="quote">
+<blockquote>
+<p>“The abstract is of utmost importance, for it is read by 10 to 500 times more people than hear or read the entire article. It should not be a mere recital of the subjects covered, replete with such expressions as ‘is discussed’ and ‘is described.’ It should be a condensation and concentration of the essential qualities of the paper.”</p>
+</blockquote>
+<p>— Kenneth Landes. A Scrutiny of the Abstract. Bulletin of the American Association of Petroleum Geologists, Vol. 35, No.&nbsp;7, July 1951, p.&nbsp;1660.</p>
+</div>
+<p>Also see <em>Nature</em> summary <a href="https://www.nature.com/documents/nature-summary-paragraph.pdf">guidance</a></p>
+</section>
+<section id="presentation-level-guidance" class="slide level2">
+<h2>Presentation-level guidance</h2>
+<ul>
+<li>Audience: varies, often your largest and most diverse</li>
+<li>Emphasis: same as paper, but even more focused</li>
+<li>Technical: cater to audience and be mindful of time</li>
+</ul>
+</section>
+<section id="deconstructing-a-15-minute-presentation" class="slide level2">
+<h2>Deconstructing a 15-minute presentation</h2>
+<ul>
+<li>Audience: Annual Conference of the Society for Decision Making Under Deep Uncertainty</li>
+<li>Emphasis: decision insight</li>
+<li>Technical: None!
+<ul>
+<li>Reference rigorous methods in speech, prepare extra slides, know your stuff for questions</li>
 </ul></li>
 </ul>
-</div>
-</section>
-<section id="dont-let-exploratory-modeling-taking-your-judgement-out-of-the-equation" class="slide level2">
-<h2>Don’t let exploratory modeling taking your judgement out of the equation</h2>
-<div class="columns">
-<div id="vcenter" class="column" style="width:40%;">
-<div>
+<p>Let’s deconstruct this <a href="https://docs.google.com/presentation/d/1C2RiQGmjvE-7hxmSRoSV6BrtLHIQePUGoPFNbR0Fgu8/edit?slide=id.g2d5818ab90f_0_0#slide=id.g2d5818ab90f_0_0">example</a> with the following in mind:</p>
 <ul>
-<li class="fragment">Scenario discovery is a process</li>
-<li class="fragment">Simple visual analysis can inform algorithmic choices, but can also be effective in-and-of itself</li>
+<li>What decision insight does it emphasize?</li>
+<li>How and when does it establish the decision problem?</li>
+<li>How much “technical” detail does it cover?</li>
+<li>What is the figure size to slide ratio?</li>
+<li>What is the figure to text ratio?</li>
+<li>What style features does it employ for emphasis?</li>
+<li>How many times is each point (motivation, technical, result) repeated in one way or another?</li>
 </ul>
-</div>
-</div><div id="unpad-fig" class="column" style="width:60%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../_assets/img/quinn_robust.png" width="500"></p>
-<figcaption><a href="https://doi.org/10.1016/j.envsoft.2017.02.017">Quinn et al., (2017)</a></figcaption>
-</figure>
-</div>
-</div></div>
 </section></section>
 <section>
 <section id="logistics" class="title-slide slide level1 center">
@@ -313,15 +262,22 @@
 <section id="this-week" class="slide level2">
 <h2>This week</h2>
 <ul>
-<li>Optimization tutorial on Wed. by Prabhat</li>
-<li>Case study on Friday</li>
+<li>Wednesday: Deconstructing a paper together</li>
+<li>Friday: Practice presentations - 2 volunteers?</li>
 </ul>
 </section>
 <section id="next-week" class="slide level2">
 <h2>Next week</h2>
 <ul>
-<li>Discussion about revisiting decision analysis framing</li>
-<li>Practice presentations Wed. &amp; Fri.</li>
+<li>Monday: Practice presentations</li>
+<li>Wednesday: Lecture on more “useful” DA</li>
+<li>Friday: case study on value of information</li>
+</ul>
+</section>
+<section id="two-weeks" class="slide level2">
+<h2>Two weeks</h2>
+<ul>
+<li>M/W final presentations!</li>
 </ul>
 
 
