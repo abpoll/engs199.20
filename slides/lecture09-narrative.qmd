@@ -1,0 +1,123 @@
+---
+title: "Communicating your analysis framing"
+subtitle: "Lecture 09"
+author: "{{< var instructor.name_no_title >}}"
+course: "{{< var course.number >}}"
+institution: "{{< var university.name >}}"
+date: "November 3, 2025"
+format:
+    revealjs:
+        scrollable: true
+        slide-number: c/t
+        show-slide-number: all
+        center-title-slide: true
+        transition: none
+        toc: true
+        toc-depth: 1
+        toc-title: "Overview"
+        history: false
+        link-external-newwindow: true
+        theme: ../_assets/sass/slides.scss
+        template-partials:
+            - title-slide.html
+        menu:
+            numbers: true
+        date-format: long
+        email-obfuscation: javascript
+        controls: true
+execute:
+    freeze: auto
+    echo: false
+---
+
+# Framing your analysis
+## How you structure
+We "answer" questions like: 
+
+* What is the decision problem?
+* Who are the decision-makers?
+* What are the goals?
+* What are the possible actions?
+* What are the relevant processes?
+* What are the uncertainties?
+
+## How you analyze
+We "answer" questions like: 
+
+* What is feasible to analyze?
+* Do I optimize or not?
+* What model(s) do I use?
+* How do I sample uncertainties?
+* How do I measure objectives?
+
+## Discussion questions
+
+::: {.incremental}
+* How are the tasks of structuring and analyzing related? 
+* Which task did the course provide more guidance on?
+* What are some differences between a DA project, paper, and presentation?
+:::
+
+# Framing as narrative
+## General guidance
+* Who is the audience?
+* Assert how decisions are made
+* Emphasize decision relevance
+* Emphasize structure
+* Justify technical details and describe them as simply as possible
+
+## Project-level guidance
+* Audience: funders, clients, stakeholders
+* Emphasis: improving a real-world decision
+* Technical: be as good as the best and improve a few key things
+
+## Paper-level guidance
+* Audience: scientists, funders, agencies
+* Emphasis: decision insights or better method to analyze decisions
+* Technical: be as good as the best and improve one or two things
+
+## Abstract-level guidance
+::: {.quote}
+> "The abstract is of utmost importance, for it is read by 10 to 500 times more people
+than hear or read the entire article. It should not be a mere recital of the subjects
+covered, replete with such expressions as 'is discussed' and 'is described.' It should be a
+condensation and concentration of the essential qualities of the paper." 
+
+--- Kenneth Landes. A Scrutiny of the Abstract. Bulletin of the American Association of Petroleum Geologists, Vol. 35, No. 7, July 1951, p. 1660.
+:::
+
+Also see *Nature* summary [guidance](https://www.nature.com/documents/nature-summary-paragraph.pdf)
+
+## Presentation-level guidance
+* Audience: varies, often your largest and most diverse
+* Emphasis: same as paper, but even more focused
+* Technical: cater to audience and be mindful of time
+
+## Deconstructing a 15-minute presentation
+* Audience: Annual Conference of the Society for Decision Making Under Deep Uncertainty
+* Emphasis: decision insight
+* Technical: None! 
+    - Reference rigorous methods in speech, prepare extra slides, know your stuff for questions
+
+Let's deconstruct this [example](https://docs.google.com/presentation/d/1C2RiQGmjvE-7hxmSRoSV6BrtLHIQePUGoPFNbR0Fgu8/edit?slide=id.g2d5818ab90f_0_0#slide=id.g2d5818ab90f_0_0) with the following in mind:
+
+* What decision insight does it emphasize?
+* How and when does it establish the decision problem?
+* How much "technical" detail does it cover?
+* What is the figure size to slide ratio?
+* What is the figure to text ratio?
+* What style features does it employ for emphasis?
+* How many times is each point (motivation, technical, result) repeated in one way or another?
+
+# Logistics
+## This week
+* Wednesday: Deconstructing a paper together
+* Friday: Practice presentations - 2 volunteers?
+
+## Next week
+* Monday: Practice presentations
+* Wednesday: Lecture on more "useful" DA
+* Friday: case study on value of information
+
+## Two weeks
+* M/W final presentations! 
