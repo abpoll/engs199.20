@@ -1,0 +1,134 @@
+---
+title: "Decision analysis to inform decisions"
+subtitle: "Lecture 10"
+author: "{{< var instructor.name_no_title >}}"
+course: "{{< var course.number >}}"
+institution: "{{< var university.name >}}"
+date: "November 12, 2025"
+format:
+    revealjs:
+        scrollable: true
+        slide-number: c/t
+        show-slide-number: all
+        center-title-slide: true
+        transition: none
+        toc: true
+        toc-depth: 1
+        toc-title: "Overview"
+        history: false
+        link-external-newwindow: true
+        theme: ../_assets/sass/slides.scss
+        template-partials:
+            - title-slide.html
+        menu:
+            numbers: true
+        date-format: long
+        email-obfuscation: javascript
+        controls: true
+execute:
+    freeze: auto
+    echo: false
+---
+
+# Why do we analyze decisions? 
+## Our course objectives
+1. Frame climate decision problems in a helpful way.
+2. Apply multi-objective robust decision-making frameworks to real-world problems using open source software tools.
+3. Evaluate trade-offs between competing objectives using appropriate quantitative techniques. 
+4. Identify actionable insights for addressing problems characterized by deep uncertainties.
+5. Communicate complex technical analyses clearly and effectively.
+6. Develop professional-quality deliverables. 
+
+## What did we learn about framing problems in a "helpful" way?
+A few guiding questions:
+
+* Did we learn how to inform decisions?  
+* Is it possible to do this without co-production? How?
+* What frameworks did we learn for providing decision support? 
+* Does the DMDU book have a chapter on decision making or support? 
+
+# Perspectives on informing decisions
+## Usable information {.nostretch}
+![[Lemos et al., (2012)](https://doi.org/10.1038/nclimate1614)](../_assets/img/usable.png){width=550}
+
+## Organizational constraints
+
+> "It's David and Goliath and David ain't winning...the rules and regulations promulgated by those organizations [state and federal entities] make it almost impossible to do mitigation" - Interviewee#15
+
+> "We've got mountiain lions... wolves... coyotes... fishers, great horned owls... eagles. You name it, it's all here... Environmenta impact seems foolish in a town that's all woods" - Interviewee#4
+
+> "We don't want to have a negative impact on the environment but... saving two or three fish is not worth $450,000" - Interviewee#15
+
+> "[federal funding programs are] a great idea but too complex for us to access" - Interviewee#7
+
+For more, see [Consoer and Milman (2017)](https://onlinelibrary.wiley.com/doi/10.1111/jfr3.12302)
+
+## Evaluation
+![[Leskens et al., (2014). Why are decisions in flood disaster management so poorly supported by information from flood models?](https://www.sciencedirect.com/science/article/abs/pii/S1364815213002843)](../_assets/img/decision_useful.png)
+
+## Knowledge infrastructure
+Remember this?
+
+![[Herman et al., (2020)](https://doi.org/10.1029/2019WR025502)](../_assets/img/herman_policy.jpg)
+
+## Knowledge infrastructure
+
+Control problem framing abstracts away from who is the "controller"
+
+![[Anderies et al., (2018)](https://doi.org/10.1073/pnas.1802885115)](../_assets/img/simple_closed.jpeg)
+
+## Knowledge infrastructure
+The real-world problem is more complex *and* gets addressed by real-world decision-making processes
+
+![[Deslatte et al., (2024)](https://doi.org/10.5751/ES-15454-290428)](../_assets/img/knowledge_inf.jpg)
+
+## Value of information
+Should we expend resources to build new knowledge? Key concepts include:
+
+* Expected value of perfect information (i.e., reducing all uncertainty)
+* Partial expected value of perfect information (i.e., eliminating uncertainty associated with one modeling aspect)
+* Expected value of sample information (i.e., improvement from reducing uncertainty)
+  - Most realistic
+
+## Cross-walking different perspectives
+Try to connect the dots across these literatures (which are largely disonnected) and consider:
+
+::: {.incremental}
+* How are decisions made now? 
+* How "should" decisions be made? 
+* How can decisions be made better? 
+:::
+
+# Having an identity as a decision analyst
+## What roles can you play?
+* Improve methods for implementing decision analysis
+* Make the results of decision analysis more salient 
+* Translate good decision analysis into better decision-making
+* Analyze decision-making for how well it meets its objectives
+* Identify currently feasible ways to improve decisions
+
+**What roles does MORDM enable you to fill, and how completely?**
+
+## A few closing thoughts on the course
+::: {.incremental}
+* MORDM operationalizes a lot of good ideas; hold onto the ideas but not necessarily the worfklow
+  - RDM largely builds off of theories related to individual decision-making, not collective action problems
+  - Evaluation and political science are major gaps in existing guidance on RDM framing
+* Choose project and paper goals first, then find and build on the body of work that enables you to realize them
+* You have a lot of decision-making experience; use your intuition to think about decision analysis and decision making for wicked social planning problems
+:::
+
+# Logistics
+## Presentations next week!
+* Monday: Eric volunteered. Who else?
+* Presentation peer evaluation. For each other student:
+  - Write a max one-page comment with feedback on style and content
+  - Style: what worked and didn't for you as an audience?
+  - Content: give your best summary of their project and goals
+  - Content: state your favorite part of the pitch/idea
+  - Content: outline your biggest (max 3) areas of confusion
+
+## Report stuff
+* Report due Nov 26
+  - The drafts were great! For the final report, I'm looking for narrower and sharper focuses for your next paper so your advisors will be glad you took this course :) 
+  - I am going to randomly assign report partners so that each person has a peer evaluation aspect to their report, as well as my feedback

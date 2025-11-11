@@ -1,0 +1,30 @@
+---
+format:
+  html:
+    title: Week 9 Readings
+
+reference-location: document
+citation-location: document
+sidebar: main
+---
+
+## Optional Reading
+
+What does it mean for a decision analysis to be useful? Here are a few possible features of a useful decision analysis:
+
+1. Produces a framework, tool, or other output that decision-makers use
+2. Helps decision-makers build their capabilities to plan or make decisions
+3. Directly informs a plan or decision 
+4. Improves how well plans and decisions achieve their objectives
+
+While several of the chapters and studies we reviewed in detail entail some of these features, most of our case studies are theoretical in nature and do not. The field of decision making under deep uncertainty is moving towards interfacing methods and approaches more with decision-making, but this is a rather big gap in the field. The following recommended reading represents a range of approaches to increasing decision-making utility through methods and concepts such as evaluation, knowledge infrastructure, organizational constraints, informaton usability, and value of information. You'll notice that these papers are disonnected from the studies we read throughout the term and also from each other. What ideas in these studies and the different fields they come from may help you make your decision analyses more useful? How can you build bridges across these fields and the material we reviewed in the rest of the course to foreground usefulness and usability in your decision analysis framing from the start? 
+
+1. @Lemos2012 - usable information
+2. @Consoer2018 - organizational constraints
+3. @Leskens2014 - evaluation
+4. @Anderies2019 - knowledge infrastructure 
+5. @Runge2011 - value of information
+
+### References
+::: {#refs}
+:::
