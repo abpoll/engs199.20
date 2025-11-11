@@ -163,462 +163,575 @@
     "text": "Optional Reading\nI want to provide you with more references for identifying, characterizing, and quantifying uncertainties in general and in decision analysis papers.\nMore on uncertainty analysis in general: Srikrishnan et al. (2022) and related e-book on uncertainty characterization and quantification in MSD analyses\nMore on deep uncertainty: Lempert et al. (2024)\nPapers with Methods sections (or Supplementary Info) worth reviewing to help with your module progress report (look at the presentation of the analysis workflow, how the authors represent and account for various types of uncertainty, etc.,):\n\nOddo et al. (2020)\nZarekarizi et al. (2020)\nPollack et al. (2025)\n\n\nReferences\n\n\nLempert, R. J., Lawrence, J., Kopp, R. E., Haasnoot, M., Reisinger, A., Grubb, M., & Pasqualino, R. (2024). The use of decision making under deep uncertainty in the IPCC. Frontiers in Climate, 6. https://doi.org/10.3389/fclim.2024.1380054\n\n\nOddo, P. C., Lee, B. S., Garner, G. G., Srikrishnan, V., Reed, P. M., Forest, C. E., & Keller, K. (2020). Deep uncertainties in sea-level rise and storm surge projections: Implications for coastal flood risk management. Risk Anal., 40(1), 153–168. https://doi.org/10.1111/risa.12888\n\n\nPollack, A. B., Santamaria-Aguilar, S., Maduwantha, P., Helgeson, C., Wahl, T., & Keller, K. (2025). Funding rules that promote equity in climate adaptation outcomes. Proceedings of the National Academy of Sciences, 122(2), e2418711121. https://doi.org/10.1073/pnas.2418711121\n\n\nSrikrishnan, V., Lafferty, D. C., Wong, T. E., Lamontagne, J. R., Quinn, J. D., Sharma, S., et al. (2022). Uncertainty analysis in multi‐sector systems: Considerations for risk analysis, projection, and planning for complex systems. Earths Future, 10(8). https://doi.org/10.1029/2021ef002644\n\n\nZarekarizi, M., Srikrishnan, V., & Keller, K. (2020). Neglecting uncertainties biases house-elevation decisions to manage riverine flood risks. Nat. Commun., 11(1), 5361. https://doi.org/10.1038/s41467-020-19188-9"
   },
   {
-    "objectID": "project/report.html",
-    "href": "project/report.html",
-    "title": "Project Report Instructions",
+    "objectID": "readings/readings09.html",
+    "href": "readings/readings09.html",
+    "title": "Week 9 Readings",
     "section": "",
-    "text": "Your project report is a draft of several sections of your paper:\n\nYour introduction\nSeveral parts of your methods section\nThe hypothesized results from your decision analysis\n\nGoing into more detail on each section:\n\n\nWith all the attention we’ve paid to framing, you are ready to write a first (or more refined) draft of your paper’s introduction. You can follow other structures, but one way to do an effective structure mirrors your presentation by answering:\n\nWhat is your decision problem?\nWhat is the state of the art in addressing this problem?\nWhat is wrong with the status quo?\nWhat knowledge gaps are there and which do you address?\nHow will you address these knowledge gaps (not too technical)?\nWhat are your hypotheses about your planned decision analysis?\nWhat are the implications?\n\nFor some journals, especially those with space constraints, the last two bullets are not necessary (or possible) to include. For your report, I would like you to include these for completeness. You can always use that text in other sections.\n\n\n\nOne of the main things we learned in this course is that our analytical choices stem from our framing choices and that we should have strong justifications for why our methods appropriately operationalize these choices. Here are the types of analytical choices you can write a draft about in your report:\n\nOverview of the overall decision analysis workflow\n\nTake this opportunity to really highlight what your paper’s goals are and how the workflow accommodates answering your specific research questions\nTalk about any framing activities (e.g., workshops or meetings with stakeholders, policy document review, etc.,)\n\nHighlight the key uncertainties relevant to your decision analysis (specifically your paper’s goals), explain the role uncertainty plays in your analysis (e.g., robustness considerations, scenario discovery, factor fixing, etc.,) and how you will address that\nThe relevant objectives (and trade-offs/synergies) for your study, how you identified them, and how you will measure them\nIf relevant, how you define and measure robustness and the justification for that\nYour exploratory modeling approach\n\nYou do not have to describe your model entirely here (though you might for your paper). For your report, you should think of this as being at the level of deatil for the “main” manuscript, but not for the supplementary info (e.g., extensive details on validation or calibration, data sources, etc.,)\n\nYour policy search approach (prespecified or generating solutions?) - if generating solutions, how will you handle deep uncertainties and do you consider robustness in your search?\n\nYou should comment on the justification for your policy search approach, including how you represent the policy structure. Is it reasonable in your setting for a decision-maker to implement policies in this form? How stylized is this representation?\n\n\n\n\n\nIt is important for you to form hypotheses before you start your analysis. Given the exploratory nature of our modeling, and the many uncertainties involved with framing and data and projections, hypotheses are a good way to safeguard against errors in implementation. More importantly, they require you to think hard and encourage you to treat your modeling exercise as a complement to your reasoning instead of replacement. Importantly, one reason that we use exploratory modeling is that it can be a priori infeasible to anticipate the consequences of our complex system of study and the decision space we consider. You can form hypotheses about the types of mechanisms that could explain results in different directions. You can also explain the types of analyses you will do to get to the bottom of reuslts you find.\nIn our trade-offs module report, we proposed figure sketches about how the strategies under consideration might navigate trade-offs in our problem. Now, we will apply the figure sketch technique more broadly to the results-based narrative of our study. What are the key results you will generate in response to your research questions? Sketch these out, include figure captions, and write text summarizing your hypotheses. Compared to the other sections, you do not have to write these summaries in the same narrative style but they should be in complete sentences and reflect your reasoning about the complex system and decision space.",
+    "text": "What does it mean for a decision analysis to be useful? Here are a few possible features of a useful decision analysis:\n\nProduces a framework, tool, or other output that decision-makers use\nHelps decision-makers build their capabilities to plan or make decisions\nDirectly informs a plan or decision\nImproves how well plans and decisions achieve their objectives\n\nWhile several of the chapters and studies we reviewed in detail entail some of these features, most of our case studies are theoretical in nature and do not. The field of decision making under deep uncertainty is moving towards interfacing methods and approaches more with decision-making, but this is a rather big gap in the field. The following recommended reading represents a range of approaches to increasing decision-making utility through methods and concepts such as evaluation, knowledge infrastructure, organizational constraints, informaton usability, and value of information. You’ll notice that these papers are disonnected from the studies we read throughout the term and also from each other. What ideas in these studies and the different fields they come from may help you make your decision analyses more useful? How can you build bridges across these fields and the material we reviewed in the rest of the course to foreground usefulness and usability in your decision analysis framing from the start?\n\nLemos et al. (2012) - usable information\nConsoer & Milman (2018) - organizational constraints\nLeskens et al. (2014) - evaluation\nAnderies et al. (2019) - knowledge infrastructure\nRunge et al. (2011) - value of information\n\n\n\n\n\nAnderies, J. M., Mathias, J.-D., & Janssen, M. A. (2019). Knowledge infrastructure and safe operating spaces in social-ecological systems. Proc. Natl. Acad. Sci. U. S. A., 116(12), 5277–5284. https://doi.org/10.1073/pnas.1802885115\n\n\nConsoer, M., & Milman, A. (2018). Opportunities, constraints, and choices for flood mitigation in rural areas: Perspectives of municipalities in massachusetts: Opportunities, constraints, and choices for flood mitigation in rural areas. J. Flood Risk Manag., 11(2), 141–151. https://doi.org/10.1111/jfr3.12302\n\n\nLemos, M. C., Kirchhoff, C. J., & Ramprasad, V. (2012). Narrowing the climate information usability gap. Nat. Clim. Chang., 2(11), 789–794. https://doi.org/10.1038/nclimate1614\n\n\nLeskens, J. G., Brugnach, M., Hoekstra, A. Y., & Schuurmans, W. (2014). Why are decisions in flood disaster management so poorly supported by information from flood models? Environ. Model. Softw., 53, 53–61. https://doi.org/10.1016/j.envsoft.2013.11.003\n\n\nRunge, M. C., Converse, S. J., & Lyons, J. E. (2011). Which uncertainty? Using expert elicitation and expected value of information to design an adaptive program. Biol. Conserv., 144(4), 1214–1223. https://doi.org/10.1016/j.biocon.2010.12.020"
+  },
+  {
+    "objectID": "readings/readings09.html#optional-reading",
+    "href": "readings/readings09.html#optional-reading",
+    "title": "Week 9 Readings",
+    "section": "",
+    "text": "What does it mean for a decision analysis to be useful? Here are a few possible features of a useful decision analysis:\n\nProduces a framework, tool, or other output that decision-makers use\nHelps decision-makers build their capabilities to plan or make decisions\nDirectly informs a plan or decision\nImproves how well plans and decisions achieve their objectives\n\nWhile several of the chapters and studies we reviewed in detail entail some of these features, most of our case studies are theoretical in nature and do not. The field of decision making under deep uncertainty is moving towards interfacing methods and approaches more with decision-making, but this is a rather big gap in the field. The following recommended reading represents a range of approaches to increasing decision-making utility through methods and concepts such as evaluation, knowledge infrastructure, organizational constraints, informaton usability, and value of information. You’ll notice that these papers are disonnected from the studies we read throughout the term and also from each other. What ideas in these studies and the different fields they come from may help you make your decision analyses more useful? How can you build bridges across these fields and the material we reviewed in the rest of the course to foreground usefulness and usability in your decision analysis framing from the start?\n\nLemos et al. (2012) - usable information\nConsoer & Milman (2018) - organizational constraints\nLeskens et al. (2014) - evaluation\nAnderies et al. (2019) - knowledge infrastructure\nRunge et al. (2011) - value of information\n\n\n\n\n\nAnderies, J. M., Mathias, J.-D., & Janssen, M. A. (2019). Knowledge infrastructure and safe operating spaces in social-ecological systems. Proc. Natl. Acad. Sci. U. S. A., 116(12), 5277–5284. https://doi.org/10.1073/pnas.1802885115\n\n\nConsoer, M., & Milman, A. (2018). Opportunities, constraints, and choices for flood mitigation in rural areas: Perspectives of municipalities in massachusetts: Opportunities, constraints, and choices for flood mitigation in rural areas. J. Flood Risk Manag., 11(2), 141–151. https://doi.org/10.1111/jfr3.12302\n\n\nLemos, M. C., Kirchhoff, C. J., & Ramprasad, V. (2012). Narrowing the climate information usability gap. Nat. Clim. Chang., 2(11), 789–794. https://doi.org/10.1038/nclimate1614\n\n\nLeskens, J. G., Brugnach, M., Hoekstra, A. Y., & Schuurmans, W. (2014). Why are decisions in flood disaster management so poorly supported by information from flood models? Environ. Model. Softw., 53, 53–61. https://doi.org/10.1016/j.envsoft.2013.11.003\n\n\nRunge, M. C., Converse, S. J., & Lyons, J. E. (2011). Which uncertainty? Using expert elicitation and expected value of information to design an adaptive program. Biol. Conserv., 144(4), 1214–1223. https://doi.org/10.1016/j.biocon.2010.12.020"
+  },
+  {
+    "objectID": "project/updates.html",
+    "href": "project/updates.html",
+    "title": "Project Progress Reports",
+    "section": "",
+    "text": "At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I highly encourage you to work on these during the module to stay on track with your project.\nNote that the Gaps module does not have a progress report.",
     "crumbs": [
       "Course Project",
-      "Final Report"
+      "Module Reports"
     ]
   },
   {
-    "objectID": "project/report.html#overview",
-    "href": "project/report.html#overview",
-    "title": "Project Report Instructions",
+    "objectID": "project/updates.html#overview",
+    "href": "project/updates.html#overview",
+    "title": "Project Progress Reports",
     "section": "",
-    "text": "Your project report is a draft of several sections of your paper:\n\nYour introduction\nSeveral parts of your methods section\nThe hypothesized results from your decision analysis\n\nGoing into more detail on each section:\n\n\nWith all the attention we’ve paid to framing, you are ready to write a first (or more refined) draft of your paper’s introduction. You can follow other structures, but one way to do an effective structure mirrors your presentation by answering:\n\nWhat is your decision problem?\nWhat is the state of the art in addressing this problem?\nWhat is wrong with the status quo?\nWhat knowledge gaps are there and which do you address?\nHow will you address these knowledge gaps (not too technical)?\nWhat are your hypotheses about your planned decision analysis?\nWhat are the implications?\n\nFor some journals, especially those with space constraints, the last two bullets are not necessary (or possible) to include. For your report, I would like you to include these for completeness. You can always use that text in other sections.\n\n\n\nOne of the main things we learned in this course is that our analytical choices stem from our framing choices and that we should have strong justifications for why our methods appropriately operationalize these choices. Here are the types of analytical choices you can write a draft about in your report:\n\nOverview of the overall decision analysis workflow\n\nTake this opportunity to really highlight what your paper’s goals are and how the workflow accommodates answering your specific research questions\nTalk about any framing activities (e.g., workshops or meetings with stakeholders, policy document review, etc.,)\n\nHighlight the key uncertainties relevant to your decision analysis (specifically your paper’s goals), explain the role uncertainty plays in your analysis (e.g., robustness considerations, scenario discovery, factor fixing, etc.,) and how you will address that\nThe relevant objectives (and trade-offs/synergies) for your study, how you identified them, and how you will measure them\nIf relevant, how you define and measure robustness and the justification for that\nYour exploratory modeling approach\n\nYou do not have to describe your model entirely here (though you might for your paper). For your report, you should think of this as being at the level of deatil for the “main” manuscript, but not for the supplementary info (e.g., extensive details on validation or calibration, data sources, etc.,)\n\nYour policy search approach (prespecified or generating solutions?) - if generating solutions, how will you handle deep uncertainties and do you consider robustness in your search?\n\nYou should comment on the justification for your policy search approach, including how you represent the policy structure. Is it reasonable in your setting for a decision-maker to implement policies in this form? How stylized is this representation?\n\n\n\n\n\nIt is important for you to form hypotheses before you start your analysis. Given the exploratory nature of our modeling, and the many uncertainties involved with framing and data and projections, hypotheses are a good way to safeguard against errors in implementation. More importantly, they require you to think hard and encourage you to treat your modeling exercise as a complement to your reasoning instead of replacement. Importantly, one reason that we use exploratory modeling is that it can be a priori infeasible to anticipate the consequences of our complex system of study and the decision space we consider. You can form hypotheses about the types of mechanisms that could explain results in different directions. You can also explain the types of analyses you will do to get to the bottom of reuslts you find.\nIn our trade-offs module report, we proposed figure sketches about how the strategies under consideration might navigate trade-offs in our problem. Now, we will apply the figure sketch technique more broadly to the results-based narrative of our study. What are the key results you will generate in response to your research questions? Sketch these out, include figure captions, and write text summarizing your hypotheses. Compared to the other sections, you do not have to write these summaries in the same narrative style but they should be in complete sentences and reflect your reasoning about the complex system and decision space.",
+    "text": "At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I highly encourage you to work on these during the module to stay on track with your project.\nNote that the Gaps module does not have a progress report.",
     "crumbs": [
       "Course Project",
-      "Final Report"
+      "Module Reports"
     ]
   },
   {
-    "objectID": "project/report.html#rubric",
-    "href": "project/report.html#rubric",
-    "title": "Project Report Instructions",
+    "objectID": "project/updates.html#schedule",
+    "href": "project/updates.html#schedule",
+    "title": "Project Progress Reports",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\n\n\n\n\n\nModule\nInstructions\nDue Date\n\n\n\n\nOverview\n\n9/26/25\n\n\nUncertainty\n\n10/3/25\n\n\nRDM\n\n10/10/25\n\n\nTrade-offs\n\n10/17/25\n\n\nDMDU\n\n10/31/25",
+    "crumbs": [
+      "Course Project",
+      "Module Reports"
+    ]
+  },
+  {
+    "objectID": "project/updates.html#rubric",
+    "href": "project/updates.html#rubric",
+    "title": "Project Progress Reports",
     "section": "Rubric",
-    "text": "Rubric\nFor the purposes of the training, there is no grade assigned. For credit-based versions of this course, it is up to instructor discretion to design a grading scheme.\nThat said, there will be a peer evaluation aspect to the final report in the training, and I propose this for credit-based versions of the course as well.",
+    "text": "Rubric\nYour grade is based on your perceived effort. Even if you do not fully understand how to apply lessons from a module to your project, you can receive full credit for a report if you understand your knowledge gaps and form strong questions for me to provide clarification and direction for you. You can receive 0-3 points on each assignment.\n\n0: No perceived effort\n1: Low perceived effort\n\nE.g., incomplete, no synthesis, no self awareness of knowledge gaps, no questions for me\n\n2: Moderate perceived effort\n\nE.g., Complete but synthesis has important shortcomings and questions are too open ended for me to provide helpful guidance\n\n3: High perceived effort\n\nE.g., Complete and synthesis has important shortcomings but questions are specific and allow me to provide helpful guidance.\n\n\nThe instructions for each report will include examples of specific questions about the module that you can use for free in your report to help boost your grade. I will not be able to anticipate all questions that apply to your understanding and decision problem, so it is no guarantee you receive a 3 if you use some of these example questions.\nI will provide as much detailed feedback on each report as I can. This means that the more thought and effort you put into your report, the more guidance you will receive. This will help you on your project presentation and report. However, you must apply discretion when writing your report and should not include too much or irrelevant details. Concision is a very important feature of strong synthesis.\nLate submissions receive a 25% downgrading of the full credit score for each late day. Extension requests must be made 24 hours before the submission deadline with a submission of what you have achieved so far.",
     "crumbs": [
       "Course Project",
-      "Final Report"
+      "Module Reports"
     ]
   },
   {
-    "objectID": "project/presentation.html",
-    "href": "project/presentation.html",
-    "title": "Project Presentation Instructions",
+    "objectID": "project/overview.html",
+    "href": "project/overview.html",
+    "title": "Course Project",
     "section": "",
-    "text": "Your project presentation will provide a narrative overview of your project. You are allowed 15 minutes for your presentation, which should cover the following:\n\nWhat is your decision problem?\nWhat is the state of the art in addressing this problem?\nWhat is wrong with the status quo?\nWhat knowledge gaps are there and which do you address?\nHow will you address these knowledge gaps (not too technical)?\nWhat are your hypotheses about your planned decision analysis?\nWhat are the implications?\n\nAs an audience member, you will be responsible for one short summary and round of moderation of group discussion for a colleague’s project. Your summary should focus on the story of the project and should clarify any parts of the story that were not clear to you. Your round of moderation should facilitate specific attention from the other audience members. For example, you can prompt other students to comment on potential limitations in proposed methods or you can prompt the presenter to clarify a specific narrative point.",
+    "text": "The goal of the course project is to develop and report on an actionable plan for implementing a quantitative decision analysis. This project can be highly synergistic with thesis projects.",
     "crumbs": [
-      "Course Project",
-      "Presentation"
+      "Course Project"
     ]
   },
   {
-    "objectID": "project/presentation.html#overview",
-    "href": "project/presentation.html#overview",
-    "title": "Project Presentation Instructions",
+    "objectID": "project/overview.html#overview",
+    "href": "project/overview.html#overview",
+    "title": "Course Project",
     "section": "",
-    "text": "Your project presentation will provide a narrative overview of your project. You are allowed 15 minutes for your presentation, which should cover the following:\n\nWhat is your decision problem?\nWhat is the state of the art in addressing this problem?\nWhat is wrong with the status quo?\nWhat knowledge gaps are there and which do you address?\nHow will you address these knowledge gaps (not too technical)?\nWhat are your hypotheses about your planned decision analysis?\nWhat are the implications?\n\nAs an audience member, you will be responsible for one short summary and round of moderation of group discussion for a colleague’s project. Your summary should focus on the story of the project and should clarify any parts of the story that were not clear to you. Your round of moderation should facilitate specific attention from the other audience members. For example, you can prompt other students to comment on potential limitations in proposed methods or you can prompt the presenter to clarify a specific narrative point.",
+    "text": "The goal of the course project is to develop and report on an actionable plan for implementing a quantitative decision analysis. This project can be highly synergistic with thesis projects.",
     "crumbs": [
-      "Course Project",
-      "Presentation"
+      "Course Project"
     ]
   },
   {
-    "objectID": "project/presentation.html#rubric",
-    "href": "project/presentation.html#rubric",
-    "title": "Project Presentation Instructions",
-    "section": "Rubric",
-    "text": "Rubric\nThe below is a proposed grading scheme for future credit-based versions of the course. For the purposes of the training, there is no grade assigned. We will do the peer evaluation, though.\nYou can receive a maximum of 20 points, with credit opportunities as follows:\n\nUp to 10 points based on instructor’s rating\nUp to 8 points based on average of peer rating (low quality dropped)\nUp to 2 points for summary and moderation\n1 point for strong and constructive peer evaluation\nUp to 2 points for submitting a revised and improved recorded presentation on Canvas within the following week\n\nYou can lose points as follows:\n\n-5 points for going over 15 minutes on either presentation opportunity\n-2 points for low quality peer evaluation\n\nNote: Low quality peer evaluations are ones that suggest you were not paying attention to your colleague’s presentation. Even if you struggle to understand some material, your colleague deserves your respect. In fact, conveying clearly that you struggled to understand some material can be very helpful to your colleague in synthesizing feedback and working on their final report.",
+    "objectID": "project/overview.html#schedule",
+    "href": "project/overview.html#schedule",
+    "title": "Course Project",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\n\n\n\n\n\nMilestone\nInstructions\nDue Date\n\n\n\n\nProgress Reports\n\nPlease see within page\n\n\nPresentation\n\nNov. 16, 2025\n\n\nReport\n\nNov. 26, 2025",
     "crumbs": [
-      "Course Project",
-      "Presentation"
+      "Course Project"
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "This website contains course materials for the Fall 2025 edition of Decision Analysis for Wicked Climate Problems, taught by Adam Pollack at Dartmouth College."
-  },
-  {
-    "objectID": "about.html#acknowledgements",
-    "href": "about.html#acknowledgements",
-    "title": "About",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nThe layout for this site draws heavily from Environmental Systems Analysis by Dr. Vivek Srikrishnan at Cornell University, Data Science for Climate Risk Assessment by Dr. James Doss-Gollin at Rice University, and course materials by Dr. Andrew Heiss at Georgia State University."
-  },
-  {
-    "objectID": "about.html#tools-and-generation-workflow",
-    "href": "about.html#tools-and-generation-workflow",
-    "title": "About",
-    "section": "Tools and Generation Workflow",
-    "text": "Tools and Generation Workflow\nThis course website was built with Quarto. All materials can be found at the GitHub Repository."
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#basic-idea",
-    "href": "slides/lecture07-dps.html#basic-idea",
-    "title": "Direct policy search",
-    "section": "Basic idea",
-    "text": "Basic idea\nRecall: RDM aims to identify strategies that perform well over a wide range of future conditions\n\n\nWhat if we identify strategies that respond to new information over time?\nGoal: Optimize the sequence, timing, and/or threshold values of observed variables to initiate actions"
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#a-few-technical-considerations",
-    "href": "slides/lecture07-dps.html#a-few-technical-considerations",
-    "title": "Direct policy search",
-    "section": "A few technical considerations",
-    "text": "A few technical considerations\n\nOptimizing dynamic strategies is highly sensitive to uncertainty characterization\n\nUC determines how extreme stressors are and the sequence of events\n\nThere are many methods to implement this optimization and we will spend most of our time on one approach - direct policy search"
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#problem-overview",
-    "href": "slides/lecture07-dps.html#problem-overview",
-    "title": "Direct policy search",
-    "section": "Problem overview",
-    "text": "Problem overview\n\n\n\nHerman et al., (2020)"
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#in-math",
-    "href": "slides/lecture07-dps.html#in-math",
-    "title": "Direct policy search",
-    "section": "In math",
-    "text": "In math\n\\[\\begin{aligned}\n& \\min_{\\pi} \\mathbb{E}_{e_{1}, \\ldots, e_{H+1}} \\sum_{t=0}^{H-1} J_{t}(x_{t}, a_{t}, e_{t}) + J_{H+1}(x_{H+1}) \\\\\n\\text{subject to:} \\quad\n& x_{t+1} = f_{t}(x_{t}, a_{t}, e_{t+1}), \\quad t=0,\\ldots,H-1 \\\\\n& a_{t} = \\pi(I_{t}), \\quad t=0,\\ldots,H-1\n\\end{aligned}\\]\nwhere \\(x_{t}\\) are system states, \\(a_{t}\\) are discrete actions, \\(e_{t}\\) are external forcings, \\(I_{t}\\) is the information, and \\(J\\) are objectives. The system follows the state transition equation \\(x_{t+1} = f_{t}(x_{t}, a_{t}, e_{t+1})\\) in a single realization of the external disturbance with a single action."
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#open-loop",
-    "href": "slides/lecture07-dps.html#open-loop",
-    "title": "Direct policy search",
-    "section": "Open loop",
-    "text": "Open loop\n\\[\\begin{aligned}\n& \\min_{\\pi} \\mathbb{E}_{e_{1}, \\ldots, e_{H+1}} \\sum_{t=0}^{H-1} J_{t}(x_{t}, a_{t}, e_{t}) + J_{H+1}(x_{H+1}) \\\\\n\\text{subject to:} \\quad\n& x_{t+1} = f_{t}(x_{t}, a_{t}, e_{t+1}), \\quad t=0,\\ldots,H-1 \\\\\n& a_{t} = \\pi(I_{t}), \\quad t=0,\\ldots,H-1\n\\end{aligned}\\]\nOpen loop directly optimizes directly optimizes the sequence of actions over the time horizon, \\(a_{t} = \\pi(t)\\). In theory, you can use any optimization method (e.g., linear programming, nonlinear programming, heuristics, enumeration)."
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#closed-loop",
-    "href": "slides/lecture07-dps.html#closed-loop",
-    "title": "Direct policy search",
-    "section": "Closed loop",
-    "text": "Closed loop\nIn contrast to open loop, closed loop approaches direct actions based on observed conditions. At a high level, there are three main approaches:\n\nStochastic dynamic programming\nFind the optimal sequence of decisions based on approximating the optimal value function\nApproximate the optimal sequence of decisions based on optimizing a particular policy structure\n\nMost MORDM studies employ one class of methods in that last approach."
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#intuition",
-    "href": "slides/lecture07-dps.html#intuition",
-    "title": "Direct policy search",
-    "section": "Intuition",
-    "text": "Intuition\nSpecify a policy with a functional form and parameters such that \\(a_{t} = \\pi(I_{t}, \\theta)\\).\nAfter reformulating the optimization problem this way, what we identify is a mapping of observations to actions. The “optimal” policy is limited by the functional form of \\(\\pi\\) and the numerical convergence of the optimization."
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#why-optimal-in-quotes",
-    "href": "slides/lecture07-dps.html#why-optimal-in-quotes",
-    "title": "Direct policy search",
-    "section": "Why “Optimal” in quotes?",
-    "text": "Why “Optimal” in quotes?\nWe usually can’t guarantee that we can find an optimum (or even quantify an optimality gap) because:\n\nSimulation-optimization is applied in very general settings;\nMay not have much a priori information about the response surface;\nThe response surface can be highly nonlinear.\n\n\nCredit to Vivek Srikrishnan, Environmental Systems Analysis"
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#why-optimal-in-quotes-1",
-    "href": "slides/lecture07-dps.html#why-optimal-in-quotes-1",
-    "title": "Direct policy search",
-    "section": "Why “Optimal” in quotes?",
-    "text": "Why “Optimal” in quotes?\n\nThe optimal solution of a model is not an optimal solution of a problem unless the model is a perfect representation of the problem, which it never is.\n\n— Ackoff, R. L. (1979). “The Future of Operational Research is Past.” The Journal of the Operational Research Society, 30(2), 93–104. https://doi.org/10.1057/jors.1979.22\n\n\n\nCredit to Vivek Srikrishnan, Environmental Systems Analysis"
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#some-more-technical-details",
-    "href": "slides/lecture07-dps.html#some-more-technical-details",
-    "title": "Direct policy search",
-    "section": "Some more technical details",
-    "text": "Some more technical details\nStudies consider many functional forms for \\(\\pi\\) including linear decision rules, neural networks, radial basis functions, and binary trees.\nEvolutionary algorithms are widely used to support policy search because the relationship between policy parameters and objective functions may be multimodal or discontinuous (which makes gradient-based techniques complicated or infeasible)."
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#policy-search-schematic",
-    "href": "slides/lecture07-dps.html#policy-search-schematic",
-    "title": "Direct policy search",
-    "section": "Policy search schematic",
-    "text": "Policy search schematic\n\nHerman et al., (2020)"
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#dps-example---radial-basis-function",
-    "href": "slides/lecture07-dps.html#dps-example---radial-basis-function",
-    "title": "Direct policy search",
-    "section": "DPS example - radial basis function",
-    "text": "DPS example - radial basis function\n\nQuinn et al., (2017)"
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#dps-example---radial-basis-function-1",
-    "href": "slides/lecture07-dps.html#dps-example---radial-basis-function-1",
-    "title": "Direct policy search",
-    "section": "DPS example - radial basis function",
-    "text": "DPS example - radial basis function\n\nMarangoni et al., (2021)"
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#dps-example---policy-tree",
-    "href": "slides/lecture07-dps.html#dps-example---policy-tree",
-    "title": "Direct policy search",
-    "section": "DPS example - policy tree",
-    "text": "DPS example - policy tree\n\nHerman and Giuliani (2018)"
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#dps-example---infrastructure-pathways",
-    "href": "slides/lecture07-dps.html#dps-example---infrastructure-pathways",
-    "title": "Direct policy search",
-    "section": "DPS example - infrastructure pathways",
-    "text": "DPS example - infrastructure pathways\n\n\n\nTrindade et al. (2019)"
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#who-will-implement-these-policies",
-    "href": "slides/lecture07-dps.html#who-will-implement-these-policies",
-    "title": "Direct policy search",
-    "section": "Who will implement these policies?",
-    "text": "Who will implement these policies?\n\nStudies document limited uptake of optimization-based methods by practitioners (e.g., Pianosi et al., (2020))\nDecision-makers may prefer simpler and more understandable tools"
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#even-with-promised-uptake-remember-these-challenges",
-    "href": "slides/lecture07-dps.html#even-with-promised-uptake-remember-these-challenges",
-    "title": "Direct policy search",
-    "section": "Even with promised uptake, remember these challenges",
-    "text": "Even with promised uptake, remember these challenges\n\nPay attention to convergence\nConsider your computational budget\nYou may not be able to gurantee more than a local “optimum”\nMOEAs are less “transparent” than conventional OR-based approaches and may have important but hidden assumptions"
-  },
-  {
-    "objectID": "slides/lecture07-dps.html#this-week",
-    "href": "slides/lecture07-dps.html#this-week",
-    "title": "Direct policy search",
-    "section": "This week",
-    "text": "This week\n\nCase study Wednesday\nTutorial on DPS for lake problem Friday"
-  },
-  {
-    "objectID": "slides/case01-rdm.html#define-key-concepts",
-    "href": "slides/case01-rdm.html#define-key-concepts",
+    "objectID": "slides/lecture04-rdm.html#the-dmdu-argument-against-predict-then-act",
+    "href": "slides/lecture04-rdm.html#the-dmdu-argument-against-predict-then-act",
     "title": "Robust decision-making",
-    "section": "Define key concepts",
-    "text": "Define key concepts\nSpend a few minutes writing down your definitions of:\n\nWell-characterized uncertainty\nOptimal expected utility\nDeep uncertainty\nPrecautionary principle\nRobust decision\nRegret\nSatisficing\nKeeping options open"
+    "section": "The DMDU Argument Against Predict-Then-Act",
+    "text": "The DMDU Argument Against Predict-Then-Act\n\n\n\nwicked problems are not well-bounded, are framed differently by various stakeholders, and are not well-understood until after formulation of a solution. Using predictions to adjudicate such problems skews attention toward the proverbial lamp post, not the true location of the keys to a policy solution.\n\n\n— Lempert, 2019. Robust Decision Making (RDM)."
   },
   {
-    "objectID": "slides/case01-rdm.html#discuss-results",
-    "href": "slides/case01-rdm.html#discuss-results",
+    "objectID": "slides/lecture04-rdm.html#finding-robust-solutions-that-perform-well-over-a-wide-range-of-futures",
+    "href": "slides/lecture04-rdm.html#finding-robust-solutions-that-perform-well-over-a-wide-range-of-futures",
     "title": "Robust decision-making",
-    "section": "Discuss results",
-    "text": "Discuss results\n\n\nWhat visual languages accompany different types of robustness metrics?\nWhat strategy should the decision-makers choose?"
+    "section": "Finding robust solutions that “perform well” over a “wide range” of futures",
+    "text": "Finding robust solutions that “perform well” over a “wide range” of futures\n\nRob Lempert, PhD; & Michelle Miro, PhD. Online Training for Water Utilities—WUCA / Chapter 3: Plan"
   },
   {
-    "objectID": "slides/case01-rdm.html#scrutinize-key-concepts",
-    "href": "slides/case01-rdm.html#scrutinize-key-concepts",
+    "objectID": "slides/lecture04-rdm.html#measuring-robustness",
+    "href": "slides/lecture04-rdm.html#measuring-robustness",
     "title": "Robust decision-making",
-    "section": "Scrutinize key concepts",
-    "text": "Scrutinize key concepts\nLet’s discuss:\n\n\nWell-characterized vs. deep uncertainty\nOptimal expected utility vs. robustness\nPrecautionary principle vs. robustness\nRegret vs. satisficing\nConsidering too little vs. too much"
+    "section": "Measuring robustness",
+    "text": "Measuring robustness\n\n\n\nMcPhail et al. (2019)"
   },
   {
-    "objectID": "slides/case01-rdm.html#example---home-elevation-problem",
-    "href": "slides/case01-rdm.html#example---home-elevation-problem",
+    "objectID": "slides/lecture04-rdm.html#regret-the-cost-of-choosing-incorrectly",
+    "href": "slides/lecture04-rdm.html#regret-the-cost-of-choosing-incorrectly",
     "title": "Robust decision-making",
-    "section": "Example - home elevation problem",
-    "text": "Example - home elevation problem\n\n\nWhat can I do to know what robustness metrics are relevant?\nDo beliefs about uncertain drivers or problem scope uncertainties matter more?"
+    "section": "Regret: The “cost” of choosing “incorrectly”",
+    "text": "Regret: The “cost” of choosing “incorrectly”\nAdaptating notation in Lempert and Collins (2007), the regret of action a in state x is:\n\\(R_{a}(x) = Max_{a'}[PV(U_{a'}(x))] - PV(U_{a}(x))\\),\nthe difference between the present value expected utility of the optimal action in a considered state of the world and the considered action’s present value expected utility in that state of the world.\nNote: There are many ways to go from an action’s regret metric in one state (i.e., \\(T_{1}\\)) to evaluating its overall robustness (i.e., \\(T_{2}\\) and \\(T_{3}\\))."
   },
   {
-    "objectID": "slides/case01-rdm.html#your-examples",
-    "href": "slides/case01-rdm.html#your-examples",
+    "objectID": "slides/lecture04-rdm.html#satisficing",
+    "href": "slides/lecture04-rdm.html#satisficing",
     "title": "Robust decision-making",
-    "section": "Your examples",
-    "text": "Your examples\nLet’s take turns applying some new concepts to our problem framing."
+    "section": "Satisficing",
+    "text": "Satisficing\nFollowing McPhail et al. (2019), this approach “seeks to meet a minimum performance threshold.”\nLooking across states (i.e., \\(T_{2}\\) and \\(T_{3}\\)), the domain criterion is a common approach (e.g., see Herman et al., (2015)), which analysts often implement as the fraction of states of the world in which the performance threshold is met."
   },
   {
-    "objectID": "slides/case01-rdm.html#this-week",
-    "href": "slides/case01-rdm.html#this-week",
+    "objectID": "slides/lecture04-rdm.html#schematic",
+    "href": "slides/lecture04-rdm.html#schematic",
+    "title": "Robust decision-making",
+    "section": "Schematic",
+    "text": "Schematic\n\nLempert, 2019. Robust Decision Making (RDM)."
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#framing",
+    "href": "slides/lecture04-rdm.html#framing",
+    "title": "Robust decision-making",
+    "section": "Framing",
+    "text": "Framing\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#identifying-vulnerabilities",
+    "href": "slides/lecture04-rdm.html#identifying-vulnerabilities",
+    "title": "Robust decision-making",
+    "section": "Identifying Vulnerabilities",
+    "text": "Identifying Vulnerabilities\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#designing-strategies-adaptive-to-vulnerabilities",
+    "href": "slides/lecture04-rdm.html#designing-strategies-adaptive-to-vulnerabilities",
+    "title": "Robust decision-making",
+    "section": "Designing Strategies Adaptive to Vulnerabilities",
+    "text": "Designing Strategies Adaptive to Vulnerabilities\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#tradeoff-analysis",
+    "href": "slides/lecture04-rdm.html#tradeoff-analysis",
+    "title": "Robust decision-making",
+    "section": "Tradeoff Analysis",
+    "text": "Tradeoff Analysis\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#evaluating-robustness",
+    "href": "slides/lecture04-rdm.html#evaluating-robustness",
+    "title": "Robust decision-making",
+    "section": "Evaluating Robustness",
+    "text": "Evaluating Robustness\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#iterating-with-decision-makers",
+    "href": "slides/lecture04-rdm.html#iterating-with-decision-makers",
+    "title": "Robust decision-making",
+    "section": "Iterating with Decision-makers",
+    "text": "Iterating with Decision-makers\nMany potential conditions where current strategies insufficient:\n\n\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#we-are-not-completely-ignorant-about-future-probabilities",
+    "href": "slides/lecture04-rdm.html#we-are-not-completely-ignorant-about-future-probabilities",
+    "title": "Robust decision-making",
+    "section": "We are not completely ignorant about future probabilities",
+    "text": "We are not completely ignorant about future probabilities\n\n\n\nHausfather and Peters (2020). RCP8.5 is a problematic scenario for near-term emissions"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#alternative-synthesize-subjective-beliefs-about-deep-uncertainties",
+    "href": "slides/lecture04-rdm.html#alternative-synthesize-subjective-beliefs-about-deep-uncertainties",
+    "title": "Robust decision-making",
+    "section": "Alternative: Synthesize subjective beliefs about deep uncertainties",
+    "text": "Alternative: Synthesize subjective beliefs about deep uncertainties\n\nDoss-Gollin and Keller (2023)"
+  },
+  {
+    "objectID": "slides/lecture04-rdm.html#this-week",
+    "href": "slides/lecture04-rdm.html#this-week",
     "title": "Robust decision-making",
     "section": "This week",
-    "text": "This week\n\nWe’ll go over the RDM tutorial on Friday together"
+    "text": "This week\n\nCase study on Wednesday\nTutorial on RDM on Friday"
   },
   {
-    "objectID": "slides/case01-rdm.html#next-week",
-    "href": "slides/case01-rdm.html#next-week",
+    "objectID": "slides/lecture04-rdm.html#next-week",
+    "href": "slides/lecture04-rdm.html#next-week",
     "title": "Robust decision-making",
     "section": "Next week",
-    "text": "Next week\n\nMonday - high-level overview of considering and navigating tradeoffs in our decision problems\nWednesday - case study (who can lead?)\nFriday - tutorial on visualizing trade-offs"
+    "text": "Next week\n\nLecture on Monday - area I have most experience in re: MORDM\nJournal Club Wednesday\nTutorial on visualizing tradeoffs"
   },
   {
-    "objectID": "slides/lecture09-narrative.html#how-you-structure",
-    "href": "slides/lecture09-narrative.html#how-you-structure",
-    "title": "Communicating your analysis framing",
-    "section": "How you structure",
-    "text": "How you structure\nWe “answer” questions like:\n\nWhat is the decision problem?\nWho are the decision-makers?\nWhat are the goals?\nWhat are the possible actions?\nWhat are the relevant processes?\nWhat are the uncertainties?"
+    "objectID": "slides/lecture02-framing.html#how-did-you-make-these-decisions",
+    "href": "slides/lecture02-framing.html#how-did-you-make-these-decisions",
+    "title": "Framing a decision analysis",
+    "section": "How did you make these decisions?",
+    "text": "How did you make these decisions?\n\nWhat did you eat for your last meal?\nWhat colleges did you apply to?\nHow did you choose your PhD program?\n\n\nhttps://xkcd.com/1445/"
   },
   {
-    "objectID": "slides/lecture09-narrative.html#how-you-analyze",
-    "href": "slides/lecture09-narrative.html#how-you-analyze",
-    "title": "Communicating your analysis framing",
-    "section": "How you analyze",
-    "text": "How you analyze\nWe “answer” questions like:\n\nWhat is feasible to analyze?\nDo I optimize or not?\nWhat model(s) do I use?\nHow do I sample uncertainties?\nHow do I measure objectives?"
+    "objectID": "slides/lecture02-framing.html#framing-refers-to-how-you-structure-a-decision-problem",
+    "href": "slides/lecture02-framing.html#framing-refers-to-how-you-structure-a-decision-problem",
+    "title": "Framing a decision analysis",
+    "section": "Framing refers to how you structure a decision problem",
+    "text": "Framing refers to how you structure a decision problem\nFraming breakfast decisions\n\n\nI want to eat a healthy breakfast every morning that gives me energy\nIt needs to be affordable, tasty, low in sugar, etc.,\nOatmeal with peanut butter and frozen berries, toast with peanut butter and bananas, etc.,"
   },
   {
-    "objectID": "slides/lecture09-narrative.html#discussion-questions",
-    "href": "slides/lecture09-narrative.html#discussion-questions",
-    "title": "Communicating your analysis framing",
-    "section": "Discussion questions",
-    "text": "Discussion questions\n\n\nHow are the tasks of structuring and analyzing related?\nWhich task did the course provide more guidance on?\nWhat are some differences between a DA project, paper, and presentation?"
+    "objectID": "slides/lecture02-framing.html#framing-informs-how-you-analyze-a-decision",
+    "href": "slides/lecture02-framing.html#framing-informs-how-you-analyze-a-decision",
+    "title": "Framing a decision analysis",
+    "section": "Framing informs how you analyze a decision",
+    "text": "Framing informs how you analyze a decision\nFraming breakfast decisions, continued\n\n\nI can calculate the costs, macronutrients, etc.,\nI can map out which breakfasts do better/worse on my objectives"
   },
   {
-    "objectID": "slides/lecture09-narrative.html#general-guidance",
-    "href": "slides/lecture09-narrative.html#general-guidance",
-    "title": "Communicating your analysis framing",
-    "section": "General guidance",
-    "text": "General guidance\n\nWho is the audience?\nAssert how decisions are made\nEmphasize decision relevance\nEmphasize structure\nJustify technical details and describe them as simply as possible"
+    "objectID": "slides/lecture02-framing.html#getting-theoretical-about-it",
+    "href": "slides/lecture02-framing.html#getting-theoretical-about-it",
+    "title": "Framing a decision analysis",
+    "section": "Getting theoretical about it",
+    "text": "Getting theoretical about it\n\n\n\n\n\n\n\nG\n\n\n\nClarify the\\ndecision\\ncontext\n\nClarify the\ndecision\ncontext\n\n\n\nDefine\\nobjectives\n\nDefine\nobjectives\n\n\n\nClarify the\\ndecision\\ncontext-&gt;Define\\nobjectives\n\n\n\n\n\nDevelop\\nalternatives\n\nDevelop\nalternatives\n\n\n\nDefine\\nobjectives-&gt;Develop\\nalternatives\n\n\n\n\n\nEstimate\\nmetrics\n\nEstimate\nmetrics\n\n\n\nDevelop\\nalternatives-&gt;Estimate\\nmetrics\n\n\n\n\n\nEvaluate\\ntrade-offs\n\nEvaluate\ntrade-offs\n\n\n\nEstimate\\nmetrics-&gt;Evaluate\\ntrade-offs\n\n\n\n\n\nImplement,\\nmonitor,\\nreview\n\nImplement,\nmonitor,\nreview\n\n\n\nEvaluate\\ntrade-offs-&gt;Implement,\\nmonitor,\\nreview\n\n\n\n\n\nImplement,\\nmonitor,\\nreview-&gt;Clarify the\\ndecision\\ncontext\n\n\n\n\n\n\n\n\n\n\n\nAdapted from Gregory et al. (2012)"
   },
   {
-    "objectID": "slides/lecture09-narrative.html#project-level-guidance",
-    "href": "slides/lecture09-narrative.html#project-level-guidance",
-    "title": "Communicating your analysis framing",
-    "section": "Project-level guidance",
-    "text": "Project-level guidance\n\nAudience: funders, clients, stakeholders\nEmphasis: improving a real-world decision\nTechnical: be as good as the best and improve a few key things"
+    "objectID": "slides/lecture02-framing.html#framing-is-iterative-and-deliberative",
+    "href": "slides/lecture02-framing.html#framing-is-iterative-and-deliberative",
+    "title": "Framing a decision analysis",
+    "section": "Framing is iterative and deliberative",
+    "text": "Framing is iterative and deliberative\n\n\n\nFrom Lempert (2019)"
   },
   {
-    "objectID": "slides/lecture09-narrative.html#paper-level-guidance",
-    "href": "slides/lecture09-narrative.html#paper-level-guidance",
-    "title": "Communicating your analysis framing",
-    "section": "Paper-level guidance",
-    "text": "Paper-level guidance\n\nAudience: scientists, funders, agencies\nEmphasis: decision insights or better method to analyze decisions\nTechnical: be as good as the best and improve one or two things"
+    "objectID": "slides/lecture02-framing.html#how-should-i-travel-from-hanover-to-philadelphia",
+    "href": "slides/lecture02-framing.html#how-should-i-travel-from-hanover-to-philadelphia",
+    "title": "Framing a decision analysis",
+    "section": "How should I travel from Hanover to Philadelphia?",
+    "text": "How should I travel from Hanover to Philadelphia?"
   },
   {
-    "objectID": "slides/lecture09-narrative.html#abstract-level-guidance",
-    "href": "slides/lecture09-narrative.html#abstract-level-guidance",
-    "title": "Communicating your analysis framing",
-    "section": "Abstract-level guidance",
-    "text": "Abstract-level guidance\n\n\n“The abstract is of utmost importance, for it is read by 10 to 500 times more people than hear or read the entire article. It should not be a mere recital of the subjects covered, replete with such expressions as ‘is discussed’ and ‘is described.’ It should be a condensation and concentration of the essential qualities of the paper.”\n\n— Kenneth Landes. A Scrutiny of the Abstract. Bulletin of the American Association of Petroleum Geologists, Vol. 35, No. 7, July 1951, p. 1660.\n\nAlso see Nature summary guidance"
+    "objectID": "slides/lecture02-framing.html#how-to-preserve-access-to-clean-water-in-the-growing-us-southwest",
+    "href": "slides/lecture02-framing.html#how-to-preserve-access-to-clean-water-in-the-growing-us-southwest",
+    "title": "Framing a decision analysis",
+    "section": "How to preserve access to clean water in the growing US Southwest?",
+    "text": "How to preserve access to clean water in the growing US Southwest?"
   },
   {
-    "objectID": "slides/lecture09-narrative.html#presentation-level-guidance",
-    "href": "slides/lecture09-narrative.html#presentation-level-guidance",
-    "title": "Communicating your analysis framing",
-    "section": "Presentation-level guidance",
-    "text": "Presentation-level guidance\n\nAudience: varies, often your largest and most diverse\nEmphasis: same as paper, but even more focused\nTechnical: cater to audience and be mindful of time"
+    "objectID": "slides/lecture02-framing.html#why-is-framing-water-management-more-challenging-than-travel-recommendations",
+    "href": "slides/lecture02-framing.html#why-is-framing-water-management-more-challenging-than-travel-recommendations",
+    "title": "Framing a decision analysis",
+    "section": "Why is framing water management more challenging than travel recommendations?",
+    "text": "Why is framing water management more challenging than travel recommendations?\nA few hints from our examples:\n\nAnalyzing travel options was relatively simple\nWe got to the bottom of my travel goals quickly\nI have (most of) the decision-making agency and chose my favorite option"
   },
   {
-    "objectID": "slides/lecture09-narrative.html#deconstructing-a-15-minute-presentation",
-    "href": "slides/lecture09-narrative.html#deconstructing-a-15-minute-presentation",
-    "title": "Communicating your analysis framing",
-    "section": "Deconstructing a 15-minute presentation",
-    "text": "Deconstructing a 15-minute presentation\n\nAudience: Annual Conference of the Society for Decision Making Under Deep Uncertainty\nEmphasis: decision insight\nTechnical: None!\n\nReference rigorous methods in speech, prepare extra slides, know your stuff for questions\n\n\nLet’s deconstruct this example with the following in mind:\n\nWhat decision insight does it emphasize?\nHow and when does it establish the decision problem?\nHow much “technical” detail does it cover?\nWhat is the figure size to slide ratio?\nWhat is the figure to text ratio?\nWhat style features does it employ for emphasis?\nHow many times is each point (motivation, technical, result) repeated in one way or another?"
+    "objectID": "slides/lecture02-framing.html#conceptual-models",
+    "href": "slides/lecture02-framing.html#conceptual-models",
+    "title": "Framing a decision analysis",
+    "section": "Conceptual models",
+    "text": "Conceptual models\n\nConceptual model for addressing inland flood risk from Helgeson et al. (2024)"
   },
   {
-    "objectID": "slides/lecture09-narrative.html#this-week",
-    "href": "slides/lecture09-narrative.html#this-week",
-    "title": "Communicating your analysis framing",
-    "section": "This week",
-    "text": "This week\n\nWednesday: Deconstructing a paper together\nFriday: Practice presentations - 2 volunteers?"
+    "objectID": "slides/lecture02-framing.html#another-conceptual-model",
+    "href": "slides/lecture02-framing.html#another-conceptual-model",
+    "title": "Framing a decision analysis",
+    "section": "Another conceptual model",
+    "text": "Another conceptual model\n\nUnpublished conceptual model for federal funding rules to reduce flood risk"
   },
   {
-    "objectID": "slides/lecture09-narrative.html#next-week",
-    "href": "slides/lecture09-narrative.html#next-week",
-    "title": "Communicating your analysis framing",
+    "objectID": "slides/lecture02-framing.html#values-informed-mental-models",
+    "href": "slides/lecture02-framing.html#values-informed-mental-models",
+    "title": "Framing a decision analysis",
+    "section": "Values-informed mental models",
+    "text": "Values-informed mental models\n\nValues mapping on execerpt of the conceptual model from Helgeson et al. (2024)"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#xlrm-diagrams",
+    "href": "slides/lecture02-framing.html#xlrm-diagrams",
+    "title": "Framing a decision analysis",
+    "section": "XLRM diagrams",
+    "text": "XLRM diagrams\n\nFrom Pollack et al. (2025)"
+  },
+  {
+    "objectID": "slides/lecture02-framing.html#next-week",
+    "href": "slides/lecture02-framing.html#next-week",
+    "title": "Framing a decision analysis",
     "section": "Next week",
-    "text": "Next week\n\nMonday: Practice presentations\nWednesday: Lecture on more “useful” DA\nFriday: case study on value of information"
+    "text": "Next week\n\nDo the 9/22 readings\nStarting Uncertainty module\nWe will only meet Monday next week - prioritize your project proposal and schedule office hours as needed\nLet me know if you are testing out the labs and need any help"
   },
   {
-    "objectID": "slides/lecture09-narrative.html#two-weeks",
-    "href": "slides/lecture09-narrative.html#two-weeks",
-    "title": "Communicating your analysis framing",
-    "section": "Two weeks",
-    "text": "Two weeks\n\nM/W final presentations!"
+    "objectID": "slides/lecture02-framing.html#works-cited",
+    "href": "slides/lecture02-framing.html#works-cited",
+    "title": "Framing a decision analysis",
+    "section": "Works cited",
+    "text": "Works cited\n\n\n\n\nGregory, R., Failing, L., Harstone, M., Long, G., McDaniels, T., & Ohlson, D. (2012). Structuring environmental management choices. In Structured decision making (pp. 1–20). Chichester, UK: John Wiley & Sons, Ltd. https://doi.org/10.1002/9781444398557.ch1\n\n\nHelgeson, C., Keller, K., Nicholas, R. E., Srikrishnan, V., Cooper, C., Smithwick, E. A. H., & Tuana, N. (2024). Integrating values to improve the relevance of climate‐risk research. Earths Future, 12(10), e2022EF003025. https://doi.org/10.1029/2022ef003025\n\n\nLempert, R. J. (2019). Robust decision making (RDM). In Decision making under deep uncertainty (pp. 23–51). Cham: Springer International Publishing. https://doi.org/10.1007/978-3-030-05252-2\\_2\n\n\nPollack, A. B., Santamaria-Aguilar, S., Maduwantha, P., Helgeson, C., Wahl, T., & Keller, K. (2025). Funding rules that promote equity in climate adaptation outcomes. Proceedings of the National Academy of Sciences, 122(2), e2418711121. https://doi.org/10.1073/pnas.2418711121"
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#defining-challenges",
-    "href": "slides/lecture06-dmdu.html#defining-challenges",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
-    "section": "Defining challenges",
-    "text": "Defining challenges\nComing to grips with irreducible uncertainty:\n\nLimits in predictability of complex systems\nDifferent perspectives on the problem, system, and objectives\nDynamic and unknowable futures"
+    "objectID": "slides/case03-dps.html#summarize-the-study",
+    "href": "slides/case03-dps.html#summarize-the-study",
+    "title": "Direct policy search",
+    "section": "Summarize the study",
+    "text": "Summarize the study\nSuccintly, please :)\n\n\nWhat is the study about?\nHow does it address its research question(s)?\nWhat does the study find?\nWhat strengths did you find?\nWhat weaknesses did you find?\nHow will you think about this paper going forward with your decision analysis?"
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#finding-strategies-that-are-robust-to-irreducible-uncertainties",
-    "href": "slides/lecture06-dmdu.html#finding-strategies-that-are-robust-to-irreducible-uncertainties",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
-    "section": "Finding strategies that are robust to irreducible uncertainties",
-    "text": "Finding strategies that are robust to irreducible uncertainties\nThis entails:\n\nExploratory modeling\nAdaptive planning\nDecision support"
+    "objectID": "slides/case03-dps.html#optimization-concepts",
+    "href": "slides/case03-dps.html#optimization-concepts",
+    "title": "Direct policy search",
+    "section": "Optimization concepts",
+    "text": "Optimization concepts\nDefine the following, and explain how it connects to the study:\n\n\nDeeply uncertain tipping point\nOpen loop, intertemporal optimization\nCurse of dimensionality\nDirect policy search\nMulti-objective evolutionary algorithms\nPolicy inertia\nHypervolume\nRobustness analysis\nScenario discovery"
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#weve-seen-this-before",
-    "href": "slides/lecture06-dmdu.html#weve-seen-this-before",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
-    "section": "We’ve seen this before!",
-    "text": "We’ve seen this before!\nLempert and Collins (2007)\n\n\nExploratory modeling\n\n\nSimple model of lake dynamics\nEvaluates decisions optimal for one critical P over a wide range of critical P scenarios\n\n\nAdaptive planning\n\n\nThe town learns about critical P over time and determines their anthropogenic inflows based on observed P and best-guess critical P\n\n\nDecision support\n\n\nCalculates two robustness metrics and visualizes results in several ways"
+    "objectID": "slides/case03-dps.html#discuss-the-studys-approach",
+    "href": "slides/case03-dps.html#discuss-the-studys-approach",
+    "title": "Direct policy search",
+    "section": "Discuss the study’s approach",
+    "text": "Discuss the study’s approach\nAnswer the following questions:\n\n\nHow did the authors implement MORDM?\nWhich optimization approach converges faster?\nWhich optimization approach is “better?” How?\nHow robust are any of the “optimal” strategies?\nAre there reasons to prefer DPS beyond the study’s results?"
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#exploratory-modeling",
-    "href": "slides/lecture06-dmdu.html#exploratory-modeling",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
-    "section": "Exploratory modeling",
-    "text": "Exploratory modeling\n\n\nWhat?\n\nScenario-based, what-if modeling\n\nHow?\n\nRunning computational models (often simple) many times\nOften search for strategies using optimization algorithms\n\nWhy?\n\nDeriving the consequences of actions on complex systems with mental models alone is infeasible\nConsidering only pre-specified strategies limits the ability of decision-makers to learn about the problem and identify robust solutions"
+    "objectID": "slides/case03-dps.html#which-strategy-is-better-in-the-reference-scenario",
+    "href": "slides/case03-dps.html#which-strategy-is-better-in-the-reference-scenario",
+    "title": "Direct policy search",
+    "section": "Which strategy is better in the reference scenario?",
+    "text": "Which strategy is better in the reference scenario?\n\n\n\nQuinn et al., (2017)"
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#adaptive-planning",
-    "href": "slides/lecture06-dmdu.html#adaptive-planning",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
-    "section": "Adaptive planning",
-    "text": "Adaptive planning\n\n\nWhat?\n\nStrategies guide future decisions based on how the future unfolds\n\nHow?\n\nExplore a wide variety of futures during plan design\nIdentify actions that are best suited to different futures, as well as what signals ensure the timely implementation of those actions\n\nWhy?\n\nAdaptive strategies are flexible, which contributes to robustness in the face of deep and dynamic uncertainties"
+    "objectID": "slides/case03-dps.html#how-do-the-strategies-manage-the-tipping-point",
+    "href": "slides/case03-dps.html#how-do-the-strategies-manage-the-tipping-point",
+    "title": "Direct policy search",
+    "section": "How do the strategies manage the tipping point?",
+    "text": "How do the strategies manage the tipping point?\n\n\n\nQuinn et al., (2017)"
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#decision-support",
-    "href": "slides/lecture06-dmdu.html#decision-support",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
-    "section": "Decision support",
-    "text": "Decision support\n\n\nWhat?\n\nAn iterative, collaborative approach that facilitates learning across alternative framings of the problem and learning about stakeholder preferences and trade-offs\n\nHow?\n\nGood question! This is an area with little guidance in the field…\n\nWhy?\n\nUnder deep uncertainty, decision support moves away from trying to define what is the “right” choice and instead enable decision-makers to converge on an acceptable decision"
+    "objectID": "slides/case03-dps.html#why-do-the-dps-strategies-fail",
+    "href": "slides/case03-dps.html#why-do-the-dps-strategies-fail",
+    "title": "Direct policy search",
+    "section": "Why do the DPS strategies fail?",
+    "text": "Why do the DPS strategies fail?\n\n\n\nQuinn et al., (2017)"
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#high-level-overview",
-    "href": "slides/lecture06-dmdu.html#high-level-overview",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
-    "section": "High-level overview",
-    "text": "High-level overview\n\nBartholomew and Kwakkel (2020)"
+    "objectID": "slides/case03-dps.html#open-discussion",
+    "href": "slides/case03-dps.html#open-discussion",
+    "title": "Direct policy search",
+    "section": "Open discussion",
+    "text": "Open discussion\nWhat would you like to discuss about the paper and/or optimization/DPS connections to your project?"
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#what-these-approaches-share",
-    "href": "slides/lecture06-dmdu.html#what-these-approaches-share",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
-    "section": "What these approaches share",
-    "text": "What these approaches share\n\nAll three building blocks discussed earlier\nThe use of a multi-objective evolutionary algorithm (MOEA) to identify a large, diverse set of strategies that capture trade-offs"
+    "objectID": "slides/case03-dps.html#friday",
+    "href": "slides/case03-dps.html#friday",
+    "title": "Direct policy search",
+    "section": "Friday",
+    "text": "Friday\n\nDPS tutorial"
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#whats-wrong-with-mordm",
-    "href": "slides/lecture06-dmdu.html#whats-wrong-with-mordm",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
-    "section": "What’s “wrong” with MORDM?",
-    "text": "What’s “wrong” with MORDM?\n\n\nThe main idea for Multi-Scenario MORDM or Many-Objective Robust Optimization comes the observation that solutions found through optimization for a reference scenario can have very poor performance in other scenarios.\n\n\n\n\nRemember lab?"
+    "objectID": "slides/case03-dps.html#next-week",
+    "href": "slides/case03-dps.html#next-week",
+    "title": "Direct policy search",
+    "section": "Next week",
+    "text": "Next week\n\nMonday: Scenario discovery lecture\nWednesday: Prabhat leads optimization tutorial\nFriday: case study"
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#why-multi-scenario-mordm",
-    "href": "slides/lecture06-dmdu.html#why-multi-scenario-mordm",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
-    "section": "Why Multi-Scenario MORDM?",
-    "text": "Why Multi-Scenario MORDM?\n\nThe main innovation of MORDM is using a MOEA to obtain a large, diverse set of strategies that capture trade-offs\nMulti-Scenario MORDM builds on this by adding more reference scenarios (based on scenario discovery) to enhance diversity of strategy alternatives that are Pareto optimal strategies under different scenarios\n\n\nBartholomew and Kwakkel (2020) recommend this approach as a good balance for identifying candidates that are optimal within scenarios, robust across scenarios, and not too computationally challenging to find."
+    "objectID": "slides/lecture03-uncertainty.html#what-is-uncertainty",
+    "href": "slides/lecture03-uncertainty.html#what-is-uncertainty",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "What is uncertainty?",
+    "text": "What is uncertainty?\n\nA lack of certainty; an inability to exactly describe current or future states and values\n\nParphrased from the Wikipedia entry on Uncertainty"
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#why-moro",
-    "href": "slides/lecture06-dmdu.html#why-moro",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
-    "section": "Why MORO?",
-    "text": "Why MORO?\n\n\nSince the overarching aim of supporting decision making under deep uncertainty is the identification of robust strategies that offer an acceptable performance across multiple competing objectives, why not include these robustness considerations already in the search phase for candidate solutions?\n\n\nBartholomew and Kwakkel (2020)\n\nBut this approach is computationally intense and can sacrifice identifying strategies that are optimal in any given scenario!"
+    "objectID": "slides/lecture03-uncertainty.html#two-overarching-types-of-uncertainty",
+    "href": "slides/lecture03-uncertainty.html#two-overarching-types-of-uncertainty",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Two overarching types of uncertainty",
+    "text": "Two overarching types of uncertainty\n\n\nAleatoric uncertainty results from randomness\n\nEpistemic uncertainty results from lack of knowledge"
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#approaches-that-go-by-different-names-but-fit-into-the-above-classes",
-    "href": "slides/lecture06-dmdu.html#approaches-that-go-by-different-names-but-fit-into-the-above-classes",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
-    "section": "Approaches that go by different names, but fit into the above classes",
-    "text": "Approaches that go by different names, but fit into the above classes\n\nDeeply uncertain pathways, a variant of MORO, by Trindade et al. (2019)\nA novel approach to scenario discovery to enhance Multi-Scenario MORDM by Shavazipour et al. (2021)"
+    "objectID": "slides/lecture03-uncertainty.html#fundamental-limits-to-earth-systems-modeling",
+    "href": "slides/lecture03-uncertainty.html#fundamental-limits-to-earth-systems-modeling",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Fundamental limits to Earth systems modeling",
+    "text": "Fundamental limits to Earth systems modeling\nEarth systems are open, posing fundamental limitations on our ability to reduce all relevant areas of epistemic uncertainty.\n\n\n\nVerification and validation of numerical models of natural systems is impossible… because natural systems are never closed and because model results are always nonunique…\n\n\nThus, the primary value of models is heuristic: Models are representations, useful for guiding further study but not susceptible to proof.\n\n\n\n— Oreskes, N., Shrader-Frechette, K., & Belitz, K. (1994). Verification, validation, and confirmation of numerical models in the earth sciences. Science, 263(5147), 641-646."
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#key-features-to-consider-in-reviewing-studies",
-    "href": "slides/lecture06-dmdu.html#key-features-to-consider-in-reviewing-studies",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
-    "section": "Key features to consider in reviewing studies",
-    "text": "Key features to consider in reviewing studies\n\n\nIdentify how the optimization handles “shallow” uncertainties\nIdentify whether robustness is an objective in the MOEA\n\nEven when robustness is an objective, studies often evaluate robustness on a new set of samples as a form of “validation”\n\nIn evaluating the performance of strategies, do they assume all scenarios are equally likely?\n\nMulti-scenario MORDM and MORO make it really important to understand how a study calculates objective values for strategies"
+    "objectID": "slides/lecture03-uncertainty.html#example-climate-scenario-uncertainty-is-often-called-deep",
+    "href": "slides/lecture03-uncertainty.html#example-climate-scenario-uncertainty-is-often-called-deep",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Example: Climate scenario uncertainty is often called “deep”",
+    "text": "Example: Climate scenario uncertainty is often called “deep”\n\n\n\nHausfather and Peters (2020). RCP8.5 is a problematic scenario for near-term emissions"
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#what-you-shouldnt-implement",
-    "href": "slides/lecture06-dmdu.html#what-you-shouldnt-implement",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
-    "section": "What you shouldn’t implement",
-    "text": "What you shouldn’t implement\nDo not:\n\n\nUse an approach you don’t understand and can’t write clearly about\nEvaluate objectives across scenarios without an explicit probability distribution (but then is your problem really deeply uncertain?)\nNeglect well-characterized uncertainties"
+    "objectID": "slides/lecture03-uncertainty.html#example-scenario-and-model-choices-reflect-deep-uncertainty-in-sea-level-rise-projections",
+    "href": "slides/lecture03-uncertainty.html#example-scenario-and-model-choices-reflect-deep-uncertainty-in-sea-level-rise-projections",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Example: Scenario and model choices reflect “deep” uncertainty in sea-level rise projections",
+    "text": "Example: Scenario and model choices reflect “deep” uncertainty in sea-level rise projections\n\nDoss-Gollin and Keller (2023). A subjective Bayesian framework for synthesizing deep uncertainties in climate risk management"
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#what-should-you-implement",
-    "href": "slides/lecture06-dmdu.html#what-should-you-implement",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
-    "section": "What should you implement?",
-    "text": "What should you implement?\nThe uncomfortable truth is that the literature does not provide clear guidance on this question, and that’s probably a major reason you were all interested in taking this course.\n\nAs always, you can justify your choice with strong framing :)\n\n\nAnd this is what the strong papers and analyses do. Reach out to someone whose work you admire!"
+    "objectID": "slides/lecture03-uncertainty.html#example-triggering-managed-retreat",
+    "href": "slides/lecture03-uncertainty.html#example-triggering-managed-retreat",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Example: Triggering managed retreat",
+    "text": "Example: Triggering managed retreat\n\nHegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies. Preprint."
   },
   {
-    "objectID": "slides/lecture06-dmdu.html#this-week",
-    "href": "slides/lecture06-dmdu.html#this-week",
-    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "objectID": "slides/lecture03-uncertainty.html#myopic-strategies",
+    "href": "slides/lecture03-uncertainty.html#myopic-strategies",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Myopic strategies",
+    "text": "Myopic strategies\n\nHegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies.. Preprint"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#schematic-representation",
+    "href": "slides/lecture03-uncertainty.html#schematic-representation",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Schematic Representation",
+    "text": "Schematic Representation\n\nReed et al., (2025). Addressing Uncertainty in multisector dynamics research"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#many-purposes---a-few-highlights-for-decision-analyses",
+    "href": "slides/lecture03-uncertainty.html#many-purposes---a-few-highlights-for-decision-analyses",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Many purposes - a few highlights for decision analyses",
+    "text": "Many purposes - a few highlights for decision analyses\n\n\nHow can we simplify our model to run it faster and sample more scenarios?\nWhat are worst-case scenarios?\nWhich actions perform well in a wide range of scenarios?\nWhat causes actions to fail?\nWhat types of observations should we collect to improve our model and better evaluate actions?\n\n\n\n\n\n\n\n\n\nNote\n\n\nNote the iterative nature of using uncertainty characterization and sensitivity analysis to inform and assess strategies"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#types-of-analyses",
+    "href": "slides/lecture03-uncertainty.html#types-of-analyses",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Types of analyses",
+    "text": "Types of analyses\n\nReed et al., (2025). Addressing Uncertainty in multisector dynamics research"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#analysis-methods",
+    "href": "slides/lecture03-uncertainty.html#analysis-methods",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Analysis methods",
+    "text": "Analysis methods\n\n\n\nReed et al., (2025). Addressing Uncertainty in multisector dynamics research"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#revisiting-the-managed-retreat-example",
+    "href": "slides/lecture03-uncertainty.html#revisiting-the-managed-retreat-example",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Revisiting the managed retreat example",
+    "text": "Revisiting the managed retreat example\n\n\n\n\n\nHegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies.. Preprint\n\n\n\n\n\n\n\nHegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies.. Preprint"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#example-from-my-research",
+    "href": "slides/lecture03-uncertainty.html#example-from-my-research",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Example from my research",
+    "text": "Example from my research\n\n\nBecause of the stated goals of the Justice40 Initiative, our main analytical goal was to evaluate different funding rules on equity and economic objectives and identify which rules perform well. To make claims about policy performance, our decision analysis was built on the following modeling chain…\n\n\n\nPollack et al., (2025). Funding rules that promote equity in climate adaptation outcomes\n\n\nOne reviewer complimented us for our extensive accounting of uncertainty. However, our (narrowly scoped!) research and policy questions did not call for factor mapping or prioritization (though we call for this in our discussion)."
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#some-personal-reflections",
+    "href": "slides/lecture03-uncertainty.html#some-personal-reflections",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Some personal reflections",
+    "text": "Some personal reflections\n\n\nAvoid inconsistent uncertainty framing and analysis (e.g., calculating expected values when framing uncertainties as “deep”)\nI feel like there’s not good guidance out there on saying for decision analysis purposes, how to represent and analyze various types of uncertainty\nDon’t lose sight of why uncertainty matters for your decision analysis (i.e., don’t ignore uncertainty but don’t overcomplicate how you handle it)\nRemember that peer-reviewed studies are units of overall decision analysis projects (i.e., don’t overstuff these studies with too many analyses and points)"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#this-week",
+    "href": "slides/lecture03-uncertainty.html#this-week",
+    "title": "Dealing with uncertainty in analyzing decisions",
     "section": "This week",
-    "text": "This week\n\nCase study Wednesday\nPossibly a tutorial Friday, otherwise open Q&A/take stock"
+    "text": "This week\n\nWe will only meet today this week - prioritize your project proposal and schedule office hours as needed\nLet me know if you are testing out the lab and need any help"
+  },
+  {
+    "objectID": "slides/lecture03-uncertainty.html#next-week",
+    "href": "slides/lecture03-uncertainty.html#next-week",
+    "title": "Dealing with uncertainty in analyzing decisions",
+    "section": "Next week",
+    "text": "Next week\n\nStarting RDM module\nJournal club next Wednesday (stay on track with 9/29 readings)"
+  },
+  {
+    "objectID": "slides/lecture10-useful.html#our-course-objectives",
+    "href": "slides/lecture10-useful.html#our-course-objectives",
+    "title": "Decision analysis to inform decisions",
+    "section": "Our course objectives",
+    "text": "Our course objectives\n\nFrame climate decision problems in a helpful way.\nApply multi-objective robust decision-making frameworks to real-world problems using open source software tools.\nEvaluate trade-offs between competing objectives using appropriate quantitative techniques.\nIdentify actionable insights for addressing problems characterized by deep uncertainties.\nCommunicate complex technical analyses clearly and effectively.\nDevelop professional-quality deliverables."
+  },
+  {
+    "objectID": "slides/lecture10-useful.html#what-did-we-learn-about-framing-problems-in-a-helpful-way",
+    "href": "slides/lecture10-useful.html#what-did-we-learn-about-framing-problems-in-a-helpful-way",
+    "title": "Decision analysis to inform decisions",
+    "section": "What did we learn about framing problems in a “helpful” way?",
+    "text": "What did we learn about framing problems in a “helpful” way?\nA few guiding questions:\n\nDid we learn how to inform decisions?\n\nIs it possible to do this without co-production? How?\nWhat frameworks did we learn for providing decision support?\nDoes the DMDU book have a chapter on decision making or support?"
+  },
+  {
+    "objectID": "slides/lecture10-useful.html#usable-information",
+    "href": "slides/lecture10-useful.html#usable-information",
+    "title": "Decision analysis to inform decisions",
+    "section": "Usable information",
+    "text": "Usable information\n\n\n\nLemos et al., (2012)"
+  },
+  {
+    "objectID": "slides/lecture10-useful.html#organizational-constraints",
+    "href": "slides/lecture10-useful.html#organizational-constraints",
+    "title": "Decision analysis to inform decisions",
+    "section": "Organizational constraints",
+    "text": "Organizational constraints\n\n“It’s David and Goliath and David ain’t winning…the rules and regulations promulgated by those organizations [state and federal entities] make it almost impossible to do mitigation” - Interviewee#15\n\n\n“We’ve got mountiain lions… wolves… coyotes… fishers, great horned owls… eagles. You name it, it’s all here… Environmenta impact seems foolish in a town that’s all woods” - Interviewee#4\n\n\n“We don’t want to have a negative impact on the environment but… saving two or three fish is not worth $450,000” - Interviewee#15\n\n\n“[federal funding programs are] a great idea but too complex for us to access” - Interviewee#7\n\nFor more, see Consoer and Milman (2017)"
+  },
+  {
+    "objectID": "slides/lecture10-useful.html#evaluation",
+    "href": "slides/lecture10-useful.html#evaluation",
+    "title": "Decision analysis to inform decisions",
+    "section": "Evaluation",
+    "text": "Evaluation\n\nLeskens et al., (2014). Why are decisions in flood disaster management so poorly supported by information from flood models?"
+  },
+  {
+    "objectID": "slides/lecture10-useful.html#knowledge-infrastructure",
+    "href": "slides/lecture10-useful.html#knowledge-infrastructure",
+    "title": "Decision analysis to inform decisions",
+    "section": "Knowledge infrastructure",
+    "text": "Knowledge infrastructure\nRemember this?\n\nHerman et al., (2020)"
+  },
+  {
+    "objectID": "slides/lecture10-useful.html#knowledge-infrastructure-1",
+    "href": "slides/lecture10-useful.html#knowledge-infrastructure-1",
+    "title": "Decision analysis to inform decisions",
+    "section": "Knowledge infrastructure",
+    "text": "Knowledge infrastructure\nControl problem framing abstracts away from who is the “controller”\n\nAnderies et al., (2018)"
+  },
+  {
+    "objectID": "slides/lecture10-useful.html#knowledge-infrastructure-2",
+    "href": "slides/lecture10-useful.html#knowledge-infrastructure-2",
+    "title": "Decision analysis to inform decisions",
+    "section": "Knowledge infrastructure",
+    "text": "Knowledge infrastructure\nThe real-world problem is more complex and gets addressed by real-world decision-making processes\n\nDeslatte et al., (2024)"
+  },
+  {
+    "objectID": "slides/lecture10-useful.html#value-of-information",
+    "href": "slides/lecture10-useful.html#value-of-information",
+    "title": "Decision analysis to inform decisions",
+    "section": "Value of information",
+    "text": "Value of information\nShould we expend resources to build new knowledge? Key concepts include:\n\nExpected value of perfect information (i.e., reducing all uncertainty)\nPartial expected value of perfect information (i.e., eliminating uncertainty associated with one modeling aspect)\nExpected value of sample information (i.e., improvement from reducing uncertainty)\n\nMost realistic"
+  },
+  {
+    "objectID": "slides/lecture10-useful.html#cross-walking-different-perspectives",
+    "href": "slides/lecture10-useful.html#cross-walking-different-perspectives",
+    "title": "Decision analysis to inform decisions",
+    "section": "Cross-walking different perspectives",
+    "text": "Cross-walking different perspectives\nTry to connect the dots across these literatures (which are largely disonnected) and consider:\n\n\nHow are decisions made now?\nHow “should” decisions be made?\nHow can decisions be made better?"
+  },
+  {
+    "objectID": "slides/lecture10-useful.html#what-roles-can-you-play",
+    "href": "slides/lecture10-useful.html#what-roles-can-you-play",
+    "title": "Decision analysis to inform decisions",
+    "section": "What roles can you play?",
+    "text": "What roles can you play?\n\nImprove methods for implementing decision analysis\nMake the results of decision analysis more salient\nTranslate good decision analysis into better decision-making\nAnalyze decision-making for how well it meets its objectives\nIdentify currently feasible ways to improve decisions\n\nWhat roles does MORDM enable you to fill, and how completely?"
+  },
+  {
+    "objectID": "slides/lecture10-useful.html#a-few-closing-thoughts-on-the-course",
+    "href": "slides/lecture10-useful.html#a-few-closing-thoughts-on-the-course",
+    "title": "Decision analysis to inform decisions",
+    "section": "A few closing thoughts on the course",
+    "text": "A few closing thoughts on the course\n\n\nMORDM operationalizes a lot of good ideas; hold onto the ideas but not necessarily the worfklow\n\nRDM largely builds off of theories related to individual decision-making, not collective action problems\nEvaluation and political science are major gaps in existing guidance on RDM framing\n\nChoose project and paper goals first, then find and build on the body of work that enables you to realize them\nYou have a lot of decision-making experience; use your intuition to think about decision analysis and decision making for wicked social planning problems"
+  },
+  {
+    "objectID": "slides/lecture10-useful.html#presentations-next-week",
+    "href": "slides/lecture10-useful.html#presentations-next-week",
+    "title": "Decision analysis to inform decisions",
+    "section": "Presentations next week!",
+    "text": "Presentations next week!\n\nMonday: Eric volunteered. Who else?\nPresentation peer evaluation. For each other student:\n\nWrite a max one-page comment with feedback on style and content\nStyle: what worked and didn’t for you as an audience?\nContent: give your best summary of their project and goals\nContent: state your favorite part of the pitch/idea\nContent: outline your biggest (max 3) areas of confusion"
+  },
+  {
+    "objectID": "slides/lecture10-useful.html#report-stuff",
+    "href": "slides/lecture10-useful.html#report-stuff",
+    "title": "Decision analysis to inform decisions",
+    "section": "Report stuff",
+    "text": "Report stuff\n\nReport due Nov 26\n\nThe drafts were great! For the final report, I’m looking for narrower and sharper focuses for your next paper so your advisors will be glad you took this course :)\nI am going to randomly assign report partners so that each person has a peer evaluation aspect to their report, as well as my feedback"
   },
   {
     "objectID": "slides/lecture01-intro.html#how-did-you-make-these-decisions",
@@ -875,7 +988,7 @@
     "href": "schedule/schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "This page contains a schedule of the topics, content, and assignments for the term, organized by module.\n\nSlides : On the schedule, this link contains the presentation for the day’s lecture.\nLab : This page contains a lab report rubric and links to each week’s lab. You can also access each week’s lab through the links in the schedule below. Please check this page to stay on top of the due dates for each lab.\nHW : This page contains the schedule and rubric for the project updates. At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I highly encourage you to work on these during the module to stay on track with your project. Please check this page to stay on top of the due dates for each progress report. Note that there is no lab report the first week and the first assignment is to define your project’s decision problem.\nReading : On the schedule, this link takes you to a list of required and optional readings for the module. Please read the required reading before class. There will typically be one required reading per week. I suggest you read at least the abstracts of optional readings before class. The optional readings will help you understand lecture and can serve as core references in lab reports and project updates.\n\n\n\n\n\nYou should follow this general process for each module\n\nDo the reading before the corresponding Monday’s Lecture\nComplete the lab report within one week from the assignment date\nSubmit the project progress report one week after the end of a module\n\n\n\n\n\n There are seven modules in this course:\n\n“Overview”: Overview of decision analysis for wicked climate problems\n“Uncertainty”: Dealing with uncertainty in analyzing decisions\n“RDM”: Robust decision-making\n“Trade-offs”: Multiple objectives and navigating trade-offs\n“DMDU”: Decision making under deep uncertainty\n“Gaps”: Gaps between decision analysis and decision support\n“Projects”: Student project presentations\n\nNote that this schedule will be updated as necessary throughout the term.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nSlides\nLab\nHW\nReading\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n1\n9/15/25\nCourse Overview\n\n\n\n\n\n\n1\n9/16/25\nComputing setup\n\n\n\n\n\n\n1\n9/17/25\nFraming a decision analysis\n\n\n\n\n\n\n1\n9/19/25\nPython and GitHub Bootcamp\n\n\n\n\n\n\n\n\nUncertainty\n\n\n\n\n\n\n2\n9/22/25\nShallow and deep uncertainties\n\n\n\n\n\n\n2\n9/23/25\nPython and GitHub Bootcamp II\n\n\n\n\n\n\n2\n9/24/25\nDeep uncertainty game\n\n\n\n\n\n\n2\n9/26/25\nMSD UC/UQ tutorials\n\n\n\n\n\n\n\n\nRDM\n\n\n\n\n\n\n3\n9/29/25\nRobust decision-making\n\n\n\n\n\n\n3\n10/1/25\nCase study\n\n\n\n\n\n\n3\n10/3/25\nPotential pitfalls of predict-then-act\n\n\n\n\n\n\n\n\nTrade-offs\n\n\n\n\n\n\n4\n10/6/25\nDA in a pluralistic society\n\n\n\n\n\n\n4\n10/8/25\nCase study\n\n\n\n\n\n\n4\n10/10/25\nTechniques for visualizing trade-offs\n\n\n\n\n\n\n\n\nDMDU\n\n\n\n\n\n\n5\n10/13/25\nTaxonomy of DMDU approaches\n\n\n\n\n\n\n5\n10/15/25\nCase study (No Slides)\n\n\n\n\n\n\n5\n10/17/25\nOpen office hours\n\n\n\n\n\n\n6\n10/20/25\nDirect policy search\n\n\n\n\n\n\n6\n10/22/25\nCase study\n\n\n\n\n\n\n6\n10/24/25\nImplementing DPS\n\n\n\n\n\n\n7\n10/27/25\nScenario discovery\n\n\n\n\n\n\n7\n10/29/25\nOptimization tutorial\n\n\n\n\n\n\n7\n10/31/25\nCase Study\n\n\n\n\n\n\n8\n11/3/25\nRevisiting decision analysis framing\n\n\n\n\n\n\n8\n11/5/25\nCase study\n\n\n\n\n\n\n8\n11/7/25\nPractice presentations\n\n\n\n\n\n\n\n\nGaps\n\n\n\n\n\n\n9\n11/10/25\nPractice presentations\n\n\n\n\n\n\n9\n11/12/25\nMore useful decision analysis\n\n\n\n\n\n\n9\n11/14/25\nCase study\n\n\n\n\n\n\n\n\nProjects\n\n\n\n\n\n\n10\n11/17/25\nPresentations\n\n\n\n\n\n\n10\n11/18/25\nPresentations",
+    "text": "This page contains a schedule of the topics, content, and assignments for the term, organized by module.\n\nSlides : On the schedule, this link contains the presentation for the day’s lecture.\nLab : This page contains a lab report rubric and links to each week’s lab. You can also access each week’s lab through the links in the schedule below. Please check this page to stay on top of the due dates for each lab.\nHW : This page contains the schedule and rubric for the project updates. At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I highly encourage you to work on these during the module to stay on track with your project. Please check this page to stay on top of the due dates for each progress report. Note that there is no lab report the first week and the first assignment is to define your project’s decision problem.\nReading : On the schedule, this link takes you to a list of required and optional readings for the module. Please read the required reading before class. There will typically be one required reading per week. I suggest you read at least the abstracts of optional readings before class. The optional readings will help you understand lecture and can serve as core references in lab reports and project updates.\n\n\n\n\n\nYou should follow this general process for each module\n\nDo the reading before the corresponding Monday’s Lecture\nComplete the lab report within one week from the assignment date\nSubmit the project progress report one week after the end of a module\n\n\n\n\n\n There are seven modules in this course:\n\n“Overview”: Overview of decision analysis for wicked climate problems\n“Uncertainty”: Dealing with uncertainty in analyzing decisions\n“RDM”: Robust decision-making\n“Trade-offs”: Multiple objectives and navigating trade-offs\n“DMDU”: Decision making under deep uncertainty\n“Gaps”: Gaps between decision analysis and decision support\n“Projects”: Student project presentations\n\nNote that this schedule will be updated as necessary throughout the term.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nTopic\nSlides\nLab\nHW\nReading\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n1\n9/15/25\nCourse Overview\n\n\n\n\n\n\n1\n9/16/25\nComputing setup\n\n\n\n\n\n\n1\n9/17/25\nFraming a decision analysis\n\n\n\n\n\n\n1\n9/19/25\nPython and GitHub Bootcamp\n\n\n\n\n\n\n\n\nUncertainty\n\n\n\n\n\n\n2\n9/22/25\nShallow and deep uncertainties\n\n\n\n\n\n\n2\n9/23/25\nPython and GitHub Bootcamp II\n\n\n\n\n\n\n2\n9/24/25\nDeep uncertainty game\n\n\n\n\n\n\n2\n9/26/25\nMSD UC/UQ tutorials\n\n\n\n\n\n\n\n\nRDM\n\n\n\n\n\n\n3\n9/29/25\nRobust decision-making\n\n\n\n\n\n\n3\n10/1/25\nCase study\n\n\n\n\n\n\n3\n10/3/25\nPotential pitfalls of predict-then-act\n\n\n\n\n\n\n\n\nTrade-offs\n\n\n\n\n\n\n4\n10/6/25\nDA in a pluralistic society\n\n\n\n\n\n\n4\n10/8/25\nCase study\n\n\n\n\n\n\n4\n10/10/25\nTechniques for visualizing trade-offs\n\n\n\n\n\n\n\n\nDMDU\n\n\n\n\n\n\n5\n10/13/25\nTaxonomy of DMDU approaches\n\n\n\n\n\n\n5\n10/15/25\nCase study (No Slides)\n\n\n\n\n\n\n5\n10/17/25\nOpen office hours\n\n\n\n\n\n\n6\n10/20/25\nDirect policy search\n\n\n\n\n\n\n6\n10/22/25\nCase study\n\n\n\n\n\n\n6\n10/24/25\nImplementing DPS\n\n\n\n\n\n\n7\n10/27/25\nScenario discovery\n\n\n\n\n\n\n7\n10/29/25\nOptimization tutorial\n\n\n\n\n\n\n7\n10/31/25\nCase Study\n\n\n\n\n\n\n8\n11/3/25\nRevisiting decision analysis framing\n\n\n\n\n\n\n8\n11/5/25\nCase study\n\n\n\n\n\n\n8\n11/7/25\nPractice presentations\n\n\n\n\n\n\n\n\nGaps\n\n\n\n\n\n\n9\n11/10/25\nPractice presentations\n\n\n\n\n\n\n9\n11/12/25\nMore useful decision analysis\n\n\n\n\n\n\n9\n11/14/25\nCase study\n\n\n\n\n\n\n\n\nProjects\n\n\n\n\n\n\n10\n11/17/25\nPresentations\n\n\n\n\n\n\n10\n11/19/25\nPresentations",
     "crumbs": [
       "Schedule"
     ]
@@ -1429,462 +1542,461 @@
     "text": "Next week\n\nMonday: bringing things together with MORDM (guest lecture)\nWednesday: case study\nFriday: case study and HW 4 due (Sunday ok)"
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#what-is-uncertainty",
-    "href": "slides/lecture03-uncertainty.html#what-is-uncertainty",
-    "title": "Dealing with uncertainty in analyzing decisions",
-    "section": "What is uncertainty?",
-    "text": "What is uncertainty?\n\nA lack of certainty; an inability to exactly describe current or future states and values\n\nParphrased from the Wikipedia entry on Uncertainty"
+    "objectID": "slides/lecture06-dmdu.html#defining-challenges",
+    "href": "slides/lecture06-dmdu.html#defining-challenges",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "section": "Defining challenges",
+    "text": "Defining challenges\nComing to grips with irreducible uncertainty:\n\nLimits in predictability of complex systems\nDifferent perspectives on the problem, system, and objectives\nDynamic and unknowable futures"
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#two-overarching-types-of-uncertainty",
-    "href": "slides/lecture03-uncertainty.html#two-overarching-types-of-uncertainty",
-    "title": "Dealing with uncertainty in analyzing decisions",
-    "section": "Two overarching types of uncertainty",
-    "text": "Two overarching types of uncertainty\n\n\nAleatoric uncertainty results from randomness\n\nEpistemic uncertainty results from lack of knowledge"
+    "objectID": "slides/lecture06-dmdu.html#finding-strategies-that-are-robust-to-irreducible-uncertainties",
+    "href": "slides/lecture06-dmdu.html#finding-strategies-that-are-robust-to-irreducible-uncertainties",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "section": "Finding strategies that are robust to irreducible uncertainties",
+    "text": "Finding strategies that are robust to irreducible uncertainties\nThis entails:\n\nExploratory modeling\nAdaptive planning\nDecision support"
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#fundamental-limits-to-earth-systems-modeling",
-    "href": "slides/lecture03-uncertainty.html#fundamental-limits-to-earth-systems-modeling",
-    "title": "Dealing with uncertainty in analyzing decisions",
-    "section": "Fundamental limits to Earth systems modeling",
-    "text": "Fundamental limits to Earth systems modeling\nEarth systems are open, posing fundamental limitations on our ability to reduce all relevant areas of epistemic uncertainty.\n\n\n\nVerification and validation of numerical models of natural systems is impossible… because natural systems are never closed and because model results are always nonunique…\n\n\nThus, the primary value of models is heuristic: Models are representations, useful for guiding further study but not susceptible to proof.\n\n\n\n— Oreskes, N., Shrader-Frechette, K., & Belitz, K. (1994). Verification, validation, and confirmation of numerical models in the earth sciences. Science, 263(5147), 641-646."
+    "objectID": "slides/lecture06-dmdu.html#weve-seen-this-before",
+    "href": "slides/lecture06-dmdu.html#weve-seen-this-before",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "section": "We’ve seen this before!",
+    "text": "We’ve seen this before!\nLempert and Collins (2007)\n\n\nExploratory modeling\n\n\nSimple model of lake dynamics\nEvaluates decisions optimal for one critical P over a wide range of critical P scenarios\n\n\nAdaptive planning\n\n\nThe town learns about critical P over time and determines their anthropogenic inflows based on observed P and best-guess critical P\n\n\nDecision support\n\n\nCalculates two robustness metrics and visualizes results in several ways"
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#example-climate-scenario-uncertainty-is-often-called-deep",
-    "href": "slides/lecture03-uncertainty.html#example-climate-scenario-uncertainty-is-often-called-deep",
-    "title": "Dealing with uncertainty in analyzing decisions",
-    "section": "Example: Climate scenario uncertainty is often called “deep”",
-    "text": "Example: Climate scenario uncertainty is often called “deep”\n\n\n\nHausfather and Peters (2020). RCP8.5 is a problematic scenario for near-term emissions"
+    "objectID": "slides/lecture06-dmdu.html#exploratory-modeling",
+    "href": "slides/lecture06-dmdu.html#exploratory-modeling",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "section": "Exploratory modeling",
+    "text": "Exploratory modeling\n\n\nWhat?\n\nScenario-based, what-if modeling\n\nHow?\n\nRunning computational models (often simple) many times\nOften search for strategies using optimization algorithms\n\nWhy?\n\nDeriving the consequences of actions on complex systems with mental models alone is infeasible\nConsidering only pre-specified strategies limits the ability of decision-makers to learn about the problem and identify robust solutions"
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#example-scenario-and-model-choices-reflect-deep-uncertainty-in-sea-level-rise-projections",
-    "href": "slides/lecture03-uncertainty.html#example-scenario-and-model-choices-reflect-deep-uncertainty-in-sea-level-rise-projections",
-    "title": "Dealing with uncertainty in analyzing decisions",
-    "section": "Example: Scenario and model choices reflect “deep” uncertainty in sea-level rise projections",
-    "text": "Example: Scenario and model choices reflect “deep” uncertainty in sea-level rise projections\n\nDoss-Gollin and Keller (2023). A subjective Bayesian framework for synthesizing deep uncertainties in climate risk management"
+    "objectID": "slides/lecture06-dmdu.html#adaptive-planning",
+    "href": "slides/lecture06-dmdu.html#adaptive-planning",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "section": "Adaptive planning",
+    "text": "Adaptive planning\n\n\nWhat?\n\nStrategies guide future decisions based on how the future unfolds\n\nHow?\n\nExplore a wide variety of futures during plan design\nIdentify actions that are best suited to different futures, as well as what signals ensure the timely implementation of those actions\n\nWhy?\n\nAdaptive strategies are flexible, which contributes to robustness in the face of deep and dynamic uncertainties"
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#example-triggering-managed-retreat",
-    "href": "slides/lecture03-uncertainty.html#example-triggering-managed-retreat",
-    "title": "Dealing with uncertainty in analyzing decisions",
-    "section": "Example: Triggering managed retreat",
-    "text": "Example: Triggering managed retreat\n\nHegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies. Preprint."
+    "objectID": "slides/lecture06-dmdu.html#decision-support",
+    "href": "slides/lecture06-dmdu.html#decision-support",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "section": "Decision support",
+    "text": "Decision support\n\n\nWhat?\n\nAn iterative, collaborative approach that facilitates learning across alternative framings of the problem and learning about stakeholder preferences and trade-offs\n\nHow?\n\nGood question! This is an area with little guidance in the field…\n\nWhy?\n\nUnder deep uncertainty, decision support moves away from trying to define what is the “right” choice and instead enable decision-makers to converge on an acceptable decision"
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#myopic-strategies",
-    "href": "slides/lecture03-uncertainty.html#myopic-strategies",
-    "title": "Dealing with uncertainty in analyzing decisions",
-    "section": "Myopic strategies",
-    "text": "Myopic strategies\n\nHegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies.. Preprint"
+    "objectID": "slides/lecture06-dmdu.html#high-level-overview",
+    "href": "slides/lecture06-dmdu.html#high-level-overview",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "section": "High-level overview",
+    "text": "High-level overview\n\nBartholomew and Kwakkel (2020)"
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#schematic-representation",
-    "href": "slides/lecture03-uncertainty.html#schematic-representation",
-    "title": "Dealing with uncertainty in analyzing decisions",
-    "section": "Schematic Representation",
-    "text": "Schematic Representation\n\nReed et al., (2025). Addressing Uncertainty in multisector dynamics research"
+    "objectID": "slides/lecture06-dmdu.html#what-these-approaches-share",
+    "href": "slides/lecture06-dmdu.html#what-these-approaches-share",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "section": "What these approaches share",
+    "text": "What these approaches share\n\nAll three building blocks discussed earlier\nThe use of a multi-objective evolutionary algorithm (MOEA) to identify a large, diverse set of strategies that capture trade-offs"
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#many-purposes---a-few-highlights-for-decision-analyses",
-    "href": "slides/lecture03-uncertainty.html#many-purposes---a-few-highlights-for-decision-analyses",
-    "title": "Dealing with uncertainty in analyzing decisions",
-    "section": "Many purposes - a few highlights for decision analyses",
-    "text": "Many purposes - a few highlights for decision analyses\n\n\nHow can we simplify our model to run it faster and sample more scenarios?\nWhat are worst-case scenarios?\nWhich actions perform well in a wide range of scenarios?\nWhat causes actions to fail?\nWhat types of observations should we collect to improve our model and better evaluate actions?\n\n\n\n\n\n\n\n\n\nNote\n\n\nNote the iterative nature of using uncertainty characterization and sensitivity analysis to inform and assess strategies"
+    "objectID": "slides/lecture06-dmdu.html#whats-wrong-with-mordm",
+    "href": "slides/lecture06-dmdu.html#whats-wrong-with-mordm",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "section": "What’s “wrong” with MORDM?",
+    "text": "What’s “wrong” with MORDM?\n\n\nThe main idea for Multi-Scenario MORDM or Many-Objective Robust Optimization comes the observation that solutions found through optimization for a reference scenario can have very poor performance in other scenarios.\n\n\n\n\nRemember lab?"
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#types-of-analyses",
-    "href": "slides/lecture03-uncertainty.html#types-of-analyses",
-    "title": "Dealing with uncertainty in analyzing decisions",
-    "section": "Types of analyses",
-    "text": "Types of analyses\n\nReed et al., (2025). Addressing Uncertainty in multisector dynamics research"
+    "objectID": "slides/lecture06-dmdu.html#why-multi-scenario-mordm",
+    "href": "slides/lecture06-dmdu.html#why-multi-scenario-mordm",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "section": "Why Multi-Scenario MORDM?",
+    "text": "Why Multi-Scenario MORDM?\n\nThe main innovation of MORDM is using a MOEA to obtain a large, diverse set of strategies that capture trade-offs\nMulti-Scenario MORDM builds on this by adding more reference scenarios (based on scenario discovery) to enhance diversity of strategy alternatives that are Pareto optimal strategies under different scenarios\n\n\nBartholomew and Kwakkel (2020) recommend this approach as a good balance for identifying candidates that are optimal within scenarios, robust across scenarios, and not too computationally challenging to find."
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#analysis-methods",
-    "href": "slides/lecture03-uncertainty.html#analysis-methods",
-    "title": "Dealing with uncertainty in analyzing decisions",
-    "section": "Analysis methods",
-    "text": "Analysis methods\n\n\n\nReed et al., (2025). Addressing Uncertainty in multisector dynamics research"
+    "objectID": "slides/lecture06-dmdu.html#why-moro",
+    "href": "slides/lecture06-dmdu.html#why-moro",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "section": "Why MORO?",
+    "text": "Why MORO?\n\n\nSince the overarching aim of supporting decision making under deep uncertainty is the identification of robust strategies that offer an acceptable performance across multiple competing objectives, why not include these robustness considerations already in the search phase for candidate solutions?\n\n\nBartholomew and Kwakkel (2020)\n\nBut this approach is computationally intense and can sacrifice identifying strategies that are optimal in any given scenario!"
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#revisiting-the-managed-retreat-example",
-    "href": "slides/lecture03-uncertainty.html#revisiting-the-managed-retreat-example",
-    "title": "Dealing with uncertainty in analyzing decisions",
-    "section": "Revisiting the managed retreat example",
-    "text": "Revisiting the managed retreat example\n\n\n\n\n\nHegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies.. Preprint\n\n\n\n\n\n\n\nHegde et al., (2025). Timing managed retreat for robust coastal adaptation strategies.. Preprint"
+    "objectID": "slides/lecture06-dmdu.html#approaches-that-go-by-different-names-but-fit-into-the-above-classes",
+    "href": "slides/lecture06-dmdu.html#approaches-that-go-by-different-names-but-fit-into-the-above-classes",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "section": "Approaches that go by different names, but fit into the above classes",
+    "text": "Approaches that go by different names, but fit into the above classes\n\nDeeply uncertain pathways, a variant of MORO, by Trindade et al. (2019)\nA novel approach to scenario discovery to enhance Multi-Scenario MORDM by Shavazipour et al. (2021)"
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#example-from-my-research",
-    "href": "slides/lecture03-uncertainty.html#example-from-my-research",
-    "title": "Dealing with uncertainty in analyzing decisions",
-    "section": "Example from my research",
-    "text": "Example from my research\n\n\nBecause of the stated goals of the Justice40 Initiative, our main analytical goal was to evaluate different funding rules on equity and economic objectives and identify which rules perform well. To make claims about policy performance, our decision analysis was built on the following modeling chain…\n\n\n\nPollack et al., (2025). Funding rules that promote equity in climate adaptation outcomes\n\n\nOne reviewer complimented us for our extensive accounting of uncertainty. However, our (narrowly scoped!) research and policy questions did not call for factor mapping or prioritization (though we call for this in our discussion)."
+    "objectID": "slides/lecture06-dmdu.html#key-features-to-consider-in-reviewing-studies",
+    "href": "slides/lecture06-dmdu.html#key-features-to-consider-in-reviewing-studies",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "section": "Key features to consider in reviewing studies",
+    "text": "Key features to consider in reviewing studies\n\n\nIdentify how the optimization handles “shallow” uncertainties\nIdentify whether robustness is an objective in the MOEA\n\nEven when robustness is an objective, studies often evaluate robustness on a new set of samples as a form of “validation”\n\nIn evaluating the performance of strategies, do they assume all scenarios are equally likely?\n\nMulti-scenario MORDM and MORO make it really important to understand how a study calculates objective values for strategies"
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#some-personal-reflections",
-    "href": "slides/lecture03-uncertainty.html#some-personal-reflections",
-    "title": "Dealing with uncertainty in analyzing decisions",
-    "section": "Some personal reflections",
-    "text": "Some personal reflections\n\n\nAvoid inconsistent uncertainty framing and analysis (e.g., calculating expected values when framing uncertainties as “deep”)\nI feel like there’s not good guidance out there on saying for decision analysis purposes, how to represent and analyze various types of uncertainty\nDon’t lose sight of why uncertainty matters for your decision analysis (i.e., don’t ignore uncertainty but don’t overcomplicate how you handle it)\nRemember that peer-reviewed studies are units of overall decision analysis projects (i.e., don’t overstuff these studies with too many analyses and points)"
+    "objectID": "slides/lecture06-dmdu.html#what-you-shouldnt-implement",
+    "href": "slides/lecture06-dmdu.html#what-you-shouldnt-implement",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "section": "What you shouldn’t implement",
+    "text": "What you shouldn’t implement\nDo not:\n\n\nUse an approach you don’t understand and can’t write clearly about\nEvaluate objectives across scenarios without an explicit probability distribution (but then is your problem really deeply uncertain?)\nNeglect well-characterized uncertainties"
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#this-week",
-    "href": "slides/lecture03-uncertainty.html#this-week",
-    "title": "Dealing with uncertainty in analyzing decisions",
+    "objectID": "slides/lecture06-dmdu.html#what-should-you-implement",
+    "href": "slides/lecture06-dmdu.html#what-should-you-implement",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
+    "section": "What should you implement?",
+    "text": "What should you implement?\nThe uncomfortable truth is that the literature does not provide clear guidance on this question, and that’s probably a major reason you were all interested in taking this course.\n\nAs always, you can justify your choice with strong framing :)\n\n\nAnd this is what the strong papers and analyses do. Reach out to someone whose work you admire!"
+  },
+  {
+    "objectID": "slides/lecture06-dmdu.html#this-week",
+    "href": "slides/lecture06-dmdu.html#this-week",
+    "title": "Quantitative approaches for supporting decision-making under deep uncertainty",
     "section": "This week",
-    "text": "This week\n\nWe will only meet today this week - prioritize your project proposal and schedule office hours as needed\nLet me know if you are testing out the lab and need any help"
+    "text": "This week\n\nCase study Wednesday\nPossibly a tutorial Friday, otherwise open Q&A/take stock"
   },
   {
-    "objectID": "slides/lecture03-uncertainty.html#next-week",
-    "href": "slides/lecture03-uncertainty.html#next-week",
-    "title": "Dealing with uncertainty in analyzing decisions",
+    "objectID": "slides/lecture09-narrative.html#how-you-structure",
+    "href": "slides/lecture09-narrative.html#how-you-structure",
+    "title": "Communicating your analysis framing",
+    "section": "How you structure",
+    "text": "How you structure\nWe “answer” questions like:\n\nWhat is the decision problem?\nWho are the decision-makers?\nWhat are the goals?\nWhat are the possible actions?\nWhat are the relevant processes?\nWhat are the uncertainties?"
+  },
+  {
+    "objectID": "slides/lecture09-narrative.html#how-you-analyze",
+    "href": "slides/lecture09-narrative.html#how-you-analyze",
+    "title": "Communicating your analysis framing",
+    "section": "How you analyze",
+    "text": "How you analyze\nWe “answer” questions like:\n\nWhat is feasible to analyze?\nDo I optimize or not?\nWhat model(s) do I use?\nHow do I sample uncertainties?\nHow do I measure objectives?"
+  },
+  {
+    "objectID": "slides/lecture09-narrative.html#discussion-questions",
+    "href": "slides/lecture09-narrative.html#discussion-questions",
+    "title": "Communicating your analysis framing",
+    "section": "Discussion questions",
+    "text": "Discussion questions\n\n\nHow are the tasks of structuring and analyzing related?\nWhich task did the course provide more guidance on?\nWhat are some differences between a DA project, paper, and presentation?"
+  },
+  {
+    "objectID": "slides/lecture09-narrative.html#general-guidance",
+    "href": "slides/lecture09-narrative.html#general-guidance",
+    "title": "Communicating your analysis framing",
+    "section": "General guidance",
+    "text": "General guidance\n\nWho is the audience?\nAssert how decisions are made\nEmphasize decision relevance\nEmphasize structure\nJustify technical details and describe them as simply as possible"
+  },
+  {
+    "objectID": "slides/lecture09-narrative.html#project-level-guidance",
+    "href": "slides/lecture09-narrative.html#project-level-guidance",
+    "title": "Communicating your analysis framing",
+    "section": "Project-level guidance",
+    "text": "Project-level guidance\n\nAudience: funders, clients, stakeholders\nEmphasis: improving a real-world decision\nTechnical: be as good as the best and improve a few key things"
+  },
+  {
+    "objectID": "slides/lecture09-narrative.html#paper-level-guidance",
+    "href": "slides/lecture09-narrative.html#paper-level-guidance",
+    "title": "Communicating your analysis framing",
+    "section": "Paper-level guidance",
+    "text": "Paper-level guidance\n\nAudience: scientists, funders, agencies\nEmphasis: decision insights or better method to analyze decisions\nTechnical: be as good as the best and improve one or two things"
+  },
+  {
+    "objectID": "slides/lecture09-narrative.html#abstract-level-guidance",
+    "href": "slides/lecture09-narrative.html#abstract-level-guidance",
+    "title": "Communicating your analysis framing",
+    "section": "Abstract-level guidance",
+    "text": "Abstract-level guidance\n\n\n“The abstract is of utmost importance, for it is read by 10 to 500 times more people than hear or read the entire article. It should not be a mere recital of the subjects covered, replete with such expressions as ‘is discussed’ and ‘is described.’ It should be a condensation and concentration of the essential qualities of the paper.”\n\n— Kenneth Landes. A Scrutiny of the Abstract. Bulletin of the American Association of Petroleum Geologists, Vol. 35, No. 7, July 1951, p. 1660.\n\nAlso see Nature summary guidance"
+  },
+  {
+    "objectID": "slides/lecture09-narrative.html#presentation-level-guidance",
+    "href": "slides/lecture09-narrative.html#presentation-level-guidance",
+    "title": "Communicating your analysis framing",
+    "section": "Presentation-level guidance",
+    "text": "Presentation-level guidance\n\nAudience: varies, often your largest and most diverse\nEmphasis: same as paper, but even more focused\nTechnical: cater to audience and be mindful of time"
+  },
+  {
+    "objectID": "slides/lecture09-narrative.html#deconstructing-a-15-minute-presentation",
+    "href": "slides/lecture09-narrative.html#deconstructing-a-15-minute-presentation",
+    "title": "Communicating your analysis framing",
+    "section": "Deconstructing a 15-minute presentation",
+    "text": "Deconstructing a 15-minute presentation\n\nAudience: Annual Conference of the Society for Decision Making Under Deep Uncertainty\nEmphasis: decision insight\nTechnical: None!\n\nReference rigorous methods in speech, prepare extra slides, know your stuff for questions\n\n\nLet’s deconstruct this example with the following in mind:\n\nWhat decision insight does it emphasize?\nHow and when does it establish the decision problem?\nHow much “technical” detail does it cover?\nWhat is the figure size to slide ratio?\nWhat is the figure to text ratio?\nWhat style features does it employ for emphasis?\nHow many times is each point (motivation, technical, result) repeated in one way or another?"
+  },
+  {
+    "objectID": "slides/lecture09-narrative.html#this-week",
+    "href": "slides/lecture09-narrative.html#this-week",
+    "title": "Communicating your analysis framing",
+    "section": "This week",
+    "text": "This week\n\nWednesday: Deconstructing a paper together\nFriday: Practice presentations - 2 volunteers?"
+  },
+  {
+    "objectID": "slides/lecture09-narrative.html#next-week",
+    "href": "slides/lecture09-narrative.html#next-week",
+    "title": "Communicating your analysis framing",
     "section": "Next week",
-    "text": "Next week\n\nStarting RDM module\nJournal club next Wednesday (stay on track with 9/29 readings)"
+    "text": "Next week\n\nMonday: Practice presentations\nWednesday: Lecture on more “useful” DA\nFriday: case study on value of information"
   },
   {
-    "objectID": "slides/case03-dps.html#summarize-the-study",
-    "href": "slides/case03-dps.html#summarize-the-study",
-    "title": "Direct policy search",
-    "section": "Summarize the study",
-    "text": "Summarize the study\nSuccintly, please :)\n\n\nWhat is the study about?\nHow does it address its research question(s)?\nWhat does the study find?\nWhat strengths did you find?\nWhat weaknesses did you find?\nHow will you think about this paper going forward with your decision analysis?"
+    "objectID": "slides/lecture09-narrative.html#two-weeks",
+    "href": "slides/lecture09-narrative.html#two-weeks",
+    "title": "Communicating your analysis framing",
+    "section": "Two weeks",
+    "text": "Two weeks\n\nM/W final presentations!"
   },
   {
-    "objectID": "slides/case03-dps.html#optimization-concepts",
-    "href": "slides/case03-dps.html#optimization-concepts",
-    "title": "Direct policy search",
-    "section": "Optimization concepts",
-    "text": "Optimization concepts\nDefine the following, and explain how it connects to the study:\n\n\nDeeply uncertain tipping point\nOpen loop, intertemporal optimization\nCurse of dimensionality\nDirect policy search\nMulti-objective evolutionary algorithms\nPolicy inertia\nHypervolume\nRobustness analysis\nScenario discovery"
-  },
-  {
-    "objectID": "slides/case03-dps.html#discuss-the-studys-approach",
-    "href": "slides/case03-dps.html#discuss-the-studys-approach",
-    "title": "Direct policy search",
-    "section": "Discuss the study’s approach",
-    "text": "Discuss the study’s approach\nAnswer the following questions:\n\n\nHow did the authors implement MORDM?\nWhich optimization approach converges faster?\nWhich optimization approach is “better?” How?\nHow robust are any of the “optimal” strategies?\nAre there reasons to prefer DPS beyond the study’s results?"
-  },
-  {
-    "objectID": "slides/case03-dps.html#which-strategy-is-better-in-the-reference-scenario",
-    "href": "slides/case03-dps.html#which-strategy-is-better-in-the-reference-scenario",
-    "title": "Direct policy search",
-    "section": "Which strategy is better in the reference scenario?",
-    "text": "Which strategy is better in the reference scenario?\n\n\n\nQuinn et al., (2017)"
-  },
-  {
-    "objectID": "slides/case03-dps.html#how-do-the-strategies-manage-the-tipping-point",
-    "href": "slides/case03-dps.html#how-do-the-strategies-manage-the-tipping-point",
-    "title": "Direct policy search",
-    "section": "How do the strategies manage the tipping point?",
-    "text": "How do the strategies manage the tipping point?\n\n\n\nQuinn et al., (2017)"
-  },
-  {
-    "objectID": "slides/case03-dps.html#why-do-the-dps-strategies-fail",
-    "href": "slides/case03-dps.html#why-do-the-dps-strategies-fail",
-    "title": "Direct policy search",
-    "section": "Why do the DPS strategies fail?",
-    "text": "Why do the DPS strategies fail?\n\n\n\nQuinn et al., (2017)"
-  },
-  {
-    "objectID": "slides/case03-dps.html#open-discussion",
-    "href": "slides/case03-dps.html#open-discussion",
-    "title": "Direct policy search",
-    "section": "Open discussion",
-    "text": "Open discussion\nWhat would you like to discuss about the paper and/or optimization/DPS connections to your project?"
-  },
-  {
-    "objectID": "slides/case03-dps.html#friday",
-    "href": "slides/case03-dps.html#friday",
-    "title": "Direct policy search",
-    "section": "Friday",
-    "text": "Friday\n\nDPS tutorial"
-  },
-  {
-    "objectID": "slides/case03-dps.html#next-week",
-    "href": "slides/case03-dps.html#next-week",
-    "title": "Direct policy search",
-    "section": "Next week",
-    "text": "Next week\n\nMonday: Scenario discovery lecture\nWednesday: Prabhat leads optimization tutorial\nFriday: case study"
-  },
-  {
-    "objectID": "slides/lecture02-framing.html#how-did-you-make-these-decisions",
-    "href": "slides/lecture02-framing.html#how-did-you-make-these-decisions",
-    "title": "Framing a decision analysis",
-    "section": "How did you make these decisions?",
-    "text": "How did you make these decisions?\n\nWhat did you eat for your last meal?\nWhat colleges did you apply to?\nHow did you choose your PhD program?\n\n\nhttps://xkcd.com/1445/"
-  },
-  {
-    "objectID": "slides/lecture02-framing.html#framing-refers-to-how-you-structure-a-decision-problem",
-    "href": "slides/lecture02-framing.html#framing-refers-to-how-you-structure-a-decision-problem",
-    "title": "Framing a decision analysis",
-    "section": "Framing refers to how you structure a decision problem",
-    "text": "Framing refers to how you structure a decision problem\nFraming breakfast decisions\n\n\nI want to eat a healthy breakfast every morning that gives me energy\nIt needs to be affordable, tasty, low in sugar, etc.,\nOatmeal with peanut butter and frozen berries, toast with peanut butter and bananas, etc.,"
-  },
-  {
-    "objectID": "slides/lecture02-framing.html#framing-informs-how-you-analyze-a-decision",
-    "href": "slides/lecture02-framing.html#framing-informs-how-you-analyze-a-decision",
-    "title": "Framing a decision analysis",
-    "section": "Framing informs how you analyze a decision",
-    "text": "Framing informs how you analyze a decision\nFraming breakfast decisions, continued\n\n\nI can calculate the costs, macronutrients, etc.,\nI can map out which breakfasts do better/worse on my objectives"
-  },
-  {
-    "objectID": "slides/lecture02-framing.html#getting-theoretical-about-it",
-    "href": "slides/lecture02-framing.html#getting-theoretical-about-it",
-    "title": "Framing a decision analysis",
-    "section": "Getting theoretical about it",
-    "text": "Getting theoretical about it\n\n\n\n\n\n\n\nG\n\n\n\nClarify the\\ndecision\\ncontext\n\nClarify the\ndecision\ncontext\n\n\n\nDefine\\nobjectives\n\nDefine\nobjectives\n\n\n\nClarify the\\ndecision\\ncontext-&gt;Define\\nobjectives\n\n\n\n\n\nDevelop\\nalternatives\n\nDevelop\nalternatives\n\n\n\nDefine\\nobjectives-&gt;Develop\\nalternatives\n\n\n\n\n\nEstimate\\nmetrics\n\nEstimate\nmetrics\n\n\n\nDevelop\\nalternatives-&gt;Estimate\\nmetrics\n\n\n\n\n\nEvaluate\\ntrade-offs\n\nEvaluate\ntrade-offs\n\n\n\nEstimate\\nmetrics-&gt;Evaluate\\ntrade-offs\n\n\n\n\n\nImplement,\\nmonitor,\\nreview\n\nImplement,\nmonitor,\nreview\n\n\n\nEvaluate\\ntrade-offs-&gt;Implement,\\nmonitor,\\nreview\n\n\n\n\n\nImplement,\\nmonitor,\\nreview-&gt;Clarify the\\ndecision\\ncontext\n\n\n\n\n\n\n\n\n\n\n\nAdapted from Gregory et al. (2012)"
-  },
-  {
-    "objectID": "slides/lecture02-framing.html#framing-is-iterative-and-deliberative",
-    "href": "slides/lecture02-framing.html#framing-is-iterative-and-deliberative",
-    "title": "Framing a decision analysis",
-    "section": "Framing is iterative and deliberative",
-    "text": "Framing is iterative and deliberative\n\n\n\nFrom Lempert (2019)"
-  },
-  {
-    "objectID": "slides/lecture02-framing.html#how-should-i-travel-from-hanover-to-philadelphia",
-    "href": "slides/lecture02-framing.html#how-should-i-travel-from-hanover-to-philadelphia",
-    "title": "Framing a decision analysis",
-    "section": "How should I travel from Hanover to Philadelphia?",
-    "text": "How should I travel from Hanover to Philadelphia?"
-  },
-  {
-    "objectID": "slides/lecture02-framing.html#how-to-preserve-access-to-clean-water-in-the-growing-us-southwest",
-    "href": "slides/lecture02-framing.html#how-to-preserve-access-to-clean-water-in-the-growing-us-southwest",
-    "title": "Framing a decision analysis",
-    "section": "How to preserve access to clean water in the growing US Southwest?",
-    "text": "How to preserve access to clean water in the growing US Southwest?"
-  },
-  {
-    "objectID": "slides/lecture02-framing.html#why-is-framing-water-management-more-challenging-than-travel-recommendations",
-    "href": "slides/lecture02-framing.html#why-is-framing-water-management-more-challenging-than-travel-recommendations",
-    "title": "Framing a decision analysis",
-    "section": "Why is framing water management more challenging than travel recommendations?",
-    "text": "Why is framing water management more challenging than travel recommendations?\nA few hints from our examples:\n\nAnalyzing travel options was relatively simple\nWe got to the bottom of my travel goals quickly\nI have (most of) the decision-making agency and chose my favorite option"
-  },
-  {
-    "objectID": "slides/lecture02-framing.html#conceptual-models",
-    "href": "slides/lecture02-framing.html#conceptual-models",
-    "title": "Framing a decision analysis",
-    "section": "Conceptual models",
-    "text": "Conceptual models\n\nConceptual model for addressing inland flood risk from Helgeson et al. (2024)"
-  },
-  {
-    "objectID": "slides/lecture02-framing.html#another-conceptual-model",
-    "href": "slides/lecture02-framing.html#another-conceptual-model",
-    "title": "Framing a decision analysis",
-    "section": "Another conceptual model",
-    "text": "Another conceptual model\n\nUnpublished conceptual model for federal funding rules to reduce flood risk"
-  },
-  {
-    "objectID": "slides/lecture02-framing.html#values-informed-mental-models",
-    "href": "slides/lecture02-framing.html#values-informed-mental-models",
-    "title": "Framing a decision analysis",
-    "section": "Values-informed mental models",
-    "text": "Values-informed mental models\n\nValues mapping on execerpt of the conceptual model from Helgeson et al. (2024)"
-  },
-  {
-    "objectID": "slides/lecture02-framing.html#xlrm-diagrams",
-    "href": "slides/lecture02-framing.html#xlrm-diagrams",
-    "title": "Framing a decision analysis",
-    "section": "XLRM diagrams",
-    "text": "XLRM diagrams\n\nFrom Pollack et al. (2025)"
-  },
-  {
-    "objectID": "slides/lecture02-framing.html#next-week",
-    "href": "slides/lecture02-framing.html#next-week",
-    "title": "Framing a decision analysis",
-    "section": "Next week",
-    "text": "Next week\n\nDo the 9/22 readings\nStarting Uncertainty module\nWe will only meet Monday next week - prioritize your project proposal and schedule office hours as needed\nLet me know if you are testing out the labs and need any help"
-  },
-  {
-    "objectID": "slides/lecture02-framing.html#works-cited",
-    "href": "slides/lecture02-framing.html#works-cited",
-    "title": "Framing a decision analysis",
-    "section": "Works cited",
-    "text": "Works cited\n\n\n\n\nGregory, R., Failing, L., Harstone, M., Long, G., McDaniels, T., & Ohlson, D. (2012). Structuring environmental management choices. In Structured decision making (pp. 1–20). Chichester, UK: John Wiley & Sons, Ltd. https://doi.org/10.1002/9781444398557.ch1\n\n\nHelgeson, C., Keller, K., Nicholas, R. E., Srikrishnan, V., Cooper, C., Smithwick, E. A. H., & Tuana, N. (2024). Integrating values to improve the relevance of climate‐risk research. Earths Future, 12(10), e2022EF003025. https://doi.org/10.1029/2022ef003025\n\n\nLempert, R. J. (2019). Robust decision making (RDM). In Decision making under deep uncertainty (pp. 23–51). Cham: Springer International Publishing. https://doi.org/10.1007/978-3-030-05252-2\\_2\n\n\nPollack, A. B., Santamaria-Aguilar, S., Maduwantha, P., Helgeson, C., Wahl, T., & Keller, K. (2025). Funding rules that promote equity in climate adaptation outcomes. Proceedings of the National Academy of Sciences, 122(2), e2418711121. https://doi.org/10.1073/pnas.2418711121"
-  },
-  {
-    "objectID": "slides/lecture04-rdm.html#the-dmdu-argument-against-predict-then-act",
-    "href": "slides/lecture04-rdm.html#the-dmdu-argument-against-predict-then-act",
+    "objectID": "slides/case01-rdm.html#define-key-concepts",
+    "href": "slides/case01-rdm.html#define-key-concepts",
     "title": "Robust decision-making",
-    "section": "The DMDU Argument Against Predict-Then-Act",
-    "text": "The DMDU Argument Against Predict-Then-Act\n\n\n\nwicked problems are not well-bounded, are framed differently by various stakeholders, and are not well-understood until after formulation of a solution. Using predictions to adjudicate such problems skews attention toward the proverbial lamp post, not the true location of the keys to a policy solution.\n\n\n— Lempert, 2019. Robust Decision Making (RDM)."
+    "section": "Define key concepts",
+    "text": "Define key concepts\nSpend a few minutes writing down your definitions of:\n\nWell-characterized uncertainty\nOptimal expected utility\nDeep uncertainty\nPrecautionary principle\nRobust decision\nRegret\nSatisficing\nKeeping options open"
   },
   {
-    "objectID": "slides/lecture04-rdm.html#finding-robust-solutions-that-perform-well-over-a-wide-range-of-futures",
-    "href": "slides/lecture04-rdm.html#finding-robust-solutions-that-perform-well-over-a-wide-range-of-futures",
+    "objectID": "slides/case01-rdm.html#discuss-results",
+    "href": "slides/case01-rdm.html#discuss-results",
     "title": "Robust decision-making",
-    "section": "Finding robust solutions that “perform well” over a “wide range” of futures",
-    "text": "Finding robust solutions that “perform well” over a “wide range” of futures\n\nRob Lempert, PhD; & Michelle Miro, PhD. Online Training for Water Utilities—WUCA / Chapter 3: Plan"
+    "section": "Discuss results",
+    "text": "Discuss results\n\n\nWhat visual languages accompany different types of robustness metrics?\nWhat strategy should the decision-makers choose?"
   },
   {
-    "objectID": "slides/lecture04-rdm.html#measuring-robustness",
-    "href": "slides/lecture04-rdm.html#measuring-robustness",
+    "objectID": "slides/case01-rdm.html#scrutinize-key-concepts",
+    "href": "slides/case01-rdm.html#scrutinize-key-concepts",
     "title": "Robust decision-making",
-    "section": "Measuring robustness",
-    "text": "Measuring robustness\n\n\n\nMcPhail et al. (2019)"
+    "section": "Scrutinize key concepts",
+    "text": "Scrutinize key concepts\nLet’s discuss:\n\n\nWell-characterized vs. deep uncertainty\nOptimal expected utility vs. robustness\nPrecautionary principle vs. robustness\nRegret vs. satisficing\nConsidering too little vs. too much"
   },
   {
-    "objectID": "slides/lecture04-rdm.html#regret-the-cost-of-choosing-incorrectly",
-    "href": "slides/lecture04-rdm.html#regret-the-cost-of-choosing-incorrectly",
+    "objectID": "slides/case01-rdm.html#example---home-elevation-problem",
+    "href": "slides/case01-rdm.html#example---home-elevation-problem",
     "title": "Robust decision-making",
-    "section": "Regret: The “cost” of choosing “incorrectly”",
-    "text": "Regret: The “cost” of choosing “incorrectly”\nAdaptating notation in Lempert and Collins (2007), the regret of action a in state x is:\n\\(R_{a}(x) = Max_{a'}[PV(U_{a'}(x))] - PV(U_{a}(x))\\),\nthe difference between the present value expected utility of the optimal action in a considered state of the world and the considered action’s present value expected utility in that state of the world.\nNote: There are many ways to go from an action’s regret metric in one state (i.e., \\(T_{1}\\)) to evaluating its overall robustness (i.e., \\(T_{2}\\) and \\(T_{3}\\))."
+    "section": "Example - home elevation problem",
+    "text": "Example - home elevation problem\n\n\nWhat can I do to know what robustness metrics are relevant?\nDo beliefs about uncertain drivers or problem scope uncertainties matter more?"
   },
   {
-    "objectID": "slides/lecture04-rdm.html#satisficing",
-    "href": "slides/lecture04-rdm.html#satisficing",
+    "objectID": "slides/case01-rdm.html#your-examples",
+    "href": "slides/case01-rdm.html#your-examples",
     "title": "Robust decision-making",
-    "section": "Satisficing",
-    "text": "Satisficing\nFollowing McPhail et al. (2019), this approach “seeks to meet a minimum performance threshold.”\nLooking across states (i.e., \\(T_{2}\\) and \\(T_{3}\\)), the domain criterion is a common approach (e.g., see Herman et al., (2015)), which analysts often implement as the fraction of states of the world in which the performance threshold is met."
+    "section": "Your examples",
+    "text": "Your examples\nLet’s take turns applying some new concepts to our problem framing."
   },
   {
-    "objectID": "slides/lecture04-rdm.html#schematic",
-    "href": "slides/lecture04-rdm.html#schematic",
-    "title": "Robust decision-making",
-    "section": "Schematic",
-    "text": "Schematic\n\nLempert, 2019. Robust Decision Making (RDM)."
-  },
-  {
-    "objectID": "slides/lecture04-rdm.html#framing",
-    "href": "slides/lecture04-rdm.html#framing",
-    "title": "Robust decision-making",
-    "section": "Framing",
-    "text": "Framing\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
-  },
-  {
-    "objectID": "slides/lecture04-rdm.html#identifying-vulnerabilities",
-    "href": "slides/lecture04-rdm.html#identifying-vulnerabilities",
-    "title": "Robust decision-making",
-    "section": "Identifying Vulnerabilities",
-    "text": "Identifying Vulnerabilities\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
-  },
-  {
-    "objectID": "slides/lecture04-rdm.html#designing-strategies-adaptive-to-vulnerabilities",
-    "href": "slides/lecture04-rdm.html#designing-strategies-adaptive-to-vulnerabilities",
-    "title": "Robust decision-making",
-    "section": "Designing Strategies Adaptive to Vulnerabilities",
-    "text": "Designing Strategies Adaptive to Vulnerabilities\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
-  },
-  {
-    "objectID": "slides/lecture04-rdm.html#tradeoff-analysis",
-    "href": "slides/lecture04-rdm.html#tradeoff-analysis",
-    "title": "Robust decision-making",
-    "section": "Tradeoff Analysis",
-    "text": "Tradeoff Analysis\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
-  },
-  {
-    "objectID": "slides/lecture04-rdm.html#evaluating-robustness",
-    "href": "slides/lecture04-rdm.html#evaluating-robustness",
-    "title": "Robust decision-making",
-    "section": "Evaluating Robustness",
-    "text": "Evaluating Robustness\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
-  },
-  {
-    "objectID": "slides/lecture04-rdm.html#iterating-with-decision-makers",
-    "href": "slides/lecture04-rdm.html#iterating-with-decision-makers",
-    "title": "Robust decision-making",
-    "section": "Iterating with Decision-makers",
-    "text": "Iterating with Decision-makers\nMany potential conditions where current strategies insufficient:\n\n\n\nGroves et al., 2019. Robust Decision Making (RDM): Application to Water Planning and Climate Policy."
-  },
-  {
-    "objectID": "slides/lecture04-rdm.html#we-are-not-completely-ignorant-about-future-probabilities",
-    "href": "slides/lecture04-rdm.html#we-are-not-completely-ignorant-about-future-probabilities",
-    "title": "Robust decision-making",
-    "section": "We are not completely ignorant about future probabilities",
-    "text": "We are not completely ignorant about future probabilities\n\n\n\nHausfather and Peters (2020). RCP8.5 is a problematic scenario for near-term emissions"
-  },
-  {
-    "objectID": "slides/lecture04-rdm.html#alternative-synthesize-subjective-beliefs-about-deep-uncertainties",
-    "href": "slides/lecture04-rdm.html#alternative-synthesize-subjective-beliefs-about-deep-uncertainties",
-    "title": "Robust decision-making",
-    "section": "Alternative: Synthesize subjective beliefs about deep uncertainties",
-    "text": "Alternative: Synthesize subjective beliefs about deep uncertainties\n\nDoss-Gollin and Keller (2023)"
-  },
-  {
-    "objectID": "slides/lecture04-rdm.html#this-week",
-    "href": "slides/lecture04-rdm.html#this-week",
+    "objectID": "slides/case01-rdm.html#this-week",
+    "href": "slides/case01-rdm.html#this-week",
     "title": "Robust decision-making",
     "section": "This week",
-    "text": "This week\n\nCase study on Wednesday\nTutorial on RDM on Friday"
+    "text": "This week\n\nWe’ll go over the RDM tutorial on Friday together"
   },
   {
-    "objectID": "slides/lecture04-rdm.html#next-week",
-    "href": "slides/lecture04-rdm.html#next-week",
+    "objectID": "slides/case01-rdm.html#next-week",
+    "href": "slides/case01-rdm.html#next-week",
     "title": "Robust decision-making",
     "section": "Next week",
-    "text": "Next week\n\nLecture on Monday - area I have most experience in re: MORDM\nJournal Club Wednesday\nTutorial on visualizing tradeoffs"
+    "text": "Next week\n\nMonday - high-level overview of considering and navigating tradeoffs in our decision problems\nWednesday - case study (who can lead?)\nFriday - tutorial on visualizing trade-offs"
   },
   {
-    "objectID": "project/overview.html",
-    "href": "project/overview.html",
-    "title": "Course Project",
+    "objectID": "slides/lecture07-dps.html#basic-idea",
+    "href": "slides/lecture07-dps.html#basic-idea",
+    "title": "Direct policy search",
+    "section": "Basic idea",
+    "text": "Basic idea\nRecall: RDM aims to identify strategies that perform well over a wide range of future conditions\n\n\nWhat if we identify strategies that respond to new information over time?\nGoal: Optimize the sequence, timing, and/or threshold values of observed variables to initiate actions"
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#a-few-technical-considerations",
+    "href": "slides/lecture07-dps.html#a-few-technical-considerations",
+    "title": "Direct policy search",
+    "section": "A few technical considerations",
+    "text": "A few technical considerations\n\nOptimizing dynamic strategies is highly sensitive to uncertainty characterization\n\nUC determines how extreme stressors are and the sequence of events\n\nThere are many methods to implement this optimization and we will spend most of our time on one approach - direct policy search"
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#problem-overview",
+    "href": "slides/lecture07-dps.html#problem-overview",
+    "title": "Direct policy search",
+    "section": "Problem overview",
+    "text": "Problem overview\n\n\n\nHerman et al., (2020)"
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#in-math",
+    "href": "slides/lecture07-dps.html#in-math",
+    "title": "Direct policy search",
+    "section": "In math",
+    "text": "In math\n\\[\\begin{aligned}\n& \\min_{\\pi} \\mathbb{E}_{e_{1}, \\ldots, e_{H+1}} \\sum_{t=0}^{H-1} J_{t}(x_{t}, a_{t}, e_{t}) + J_{H+1}(x_{H+1}) \\\\\n\\text{subject to:} \\quad\n& x_{t+1} = f_{t}(x_{t}, a_{t}, e_{t+1}), \\quad t=0,\\ldots,H-1 \\\\\n& a_{t} = \\pi(I_{t}), \\quad t=0,\\ldots,H-1\n\\end{aligned}\\]\nwhere \\(x_{t}\\) are system states, \\(a_{t}\\) are discrete actions, \\(e_{t}\\) are external forcings, \\(I_{t}\\) is the information, and \\(J\\) are objectives. The system follows the state transition equation \\(x_{t+1} = f_{t}(x_{t}, a_{t}, e_{t+1})\\) in a single realization of the external disturbance with a single action."
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#open-loop",
+    "href": "slides/lecture07-dps.html#open-loop",
+    "title": "Direct policy search",
+    "section": "Open loop",
+    "text": "Open loop\n\\[\\begin{aligned}\n& \\min_{\\pi} \\mathbb{E}_{e_{1}, \\ldots, e_{H+1}} \\sum_{t=0}^{H-1} J_{t}(x_{t}, a_{t}, e_{t}) + J_{H+1}(x_{H+1}) \\\\\n\\text{subject to:} \\quad\n& x_{t+1} = f_{t}(x_{t}, a_{t}, e_{t+1}), \\quad t=0,\\ldots,H-1 \\\\\n& a_{t} = \\pi(I_{t}), \\quad t=0,\\ldots,H-1\n\\end{aligned}\\]\nOpen loop directly optimizes directly optimizes the sequence of actions over the time horizon, \\(a_{t} = \\pi(t)\\). In theory, you can use any optimization method (e.g., linear programming, nonlinear programming, heuristics, enumeration)."
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#closed-loop",
+    "href": "slides/lecture07-dps.html#closed-loop",
+    "title": "Direct policy search",
+    "section": "Closed loop",
+    "text": "Closed loop\nIn contrast to open loop, closed loop approaches direct actions based on observed conditions. At a high level, there are three main approaches:\n\nStochastic dynamic programming\nFind the optimal sequence of decisions based on approximating the optimal value function\nApproximate the optimal sequence of decisions based on optimizing a particular policy structure\n\nMost MORDM studies employ one class of methods in that last approach."
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#intuition",
+    "href": "slides/lecture07-dps.html#intuition",
+    "title": "Direct policy search",
+    "section": "Intuition",
+    "text": "Intuition\nSpecify a policy with a functional form and parameters such that \\(a_{t} = \\pi(I_{t}, \\theta)\\).\nAfter reformulating the optimization problem this way, what we identify is a mapping of observations to actions. The “optimal” policy is limited by the functional form of \\(\\pi\\) and the numerical convergence of the optimization."
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#why-optimal-in-quotes",
+    "href": "slides/lecture07-dps.html#why-optimal-in-quotes",
+    "title": "Direct policy search",
+    "section": "Why “Optimal” in quotes?",
+    "text": "Why “Optimal” in quotes?\nWe usually can’t guarantee that we can find an optimum (or even quantify an optimality gap) because:\n\nSimulation-optimization is applied in very general settings;\nMay not have much a priori information about the response surface;\nThe response surface can be highly nonlinear.\n\n\nCredit to Vivek Srikrishnan, Environmental Systems Analysis"
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#why-optimal-in-quotes-1",
+    "href": "slides/lecture07-dps.html#why-optimal-in-quotes-1",
+    "title": "Direct policy search",
+    "section": "Why “Optimal” in quotes?",
+    "text": "Why “Optimal” in quotes?\n\nThe optimal solution of a model is not an optimal solution of a problem unless the model is a perfect representation of the problem, which it never is.\n\n— Ackoff, R. L. (1979). “The Future of Operational Research is Past.” The Journal of the Operational Research Society, 30(2), 93–104. https://doi.org/10.1057/jors.1979.22\n\n\n\nCredit to Vivek Srikrishnan, Environmental Systems Analysis"
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#some-more-technical-details",
+    "href": "slides/lecture07-dps.html#some-more-technical-details",
+    "title": "Direct policy search",
+    "section": "Some more technical details",
+    "text": "Some more technical details\nStudies consider many functional forms for \\(\\pi\\) including linear decision rules, neural networks, radial basis functions, and binary trees.\nEvolutionary algorithms are widely used to support policy search because the relationship between policy parameters and objective functions may be multimodal or discontinuous (which makes gradient-based techniques complicated or infeasible)."
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#policy-search-schematic",
+    "href": "slides/lecture07-dps.html#policy-search-schematic",
+    "title": "Direct policy search",
+    "section": "Policy search schematic",
+    "text": "Policy search schematic\n\nHerman et al., (2020)"
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#dps-example---radial-basis-function",
+    "href": "slides/lecture07-dps.html#dps-example---radial-basis-function",
+    "title": "Direct policy search",
+    "section": "DPS example - radial basis function",
+    "text": "DPS example - radial basis function\n\nQuinn et al., (2017)"
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#dps-example---radial-basis-function-1",
+    "href": "slides/lecture07-dps.html#dps-example---radial-basis-function-1",
+    "title": "Direct policy search",
+    "section": "DPS example - radial basis function",
+    "text": "DPS example - radial basis function\n\nMarangoni et al., (2021)"
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#dps-example---policy-tree",
+    "href": "slides/lecture07-dps.html#dps-example---policy-tree",
+    "title": "Direct policy search",
+    "section": "DPS example - policy tree",
+    "text": "DPS example - policy tree\n\nHerman and Giuliani (2018)"
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#dps-example---infrastructure-pathways",
+    "href": "slides/lecture07-dps.html#dps-example---infrastructure-pathways",
+    "title": "Direct policy search",
+    "section": "DPS example - infrastructure pathways",
+    "text": "DPS example - infrastructure pathways\n\n\n\nTrindade et al. (2019)"
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#who-will-implement-these-policies",
+    "href": "slides/lecture07-dps.html#who-will-implement-these-policies",
+    "title": "Direct policy search",
+    "section": "Who will implement these policies?",
+    "text": "Who will implement these policies?\n\nStudies document limited uptake of optimization-based methods by practitioners (e.g., Pianosi et al., (2020))\nDecision-makers may prefer simpler and more understandable tools"
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#even-with-promised-uptake-remember-these-challenges",
+    "href": "slides/lecture07-dps.html#even-with-promised-uptake-remember-these-challenges",
+    "title": "Direct policy search",
+    "section": "Even with promised uptake, remember these challenges",
+    "text": "Even with promised uptake, remember these challenges\n\nPay attention to convergence\nConsider your computational budget\nYou may not be able to gurantee more than a local “optimum”\nMOEAs are less “transparent” than conventional OR-based approaches and may have important but hidden assumptions"
+  },
+  {
+    "objectID": "slides/lecture07-dps.html#this-week",
+    "href": "slides/lecture07-dps.html#this-week",
+    "title": "Direct policy search",
+    "section": "This week",
+    "text": "This week\n\nCase study Wednesday\nTutorial on DPS for lake problem Friday"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "The goal of the course project is to develop and report on an actionable plan for implementing a quantitative decision analysis. This project can be highly synergistic with thesis projects.",
-    "crumbs": [
-      "Course Project"
-    ]
+    "text": "This website contains course materials for the Fall 2025 edition of Decision Analysis for Wicked Climate Problems, taught by Adam Pollack at Dartmouth College."
   },
   {
-    "objectID": "project/overview.html#overview",
-    "href": "project/overview.html#overview",
-    "title": "Course Project",
+    "objectID": "about.html#acknowledgements",
+    "href": "about.html#acknowledgements",
+    "title": "About",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nThe layout for this site draws heavily from Environmental Systems Analysis by Dr. Vivek Srikrishnan at Cornell University, Data Science for Climate Risk Assessment by Dr. James Doss-Gollin at Rice University, and course materials by Dr. Andrew Heiss at Georgia State University."
+  },
+  {
+    "objectID": "about.html#tools-and-generation-workflow",
+    "href": "about.html#tools-and-generation-workflow",
+    "title": "About",
+    "section": "Tools and Generation Workflow",
+    "text": "Tools and Generation Workflow\nThis course website was built with Quarto. All materials can be found at the GitHub Repository."
+  },
+  {
+    "objectID": "project/presentation.html",
+    "href": "project/presentation.html",
+    "title": "Project Presentation Instructions",
     "section": "",
-    "text": "The goal of the course project is to develop and report on an actionable plan for implementing a quantitative decision analysis. This project can be highly synergistic with thesis projects.",
-    "crumbs": [
-      "Course Project"
-    ]
-  },
-  {
-    "objectID": "project/overview.html#schedule",
-    "href": "project/overview.html#schedule",
-    "title": "Course Project",
-    "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\n\n\n\nMilestone\nInstructions\nDue Date\n\n\n\n\nProgress Reports\n\nPlease see within page\n\n\nPresentation\n\nNov. 16, 2025\n\n\nReport\n\nNov. 26, 2025",
-    "crumbs": [
-      "Course Project"
-    ]
-  },
-  {
-    "objectID": "project/updates.html",
-    "href": "project/updates.html",
-    "title": "Project Progress Reports",
-    "section": "",
-    "text": "At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I highly encourage you to work on these during the module to stay on track with your project.\nNote that the Gaps module does not have a progress report.",
+    "text": "Your project presentation will provide a narrative overview of your project. You are allowed 15 minutes for your presentation, which should cover the following:\n\nWhat is your decision problem?\nWhat is the state of the art in addressing this problem?\nWhat is wrong with the status quo?\nWhat knowledge gaps are there and which do you address?\nHow will you address these knowledge gaps (not too technical)?\nWhat are your hypotheses about your planned decision analysis?\nWhat are the implications?\n\nAs an audience member, you will be responsible for one short summary and round of moderation of group discussion for a colleague’s project. Your summary should focus on the story of the project and should clarify any parts of the story that were not clear to you. Your round of moderation should facilitate specific attention from the other audience members. For example, you can prompt other students to comment on potential limitations in proposed methods or you can prompt the presenter to clarify a specific narrative point.",
     "crumbs": [
       "Course Project",
-      "Module Reports"
+      "Presentation"
     ]
   },
   {
-    "objectID": "project/updates.html#overview",
-    "href": "project/updates.html#overview",
-    "title": "Project Progress Reports",
+    "objectID": "project/presentation.html#overview",
+    "href": "project/presentation.html#overview",
+    "title": "Project Presentation Instructions",
     "section": "",
-    "text": "At the end of each module, you will have one week to submit your responses to guided questions on how you will integrate new concepts into your final project. I highly encourage you to work on these during the module to stay on track with your project.\nNote that the Gaps module does not have a progress report.",
+    "text": "Your project presentation will provide a narrative overview of your project. You are allowed 15 minutes for your presentation, which should cover the following:\n\nWhat is your decision problem?\nWhat is the state of the art in addressing this problem?\nWhat is wrong with the status quo?\nWhat knowledge gaps are there and which do you address?\nHow will you address these knowledge gaps (not too technical)?\nWhat are your hypotheses about your planned decision analysis?\nWhat are the implications?\n\nAs an audience member, you will be responsible for one short summary and round of moderation of group discussion for a colleague’s project. Your summary should focus on the story of the project and should clarify any parts of the story that were not clear to you. Your round of moderation should facilitate specific attention from the other audience members. For example, you can prompt other students to comment on potential limitations in proposed methods or you can prompt the presenter to clarify a specific narrative point.",
     "crumbs": [
       "Course Project",
-      "Module Reports"
+      "Presentation"
     ]
   },
   {
-    "objectID": "project/updates.html#schedule",
-    "href": "project/updates.html#schedule",
-    "title": "Project Progress Reports",
-    "section": "Schedule",
-    "text": "Schedule\n\n\n\n\n\n\n\n\nModule\nInstructions\nDue Date\n\n\n\n\nOverview\n\n9/26/25\n\n\nUncertainty\n\n10/3/25\n\n\nRDM\n\n10/10/25\n\n\nTrade-offs\n\n10/17/25\n\n\nDMDU\n\n10/31/25",
-    "crumbs": [
-      "Course Project",
-      "Module Reports"
-    ]
-  },
-  {
-    "objectID": "project/updates.html#rubric",
-    "href": "project/updates.html#rubric",
-    "title": "Project Progress Reports",
+    "objectID": "project/presentation.html#rubric",
+    "href": "project/presentation.html#rubric",
+    "title": "Project Presentation Instructions",
     "section": "Rubric",
-    "text": "Rubric\nYour grade is based on your perceived effort. Even if you do not fully understand how to apply lessons from a module to your project, you can receive full credit for a report if you understand your knowledge gaps and form strong questions for me to provide clarification and direction for you. You can receive 0-3 points on each assignment.\n\n0: No perceived effort\n1: Low perceived effort\n\nE.g., incomplete, no synthesis, no self awareness of knowledge gaps, no questions for me\n\n2: Moderate perceived effort\n\nE.g., Complete but synthesis has important shortcomings and questions are too open ended for me to provide helpful guidance\n\n3: High perceived effort\n\nE.g., Complete and synthesis has important shortcomings but questions are specific and allow me to provide helpful guidance.\n\n\nThe instructions for each report will include examples of specific questions about the module that you can use for free in your report to help boost your grade. I will not be able to anticipate all questions that apply to your understanding and decision problem, so it is no guarantee you receive a 3 if you use some of these example questions.\nI will provide as much detailed feedback on each report as I can. This means that the more thought and effort you put into your report, the more guidance you will receive. This will help you on your project presentation and report. However, you must apply discretion when writing your report and should not include too much or irrelevant details. Concision is a very important feature of strong synthesis.\nLate submissions receive a 25% downgrading of the full credit score for each late day. Extension requests must be made 24 hours before the submission deadline with a submission of what you have achieved so far.",
+    "text": "Rubric\nThe below is a proposed grading scheme for future credit-based versions of the course. For the purposes of the training, there is no grade assigned. We will do the peer evaluation, though.\nYou can receive a maximum of 20 points, with credit opportunities as follows:\n\nUp to 10 points based on instructor’s rating\nUp to 8 points based on average of peer rating (low quality dropped)\nUp to 2 points for summary and moderation\n1 point for strong and constructive peer evaluation\nUp to 2 points for submitting a revised and improved recorded presentation on Canvas within the following week\n\nYou can lose points as follows:\n\n-5 points for going over 15 minutes on either presentation opportunity\n-2 points for low quality peer evaluation\n\nNote: Low quality peer evaluations are ones that suggest you were not paying attention to your colleague’s presentation. Even if you struggle to understand some material, your colleague deserves your respect. In fact, conveying clearly that you struggled to understand some material can be very helpful to your colleague in synthesizing feedback and working on their final report.",
     "crumbs": [
       "Course Project",
-      "Module Reports"
+      "Presentation"
+    ]
+  },
+  {
+    "objectID": "project/report.html",
+    "href": "project/report.html",
+    "title": "Project Report Instructions",
+    "section": "",
+    "text": "Your project report is a draft of several sections of your paper:\n\nYour introduction\nSeveral parts of your methods section\nThe hypothesized results from your decision analysis\n\nGoing into more detail on each section:\n\n\nWith all the attention we’ve paid to framing, you are ready to write a first (or more refined) draft of your paper’s introduction. You can follow other structures, but one way to do an effective structure mirrors your presentation by answering:\n\nWhat is your decision problem?\nWhat is the state of the art in addressing this problem?\nWhat is wrong with the status quo?\nWhat knowledge gaps are there and which do you address?\nHow will you address these knowledge gaps (not too technical)?\nWhat are your hypotheses about your planned decision analysis?\nWhat are the implications?\n\nFor some journals, especially those with space constraints, the last two bullets are not necessary (or possible) to include. For your report, I would like you to include these for completeness. You can always use that text in other sections.\n\n\n\nOne of the main things we learned in this course is that our analytical choices stem from our framing choices and that we should have strong justifications for why our methods appropriately operationalize these choices. Here are the types of analytical choices you can write a draft about in your report:\n\nOverview of the overall decision analysis workflow\n\nTake this opportunity to really highlight what your paper’s goals are and how the workflow accommodates answering your specific research questions\nTalk about any framing activities (e.g., workshops or meetings with stakeholders, policy document review, etc.,)\n\nHighlight the key uncertainties relevant to your decision analysis (specifically your paper’s goals), explain the role uncertainty plays in your analysis (e.g., robustness considerations, scenario discovery, factor fixing, etc.,) and how you will address that\nThe relevant objectives (and trade-offs/synergies) for your study, how you identified them, and how you will measure them\nIf relevant, how you define and measure robustness and the justification for that\nYour exploratory modeling approach\n\nYou do not have to describe your model entirely here (though you might for your paper). For your report, you should think of this as being at the level of deatil for the “main” manuscript, but not for the supplementary info (e.g., extensive details on validation or calibration, data sources, etc.,)\n\nYour policy search approach (prespecified or generating solutions?) - if generating solutions, how will you handle deep uncertainties and do you consider robustness in your search?\n\nYou should comment on the justification for your policy search approach, including how you represent the policy structure. Is it reasonable in your setting for a decision-maker to implement policies in this form? How stylized is this representation?\n\n\n\n\n\nIt is important for you to form hypotheses before you start your analysis. Given the exploratory nature of our modeling, and the many uncertainties involved with framing and data and projections, hypotheses are a good way to safeguard against errors in implementation. More importantly, they require you to think hard and encourage you to treat your modeling exercise as a complement to your reasoning instead of replacement. Importantly, one reason that we use exploratory modeling is that it can be a priori infeasible to anticipate the consequences of our complex system of study and the decision space we consider. You can form hypotheses about the types of mechanisms that could explain results in different directions. You can also explain the types of analyses you will do to get to the bottom of reuslts you find.\nIn our trade-offs module report, we proposed figure sketches about how the strategies under consideration might navigate trade-offs in our problem. Now, we will apply the figure sketch technique more broadly to the results-based narrative of our study. What are the key results you will generate in response to your research questions? Sketch these out, include figure captions, and write text summarizing your hypotheses. Compared to the other sections, you do not have to write these summaries in the same narrative style but they should be in complete sentences and reflect your reasoning about the complex system and decision space.",
+    "crumbs": [
+      "Course Project",
+      "Final Report"
+    ]
+  },
+  {
+    "objectID": "project/report.html#overview",
+    "href": "project/report.html#overview",
+    "title": "Project Report Instructions",
+    "section": "",
+    "text": "Your project report is a draft of several sections of your paper:\n\nYour introduction\nSeveral parts of your methods section\nThe hypothesized results from your decision analysis\n\nGoing into more detail on each section:\n\n\nWith all the attention we’ve paid to framing, you are ready to write a first (or more refined) draft of your paper’s introduction. You can follow other structures, but one way to do an effective structure mirrors your presentation by answering:\n\nWhat is your decision problem?\nWhat is the state of the art in addressing this problem?\nWhat is wrong with the status quo?\nWhat knowledge gaps are there and which do you address?\nHow will you address these knowledge gaps (not too technical)?\nWhat are your hypotheses about your planned decision analysis?\nWhat are the implications?\n\nFor some journals, especially those with space constraints, the last two bullets are not necessary (or possible) to include. For your report, I would like you to include these for completeness. You can always use that text in other sections.\n\n\n\nOne of the main things we learned in this course is that our analytical choices stem from our framing choices and that we should have strong justifications for why our methods appropriately operationalize these choices. Here are the types of analytical choices you can write a draft about in your report:\n\nOverview of the overall decision analysis workflow\n\nTake this opportunity to really highlight what your paper’s goals are and how the workflow accommodates answering your specific research questions\nTalk about any framing activities (e.g., workshops or meetings with stakeholders, policy document review, etc.,)\n\nHighlight the key uncertainties relevant to your decision analysis (specifically your paper’s goals), explain the role uncertainty plays in your analysis (e.g., robustness considerations, scenario discovery, factor fixing, etc.,) and how you will address that\nThe relevant objectives (and trade-offs/synergies) for your study, how you identified them, and how you will measure them\nIf relevant, how you define and measure robustness and the justification for that\nYour exploratory modeling approach\n\nYou do not have to describe your model entirely here (though you might for your paper). For your report, you should think of this as being at the level of deatil for the “main” manuscript, but not for the supplementary info (e.g., extensive details on validation or calibration, data sources, etc.,)\n\nYour policy search approach (prespecified or generating solutions?) - if generating solutions, how will you handle deep uncertainties and do you consider robustness in your search?\n\nYou should comment on the justification for your policy search approach, including how you represent the policy structure. Is it reasonable in your setting for a decision-maker to implement policies in this form? How stylized is this representation?\n\n\n\n\n\nIt is important for you to form hypotheses before you start your analysis. Given the exploratory nature of our modeling, and the many uncertainties involved with framing and data and projections, hypotheses are a good way to safeguard against errors in implementation. More importantly, they require you to think hard and encourage you to treat your modeling exercise as a complement to your reasoning instead of replacement. Importantly, one reason that we use exploratory modeling is that it can be a priori infeasible to anticipate the consequences of our complex system of study and the decision space we consider. You can form hypotheses about the types of mechanisms that could explain results in different directions. You can also explain the types of analyses you will do to get to the bottom of reuslts you find.\nIn our trade-offs module report, we proposed figure sketches about how the strategies under consideration might navigate trade-offs in our problem. Now, we will apply the figure sketch technique more broadly to the results-based narrative of our study. What are the key results you will generate in response to your research questions? Sketch these out, include figure captions, and write text summarizing your hypotheses. Compared to the other sections, you do not have to write these summaries in the same narrative style but they should be in complete sentences and reflect your reasoning about the complex system and decision space.",
+    "crumbs": [
+      "Course Project",
+      "Final Report"
+    ]
+  },
+  {
+    "objectID": "project/report.html#rubric",
+    "href": "project/report.html#rubric",
+    "title": "Project Report Instructions",
+    "section": "Rubric",
+    "text": "Rubric\nFor the purposes of the training, there is no grade assigned. For credit-based versions of this course, it is up to instructor discretion to design a grading scheme.\nThat said, there will be a peer evaluation aspect to the final report in the training, and I propose this for credit-based versions of the course as well.",
+    "crumbs": [
+      "Course Project",
+      "Final Report"
     ]
   },
   {
